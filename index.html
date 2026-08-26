@@ -64,22 +64,23 @@
       outline-offset: 4px;
     }
 
+    /* Revised Hero Styling */
     .hero {
-      min-height: 80vh;
+      min-height: 75vh;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(112deg, #191718 0%, #231F20 50%, #2D4D36 100%);
+      background: linear-gradient(135deg, #191718 0%, #231F20 45%, #2D4D36 100%);
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      opacity: .22;
+      opacity: .14;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(201,165,86,.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201,165,86,.08) 1px, transparent 1px);
+        linear-gradient(rgba(201,165,86,.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,165,86,.06) 1px, transparent 1px);
       background-size: 80px 80px;
       mask-image: linear-gradient(to right, black 20%, transparent 90%);
     }
@@ -91,7 +92,22 @@
       right: 0;
       bottom: 0;
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(201,165,86,.5), transparent);
+      background: linear-gradient(to right, transparent, rgba(201,165,86,.4), transparent);
+    }
+
+    .hero-title {
+      font-family: "Cinzel Decorative", serif;
+      font-weight: 400;
+      font-size: clamp(3.2rem, 16vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      max-width: 1100px;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: clamp(4.5rem, 8vw, 7.25rem);
+      }
     }
 
     .gold-rule { width: 64px; height: 1px; background: var(--gold); }
@@ -208,29 +224,40 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <section id="home" class="hero flex items-center">
-        <div class="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <p class="eyebrow">STRATEGIC COMMUNICATION • VISUAL STORYTELLING • PROGRAM OPERATIONS</p>
-          <div class="gold-rule mt-5"></div>
+      <!-- Homepage Hero Section -->
+      <section id="home" class="hero flex items-center py-16 lg:py-24">
+        <div class="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10">
           
-          <h1 class="display mt-8 max-w-5xl text-5xl leading-[1.05] tracking-tight text-[#EAE5DB] sm:text-7xl lg:text-8xl">
+          <!-- 1. Eyebrow -->
+          <p class="font-['Montserrat'] font-normal text-xs sm:text-sm tracking-[0.18em] uppercase text-[#C9A556]">
+            STRATEGIC COMMUNICATION • VISUAL STORYTELLING • PROGRAM OPERATIONS
+          </p>
+          
+          <!-- 2. Short gold rule -->
+          <div class="gold-rule mt-4 mb-6"></div>
+          
+          <!-- 3. Amanda Sullivan -->
+          <h1 class="hero-title text-[#EAE5DB]">
             Amanda Sullivan
           </h1>
           
-          <p class="cinzel mt-6 max-w-4xl text-xl font-normal leading-relaxed text-[#EAE5DB] sm:text-2xl lg:text-3xl">
-            Award-winning communications professional, writer, photographer, and creative strategist.
+          <!-- 4. Primary professional descriptor -->
+          <p class="font-['Montserrat'] font-light text-xl sm:text-2xl lg:text-[26px] leading-relaxed text-[#EAE5DB] mt-6 max-w-[850px]">
+            Award-winning communications professional working across strategy, writing, photography, digital media, and program operations.
           </p>
           
-          <p class="cinzel mt-4 text-2xl text-[#C9A556] sm:text-3xl">
+          <!-- 5. Tagline -->
+          <p class="cinzel font-normal text-xl sm:text-2xl lg:text-[28px] text-[#C9A556] mt-5">
             Your story. Your way.
           </p>
           
-          <p class="mt-7 max-w-3xl text-base font-light leading-relaxed text-[#EAE5DBcc] sm:text-lg">
-            I turn complex ideas into clear, compelling communication—and build the content, systems, and digital spaces that bring those ideas to life.
+          <!-- 6. Supporting copy -->
+          <p class="font-['Montserrat'] font-light text-base sm:text-[18px] leading-relaxed text-[#EAE5DBcc] mt-5 max-w-[760px]">
+            I turn complex ideas into clear, compelling communication—and build the content, systems, and digital spaces that bring them to life.
           </p>
           
-          <div class="mt-10 flex flex-wrap items-center gap-4">
+          <!-- 7. Action buttons -->
+          <div class="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
             <a class="button-main" href="#work">
               <span>View Selected Work</span>
               <i data-lucide="arrow-down-right" class="h-4 w-4"></i>
@@ -239,11 +266,12 @@
               <span>Download Résumé</span>
               <i data-lucide="file-text" class="h-4 w-4"></i>
             </a> 
-            <a class="inline-flex items-center gap-2 text-sm font-semibold tracking-wider text-[#EAE5DB] uppercase transition hover:text-[#C9A556]" href="#contact">
+            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-[#EAE5DB] uppercase transition hover:text-[#C9A556] py-2 px-1" href="#contact">
               <span>Contact</span>
               <i data-lucide="arrow-right" class="h-4 w-4"></i>
             </a>
           </div>
+
         </div>
       </section>
 
