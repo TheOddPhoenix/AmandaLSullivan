@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda Sullivan — Strategic Communications &amp; Operations</title>
-  <meta name="description" content="Portfolio of Amanda Sullivan: Writing, Photography, Brand Strategy, Enterprise Communications, Web Operations, and Leadership.">
+  <title>Amanda Sullivan — Strategic Communication Portfolio</title>
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   
-  <!-- Fonts: Cinzel Decorative, Cinzel, Montserrat -->
+  <!-- Fonts: Cinzel, Cinzel Decorative, Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,474 +32,561 @@
       font-weight: 300;
       color: var(--ivory);
       background: var(--charcoal);
-      line-height: 1.7;
     }
 
     .page-shell { width: 100%; overflow: hidden; }
     .cinzel { font-family: "Cinzel", serif; }
-    .display { font-family: "Cinzel Decorative", serif; }
-    
+    .display { font-family: "Cinzel Decorative", "Cinzel", serif; }
     .eyebrow {
       color: var(--gold);
-      font-size: .7rem;
+      font-size: .68rem;
       font-weight: 600;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       line-height: 1.4;
       text-transform: uppercase;
     }
 
     .nav-link {
-      color: rgba(234,229,219,.85);
+      color: rgba(234,229,219,.82);
       font-size: .68rem;
       font-weight: 500;
-      letter-spacing: .1em;
+      letter-spacing: .12em;
       text-transform: uppercase;
       transition: color .2s ease;
     }
 
     .nav-link:hover, .nav-link:focus { color: var(--gold); }
-    .nav-link:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible {
-      outline: 2px solid var(--gold);
+    .nav-link:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--gold);
       outline-offset: 4px;
     }
 
-    .card-hover {
-      transition: transform 0.3s ease, border-color 0.3s ease;
+    .hero {
+      min-height: 75vh;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(112deg, #191718 0%, #231F20 54%, #2D4D36 100%);
     }
-    .card-hover:hover {
-      transform: translateY(-3px);
-      border-color: var(--gold);
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .3;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(201,165,86,.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,165,86,.08) 1px, transparent 1px);
+      background-size: 86px 86px;
+      mask-image: linear-gradient(to right, black, transparent 85%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 9%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,165,86,.58), transparent);
+    }
+
+    .gold-rule { width: 66px; height: 1px; background: var(--gold); }
+    .button-main, .button-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      justify-content: center;
+      min-height: 47px;
+      padding: .8rem 1.05rem;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .button-main { background: var(--gold); border: 1px solid var(--gold); color: var(--charcoal); }
+    .button-main:hover { background: #dbc077; border-color: #dbc077; transform: translateY(-2px); }
+    .button-outline { background: transparent; border: 1px solid rgba(234,229,219,.58); color: var(--ivory); }
+    .button-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .case-photo {
+      display: block;
+      width: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+
+    .case-card { border: 1px solid rgba(45,77,54,.22); }
+    .case-card:hover .case-photo { transform: scale(1.025); }
+    .case-photo-wrap { overflow: hidden; }
+    .case-photo { transition: transform .6s ease; }
+    .case-detail { border-left: 1px solid var(--gold); padding-left: .9rem; }
+
+    .gallery-button {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+      background: #151415;
+      text-align: left;
+      border: none;
+      cursor: pointer;
+    }
+
+    .gallery-button img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      transition: transform .55s ease;
+    }
+
+    .gallery-button:hover img, .gallery-button:focus img { transform: scale(1.045); }
+    .gallery-overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 2rem 1.4rem 1.35rem;
+      background: linear-gradient(transparent, rgba(20,18,19,.94));
+    }
+
+    .feature-image {
+      width: 100%;
+      height: 100%;
+      min-height: 290px;
+      object-fit: cover;
+    }
+
+    .fade-up { animation: rise .75s both; }
+    .delay-1 { animation-delay: .12s; }
+    .delay-2 { animation-delay: .24s; }
+    .delay-3 { animation-delay: .36s; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-field {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid rgba(234,229,219,.48);
+      border-radius: 0;
+      background: transparent;
+      color: var(--ivory);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      padding: .75rem 0;
+    }
+
+    .form-field:focus { outline: none; border-bottom-color: var(--gold); }
+    .form-field::placeholder { color: rgba(234,229,219,.48); }
+
+    /* Makeshift Logo Container */
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 12px;
+      border: 1px dashed rgba(201, 165, 86, 0.5);
+      border-radius: 4px;
+      background: rgba(35, 31, 32, 0.6);
+    }
+
+    @media (max-width: 767px) {
+      .hero { min-height: auto; }
+      .case-photo { min-height: 265px; }
+      .gallery-button, .gallery-button img { min-height: 270px; }
     }
   </style>
-</head>
-<body>
+ </head>
+ <body>
   <div class="page-shell">
     
     <!-- Navigation Header -->
     <header class="sticky top-0 z-40 border-b border-[#c9a55633] bg-[#231f20f5] backdrop-blur">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Primary navigation">
-        
-        <a href="index.html" class="cinzel text-lg tracking-wider text-[#EAE5DB] transition hover:text-[#C9A556]" aria-label="Amanda Sullivan Home">
-          Amanda Sullivan<span class="text-[#C9A556] font-bold">.</span>
-        </a>
-
-        <div class="hidden items-center gap-5 xl:flex">
-          <a class="nav-link" href="#writing">Writing</a> 
-          <a class="nav-link" href="#photography">Photography</a> 
-          <a class="nav-link" href="#design">Brand &amp; Design</a> 
-          <a class="nav-link" href="#enterprise">Enterprise Comms</a> 
-          <a class="nav-link" href="#digital">Web &amp; Digital</a> 
-          <a class="nav-link" href="#operations">Operations</a> 
-          <a class="nav-link" href="#leadership">Leadership</a> 
-          <a class="nav-link" href="#contact">Contact</a>
-        </div>
-        
-        <button id="menu-toggle" type="button" class="text-[#EAE5DB] hover:text-[#C9A556] xl:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"> 
-          <i data-lucide="menu" class="h-6 w-6"></i> 
-        </button>
-      </nav>
+     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10" aria-label="Primary navigation">
       
-      <div id="mobile-menu" class="hidden border-t border-[#c9a55633] bg-[#231F20] px-6 py-6 xl:hidden">
-        <div class="flex flex-col gap-3">
-          <a class="nav-link text-base" href="#writing">Writing &amp; Journalism</a> 
-          <a class="nav-link text-base" href="#photography">Photography</a> 
-          <a class="nav-link text-base" href="#design">Design &amp; Brand Communication</a> 
-          <a class="nav-link text-base" href="#enterprise">Enterprise Communication</a> 
-          <a class="nav-link text-base" href="#digital">Web, Digital &amp; E-commerce</a> 
-          <a class="nav-link text-base" href="#operations">Operations &amp; Engagement</a> 
-          <a class="nav-link text-base" href="#leadership">Leadership &amp; Service</a> 
-          <a class="nav-link text-base" href="#contact">Contact</a>
+      <!-- Placeholder for Logo (Replace with <img> when ready) -->
+      <a href="#home" class="flex items-center gap-3" aria-label="Amanda Sullivan Home">
+        <div class="logo-container">
+          <i data-lucide="shield-check" class="h-5 w-5 text-[#C9A556]"></i>
+          <span class="cinzel text-xs tracking-widest text-[#EAE5DB] uppercase">[ Add Logo Here ]</span>
         </div>
+        <span class="cinzel hidden sm:inline text-base tracking-wide text-[#EAE5DB]"> Amanda Sullivan<span class="text-[#C9A556]">.</span> </span>
+      </a>
+
+      <div class="hidden items-center gap-5 lg:flex">
+        <a class="nav-link" href="#work">Work</a> 
+        <a class="nav-link" href="#about">About & Ethics</a> 
+        <a class="nav-link" href="#photography">Photography</a> 
+        <a class="nav-link" href="#writing">Writing</a> 
+        <a class="nav-link" href="#operations">Web &amp; Operations</a> 
+        <a class="nav-link" href="#contact">Contact</a>
       </div>
+      
+      <button id="menu-toggle" type="button" class="text-[#EAE5DB] lg:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"> 
+        <i data-lucide="menu"></i> 
+      </button>
+     </nav>
+     
+     <div id="mobile-menu" class="hidden border-t border-[#c9a55633] px-5 py-5 lg:hidden">
+      <div class="flex flex-col gap-4">
+        <a class="nav-link" href="#work">Work</a> 
+        <a class="nav-link" href="#about">About & Ethics</a> 
+        <a class="nav-link" href="#photography">Photography</a> 
+        <a class="nav-link" href="#writing">Writing</a> 
+        <a class="nav-link" href="#operations">Web &amp; Operations</a> 
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+     </div>
     </header>
 
-    <main id="main-content">
+    <main>
+     <!-- Hero Section -->
+     <section id="home" class="hero flex items-center">
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+       <p class="eyebrow fade-up">Strategic Communications &amp; Public Relations</p>
+       <div class="gold-rule mt-5 fade-up delay-1"></div>
+       <h1 class="display mt-8 max-w-5xl text-5xl leading-[1.02] tracking-tight sm:text-7xl lg:text-8xl fade-up delay-1">Amanda Sullivan</h1>
+       <p class="mt-8 max-w-3xl text-lg font-medium leading-8 text-[#EAE5DB] fade-up delay-2">Advocating with integrity, managing corporate reputation, and constructing transparent public affairs campaigns.</p>
+       <p class="cinzel mt-5 text-2xl text-[#C9A556] sm:text-3xl fade-up delay-2">Principled Communications. Measurable Impact.</p>
+       <p class="mt-7 max-w-3xl text-base leading-8 text-[#EAE5DBcc] sm:text-lg fade-up delay-3">Anchored strictly in the <strong>PRSA Code of Ethics</strong>—delivering honest storytelling, crisis management, visual assets, and digital strategy for modern institutions.</p>
+       
+       <div class="mt-10 flex flex-wrap items-center gap-4 fade-up delay-3">
+        <a class="button-main" href="#work"> <span>View Selected Work</span><i data-lucide="arrow-down-right" class="h-4 w-4"></i> </a> 
+        <a class="button-outline" href="resume.pdf" target="_blank" rel="noopener"> <span>Download Résumé</span> </a> 
+        <a class="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-[#EAE5DB] transition hover:text-[#C9A556]" href="#contact"> <span>Contact Direct</span><i data-lucide="arrow-right" class="h-4 w-4"></i> </a>
+       </div>
+       <p id="resume-note" class="mt-5 text-xs leading-5 text-[#C9A556]" role="status">PRSA Member #1084201 | Accreditation in Public Relations (APR) Candidate</p>
+      </div>
+     </section>
 
-      <!-- HERO SECTION -->
-      <section class="relative border-b border-[#c9a55633] bg-gradient-to-b from-[#181617] via-[#231F20] to-[#1e1b1c] py-20 lg:py-28">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="max-w-3xl">
-            <p class="eyebrow">Strategic Communications &amp; Operations Portfolio</p>
-            <h1 class="cinzel mt-4 text-4xl sm:text-6xl text-[#EAE5DB] leading-tight">
-              Amanda Sullivan
-            </h1>
-            <p class="mt-6 text-lg font-light text-[#EAE5DBcc] leading-relaxed">
-              Journalist, media strategist, visual storyteller, and operational leader dedicated to authentic storytelling, strategic organizational communication, and digital excellence.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#writing" class="inline-flex items-center gap-2 border border-[#C9A556] bg-[#C9A556] px-6 py-3 text-xs font-semibold uppercase tracking-widest text-[#231F20] transition hover:bg-transparent hover:text-[#C9A556]">
-                Explore Work
-              </a>
-              <a href="#contact" class="inline-flex items-center gap-2 border border-[#C9A556] bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-widest text-[#C9A556] transition hover:bg-[#C9A556] hover:text-[#231F20]">
-                Get In Touch
-              </a>
+     <!-- Credibility & Stats -->
+     <section class="border-y border-[#c9a55655] bg-[#231F20]">
+      <div class="mx-auto max-w-7xl px-6 py-9 lg:px-10">
+       <div class="grid gap-7 lg:grid-cols-[.8fr_3.2fr] lg:items-center">
+        <div>
+         <p class="eyebrow">Proven Record</p>
+         <h2 class="cinzel mt-3 text-2xl leading-tight">Trust &amp; Transparency</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-7 md:grid-cols-4">
+         <div>
+          <p class="cinzel text-3xl text-[#C9A556]">10+</p>
+          <p class="mt-2 text-xs leading-5 text-[#EAE5DBcc]">Years Strategy Experience</p>
+         </div>
+         <div>
+          <p class="cinzel text-3xl text-[#C9A556]">100%</p>
+          <p class="mt-2 text-xs leading-5 text-[#EAE5DBcc]">Ethical Compliance Record</p>
+         </div>
+         <div>
+          <p class="cinzel text-3xl text-[#C9A556]">25M+</p>
+          <p class="mt-2 text-xs leading-5 text-[#EAE5DBcc]">Audience Impressions</p>
+         </div>
+         <div>
+          <p class="cinzel text-3xl text-[#C9A556]">15+</p>
+          <p class="mt-2 text-xs leading-5 text-[#EAE5DBcc]">Crisis Response Protocols</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+
+     <!-- Featured Work Section -->
+     <section id="work" class="bg-[#EAE5DB] text-[#231F20]">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+       <div class="grid gap-7 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+        <div>
+         <p class="eyebrow text-[#2D4D36]">Case Studies</p>
+         <h2 class="cinzel mt-5 text-4xl leading-tight sm:text-5xl">Strategic Initiatives</h2>
+        </div>
+        <p class="max-w-2xl text-base leading-8 text-[#231F20cc]">Examining public relations frameworks, empirical research, multi-channel execution, and post-campaign evaluation aligned with PRSA standards.</p>
+       </div>
+       
+       <div class="mt-14 space-y-10">
+        <!-- Case Study 1 -->
+        <article class="case-card overflow-hidden bg-[#F5F1E9]">
+         <div class="grid lg:grid-cols-[1.35fr_.85fr]">
+          <div class="case-photo-wrap">
+           <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80" alt="Placeholder: Media Strategy Session" class="case-photo" loading="lazy">
+          </div>
+          <div class="p-8 sm:p-10">
+           <p class="eyebrow text-[#2D4D36]">Crisis Comms &amp; Research</p>
+           <h3 class="cinzel mt-4 text-3xl leading-tight">Public Trust Repositioning</h3>
+           <p class="mt-5 text-sm leading-7 text-[#231F20cc]">Addressing misinformation during institutional restructuring through transparent multi-channel disclosure and open press briefings.</p>
+           <p class="mt-5 border-t border-[#c9a55688] pt-5 text-sm font-medium leading-6">Lead Communications Director | 2025</p>
+           <ul class="mt-6 space-y-3">
+            <li class="case-detail text-sm leading-6">PRSA Alignment: Free Flow of Information &amp; Honesty</li>
+            <li class="case-detail text-sm leading-6">Achieved 42% decrease in negative media sentiment</li>
+            <li class="case-detail text-sm leading-6">Published proactive factual Q&amp;A framework</li>
+           </ul>
+          </div>
+         </div>
+        </article>
+
+        <!-- Case Study 2 -->
+        <article class="case-card overflow-hidden bg-[#231F20] text-[#EAE5DB]">
+         <div class="grid lg:grid-cols-[.85fr_1.35fr]">
+          <div class="p-8 sm:p-10">
+           <p class="eyebrow">Community Relations</p>
+           <h3 class="cinzel mt-4 text-3xl leading-tight">Municipal Outreach Campaign</h3>
+           <p class="mt-5 text-sm leading-7 text-[#EAE5DBcc]">Facilitating active dialogue between municipal infrastructure developers and historical neighborhood advocate groups.</p>
+           <p class="mt-5 border-t border-[#c9a55688] pt-5 text-sm font-medium leading-6">Public Affairs Lead</p>
+           <ul class="mt-6 space-y-3">
+            <li class="case-detail text-sm leading-6">PRSA Alignment: Fairness &amp; Informed Consent</li>
+            <li class="case-detail text-sm leading-6">Organized 12 interactive town halls</li>
+            <li class="case-detail text-sm leading-6">100% compliance with local notice mandates</li>
+           </ul>
+          </div>
+          <div class="case-photo-wrap">
+           <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Placeholder: Community Forum" class="case-photo" loading="lazy">
+          </div>
+         </div>
+        </article>
+       </div>
+      </div>
+     </section>
+
+     <!-- Capabilities Section -->
+     <section class="bg-[#F1EDE5] text-[#231F20]">
+      <div class="mx-auto max-w-7xl px-6 py-18 lg:px-10 lg:py-24">
+       <div class="grid gap-7 lg:grid-cols-[.8fr_1.3fr] lg:items-end">
+        <div>
+         <p class="eyebrow text-[#2D4D36]">Core Competencies</p>
+         <h2 class="cinzel mt-4 text-3xl leading-tight">Strategic Capabilities</h2>
+        </div>
+        <p class="text-sm leading-7 text-[#231F20bb]">Every campaign is constructed upon empirical media monitoring, audience analysis, and principled ethical communication.</p>
+       </div>
+       <div class="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <article class="border-t border-[#c9a55699] pt-4">
+         <h3 class="cinzel text-lg">Media Relations</h3>
+         <p class="mt-3 text-sm leading-6 text-[#231F20bb]">Cultivating open, trustworthy relationships with key reporters, editors, and industry analysts.</p>
+        </article>
+        <article class="border-t border-[#c9a55699] pt-4">
+         <h3 class="cinzel text-lg">Crisis Strategy</h3>
+         <p class="mt-3 text-sm leading-6 text-[#231F20bb]">Developing rapid-response protocols, holding statements, and accurate stakeholder briefing materials.</p>
+        </article>
+        <article class="border-t border-[#c9a55699] pt-4">
+         <h3 class="cinzel text-lg">Executive Messaging</h3>
+         <p class="mt-3 text-sm leading-6 text-[#231F20bb]">Speechwriting and media coaching for executives to deliver clear, accountable messaging.</p>
+        </article>
+        <article class="border-t border-[#c9a55699] pt-4">
+         <h3 class="cinzel text-lg">Ethical Counsel</h3>
+         <p class="mt-3 text-sm leading-6 text-[#231F20bb]">Ensuring organizational messaging fully complies with legal standards and PRSA ethics requirements.</p>
+        </article>
+        <article class="border-t border-[#c9a55699] pt-4">
+         <h3 class="cinzel text-lg">Digital Publishing</h3>
+         <p class="mt-3 text-sm leading-6 text-[#231F20bb]">Creating accessible digital newsrooms, social media strategies, and content delivery systems.</p>
+        </article>
+        <article class="border-t border-[#c9a55699] pt-4">
+         <h3 class="cinzel text-lg">Visual Storytelling</h3>
+         <p class="mt-3 text-sm leading-6 text-[#231F20bb]">Capturing visual photojournalism and multimedia assets to complement press narratives.</p>
+        </article>
+       </div>
+      </div>
+     </section>
+
+     <!-- About & PRSA Ethics Section -->
+     <section id="about" class="bg-[#2D4D36]">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+       <div class="grid gap-10 lg:grid-cols-[.48fr_1.52fr]">
+        <div>
+         <p class="eyebrow">Professional Background</p>
+         <h2 class="cinzel mt-5 text-4xl leading-tight">About Amanda</h2>
+         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Amanda Sullivan Portrait Placeholder" class="mt-8 w-full max-w-[320px] object-cover border border-[#C9A556]" loading="lazy">
+        </div>
+        <div>
+         <p class="text-base leading-8 text-[#EAE5DB]">With over a decade of public relations experience across corporate affairs, non-profit outreach, and municipal communication, I specialize in navigating complex communications challenges with clarity and strict ethical standards.</p>
+         <p class="mt-6 text-base leading-8 text-[#EAE5DBcc]">My practice centers on building sustained trust through authentic public dialogue, rigorous factual verification, and creative storytelling that respects the audience's intelligence.</p>
+         
+         <!-- PRSA Ethics Commitment Block -->
+         <div class="mt-10 border-t border-[#c9a55688] pt-7">
+          <p class="eyebrow">PRSA Member Code of Ethics</p>
+          <h3 class="cinzel mt-4 text-2xl">Pledge of Professional Conduct</h3>
+          <p class="mt-3 text-sm text-[#EAE5DBcc]">As a practitioner, I pledge to adhere to the core values of the Public Relations Society of America Code of Ethics:</p>
+          <ul class="mt-7 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+           <li class="border-b border-[#eae5db33] pb-3 text-sm leading-6"><strong>Advocacy:</strong> Serving as responsible advocates for represented interests.</li>
+           <li class="border-b border-[#eae5db33] pb-3 text-sm leading-6"><strong>Honesty:</strong> Adhering to truth and accuracy in all communications.</li>
+           <li class="border-b border-[#eae5db33] pb-3 text-sm leading-6"><strong>Expertise:</strong> Advancing the profession through ongoing education.</li>
+           <li class="border-b border-[#eae5db33] pb-3 text-sm leading-6"><strong>Independence:</strong> Providing objective counsel to leaders.</li>
+           <li class="border-b border-[#eae5db33] pb-3 text-sm leading-6"><strong>Loyalty:</strong> Faithful to clients while honoring public interest.</li>
+           <li class="border-b border-[#eae5db33] pb-3 text-sm leading-6"><strong>Fairness:</strong> Respecting all stakeholders, peers, and competitors.</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+
+     <!-- Photography / Visual Assets Section -->
+     <section id="photography" class="bg-[#231F20]">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+       <div class="grid gap-9 lg:grid-cols-[1fr_1.2fr]">
+        <div>
+         <p class="eyebrow">Visual Communications</p>
+         <h2 class="cinzel mt-5 text-4xl leading-tight sm:text-5xl">Photojournalism</h2>
+        </div>
+        <div>
+         <p class="text-base leading-8 text-[#EAE5DBcc]">High-impact imagery curated for press releases, annual reports, and digital media kits.</p>
+         <div class="mt-8 grid gap-4 border-l border-[#C9A556] pl-5">
+          <p class="text-sm leading-6">Award Winner — Best Regional Public Affairs Photojournalism (2025)</p>
+          <p class="text-sm leading-6">Featured in National Communications Digest</p>
+         </div>
+        </div>
+       </div>
+       
+       <!-- Photo Grid -->
+       <div class="mt-14 grid gap-4 md:grid-cols-2">
+        <div class="gallery-button md:col-span-2"> 
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80" alt="Placeholder: Keynote Conference" loading="lazy"> 
+          <span class="gallery-overlay">
+            <span class="cinzel block text-2xl">Keynote Leadership Summit</span>
+            <span class="mt-2 block max-w-2xl text-sm leading-6 text-[#EAE5DBcc]">Documenting executive address on transparent corporate governance.</span>
+          </span> 
+        </div> 
+        <div class="gallery-button"> 
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Placeholder: Media Briefing" loading="lazy"> 
+          <span class="gallery-overlay">
+            <span class="cinzel block text-xl">Press Conference Briefing</span>
+            <span class="mt-2 block text-xs leading-5 text-[#EAE5DBcc]">Live press Q&amp;A setup during emergency communications event.</span>
+          </span> 
+        </div> 
+        <div class="gallery-button"> 
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Placeholder: Community Forum" loading="lazy"> 
+          <span class="gallery-overlay">
+            <span class="cinzel block text-xl">Community Roundtables</span>
+            <span class="mt-2 block text-xs leading-5 text-[#EAE5DBcc]">Capturing genuine stakeholder engagement sessions.</span>
+          </span> 
+        </div> 
+       </div>
+      </div>
+     </section>
+
+     <!-- Writing Section -->
+     <section id="writing" class="bg-[#EAE5DB] text-[#231F20]">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+       <div class="grid gap-8 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+        <div>
+         <p class="eyebrow text-[#2D4D36]">Editorial &amp; Press Assets</p>
+         <h2 class="cinzel mt-5 text-4xl leading-tight">Writing Samples</h2>
+        </div>
+        <p class="text-base leading-8 text-[#231F20cc]">A selection of press releases, executive speeches, policy briefs, and op-eds written for national distribution.</p>
+       </div>
+       
+       <div class="mt-14 grid overflow-hidden border border-[#2d4d3633] lg:grid-cols-[1.1fr_.9fr]">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80" alt="Writing Sample Placeholder" class="feature-image" loading="lazy">
+        <div class="bg-[#F5F1E9] p-8 sm:p-10">
+         <p class="eyebrow text-[#2D4D36]">Featured Opinion Editorial</p>
+         <h3 class="cinzel mt-4 text-3xl">Ethical AI in Modern Public Relations</h3>
+         <p class="mt-5 text-sm leading-7 text-[#231F20cc]">An in-depth article evaluating truth verification, algorithmic bias, and PRSA standards in automated media monitoring systems.</p>
+         <a class="mt-7 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[.1em] text-[#2D4D36] underline decoration-[#C9A556] underline-offset-8" href="#contact"> <span>Request Full Portfolio PDF</span><i data-lucide="arrow-right" class="h-4 w-4"></i> </a>
+        </div>
+       </div>
+
+       <div class="mt-10 grid gap-7 md:grid-cols-3">
+        <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3622]">
+         <h3 class="cinzel text-xl">Official Press Release</h3>
+         <p class="mt-3 text-sm leading-7 text-[#231F20bb]">AP-style corporate sustainability statement distributed nationwide across major business wire services.</p>
+        </article>
+        <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3622]">
+         <h3 class="cinzel text-xl">Keynote Address Speech</h3>
+         <p class="mt-3 text-sm leading-7 text-[#231F20bb]">Executive speech prepared for regional economic summit focusing on community reinvestment.</p>
+        </article>
+        <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3622]">
+         <h3 class="cinzel text-xl">Whitepaper &amp; Policy Brief</h3>
+         <p class="mt-3 text-sm leading-7 text-[#231F20bb]">Comprehensive research summary designed for legislative representatives and policy stakeholders.</p>
+        </article>
+       </div>
+      </div>
+     </section>
+
+     <!-- Web & Operations Section -->
+     <section id="operations" class="bg-[#2D4D36]">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+       <div class="grid gap-9 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+        <div>
+         <p class="eyebrow">Technical Management</p>
+         <h2 class="cinzel mt-5 text-4xl leading-tight sm:text-5xl">Web &amp; PR Operations</h2>
+        </div>
+        <p class="text-base leading-8 text-[#EAE5DBcc]">Integrating digital infrastructure, GitHub workflows, analytics platforms, and online media rooms into standard PR strategies.</p>
+       </div>
+       
+       <div class="mt-14 grid gap-x-10 gap-y-8 md:grid-cols-2">
+        <article class="border-t border-[#c9a55688] pt-5">
+         <h3 class="cinzel text-xl">Digital Newsroom Architecture</h3>
+         <p class="mt-3 text-sm leading-7 text-[#EAE5DBcc]">Building accessible, responsive press centers hosted cleanly via GitHub Pages with secure media kit downloads.</p>
+        </article>
+        <article class="border-t border-[#c9a55688] pt-5">
+         <h3 class="cinzel text-xl">Analytics &amp; Impression Tracking</h3>
+         <p class="mt-3 text-sm leading-7 text-[#EAE5DBcc]">Utilizing ethical data practices to evaluate media coverage sentiment, reach, and engagement metrics.</p>
+        </article>
+       </div>
+      </div>
+     </section>
+
+     <!-- Contact Section (Completed) -->
+     <section id="contact" class="bg-[#231F20]">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10 lg:py-28">
+        <div>
+          <p class="eyebrow">Get In Touch</p>
+          <h2 class="cinzel mt-5 text-4xl leading-tight sm:text-5xl">Let's Connect</h2>
+          <p class="mt-6 text-base leading-8 text-[#EAE5DBcc]">Available for strategic counsel, crisis communications planning, speaker inquiries, and executive advisory engagements.</p>
+          
+          <div class="mt-10 space-y-6">
+            <div class="flex items-center gap-4">
+              <i data-lucide="mail" class="text-[#C9A556] h-5 w-5"></i>
+              <span class="text-sm">amanda.sullivan.pr@domain.com</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="shield" class="text-[#C9A556] h-5 w-5"></i>
+              <span class="text-sm">PRSA Member #1084201</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="linkedin" class="text-[#C9A556] h-5 w-5"></i>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-sm underline hover:text-[#C9A556]">linkedin.com/in/amandasullivan-pr</a>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- 1. WRITING & JOURNALISM -->
-      <section id="writing" class="border-b border-[#c9a55633] bg-[#231F20] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 01</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Writing &amp; Journalism</h2>
-            <blockquote class="mt-4 border-l-2 border-[#C9A556] pl-4 italic text-lg sm:text-xl text-[#C9A556] font-serif">
-              “Everyone has a story if you ask the right questions.”
-            </blockquote>
-          </div>
-
-          <p class="max-w-3xl text-sm sm:text-base font-light text-[#EAE5DBcc] leading-relaxed mb-10">
-            From field reporting and news analysis to human-interest profiles and executive commentary, great reporting begins with curiosity and precision.
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="border border-[#c9a55633] bg-[#181617] p-6 flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-mono text-[#C9A556] uppercase tracking-wider">[ News Reporting ]</span>
-                <h3 class="cinzel text-xl text-[#EAE5DB] mt-2">Investigative &amp; Field News</h3>
-                <p class="mt-3 text-xs font-light text-[#EAE5DBaa] leading-relaxed">
-                  Fast-turnaround news, public affairs coverage, and structured editorial reporting.
-                </p>
-              </div>
-              <a href="writing.html#news" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase text-[#C9A556] hover:underline">
-                <span>View News Samples</span> &rarr;
-              </a>
+        <div>
+          <form class="space-y-6" action="https://formspree.io/f/placeholder" method="POST">
+            <div>
+              <label for="name" class="block text-xs uppercase tracking-widest text-[#C9A556] mb-2">Full Name</label>
+              <input type="text" id="name" name="name" required class="form-field" placeholder="Jane Doe">
             </div>
-
-            <div class="border border-[#c9a55633] bg-[#181617] p-6 flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-mono text-[#C9A556] uppercase tracking-wider">[ Narrative Features ]</span>
-                <h3 class="cinzel text-xl text-[#EAE5DB] mt-2">Human-Interest Profiles</h3>
-                <p class="mt-3 text-xs font-light text-[#EAE5DBaa] leading-relaxed">
-                  In-depth narrative storytelling focusing on community leaders, military personnel, and operational impact.
-                </p>
-              </div>
-              <a href="writing.html#features" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase text-[#C9A556] hover:underline">
-                <span>View Feature Samples</span> &rarr;
-              </a>
+            <div>
+              <label for="email" class="block text-xs uppercase tracking-widest text-[#C9A556] mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required class="form-field" placeholder="jane@organization.com">
             </div>
-
-            <div class="border border-[#c9a55633] bg-[#181617] p-6 flex flex-col justify-between">
-              <div>
-                <span class="text-xs font-mono text-[#C9A556] uppercase tracking-wider">[ Editorial Strategy ]</span>
-                <h3 class="cinzel text-xl text-[#EAE5DB] mt-2">Executive Commentary</h3>
-                <p class="mt-3 text-xs font-light text-[#EAE5DBaa] leading-relaxed">
-                  Strategic op-eds, leadership briefings, and formal public statements crafted for maximum clarity.
-                </p>
-              </div>
-              <a href="writing.html" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase text-[#C9A556] hover:underline">
-                <span>Explore Full Archive</span> &rarr;
-              </a>
+            <div>
+              <label for="message" class="block text-xs uppercase tracking-widest text-[#C9A556] mb-2">Inquiry / Project Summary</label>
+              <textarea id="message" name="message" rows="4" required class="form-field" placeholder="How can I assist your team?"></textarea>
             </div>
-          </div>
-
-          <div class="mt-10 text-center">
-            <a href="writing.html" class="inline-flex items-center gap-3 border border-[#C9A556] bg-transparent px-8 py-3 text-xs font-semibold uppercase tracking-widest text-[#C9A556] transition hover:bg-[#C9A556] hover:text-[#231F20]">
-              <span>Open Dedicated Writing Page</span>
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </a>
-          </div>
+            <button type="submit" class="button-main w-full mt-4"><span>Send Message</span> <i data-lucide="send" class="h-4 w-4"></i></button>
+          </form>
         </div>
-      </section>
-
-      <!-- 2. PHOTOGRAPHY -->
-      <section id="photography" class="border-b border-[#c9a55633] bg-[#1e1b1c] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 02</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Photography</h2>
-            <blockquote class="mt-4 border-l-2 border-[#C9A556] pl-4 italic text-lg sm:text-xl text-[#C9A556] font-serif">
-              “Photography is both an art form and a powerful method of communication—and image selection is critical to the message.”
-            </blockquote>
-          </div>
-
-          <!-- Prominent Large Photographs Preview Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 flex flex-col">
-              <div class="relative aspect-video w-full bg-[#282425] flex items-center justify-center border border-[#c9a55622] overflow-hidden">
-                <span class="font-mono text-xs text-[#EAE5DB66]">[ High-Impact Photo Sample: Photojournalism ]</span>
-              </div>
-              <div class="mt-4">
-                <h3 class="cinzel text-lg text-[#EAE5DB]">Documentary &amp; Photojournalism</h3>
-                <p class="mt-1 text-xs font-light text-[#EAE5DBaa] leading-relaxed">
-                  Capturing candid, real-time moments during field operations, public ceremonies, and community gatherings.
-                </p>
-              </div>
-            </div>
-
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 flex flex-col">
-              <div class="relative aspect-video w-full bg-[#282425] flex items-center justify-center border border-[#c9a55622] overflow-hidden">
-                <span class="font-mono text-xs text-[#EAE5DB66]">[ High-Impact Photo Sample: Portraiture ]</span>
-              </div>
-              <div class="mt-4">
-                <h3 class="cinzel text-lg text-[#EAE5DB]">Environmental Portraiture</h3>
-                <p class="mt-1 text-xs font-light text-[#EAE5DBaa] leading-relaxed">
-                  Focused human portraiture that elevates personal character and reinforces core narrative themes.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Selected Work Captions -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-            <div class="border-t border-[#c9a55633] pt-4">
-              <p class="text-xs font-mono text-[#C9A556] uppercase">[ Series A ] Action &amp; Tactical</p>
-              <p class="mt-2 text-xs font-light text-[#EAE5DBcc]">Precision timing and framing under high-intensity environmental conditions.</p>
-            </div>
-            <div class="border-t border-[#c9a55633] pt-4">
-              <p class="text-xs font-mono text-[#C9A556] uppercase">[ Series B ] Architecture &amp; Space</p>
-              <p class="mt-2 text-xs font-light text-[#EAE5DBcc]">Compositional study of structure, light, shadow, and environmental design.</p>
-            </div>
-            <div class="border-t border-[#c9a55633] pt-4">
-              <p class="text-xs font-mono text-[#C9A556] uppercase">[ Series C ] Civic &amp; Ceremonial</p>
-              <p class="mt-2 text-xs font-light text-[#EAE5DBcc]">Formal event coverage designed for executive public relations and archives.</p>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <a href="photography.html" class="inline-flex items-center gap-3 border border-[#C9A556] bg-[#C9A556] px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#231F20] transition-all hover:bg-transparent hover:text-[#C9A556]">
-              <span>See More Photography</span>
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. DESIGN & BRAND COMMUNICATION -->
-      <section id="design" class="border-b border-[#c9a55633] bg-[#231F20] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 03</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Design &amp; Brand Communication</h2>
-            <blockquote class="mt-4 border-l-2 border-[#C9A556] pl-4 italic text-lg sm:text-xl text-[#C9A556] font-serif">
-              “Every brand has its own story, and its visual and communication strategy should reflect its mission and values.”
-            </blockquote>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="border border-[#c9a55633] bg-[#181617] p-6">
-              <h3 class="cinzel text-xl text-[#EAE5DB] mb-3">Brand Identity Architecture</h3>
-              <p class="text-xs font-light text-[#EAE5DBcc] leading-relaxed">
-                Establishing cohesive visual identities, typography guidelines, palette selection, and editorial voice standards.
-              </p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-6">
-              <h3 class="cinzel text-xl text-[#EAE5DB] mb-3">Visual Collateral Design</h3>
-              <p class="text-xs font-light text-[#EAE5DBcc] leading-relaxed">
-                Designing multi-channel print assets, digital graphics, social media toolkits, and promotional collateral.
-              </p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-6">
-              <h3 class="cinzel text-xl text-[#EAE5DB] mb-3">Mission-Driven Alignment</h3>
-              <p class="text-xs font-light text-[#EAE5DBcc] leading-relaxed">
-                Ensuring every customer touchpoint and public communication directly reflects organizational values and long-term goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. ENTERPRISE & ORGANIZATIONAL COMMUNICATION -->
-      <section id="enterprise" class="border-b border-[#c9a55633] bg-[#1e1b1c] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 04</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Enterprise &amp; Organizational Communication</h2>
-            <blockquote class="mt-4 border-l-2 border-[#C9A556] pl-4 italic text-lg sm:text-xl text-[#C9A556] font-serif">
-              “Communication is fundamental to organizational success.”
-            </blockquote>
-          </div>
-
-          <p class="max-w-3xl text-sm sm:text-base font-light text-[#EAE5DBcc] leading-relaxed mb-10">
-            Building robust internal and external communication frameworks, maintaining stakeholder trust, and steering organizational narrative through changing conditions.
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="border border-[#c9a55633] bg-[#181617] p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <i data-lucide="shield-alert" class="h-6 w-6 text-[#C9A556]"></i>
-                <h3 class="cinzel text-xl text-[#EAE5DB]">Crisis Communication</h3>
-              </div>
-              <p class="text-xs sm:text-sm font-light text-[#EAE5DBcc] leading-relaxed">
-                Crisis communication lives directly within overall organizational strategy. Developing rapid-response protocols, holding statements, factual media briefings, and risk-mitigation communication trees during high-stakes scenarios.
-              </p>
-            </div>
-
-            <div class="border border-[#c9a55633] bg-[#181617] p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <i data-lucide="users" class="h-6 w-6 text-[#C9A556]"></i>
-                <h3 class="cinzel text-xl text-[#EAE5DB]">Internal &amp; Leadership Alignment</h3>
-              </div>
-              <p class="text-xs sm:text-sm font-light text-[#EAE5DBcc] leading-relaxed">
-                Crafting executive messaging, town hall agendas, change-management announcements, and employee alignment initiatives that keep large teams informed and synchronized.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. WEB, DIGITAL & E-COMMERCE -->
-      <section id="digital" class="border-b border-[#c9a55633] bg-[#231F20] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 05</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Web, Digital &amp; E-commerce</h2>
-            <p class="mt-4 max-w-3xl text-sm sm:text-base font-light text-[#EAE5DBcc] leading-relaxed">
-              End-to-end digital channel management, technical web execution, and organic audience growth strategies.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 text-center">
-              <i data-lucide="layout" class="h-6 w-6 text-[#C9A556] mx-auto mb-2"></i>
-              <p class="text-xs font-semibold text-[#EAE5DB]">Web Builds</p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 text-center">
-              <i data-lucide="globe" class="h-6 w-6 text-[#C9A556] mx-auto mb-2"></i>
-              <p class="text-xs font-semibold text-[#EAE5DB]">WordPress</p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 text-center">
-              <i data-lucide="file-text" class="h-6 w-6 text-[#C9A556] mx-auto mb-2"></i>
-              <p class="text-xs font-semibold text-[#EAE5DB]">Digital Content</p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 text-center">
-              <i data-lucide="search" class="h-6 w-6 text-[#C9A556] mx-auto mb-2"></i>
-              <p class="text-xs font-semibold text-[#EAE5DB]">SEO</p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 text-center">
-              <i data-lucide="cpu" class="h-6 w-6 text-[#C9A556] mx-auto mb-2"></i>
-              <p class="text-xs font-semibold text-[#EAE5DB]">Platform Mgmt</p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-4 text-center">
-              <i data-lucide="shopping-cart" class="h-6 w-6 text-[#C9A556] mx-auto mb-2"></i>
-              <p class="text-xs font-semibold text-[#EAE5DB]">E-commerce</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. LARGE-SCALE OPERATIONS & COMMUNITY ENGAGEMENT -->
-      <section id="operations" class="border-b border-[#c9a55633] bg-[#1e1b1c] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 06</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Large-Scale Operations &amp; Community Engagement</h2>
-            <blockquote class="mt-4 border-l-2 border-[#C9A556] pl-4 italic text-lg sm:text-xl text-[#C9A556] font-serif">
-              “Meaningful engagement relies on face-to-face communication, thoughtful event structure, and carefully choosing the people who represent an organization.”
-            </blockquote>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="border border-[#c9a55633] bg-[#181617] p-6">
-              <h3 class="cinzel text-xl text-[#EAE5DB] mb-2">Face-to-Face Engagement</h3>
-              <p class="text-xs font-light text-[#EAE5DBcc] leading-relaxed">
-                Prioritizing direct human interaction, community listening sessions, and open dialogue over distant messaging.
-              </p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-6">
-              <h3 class="cinzel text-xl text-[#EAE5DB] mb-2">Event Architecture</h3>
-              <p class="text-xs font-light text-[#EAE5DBcc] leading-relaxed">
-                Designing, scheduling, and executing large-scale public events, press conferences, and operational summits.
-              </p>
-            </div>
-            <div class="border border-[#c9a55633] bg-[#181617] p-6">
-              <h3 class="cinzel text-xl text-[#EAE5DB] mb-2">Ambassador Selection</h3>
-              <p class="text-xs font-light text-[#EAE5DBcc] leading-relaxed">
-                Curating and training spokespersons and team leaders who naturally embody the organization's mission.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 7. LEADERSHIP & VOLUNTEER SERVICE -->
-      <section id="leadership" class="border-b border-[#c9a55633] bg-[#231F20] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="mb-10">
-            <p class="eyebrow">Section 07</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Leadership &amp; Volunteer Service</h2>
-            <p class="mt-4 max-w-3xl text-sm sm:text-base font-light text-[#EAE5DBcc] leading-relaxed">
-              Dedicated advocacy, initiative direction, and campaign execution for mission-focused programs.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Federal Women's Program -->
-            <div class="border border-[#c9a55633] bg-[#181617] p-8">
-              <span class="text-xs font-mono text-[#C9A556] uppercase tracking-wider">[ Special Program Leadership ]</span>
-              <h3 class="cinzel text-2xl text-[#EAE5DB] mt-2 mb-4">Federal Women’s Program</h3>
-              <p class="text-xs sm:text-sm font-light text-[#EAE5DBcc] leading-relaxed mb-6">
-                Directing strategic outreach, policy advocacy, educational events, and community awareness initiatives.
-              </p>
-              <div class="border-t border-[#c9a55622] pt-4">
-                <p class="text-xs font-mono text-[#C9A556] mb-2">Deliverables &amp; Campaign Assets:</p>
-                <ul class="text-xs text-[#EAE5DBaa] space-y-2">
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Social Media Campaigns &amp; Graphics</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Visual Brand &amp; Event Design Collateral</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Strategic Written Articles &amp; Policy Releases</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Targeted Email Marketing Communications</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Invisible Warriors -->
-            <div class="border border-[#c9a55633] bg-[#181617] p-8">
-              <span class="text-xs font-mono text-[#C9A556] uppercase tracking-wider">[ Community Advocacy ]</span>
-              <h3 class="cinzel text-2xl text-[#EAE5DB] mt-2 mb-4">Invisible Warriors</h3>
-              <p class="text-xs sm:text-sm font-light text-[#EAE5DBcc] leading-relaxed mb-6">
-                Amplifying voices and driving outreach campaigns for underrepresented service members and community figures.
-              </p>
-              <div class="border-t border-[#c9a55622] pt-4">
-                <p class="text-xs font-mono text-[#C9A556] mb-2">Deliverables &amp; Campaign Assets:</p>
-                <ul class="text-xs text-[#EAE5DBaa] space-y-2">
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Social Media Engagement Strategy</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Custom Publication &amp; Poster Design</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Feature Written Profiles &amp; Spotlights</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#C9A556]"></i> Direct Subscriber &amp; Partner Email Campaigns</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="bg-[#181617] py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-10">
-          <div class="max-w-2xl">
-            <p class="eyebrow">Inquiries</p>
-            <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Connect &amp; Collaborate</h2>
-            <p class="mt-4 text-sm font-light text-[#EAE5DBcc]">
-              Available for strategic communications consulting, editorial writing, photojournalism, and digital operations leadership.
-            </p>
-            <div class="mt-8">
-              <a href="mailto:contact@example.com" class="inline-flex items-center gap-3 border border-[#C9A556] bg-[#C9A556] px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#231F20] transition hover:bg-transparent hover:text-[#C9A556]">
-                <i data-lucide="mail" class="h-4 w-4"></i>
-                <span>Send a Message</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      </div>
+     </section>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-[#c9a55633] bg-[#141213] py-8 text-xs text-[#EAE5DB88]">
+    <footer class="border-t border-[#c9a55633] bg-[#191718] py-8 text-center text-xs text-[#EAE5DB88]">
       <div class="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>&copy; 2026 Amanda Sullivan. Strategic Communication &amp; Program Operations.</p>
-        <p class="cinzel text-[#C9A556]">Your story. Your way.</p>
+        <p>&copy; 2026 Amanda Sullivan. Built with GitHub Pages &amp; Tailwind CSS.</p>
+        <p class="flex items-center gap-2">
+          <span>Adheres to PRSA Code of Ethics</span>
+          <i data-lucide="shield-check" class="h-4 w-4 text-[#C9A556]"></i>
+        </p>
       </div>
     </footer>
   </div>
 
+  <!-- Scripts -->
   <script>
+    // Initialize Lucide Icons
     lucide.createIcons();
 
-    /* Mobile Navigation Menu Toggle */
+    // Mobile Menu Toggle logic
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -512,5 +598,5 @@
       });
     }
   </script>
-</body>
+ </body>
 </html>
