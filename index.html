@@ -10,7 +10,7 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   
-  <!-- Fonts: Cinzel Decorative, Cinzel, Montserrat (Light 300, Regular 400, Medium 500, SemiBold 600, Bold 700) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -64,7 +64,6 @@
       outline-offset: 4px;
     }
 
-    /* Revised Hero Styling */
     .hero {
       min-height: 75vh;
       position: relative;
@@ -228,35 +227,28 @@
       <section id="home" class="hero flex items-center py-16 lg:py-24">
         <div class="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10">
           
-          <!-- 1. Eyebrow -->
           <p class="font-['Montserrat'] font-normal text-xs sm:text-sm tracking-[0.18em] uppercase text-[#C9A556]">
             STRATEGIC COMMUNICATION • VISUAL STORYTELLING • PROGRAM OPERATIONS
           </p>
           
-          <!-- 2. Short gold rule -->
           <div class="gold-rule mt-4 mb-6"></div>
           
-          <!-- 3. Amanda Sullivan -->
           <h1 class="hero-title text-[#EAE5DB]">
             Amanda Sullivan
           </h1>
           
-          <!-- 4. Primary professional descriptor -->
           <p class="font-['Montserrat'] font-light text-xl sm:text-2xl lg:text-[26px] leading-relaxed text-[#EAE5DB] mt-6 max-w-[850px]">
             Award-winning communications professional working across strategy, writing, photography, digital media, and program operations.
           </p>
           
-          <!-- 5. Tagline -->
           <p class="cinzel font-normal text-xl sm:text-2xl lg:text-[28px] text-[#C9A556] mt-5">
             Your story. Your way.
           </p>
           
-          <!-- 6. Supporting copy -->
           <p class="font-['Montserrat'] font-light text-base sm:text-[18px] leading-relaxed text-[#EAE5DBcc] mt-5 max-w-[760px]">
             I turn complex ideas into clear, compelling communication—and build the content, systems, and digital spaces that bring them to life.
           </p>
           
-          <!-- 7. Action buttons -->
           <div class="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
             <a class="button-main" href="#work">
               <span>View Selected Work</span>
@@ -530,7 +522,7 @@
                 <i data-lucide="binary" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
                 <h3 class="cinzel text-xl text-[#231F20]">Research &amp; Analytical Writing</h3>
                 <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
-                  Qualitative focus-group reporting, thematic analysis, academic research synthesize, and formal organizational reports.
+                  Qualitative focus-group reporting, thematic analysis, academic research synthesis, and formal organizational reports.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-[#c9a55666]">
@@ -601,52 +593,52 @@
             <div class="gallery-item cursor-pointer group" onclick="openModal('Community Engagement', 'Capturing authentic interaction during public events and regional outreach.')">
               <div class="img-placeholder">
                 <i data-lucide="heart" class="h-10 w-10 text-[#C9A556] mb-2"></i>
-                <p class="cinzel text-sm text-[#EAE5DB]">Community Engagement</p>
+                <p class="cinzel text-sm text-[#EAE5DB]">Community Outreach</p>
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Community Engagement</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Outreach &amp; Public Dialogue</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Documenting community partnerships, school visits, and public engagement.</p>
+                <span class="eyebrow text-[#C9A556]">Outreach</span>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Community Relations</p>
+                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Capturing authentic interaction during public events and regional literacy initiatives.</p>
               </div>
             </div>
 
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Military & Government', 'Official ceremonies, awards, and command communications.')">
+            <div class="gallery-item cursor-pointer group" onclick="openModal('Military Operations', 'High-impact tactical and ceremonial imagery.')">
               <div class="img-placeholder">
-                <i data-lucide="award" class="h-10 w-10 text-[#C9A556] mb-2"></i>
-                <p class="cinzel text-sm text-[#EAE5DB]">Military &amp; Government</p>
+                <i data-lucide="shield" class="h-10 w-10 text-[#C9A556] mb-2"></i>
+                <p class="cinzel text-sm text-[#EAE5DB]">Military Operations</p>
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Military &amp; Government</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Ceremonies &amp; Protocol</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Precision documentation for institutional records and official press releases.</p>
+                <span class="eyebrow text-[#C9A556]">Defense</span>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Tactical &amp; Official Ceremonies</p>
+                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Command changes, field exercises, and military honors.</p>
               </div>
             </div>
 
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Campaign Imagery', 'Visual assets developed for social media initiatives and awareness campaigns.')">
+            <div class="gallery-item cursor-pointer group" onclick="openModal('Campaign Imagery', 'Visual assets developed for strategic public affairs campaigns.')">
               <div class="img-placeholder">
                 <i data-lucide="image" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Campaign Imagery</p>
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Campaign Imagery</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Strategic Visual Content</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Creating tailored visual assets for digital campaigns like Training Tuesday.</p>
+                <span class="eyebrow text-[#C9A556]">Strategy</span>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Campaign Visuals</p>
+                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Custom visuals tailored for multi-platform public information campaigns.</p>
               </div>
             </div>
 
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Multimedia Production', 'Integrated photography, graphics, and video production.')">
+            <div class="gallery-item cursor-pointer group" onclick="openModal('Multimedia Production', 'Video production, audio scripting, and digital assets.')">
               <div class="img-placeholder">
-                <i data-lucide="film" class="h-10 w-10 text-[#C9A556] mb-2"></i>
+                <i data-lucide="video" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Multimedia Production</p>
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Multimedia Production</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Multi-Channel Visuals</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Combining photo, video, and design for digital newsrooms and platforms.</p>
+                <span class="eyebrow text-[#C9A556]">Multimedia</span>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Video &amp; Digital Media</p>
+                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Video editing, scriptwriting, and digital content distribution.</p>
               </div>
             </div>
 
@@ -654,154 +646,123 @@
         </div>
       </section>
 
-      <!-- Web, Digital & Communication Operations Section -->
+      <!-- Web & Operations Section -->
       <section id="operations" class="bg-[#2D4D36] text-[#EAE5DB]">
         <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="grid gap-8 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+          <div class="grid gap-6 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
             <div>
-              <p class="eyebrow text-[#C9A556]">Execution &amp; Management</p>
-              <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Web, Digital &amp; Communication Operations</h2>
+              <p class="eyebrow text-[#C9A556]">Digital Systems &amp; Logistics</p>
+              <h2 class="cinzel mt-4 text-4xl leading-tight">Web &amp; Program Operations</h2>
             </div>
             <p class="text-base font-light leading-relaxed text-[#EAE5DBcc]">
-              Amanda works across both communication and execution. She can develop the message, create the content, build or manage the platform, coordinate the people involved, and keep the project moving from idea to delivery.
+              Effective communication requires robust operational infrastructure. Amanda manages end-to-end digital publishing, CMS administration, communication workflows, and cross-functional team coordination.
             </p>
           </div>
 
-          <div class="mt-14 grid gap-10 lg:grid-cols-2">
-            
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
             <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
-              <div class="flex items-center gap-3 mb-6">
-                <i data-lucide="code" class="h-6 w-6 text-[#C9A556]"></i>
-                <h3 class="cinzel text-2xl text-[#EAE5DB]">Web &amp; Digital Capabilities</h3>
-              </div>
-              
-              <ul class="grid grid-cols-2 gap-3 text-sm font-light text-[#EAE5DBcc]">
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> WordPress</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> SharePoint</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Content Management Systems</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Basic HTML &amp; CSS</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> SEO Fundamentals</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Google Analytics</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Digital Publishing</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Social Media Management</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Email Campaign Tools</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Website Builds</li>
-              </ul>
+              <i data-lucide="globe" class="h-10 w-10 text-[#C9A556] mb-4"></i>
+              <h3 class="cinzel text-xl text-[#EAE5DB]">Digital Publishing &amp; CMS</h3>
+              <p class="mt-3 text-sm font-light text-[#EAE5DBcc] leading-relaxed">
+                Experience managing enterprise CMS platforms, maintaining digital publishing standards, ensuring Section 508 accessibility compliance, and structuring web layouts.
+              </p>
             </div>
 
             <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
-              <div class="flex items-center gap-3 mb-6">
-                <i data-lucide="workflow" class="h-6 w-6 text-[#C9A556]"></i>
-                <h3 class="cinzel text-2xl text-[#EAE5DB]">Communication Operations</h3>
-              </div>
-              
-              <ul class="grid grid-cols-2 gap-3 text-sm font-light text-[#EAE5DBcc]">
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Editorial Calendars</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Campaign Coordination</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Community Relations</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Stakeholder Engagement</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Event Planning &amp; Execution</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Training Materials</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Presentation Development</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Knowledge Management</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> Content Archives</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-[#C9A556]"></i> After-Action Reporting</li>
-              </ul>
+              <i data-lucide="workflow" class="h-10 w-10 text-[#C9A556] mb-4"></i>
+              <h3 class="cinzel text-xl text-[#EAE5DB]">Workflow Optimization</h3>
+              <p class="mt-3 text-sm font-light text-[#EAE5DBcc] leading-relaxed">
+                Streamlining editorial approval processes, establishing content calendars, coordinating cross-agency public affairs, and managing digital asset distribution pipelines.
+              </p>
             </div>
 
-          </div>
-
-          <div class="mt-12 border-t border-[#c9a55655] pt-10">
-            <p class="eyebrow text-[#C9A556] mb-4">Verified Operational Examples</p>
-            
-            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <div class="border-l-2 border-[#C9A556] pl-4">
-                <h4 class="cinzel text-lg text-[#EAE5DB]">Annual Post Guide Production</h4>
-                <p class="text-xs text-[#EAE5DBaa] mt-1">Comprehensive publication editing, layout coordination, and installation guide management.</p>
-              </div>
-
-              <div class="border-l-2 border-[#C9A556] pl-4">
-                <h4 class="cinzel text-lg text-[#EAE5DB]">Leadership Award Program</h4>
-                <p class="text-xs text-[#EAE5DBaa] mt-1">Coordinated program involving more than 100 students across more than 15 school districts.</p>
-              </div>
-
-              <div class="border-l-2 border-[#C9A556] pl-4">
-                <h4 class="cinzel text-lg text-[#EAE5DB]">Public-Facing Events</h4>
-                <p class="text-xs text-[#EAE5DBaa] mt-1">Logistics, public affairs coverage, and execution for more than 200 coordinated events.</p>
-              </div>
-
-              <div class="border-l-2 border-[#C9A556] pl-4">
-                <h4 class="cinzel text-lg text-[#EAE5DB]">Recurring Digital Campaigns</h4>
-                <p class="text-xs text-[#EAE5DBaa] mt-1">Managed campaigns including <em>Training Tuesday</em>, <em>Why I Serve</em>, <em>Soldier Spotlight</em>, and <em>Civilian Q&amp;A</em>.</p>
-              </div>
+            <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
+              <i data-lucide="layers" class="h-10 w-10 text-[#C9A556] mb-4"></i>
+              <h3 class="cinzel text-xl text-[#EAE5DB]">Program Logistics</h3>
+              <p class="mt-3 text-sm font-light text-[#EAE5DBcc] leading-relaxed">
+                Planning and executing complex outreach initiatives, coordinating cross-functional volunteer teams, and aligning communication operations with command objectives.
+              </p>
             </div>
           </div>
-
         </div>
       </section>
 
       <!-- Contact Section -->
       <section id="contact" class="bg-[#231F20] text-[#EAE5DB]">
         <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="max-w-3xl">
-            <p class="eyebrow">Direct Contact</p>
-            <h2 class="display mt-4 text-4xl leading-tight sm:text-6xl">Amanda Sullivan</h2>
-            
-            <p class="cinzel mt-4 text-lg text-[#C9A556]">
-              Strategic Communication • Writing • Photography • Digital Media • Program Operations
-            </p>
-            
-            <p class="mt-6 text-base font-light leading-relaxed text-[#EAE5DBcc] sm:text-lg">
-              Have a story to tell, a message to clarify, or an idea that needs a place in the world? Let’s bring it to life.
-            </p>
+          <div class="grid gap-12 lg:grid-cols-2">
+            <div>
+              <p class="eyebrow text-[#C9A556]">Get In Touch</p>
+              <h2 class="cinzel mt-4 text-4xl sm:text-5xl leading-tight">Let’s Connect</h2>
+              <p class="mt-6 text-base font-light text-[#EAE5DBcc] leading-relaxed max-w-lg">
+                Whether you're looking for strategic communication leadership, qualitative research execution, high-impact photojournalism, or operational management—I'd love to discuss how we can work together.
+              </p>
 
-            <div class="mt-10 flex flex-wrap items-center gap-6">
-              <a href="mailto:Amanda.l.sullivan@outlook.com" class="button-main">
-                <i data-lucide="mail" class="h-4 w-4"></i>
-                <span>Amanda.l.sullivan@outlook.com</span>
-              </a>
-
-              <a href="resume.pdf" target="_blank" rel="noopener" class="button-outline">
-                <i data-lucide="file-text" class="h-4 w-4"></i>
-                <span>View Résumé PDF</span>
-              </a>
+              <div class="mt-8 space-y-4 text-sm font-light">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="mail" class="h-5 w-5 text-[#C9A556]"></i>
+                  <a href="mailto:amandalsullivan@example.com" class="hover:text-[#C9A556] transition">amandalsullivan@example.com</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="linkedin" class="h-5 w-5 text-[#C9A556]"></i>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener" class="hover:text-[#C9A556] transition">LinkedIn Profile</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="map-pin" class="h-5 w-5 text-[#C9A556]"></i>
+                  <span>Available for Remote &amp; On-Site Work</span>
+                </div>
+              </div>
             </div>
 
-            <p class="mt-8 text-xs text-[#EAE5DBaa]">
-              Direct email communication preferred for consulting, editorial projects, and operational inquiries.
-            </p>
+            <div class="bg-[#1a1819] p-8 border border-[#c9a55633]">
+              <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message feature ready.');">
+                <div>
+                  <label for="name" class="block text-xs uppercase tracking-wider text-[#C9A556] mb-2 font-semibold">Name</label>
+                  <input type="text" id="name" required class="w-full bg-[#231F20] border border-[#c9a55644] px-4 py-3 text-sm text-[#EAE5DB] focus:outline-none focus:border-[#C9A556]">
+                </div>
+                <div>
+                  <label for="email" class="block text-xs uppercase tracking-wider text-[#C9A556] mb-2 font-semibold">Email</label>
+                  <input type="email" id="email" required class="w-full bg-[#231F20] border border-[#c9a55644] px-4 py-3 text-sm text-[#EAE5DB] focus:outline-none focus:border-[#C9A556]">
+                </div>
+                <div>
+                  <label for="message" class="block text-xs uppercase tracking-wider text-[#C9A556] mb-2 font-semibold">Message</label>
+                  <textarea id="message" rows="4" required class="w-full bg-[#231F20] border border-[#c9a55644] px-4 py-3 text-sm text-[#EAE5DB] focus:outline-none focus:border-[#C9A556]"></textarea>
+                </div>
+                <button type="submit" class="button-main w-full">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-[#c9a55633] bg-[#181617] py-8 text-xs text-[#EAE5DB88]">
-      <div class="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>&copy; 2026 Amanda Sullivan. Strategic Communication &amp; Program Operations.</p>
-        <p class="cinzel text-[#C9A556]">Your story. Your way.</p>
+    <footer class="border-t border-[#c9a55633] bg-[#1a1819] py-8 text-xs font-light text-[#EAE5DBaa]">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 sm:flex-row lg:px-10">
+        <p>© Amanda Sullivan. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#home" class="hover:text-[#C9A556] transition">Back to Top ↑</a>
+        </div>
       </div>
     </footer>
+
   </div>
 
-  <div id="photo-modal" class="modal" onclick="closeModal()">
-    <div class="bg-[#231F20] border border-[#C9A556] p-8 max-w-lg w-full text-center relative" onclick="event.stopPropagation()">
-      <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-[#EAE5DB] hover:text-[#C9A556]">
-        <i data-lucide="x" class="h-6 w-6"></i>
-      </button>
-      <div class="img-placeholder mb-6">
-        <i data-lucide="image" class="h-12 w-12 text-[#C9A556] mb-2"></i>
-        <span class="text-xs uppercase text-[#C9A556]">[ High-Resolution Visual Asset ]</span>
-      </div>
-      <h3 id="modal-title" class="cinzel text-2xl text-[#EAE5DB]">Category</h3>
-      <p id="modal-caption" class="mt-3 text-sm font-light leading-relaxed text-[#EAE5DBcc]">Caption detail...</p>
-      <button type="button" onclick="closeModal()" class="button-outline mt-6">Close Preview</button>
+  <!-- Modal Component for Gallery -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <div class="relative max-w-3xl w-full bg-[#231F20] border border-[#C9A556] p-8 text-[#EAE5DB]" onclick="event.stopPropagation()">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-[#C9A556] hover:text-[#EAE5DB] text-xl font-bold">&times;</button>
+      <h3 id="modal-title" class="cinzel text-2xl text-[#C9A556]"></h3>
+      <p id="modal-desc" class="mt-4 text-sm font-light text-[#EAE5DBcc] leading-relaxed"></p>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script>
+    // Initialize Lucide Icons
     lucide.createIcons();
 
+    // Mobile Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -813,14 +774,15 @@
       });
     }
 
-    function openModal(title, caption) {
+    // Gallery Modal Functions
+    function openModal(title, desc) {
       document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-caption').innerText = caption;
-      document.getElementById('photo-modal').classList.add('active');
+      document.getElementById('modal-desc').innerText = desc;
+      document.getElementById('image-modal').classList.add('active');
     }
 
     function closeModal() {
-      document.getElementById('photo-modal').classList.remove('active');
+      document.getElementById('image-modal').classList.remove('active');
     }
   </script>
 </body>
