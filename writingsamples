@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Amanda Sullivan</title>
+  <meta name="description" content="A selection of news reporting, feature stories, photojournalism narratives, and strategic writing by Amanda Sullivan.">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  
+  <!-- Fonts: Cinzel Decorative, Cinzel, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --forest: #2D4D36;
+      --charcoal: #231F20;
+      --gold: #C9A556;
+      --ivory: #EAE5DB;
+      --forest-deep: #203A29;
+      --paper: #F1EDE5;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      color: var(--ivory);
+      background: var(--charcoal);
+      line-height: 1.7;
+    }
+
+    .page-shell { width: 100%; overflow: hidden; }
+    .cinzel { font-family: "Cinzel", serif; }
+    .display { font-family: "Cinzel Decorative", serif; }
+    
+    .eyebrow {
+      color: var(--gold);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      color: rgba(234,229,219,.85);
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: color .2s ease;
+    }
+
+    .nav-link:hover, .nav-link:focus { color: var(--gold); }
+    .nav-link:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, article:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    /* Modal / Expanded View */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(15,14,14,0.95);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal.active { display: flex; }
+
+    /* Writing Item Cards */
+    .writing-item {
+      background: #181617;
+      border: 1px solid rgba(201,165,86,0.2);
+      transition: border-color .25s ease, transform .25s ease;
+    }
+    .writing-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 border-b border-[#c9a55633] bg-[#231f20f5] backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10" aria-label="Primary navigation">
+        
+        <a href="index.html" class="cinzel text-lg tracking-wider text-[#EAE5DB] transition hover:text-[#C9A556]" aria-label="Amanda Sullivan Home">
+          Amanda Sullivan<span class="text-[#C9A556] font-bold">.</span>
+        </a>
+
+        <div class="hidden items-center gap-6 lg:flex">
+          <a class="nav-link" href="index.html#work">Work</a> 
+          <a class="nav-link" href="index.html#about">About</a> 
+          <a class="nav-link text-[#C9A556]" href="writing.html">Writing</a> 
+          <a class="nav-link" href="photography.html">Photography</a> 
+          <a class="nav-link" href="index.html#operations">Web &amp; Operations</a> 
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </div>
+        
+        <button id="menu-toggle" type="button" class="text-[#EAE5DB] hover:text-[#C9A556] lg:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"> 
+          <i data-lucide="menu" class="h-6 w-6"></i> 
+        </button>
+      </nav>
+      
+      <div id="mobile-menu" class="hidden border-t border-[#c9a55633] bg-[#231F20] px-6 py-6 lg:hidden">
+        <div class="flex flex-col gap-4">
+          <a class="nav-link text-base" href="index.html#work">Work</a> 
+          <a class="nav-link text-base" href="index.html#about">About</a> 
+          <a class="nav-link text-base text-[#C9A556]" href="writing.html">Writing</a> 
+          <a class="nav-link text-base" href="photography.html">Photography</a> 
+          <a class="nav-link text-base" href="index.html#operations">Web &amp; Operations</a> 
+          <a class="nav-link text-base" href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Page Title & Introduction Section -->
+      <section class="border-b border-[#c9a55633] bg-gradient-to-b from-[#191718] to-[#231F20] py-16 lg:py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <p class="eyebrow">Portfolio Collection</p>
+          <h1 class="cinzel mt-3 text-4xl sm:text-5xl lg:text-6xl text-[#EAE5DB]">
+            Writing Samples
+          </h1>
+          <p class="mt-4 max-w-3xl text-base sm:text-lg font-light text-[#EAE5DBcc] leading-relaxed">
+            A selection of news reporting, feature stories, executive communications, and investigative storytelling.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 1: NEWS -->
+      <section id="news" class="py-16 lg:py-20 border-b border-[#c9a55633] bg-[#231F20]">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          
+          <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#c9a55622] pb-6">
+            <div>
+              <p class="eyebrow">Journalism &amp; Coverage</p>
+              <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">News</h2>
+            </div>
+            <p class="text-xs uppercase tracking-widest text-[#C9A556]">3 Articles</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+            <!-- News Item 01 -->
+            <article class="writing-item cursor-pointer p-6 flex flex-col justify-between" tabindex="0"
+              data-category="News Reporting"
+              data-title="Add News Article Headline Here"
+              data-meta="Publication Name • Date / Location"
+              data-body="Add full news text, official release excerpt, or article summary here. You can outline the key reporting facts, quotes, or strategic implications of the story in this area.">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="text-[#C9A556] font-mono tracking-wider uppercase">[ News ]</span>
+                  <span class="text-[#EAE5DBaa] text-[11px]">Publication / Date</span>
+                </div>
+                <h3 class="cinzel text-xl text-[#EAE5DB] leading-snug">Add News Article Headline Here</h3>
+                <p class="mt-3 text-sm font-light text-[#EAE5DBcc] line-clamp-3 leading-relaxed">
+                  Add a brief summary or opening excerpt from the news article here to preview the coverage.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55622] flex items-center justify-between text-xs font-semibold text-[#C9A556]">
+                <span>READ SAMPLE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </div>
+            </article>
+
+            <!-- News Item 02 -->
+            <article class="writing-item cursor-pointer p-6 flex flex-col justify-between" tabindex="0"
+              data-category="News Reporting"
+              data-title="Add News Article Headline Here"
+              data-meta="Publication Name • Date / Location"
+              data-body="Add full news text, official release excerpt, or article summary here. You can outline the key reporting facts, quotes, or strategic implications of the story in this area.">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="text-[#C9A556] font-mono tracking-wider uppercase">[ News ]</span>
+                  <span class="text-[#EAE5DBaa] text-[11px]">Publication / Date</span>
+                </div>
+                <h3 class="cinzel text-xl text-[#EAE5DB] leading-snug">Add News Article Headline Here</h3>
+                <p class="mt-3 text-sm font-light text-[#EAE5DBcc] line-clamp-3 leading-relaxed">
+                  Add a brief summary or opening excerpt from the news article here to preview the coverage.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55622] flex items-center justify-between text-xs font-semibold text-[#C9A556]">
+                <span>READ SAMPLE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </div>
+            </article>
+
+            <!-- News Item 03 -->
+            <article class="writing-item cursor-pointer p-6 flex flex-col justify-between" tabindex="0"
+              data-category="News Reporting"
+              data-title="Add News Article Headline Here"
+              data-meta="Publication Name • Date / Location"
+              data-body="Add full news text, official release excerpt, or article summary here. You can outline the key reporting facts, quotes, or strategic implications of the story in this area.">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="text-[#C9A556] font-mono tracking-wider uppercase">[ News ]</span>
+                  <span class="text-[#EAE5DBaa] text-[11px]">Publication / Date</span>
+                </div>
+                <h3 class="cinzel text-xl text-[#EAE5DB] leading-snug">Add News Article Headline Here</h3>
+                <p class="mt-3 text-sm font-light text-[#EAE5DBcc] line-clamp-3 leading-relaxed">
+                  Add a brief summary or opening excerpt from the news article here to preview the coverage.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55622] flex items-center justify-between text-xs font-semibold text-[#C9A556]">
+                <span>READ SAMPLE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: FEATURES -->
+      <section id="features" class="py-16 lg:py-24 bg-[#1e1b1c]">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          
+          <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#c9a55622] pb-6">
+            <div>
+              <p class="eyebrow">Narrative &amp; In-Depth</p>
+              <h2 class="cinzel mt-2 text-3xl sm:text-4xl text-[#EAE5DB]">Features</h2>
+            </div>
+            <p class="text-xs uppercase tracking-widest text-[#C9A556]">3 Articles</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+            <!-- Feature Item 01 -->
+            <article class="writing-item cursor-pointer p-6 flex flex-col justify-between" tabindex="0"
+              data-category="Feature Story"
+              data-title="Add Feature Headline Here"
+              data-meta="Publication Name • Date / Location"
+              data-body="Add long-form feature narrative, human-interest profile, or deep-dive article body text here. Detail the human element, context, and operational impact of the subject.">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="text-[#C9A556] font-mono tracking-wider uppercase">[ Feature ]</span>
+                  <span class="text-[#EAE5DBaa] text-[11px]">Publication / Date</span>
+                </div>
+                <h3 class="cinzel text-xl text-[#EAE5DB] leading-snug">Add Feature Headline Here</h3>
+                <p class="mt-3 text-sm font-light text-[#EAE5DBcc] line-clamp-3 leading-relaxed">
+                  Add a brief summary or opening excerpt from the feature story here to highlight narrative depth.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55622] flex items-center justify-between text-xs font-semibold text-[#C9A556]">
+                <span>READ SAMPLE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </div>
+            </article>
+
+            <!-- Feature Item 02 -->
+            <article class="writing-item cursor-pointer p-6 flex flex-col justify-between" tabindex="0"
+              data-category="Feature Story"
+              data-title="Add Feature Headline Here"
+              data-meta="Publication Name • Date / Location"
+              data-body="Add long-form feature narrative, human-interest profile, or deep-dive article body text here. Detail the human element, context, and operational impact of the subject.">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="text-[#C9A556] font-mono tracking-wider uppercase">[ Feature ]</span>
+                  <span class="text-[#EAE5DBaa] text-[11px]">Publication / Date</span>
+                </div>
+                <h3 class="cinzel text-xl text-[#EAE5DB] leading-snug">Add Feature Headline Here</h3>
+                <p class="mt-3 text-sm font-light text-[#EAE5DBcc] line-clamp-3 leading-relaxed">
+                  Add a brief summary or opening excerpt from the feature story here to highlight narrative depth.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55622] flex items-center justify-between text-xs font-semibold text-[#C9A556]">
+                <span>READ SAMPLE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </div>
+            </article>
+
+            <!-- Feature Item 03 -->
+            <article class="writing-item cursor-pointer p-6 flex flex-col justify-between" tabindex="0"
+              data-category="Feature Story"
+              data-title="Add Feature Headline Here"
+              data-meta="Publication Name • Date / Location"
+              data-body="Add long-form feature narrative, human-interest profile, or deep-dive article body text here. Detail the human element, context, and operational impact of the subject.">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                  <span class="text-[#C9A556] font-mono tracking-wider uppercase">[ Feature ]</span>
+                  <span class="text-[#EAE5DBaa] text-[11px]">Publication / Date</span>
+                </div>
+                <h3 class="cinzel text-xl text-[#EAE5DB] leading-snug">Add Feature Headline Here</h3>
+                <p class="mt-3 text-sm font-light text-[#EAE5DBcc] line-clamp-3 leading-relaxed">
+                  Add a brief summary or opening excerpt from the feature story here to highlight narrative depth.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55622] flex items-center justify-between text-xs font-semibold text-[#C9A556]">
+                <span>READ SAMPLE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Expanded Article Reader Modal -->
+    <div id="article-modal" class="modal" role="dialog" aria-modal="true" aria-label="Expanded writing sample reader">
+      <div class="relative max-w-3xl w-full max-h-[85vh] flex flex-col bg-[#181617] border border-[#C9A556] p-6 sm:p-10 overflow-y-auto" onclick="event.stopPropagation()">
+        
+        <button type="button" id="modal-close" aria-label="Close reader" class="absolute top-4 right-4 text-[#EAE5DB] hover:text-[#C9A556] p-2 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A556]">
+          <i data-lucide="x" class="h-6 w-6"></i>
+        </button>
+        
+        <div class="mb-6 border-b border-[#c9a55633] pb-4">
+          <p id="modal-category" class="eyebrow">Category</p>
+          <h2 id="modal-title" class="cinzel text-2xl sm:text-3xl text-[#EAE5DB] mt-2 leading-snug">Article Title</h2>
+          <p id="modal-meta" class="text-xs font-mono text-[#C9A556] mt-2">Publication • Date</p>
+        </div>
+
+        <div id="modal-body" class="text-sm font-light leading-relaxed text-[#EAE5DBcc] space-y-4">
+          <!-- Article full text inserts here dynamically -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#c9a55633] bg-[#181617] py-8 text-xs text-[#EAE5DB88]">
+      <div class="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Amanda Sullivan. Strategic Communication &amp; Program Operations.</p>
+        <p class="cinzel text-[#C9A556]">Your story. Your way.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    /* Mobile Navigation Menu Toggle */
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    /* Article Reader Modal Operations */
+    const modal = document.getElementById('article-modal');
+    const modalCategory = document.getElementById('modal-category');
+    const modalTitle = document.getElementById('modal-title');
+    const modalMeta = document.getElementById('modal-meta');
+    const modalBody = document.getElementById('modal-body');
+    const writingItems = document.querySelectorAll('.writing-item');
+
+    writingItems.forEach(item => {
+      function openModal() {
+        modalCategory.textContent = item.dataset.category || 'Writing Sample';
+        modalTitle.textContent = item.dataset.title || 'Untitled';
+        modalMeta.textContent = item.dataset.meta || '';
+        modalBody.innerHTML = `<p>${item.dataset.body || 'No content provided.'}</p>`;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      item.addEventListener('click', openModal);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal();
+        }
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
