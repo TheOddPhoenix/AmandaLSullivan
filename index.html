@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amanda Sullivan — Strategic Communication Portfolio</title>
-  <meta name="description" content="Portfolio of Amanda Sullivan — Award-winning communications professional, writer, photographer, and creative strategist specializing in strategic communication, digital media, and program operations.">
+  <meta name="description" content="Portfolio of Amanda Sullivan — Award-winning communications professional, writer, photographer, and creative strategist.">
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -65,7 +65,7 @@
     }
 
     .hero {
-      min-height: 75vh;
+      min-height: 70vh;
       position: relative;
       overflow: hidden;
       background: linear-gradient(135deg, #191718 0%, #231F20 45%, #2D4D36 100%);
@@ -97,7 +97,7 @@
     .hero-title {
       font-family: "Cinzel Decorative", serif;
       font-weight: 400;
-      font-size: clamp(3.2rem, 16vw, 5rem);
+      font-size: clamp(3.2rem, 14vw, 5rem);
       line-height: 1.05;
       letter-spacing: -0.01em;
       max-width: 1100px;
@@ -105,7 +105,7 @@
 
     @media (min-width: 1024px) {
       .hero-title {
-        font-size: clamp(4.5rem, 8vw, 7.25rem);
+        font-size: clamp(4.5rem, 8vw, 6.5rem);
       }
     }
 
@@ -152,7 +152,7 @@
 
     .gallery-item {
       position: relative;
-      min-height: 320px;
+      min-height: 300px;
       overflow: hidden;
       background: #181617;
       border: 1px solid rgba(201,165,86,0.2);
@@ -196,12 +196,12 @@
           Amanda Sullivan<span class="text-[#C9A556] font-bold">.</span>
         </a>
 
+        <!-- Updated Navigation Links -->
         <div class="hidden items-center gap-6 lg:flex">
-          <a class="nav-link" href="#work">Work</a> 
-          <a class="nav-link" href="#about">About</a> 
-          <a class="nav-link" href="#writing">Writing</a> 
-          <a class="nav-link" href="#photography">Photography</a> 
-          <a class="nav-link" href="#operations">Web &amp; Operations</a> 
+          <a class="nav-link" href="#outreach">Community Outreach</a> 
+          <a class="nav-link" href="#photography">Photojournalism</a> 
+          <a class="nav-link" href="#writing">Writing Samples</a> 
+          <a class="nav-link" href="#media">Graphics &amp; Video</a> 
           <a class="nav-link" href="#contact">Contact</a>
         </div>
         
@@ -212,18 +212,17 @@
       
       <div id="mobile-menu" class="hidden border-t border-[#c9a55633] bg-[#231F20] px-6 py-6 lg:hidden">
         <div class="flex flex-col gap-4">
-          <a class="nav-link text-base" href="#work">Work</a> 
-          <a class="nav-link text-base" href="#about">About</a> 
-          <a class="nav-link text-base" href="#writing">Writing</a> 
-          <a class="nav-link text-base" href="#photography">Photography</a> 
-          <a class="nav-link text-base" href="#operations">Web &amp; Operations</a> 
+          <a class="nav-link text-base" href="#outreach">Community Outreach</a> 
+          <a class="nav-link text-base" href="#photography">Photojournalism</a> 
+          <a class="nav-link text-base" href="#writing">Writing Samples</a> 
+          <a class="nav-link text-base" href="#media">Graphics &amp; Video</a> 
           <a class="nav-link text-base" href="#contact">Contact</a>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Homepage Hero Section -->
+      <!-- Hero Section -->
       <section id="home" class="hero flex items-center py-16 lg:py-24">
         <div class="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10">
           
@@ -245,35 +244,27 @@
             Your story. Your way.
           </p>
           
-          <p class="font-['Montserrat'] font-light text-base sm:text-[18px] leading-relaxed text-[#EAE5DBcc] mt-5 max-w-[760px]">
-            I turn complex ideas into clear, compelling communication—and build the content, systems, and digital spaces that bring them to life.
-          </p>
-          
           <div class="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
-            <a class="button-main" href="#work">
-              <span>View Selected Work</span>
+            <a class="button-main" href="#outreach">
+              <span>Explore Portfolio</span>
               <i data-lucide="arrow-down-right" class="h-4 w-4"></i>
             </a> 
             <a class="button-outline" href="resume.pdf" target="_blank" rel="noopener">
               <span>Download Résumé</span>
               <i data-lucide="file-text" class="h-4 w-4"></i>
             </a> 
-            <a class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider text-[#EAE5DB] uppercase transition hover:text-[#C9A556] py-2 px-1" href="#contact">
-              <span>Contact</span>
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </a>
           </div>
 
         </div>
       </section>
 
-      <!-- Verified Credibility Strip -->
+      <!-- Credibility Strip -->
       <section class="border-y border-[#c9a55644] bg-[#231F20]">
         <div class="mx-auto max-w-7xl px-6 py-10 lg:px-10">
           <div class="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4">
             <div>
               <p class="cinzel text-3xl font-semibold text-[#C9A556] sm:text-4xl">9+ years</p>
-              <p class="mt-2 text-xs font-normal leading-5 text-[#EAE5DBcc]">Communication, public affairs, multimedia, and operations experience</p>
+              <p class="mt-2 text-xs font-normal leading-5 text-[#EAE5DBcc]">Communication, public affairs &amp; operations experience</p>
             </div>
             <div>
               <p class="cinzel text-3xl font-semibold text-[#C9A556] sm:text-4xl">2,400+</p>
@@ -281,7 +272,7 @@
             </div>
             <div>
               <p class="cinzel text-3xl font-semibold text-[#C9A556] sm:text-4xl">150+</p>
-              <p class="mt-2 text-xs font-normal leading-5 text-[#EAE5DBcc]">Published news and feature articles</p>
+              <p class="mt-2 text-xs font-normal leading-5 text-[#EAE5DBcc]">Published news &amp; feature articles</p>
             </div>
             <div>
               <p class="cinzel text-3xl font-semibold text-[#C9A556] sm:text-4xl">1M+</p>
@@ -291,258 +282,64 @@
         </div>
       </section>
 
-      <!-- Featured Selected Work Section -->
-      <section id="work" class="bg-[#EAE5DB] text-[#231F20]">
-        <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="grid gap-6 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+      <!-- SECTION 1: COMMUNITY ENGAGEMENT & OUTREACH -->
+      <section id="outreach" class="bg-[#EAE5DB] text-[#231F20] py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <div class="grid gap-6 lg:grid-cols-[.9fr_1.3fr] lg:items-end mb-14">
             <div>
-              <p class="eyebrow text-[#2D4D36]">Verified Portfolio</p>
-              <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Selected Work</h2>
+              <p class="eyebrow text-[#2D4D36]">Stakeholder Relations &amp; Programs</p>
+              <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Community Engagement &amp; Outreach</h2>
             </div>
             <p class="text-base font-light leading-relaxed text-[#231F20cc]">
-              Strategic communication, qualitative research, community relations, and large-scale program operations executed with empirical grounding and structural rigor.
+              Building bridges between military installations, civilian institutions, educators, and local communities through coordinated campaign logistics, volunteer mobilization, and public relations initiatives.
             </p>
           </div>
           
-          <div class="mt-14 space-y-16">
-            
-            <!-- Case Study 1: Read Across America -->
-            <article class="case-card overflow-hidden bg-[#231F20] text-[#EAE5DB]">
-              <div class="grid lg:grid-cols-[1.1fr_1.25fr]">
-                <div class="p-8 sm:p-10 order-2 lg:order-1">
-                  <p class="eyebrow">Community Relations • Stakeholder Engagement • Program Operations</p>
-                  <h3 class="cinzel mt-3 text-3xl leading-tight">Read Across America Community Outreach</h3>
-                  
-                  <div class="mt-6 space-y-4 text-sm font-light leading-relaxed text-[#EAE5DBcc]">
-                    <p><strong>Challenge:</strong> Coordinate a large installation-wide literacy outreach effort connecting service members with schools and children throughout the surrounding community.</p>
-                    <p><strong>Audience:</strong> Military volunteers, regional school administrators, educators, elementary students, and community partners.</p>
-                    <p><strong>Amanda’s Role:</strong> Amanda helped coordinate volunteers, participating schools, communication, scheduling, outreach, and program execution.</p>
-                    <p><strong>Strategy &amp; Process:</strong> Designed clear operational workflows, volunteer orientation guides, cross-agency communication schedules, and event coverage plans.</p>
-                  </div>
-
-                  <div class="mt-6 border-t border-[#c9a55666] pt-5">
-                    <p class="text-xs uppercase font-semibold text-[#C9A556] tracking-wider mb-2">Verified Outcomes</p>
-                    <ul class="space-y-2 text-sm text-[#EAE5DBcc]">
-                      <li class="case-detail">More than 360 Soldier volunteers mobilized</li>
-                      <li class="case-detail">Approximately 18,000 children reached across the region</li>
-                      <li class="case-detail">Approximately 940 classrooms engaged</li>
-                      <li class="case-detail">Seamless cross-functional coordination among military and community stakeholders</li>
-                    </ul>
-                  </div>
-
-                  <div class="mt-6 bg-[#1a1819] p-4 border-l-2 border-[#C9A556]">
-                    <p class="text-xs text-[#EAE5DBaa]"><strong>What it demonstrates:</strong> Large-scale program operations, cross-stakeholder mobilization, logistical coordination, and community relations.</p>
-                  </div>
+          <!-- Outreach Case Study Card -->
+          <article class="case-card overflow-hidden bg-[#231F20] text-[#EAE5DB]">
+            <div class="grid lg:grid-cols-[1.1fr_1.25fr]">
+              <div class="p-8 sm:p-10 order-2 lg:order-1">
+                <p class="eyebrow">Community Relations • Volunteer Logistics • Public Affairs</p>
+                <h3 class="cinzel mt-3 text-3xl leading-tight text-[#C9A556]">Read Across America Community Outreach</h3>
+                
+                <div class="mt-6 space-y-4 text-sm font-light leading-relaxed text-[#EAE5DBcc]">
+                  <p><strong>Challenge:</strong> Coordinate a large installation-wide literacy outreach effort connecting service members with schools and children throughout the surrounding region.</p>
+                  <p><strong>Audience:</strong> Military volunteers, regional school administrators, educators, elementary students, and community leaders.</p>
+                  <p><strong>Amanda’s Role:</strong> Coordinated volunteer onboarding, participating school networks, internal communication, scheduling, media coverage, and on-site program execution.</p>
                 </div>
 
-                <div class="case-photo-wrap order-1 lg:order-2">
-                  <div class="img-placeholder text-[#EAE5DB]">
-                    <i data-lucide="users" class="h-12 w-12 text-[#C9A556] mb-3"></i>
-                    <p class="cinzel text-lg text-[#EAE5DB]">Read Across America Outreach</p>
-                    <p class="text-xs text-[#EAE5DBaa] mt-1">Community Relations &amp; Volunteer Logistics</p>
-                    <span class="mt-4 text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-3 py-1">
-                      [ Image Space Reserved: Outreach Event Asset ]
-                    </span>
-                  </div>
+                <div class="mt-6 border-t border-[#c9a55666] pt-5">
+                  <p class="text-xs uppercase font-semibold text-[#C9A556] tracking-wider mb-2">Verified Impact &amp; Metrics</p>
+                  <ul class="space-y-2 text-sm text-[#EAE5DBcc]">
+                    <li class="case-detail">Mobilized over 360 Soldier volunteers</li>
+                    <li class="case-detail">Reached approximately 18,000 children across regional schools</li>
+                    <li class="case-detail">Engaged 940 classrooms with structured volunteer schedules</li>
+                  </ul>
                 </div>
               </div>
-            </article>
 
-            <!-- Case Study 2: AI in the Workplace Focus-Group Project -->
-            <article class="case-card overflow-hidden bg-[#F5F1E9]">
-              <div class="grid lg:grid-cols-[1.25fr_1.1fr]">
-                <div class="case-photo-wrap">
-                  <div class="img-placeholder text-[#EAE5DB]">
-                    <i data-lucide="file-search" class="h-12 w-12 text-[#C9A556] mb-3"></i>
-                    <p class="cinzel text-lg text-[#EAE5DB]">AI in the Workplace Research</p>
-                    <p class="text-xs text-[#EAE5DBaa] mt-1">Qualitative Focus-Group Study &amp; Analysis</p>
-                    <span class="mt-4 text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-3 py-1">
-                      [ Image Space Reserved: Academic Research Report Cover / Diagram ]
-                    </span>
-                  </div>
-                </div>
-
-                <div class="p-8 sm:p-10">
-                  <p class="eyebrow text-[#2D4D36]">Qualitative Research • Organizational Communication • Analysis</p>
-                  <h3 class="cinzel mt-3 text-3xl leading-tight">AI in the Workplace Focus-Group Project</h3>
-                  
-                  <div class="mt-6 space-y-4 text-sm font-light leading-relaxed text-[#231F20cc]">
-                    <p><strong>Challenge:</strong> Explore how professionals working in Department of Defense STEM environments understand the opportunities, concerns, and organizational implications of artificial intelligence in the workplace.</p>
-                    <p><strong>Audience:</strong> Academic research advisors, organizational leaders, and DoD STEM professionals.</p>
-                    <p><strong>Amanda’s Role:</strong> Recruited participants with comparable professional backgrounds, developed and used a moderator guide, moderated the focus group, reviewed and coded the transcript, grouped findings into themes, analyzed patterns across participant responses, prepared a formal report, and presented findings to the client.</p>
-                    <p><strong>Strategy &amp; Deliverables:</strong> Constructed qualitative inquiry protocols, executed structured group moderation, performed thematic coding analysis, and synthesized findings into an actionable report and executive slide deck.</p>
-                  </div>
-
-                  <div class="mt-6 border-t border-[#c9a55666] pt-5">
-                    <p class="text-xs uppercase font-semibold text-[#2D4D36] tracking-wider mb-2">Verified Outcome</p>
-                    <ul class="space-y-2 text-sm">
-                      <li class="case-detail">Academic client research project delivered with actionable empirical findings on organizational AI perception and communication gaps</li>
-                    </ul>
-                  </div>
-
-                  <div class="mt-6 bg-[#EAE5DB] p-4 border-l-2 border-[#2D4D36]">
-                    <p class="text-xs text-[#231F20bb]"><strong>What it demonstrates:</strong> Qualitative research rigor, thematic analysis, objective reporting, and strategic communication insights.</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="bg-[#2D4D36] text-[#EAE5DB]">
-        <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="grid gap-12 lg:grid-cols-[.35fr_1fr] lg:items-start">
-            
-            <div>
-              <p class="eyebrow text-[#C9A556]">Background</p>
-              <h2 class="cinzel mt-3 text-4xl leading-tight">About Amanda</h2>
-              
-              <div class="mt-6 overflow-hidden border border-[#C9A556] bg-[#203A29]">
-                <div class="p-8 text-center flex flex-col items-center justify-center min-h-[300px]">
-                  <i data-lucide="user" class="h-16 w-16 text-[#C9A556] mb-4"></i>
-                  <p class="cinzel text-base text-[#EAE5DB]">Amanda Sullivan</p>
-                  <span class="mt-2 text-[10px] tracking-widest uppercase text-[#C9A556]">
-                    [ Headshot Image Placeholder ]
+              <div class="case-photo-wrap order-1 lg:order-2">
+                <div class="img-placeholder text-[#EAE5DB]">
+                  <i data-lucide="users" class="h-12 w-12 text-[#C9A556] mb-3"></i>
+                  <p class="cinzel text-lg text-[#EAE5DB]">Read Across America</p>
+                  <p class="text-xs text-[#EAE5DBaa] mt-1">Installation-Wide Literacy Outreach</p>
+                  <span class="mt-4 text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-3 py-1">
+                    [ Image Space Reserved: Community Outreach Photo ]
                   </span>
                 </div>
               </div>
             </div>
-
-            <div class="space-y-6">
-              <p class="text-base font-light leading-relaxed text-[#EAE5DB]">
-                Amanda Sullivan is an award-winning communications professional with experience spanning public affairs, journalism, photography, multimedia production, organizational communication, digital content, stakeholder engagement, and program operations.
-              </p>
-              <p class="text-base font-light leading-relaxed text-[#EAE5DBcc]">
-                During her Department of the Army career, she translated complex missions and organizational priorities into communication that connected leaders, service members, families, media, and surrounding communities. Her work included strategic campaigns, crisis communication, feature writing, official photography, multimedia production, executive messaging, editorial planning, community outreach, digital publishing, and high-visibility events.
-              </p>
-              <p class="text-base font-light leading-relaxed text-[#EAE5DBcc]">
-                Amanda is completing a Bachelor of Arts in English with a concentration in Professional Communication and Journalism through the University of Maine at Presque Isle. Her work combines strategic thinking, operational experience, visual judgment, and a belief that effective communication should be clear, accurate, useful, and human.
-              </p>
-
-              <blockquote class="my-8 border-l-2 border-[#C9A556] pl-6 py-2 italic cinzel text-lg text-[#EAE5DB]">
-                “I have never been interested in communication that merely fills space. I want to understand what needs to be said, who needs to hear it, and what form will make it matter.”
-              </blockquote>
-
-              <div class="mt-10 border-t border-[#c9a55655] pt-8">
-                <p class="eyebrow text-[#C9A556]">Operational Principles</p>
-                <h3 class="cinzel mt-2 text-2xl">How I Work</h3>
-                
-                <ul class="mt-6 grid gap-4 sm:grid-cols-2">
-                  <li class="border-b border-[#eae5db22] pb-3 text-sm font-light">
-                    <strong class="font-semibold text-[#C9A556] block mb-1">Audience Intent:</strong> Understand the audience before creating the message.
-                  </li>
-                  <li class="border-b border-[#eae5db22] pb-3 text-sm font-light">
-                    <strong class="font-semibold text-[#C9A556] block mb-1">Defined Purpose:</strong> Connect communication directly to organizational goals.
-                  </li>
-                  <li class="border-b border-[#eae5db22] pb-3 text-sm font-light">
-                    <strong class="font-semibold text-[#C9A556] block mb-1">Clarity First:</strong> Translate complicated subjects without stripping away humanity.
-                  </li>
-                  <li class="border-b border-[#eae5db22] pb-3 text-sm font-light">
-                    <strong class="font-semibold text-[#C9A556] block mb-1">Format Precision:</strong> Choose the exact visual, text, or digital format required.
-                  </li>
-                  <li class="border-b border-[#eae5db22] pb-3 text-sm font-light">
-                    <strong class="font-semibold text-[#C9A556] block mb-1">Professional Rigor:</strong> Maintain accuracy, accessibility, and sound judgment.
-                  </li>
-                  <li class="border-b border-[#eae5db22] pb-3 text-sm font-light">
-                    <strong class="font-semibold text-[#C9A556] block mb-1">Evaluation:</strong> Evaluate whether communication achieved its intended result.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
+          </article>
         </div>
       </section>
 
-      <!-- Writing Section -->
-      <section id="writing" class="bg-[#EAE5DB] text-[#231F20]">
-        <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="grid gap-6 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+      <!-- SECTION 2: PHOTOJOURNALISM & PHOTOGRAPHY -->
+      <section id="photography" class="bg-[#231F20] text-[#EAE5DB] py-20 lg:py-28 border-t border-[#c9a55633]">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <div class="grid gap-8 lg:grid-cols-[1fr_1.2fr] mb-14">
             <div>
-              <p class="eyebrow text-[#2D4D36]">Editorial &amp; Journalism</p>
-              <h2 class="cinzel mt-4 text-4xl leading-tight">Writing &amp; Reporting</h2>
-            </div>
-            <p class="text-base font-light leading-relaxed text-[#231F20cc]">
-              Amanda authored more than 150 news and feature articles for <em>The Guidon</em>, <em>eGuidon</em>, <em>Army.mil</em>, and other official platforms. Her writing experience includes news coverage, feature stories, scripts, executive messaging, talking points, press releases, internal communication, FAQs, campaign content, and analytical reporting.
-            </p>
-          </div>
-
-          <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            
-            <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3633] flex flex-col justify-between">
-              <div>
-                <i data-lucide="newspaper" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
-                <h3 class="cinzel text-xl text-[#231F20]">News &amp; Feature Writing</h3>
-                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
-                  Human-interest feature writing, military exercise coverage, and official news reporting published across defense distribution channels.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">
-                  150+ Articles Published
-                </span>
-              </div>
-            </article>
-
-            <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3633] flex flex-col justify-between">
-              <div>
-                <i data-lucide="megaphone" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
-                <h3 class="cinzel text-xl text-[#231F20]">Strategic Communication</h3>
-                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
-                  Campaign messaging, press releases, public announcements, FAQs, and organizational policy explanations designed for clarity and trust.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">
-                  Official Publications
-                </span>
-              </div>
-            </article>
-
-            <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3633] flex flex-col justify-between">
-              <div>
-                <i data-lucide="file-text" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
-                <h3 class="cinzel text-xl text-[#231F20]">Scripts &amp; Executive Messaging</h3>
-                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
-                  Leadership talking points, remarks for official ceremonies, video narration scripts, and internal executive updates.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">
-                  Executive Preparedness
-                </span>
-              </div>
-            </article>
-
-            <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3633] flex flex-col justify-between">
-              <div>
-                <i data-lucide="binary" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
-                <h3 class="cinzel text-xl text-[#231F20]">Research &amp; Analytical Writing</h3>
-                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
-                  Qualitative focus-group reporting, thematic analysis, academic research synthesis, and formal organizational reports.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">
-                  Analytical Reports
-                </span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Photography Section -->
-      <section id="photography" class="bg-[#231F20] text-[#EAE5DB]">
-        <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-            <div>
-              <p class="eyebrow">Visual Communications</p>
-              <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Photojournalism &amp; Imagery</h2>
+              <p class="eyebrow text-[#C9A556]">Visual Communications</p>
+              <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Photojournalism &amp; Photography</h2>
               
               <div class="mt-8 border-l-2 border-[#C9A556] pl-5 space-y-3">
                 <p class="text-xs uppercase font-semibold text-[#C9A556] tracking-wider">Verified Honors &amp; Recognition</p>
@@ -554,16 +351,12 @@
 
             <div>
               <p class="text-base font-light leading-relaxed text-[#EAE5DBcc]">
-                Amanda’s photography combines documentation with communication strategy. Her work has supported news coverage, command messaging, community outreach, official ceremonies, campaigns, and visual storytelling across Army platforms.
-              </p>
-              <p class="mt-4 text-sm font-light leading-relaxed text-[#EAE5DBaa]">
-                Featured domains include Photojournalism, Portraiture, Community Engagement, Military and Government Photography, Campaign Imagery, and Multimedia Production.
+                Amanda’s photography combines documentation with communication strategy. Her work has supported news coverage, command messaging, community outreach, official ceremonies, and visual storytelling across defense platforms.
               </p>
             </div>
           </div>
 
-          <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div class="gallery-item cursor-pointer group" onclick="openModal('Photojournalism', 'Official military training coverage documenting operational readiness.')">
               <div class="img-placeholder">
                 <i data-lucide="camera" class="h-10 w-10 text-[#C9A556] mb-2"></i>
@@ -572,8 +365,7 @@
               </div>
               <div class="gallery-overlay">
                 <span class="eyebrow text-[#C9A556]">Photojournalism</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Operational &amp; Event Coverage</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Documenting military training and official events for press release media packages.</p>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Operational Coverage</p>
               </div>
             </div>
 
@@ -585,117 +377,155 @@
               </div>
               <div class="gallery-overlay">
                 <span class="eyebrow text-[#C9A556]">Portraiture</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Personnel &amp; Spotlight Imagery</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Highlighting service members and civilian personnel for feature stories.</p>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Personnel &amp; Leaders</p>
               </div>
             </div>
 
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Community Engagement', 'Capturing authentic interaction during public events and regional outreach.')">
-              <div class="img-placeholder">
-                <i data-lucide="heart" class="h-10 w-10 text-[#C9A556] mb-2"></i>
-                <p class="cinzel text-sm text-[#EAE5DB]">Community Outreach</p>
-                <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
-              </div>
-              <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Outreach</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Community Relations</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Capturing authentic interaction during public events and regional literacy initiatives.</p>
-              </div>
-            </div>
-
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Military Operations', 'High-impact tactical and ceremonial imagery.')">
+            <div class="gallery-item cursor-pointer group" onclick="openModal('Tactical & Ceremonial', 'High-impact military ceremonies, command changes, and field operations.')">
               <div class="img-placeholder">
                 <i data-lucide="shield" class="h-10 w-10 text-[#C9A556] mb-2"></i>
-                <p class="cinzel text-sm text-[#EAE5DB]">Military Operations</p>
+                <p class="cinzel text-sm text-[#EAE5DB]">Tactical &amp; Ceremonial</p>
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Defense</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Tactical &amp; Official Ceremonies</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Command changes, field exercises, and military honors.</p>
+                <span class="eyebrow text-[#C9A556]">Events</span>
+                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Ceremonies &amp; Field Ops</p>
               </div>
             </div>
-
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Campaign Imagery', 'Visual assets developed for strategic public affairs campaigns.')">
-              <div class="img-placeholder">
-                <i data-lucide="image" class="h-10 w-10 text-[#C9A556] mb-2"></i>
-                <p class="cinzel text-sm text-[#EAE5DB]">Campaign Imagery</p>
-                <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
-              </div>
-              <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Strategy</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Campaign Visuals</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Custom visuals tailored for multi-platform public information campaigns.</p>
-              </div>
-            </div>
-
-            <div class="gallery-item cursor-pointer group" onclick="openModal('Multimedia Production', 'Video production, audio scripting, and digital assets.')">
-              <div class="img-placeholder">
-                <i data-lucide="video" class="h-10 w-10 text-[#C9A556] mb-2"></i>
-                <p class="cinzel text-sm text-[#EAE5DB]">Multimedia Production</p>
-                <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
-              </div>
-              <div class="gallery-overlay">
-                <span class="eyebrow text-[#C9A556]">Multimedia</span>
-                <p class="cinzel text-lg text-[#EAE5DB] mt-1">Video &amp; Digital Media</p>
-                <p class="text-xs font-light text-[#EAE5DBaa] mt-1">Video editing, scriptwriting, and digital content distribution.</p>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
-      <!-- Web & Operations Section -->
-      <section id="operations" class="bg-[#2D4D36] text-[#EAE5DB]">
-        <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div class="grid gap-6 lg:grid-cols-[.9fr_1.3fr] lg:items-end">
+      <!-- SECTION 3: WRITING SAMPLES -->
+      <section id="writing" class="bg-[#EAE5DB] text-[#231F20] py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <div class="grid gap-6 lg:grid-cols-[.9fr_1.3fr] lg:items-end mb-14">
             <div>
-              <p class="eyebrow text-[#C9A556]">Digital Systems &amp; Logistics</p>
-              <h2 class="cinzel mt-4 text-4xl leading-tight">Web &amp; Program Operations</h2>
+              <p class="eyebrow text-[#2D4D36]">Editorial, Press &amp; Research</p>
+              <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Writing Samples</h2>
             </div>
-            <p class="text-base font-light leading-relaxed text-[#EAE5DBcc]">
-              Effective communication requires robust operational infrastructure. Amanda manages end-to-end digital publishing, CMS administration, communication workflows, and cross-functional team coordination.
+            <p class="text-base font-light leading-relaxed text-[#231F20cc]">
+              Over 150 published news and feature articles for <em>The Guidon</em>, <em>eGuidon</em>, and <em>Army.mil</em>, alongside strategic executive messaging, talking points, and qualitative research reports.
             </p>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-3">
-            <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
-              <i data-lucide="globe" class="h-10 w-10 text-[#C9A556] mb-4"></i>
-              <h3 class="cinzel text-xl text-[#EAE5DB]">Digital Publishing &amp; CMS</h3>
-              <p class="mt-3 text-sm font-light text-[#EAE5DBcc] leading-relaxed">
-                Experience managing enterprise CMS platforms, maintaining digital publishing standards, ensuring Section 508 accessibility compliance, and structuring web layouts.
-              </p>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="bg-[#F5F1E9] p-8 border border-[#2d4d3633] flex flex-col justify-between">
+              <div>
+                <i data-lucide="newspaper" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
+                <h3 class="cinzel text-2xl text-[#231F20]">News &amp; Feature Articles</h3>
+                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
+                  Human-interest feature stories, operational reporting, and installation news articles published across official defense distribution channels.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">150+ Published Works</span>
+              </div>
+            </article>
+
+            <article class="bg-[#F5F1E9] p-8 border border-[#2d4d3633] flex flex-col justify-between">
+              <div>
+                <i data-lucide="file-search" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
+                <h3 class="cinzel text-2xl text-[#231F20]">Qualitative Research Analysis</h3>
+                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
+                  <strong>AI in the Workplace Study:</strong> Moderated focus group research, transcribed/coded data, and synthesized empirical findings regarding DoD STEM AI perception.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">Academic &amp; Operational Reports</span>
+              </div>
+            </article>
+
+            <article class="bg-[#F5F1E9] p-8 border border-[#2d4d3633] flex flex-col justify-between">
+              <div>
+                <i data-lucide="megaphone" class="h-8 w-8 text-[#2D4D36] mb-4"></i>
+                <h3 class="cinzel text-2xl text-[#231F20]">Executive &amp; Press Messaging</h3>
+                <p class="mt-3 text-sm font-light leading-relaxed text-[#231F20bb]">
+                  Strategic campaign scripts, talking points for command leadership, ceremony remarks, media releases, and internal public affairs guidance.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55666]">
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">Strategic Communications</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: SOCIAL MEDIA GRAPHICS & VIDEO -->
+      <section id="media" class="bg-[#231F20] text-[#EAE5DB] py-20 lg:py-28 border-t border-[#c9a55633]">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <div class="mb-14">
+            <p class="eyebrow text-[#C9A556]">Multimedia &amp; Digital Content</p>
+            <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Social Media Graphics &amp; Video</h2>
+            <p class="mt-4 text-base font-light text-[#EAE5DBcc] max-w-2xl">
+              Combining visual storytelling, video production, and custom digital graphics designed to engage audiences across platforms.
+            </p>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-2">
+            <!-- Drill Sergeant Halloween Video Embed -->
+            <div class="bg-[#1a1819] border border-[#c9a55633] p-5 flex flex-col justify-between">
+              <div>
+                <div class="aspect-video w-full overflow-hidden bg-black border border-[#c9a55622]">
+                  <iframe 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/Oyr_GOu4vqw" 
+                    title="How to Act Like a Drill Sergeant for Halloween" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                  </iframe>
+                </div>
+                <p class="eyebrow text-[#C9A556] mt-5">Video Production</p>
+                <h3 class="cinzel text-2xl text-[#EAE5DB] mt-2">How to Act Like a Drill Sergeant for Halloween</h3>
+                <p class="text-xs text-[#EAE5DBaa] mt-3 leading-relaxed">
+                  Staff Sgt. Aquai Alexander with Company A, 554th Engineer Battalion and MSCOE Drill Sergeant of the Year demonstrates the techniques of being a drill sergeant.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55633]">
+                <span class="text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-2 py-1">
+                  Videography &amp; Editing
+                </span>
+              </div>
             </div>
 
-            <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
-              <i data-lucide="workflow" class="h-10 w-10 text-[#C9A556] mb-4"></i>
-              <h3 class="cinzel text-xl text-[#EAE5DB]">Workflow Optimization</h3>
-              <p class="mt-3 text-sm font-light text-[#EAE5DBcc] leading-relaxed">
-                Streamlining editorial approval processes, establishing content calendars, coordinating cross-agency public affairs, and managing digital asset distribution pipelines.
-              </p>
-            </div>
-
-            <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
-              <i data-lucide="layers" class="h-10 w-10 text-[#C9A556] mb-4"></i>
-              <h3 class="cinzel text-xl text-[#EAE5DB]">Program Logistics</h3>
-              <p class="mt-3 text-sm font-light text-[#EAE5DBcc] leading-relaxed">
-                Planning and executing complex outreach initiatives, coordinating cross-functional volunteer teams, and aligning communication operations with command objectives.
-              </p>
+            <!-- Social Media Graphics Card -->
+            <div class="bg-[#1a1819] border border-[#c9a55633] p-5 flex flex-col justify-between">
+              <div>
+                <div class="aspect-video w-full bg-[#203A29] border border-[#c9a55622] flex flex-col items-center justify-center p-6 text-center">
+                  <i data-lucide="layout" class="h-12 w-12 text-[#C9A556] mb-3"></i>
+                  <p class="cinzel text-base text-[#EAE5DB]">Social Media Graphics Portfolio</p>
+                  <p class="text-xs text-[#EAE5DBaa] mt-1">Infographics, Campaign Cards &amp; Layouts</p>
+                  <span class="mt-4 text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-3 py-1">
+                    [ Image Grid Reserved: Social Media Assets ]
+                  </span>
+                </div>
+                <p class="eyebrow text-[#C9A556] mt-5">Digital Design</p>
+                <h3 class="cinzel text-2xl text-[#EAE5DB] mt-2">Campaign Graphics &amp; Visual Assets</h3>
+                <p class="text-xs text-[#EAE5DBaa] mt-3 leading-relaxed">
+                  Custom-designed social media campaigns, infographics, event promotion assets, and digital banners tailored for high engagement across Facebook, Instagram, and web channels.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-[#c9a55633]">
+                <span class="text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-2 py-1">
+                  Graphic Design &amp; Content Strategy
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="bg-[#231F20] text-[#EAE5DB]">
-        <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <!-- SECTION 5: CONTACT -->
+      <section id="contact" class="bg-[#2D4D36] text-[#EAE5DB] py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
           <div class="grid gap-12 lg:grid-cols-2">
             <div>
               <p class="eyebrow text-[#C9A556]">Get In Touch</p>
               <h2 class="cinzel mt-4 text-4xl sm:text-5xl leading-tight">Let’s Connect</h2>
               <p class="mt-6 text-base font-light text-[#EAE5DBcc] leading-relaxed max-w-lg">
-                Whether you're looking for strategic communication leadership, qualitative research execution, high-impact photojournalism, or operational management—I'd love to discuss how we can work together.
+                Whether you're looking for strategic communication leadership, qualitative research execution, high-impact photojournalism, or multimedia campaign production—I'd love to connect.
               </p>
 
               <div class="mt-8 space-y-4 text-sm font-light">
@@ -714,7 +544,7 @@
               </div>
             </div>
 
-            <div class="bg-[#1a1819] p-8 border border-[#c9a55633]">
+            <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
               <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message feature ready.');">
                 <div>
                   <label for="name" class="block text-xs uppercase tracking-wider text-[#C9A556] mb-2 font-semibold">Name</label>
