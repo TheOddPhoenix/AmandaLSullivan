@@ -30,7 +30,7 @@
     body {
       margin: 0;
       font-family: "Montserrat", sans-serif;
-      font-weight: 300; /* Montserrat Light for body copy */
+      font-weight: 300;
       color: var(--ivory);
       background: var(--charcoal);
       line-height: 1.7;
@@ -43,7 +43,7 @@
     .eyebrow {
       color: var(--gold);
       font-size: .7rem;
-      font-weight: 600; /* Montserrat SemiBold for labels */
+      font-weight: 600;
       letter-spacing: .18em;
       line-height: 1.4;
       text-transform: uppercase;
@@ -52,7 +52,7 @@
     .nav-link {
       color: rgba(234,229,219,.85);
       font-size: .7rem;
-      font-weight: 500; /* Montserrat Medium */
+      font-weight: 500;
       letter-spacing: .12em;
       text-transform: uppercase;
       transition: color .2s ease;
@@ -64,7 +64,6 @@
       outline-offset: 4px;
     }
 
-    /* Hero Section - Typography led, full width, no images */
     .hero {
       min-height: 80vh;
       position: relative;
@@ -106,7 +105,7 @@
       padding: .85rem 1.4rem;
       font-family: "Montserrat", sans-serif;
       font-size: .72rem;
-      font-weight: 600; /* Montserrat SemiBold for buttons */
+      font-weight: 600;
       letter-spacing: .12em;
       text-transform: uppercase;
       transition: all .25s ease;
@@ -122,7 +121,6 @@
     .case-photo-wrap { position: relative; overflow: hidden; background: #1a1819; }
     .case-detail { border-left: 2px solid var(--gold); padding-left: .9rem; }
 
-    /* Visual Placeholder Container */
     .img-placeholder {
       width: 100%;
       height: 100%;
@@ -152,7 +150,6 @@
       background: linear-gradient(to top, rgba(20,18,19,0.96) 0%, rgba(20,18,19,0.6) 70%, transparent 100%);
     }
 
-    /* Modal / Lightbox */
     .modal {
       display: none;
       position: fixed;
@@ -180,12 +177,10 @@
     <header class="sticky top-0 z-40 border-b border-[#c9a55633] bg-[#231f20f5] backdrop-blur">
       <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10" aria-label="Primary navigation">
         
-        <!-- Clean Wordmark Logo -->
         <a href="#home" class="cinzel text-lg tracking-wider text-[#EAE5DB] transition hover:text-[#C9A556]" aria-label="Amanda Sullivan Home">
           Amanda Sullivan<span class="text-[#C9A556] font-bold">.</span>
         </a>
 
-        <!-- Desktop Navigation Links -->
         <div class="hidden items-center gap-6 lg:flex">
           <a class="nav-link" href="#work">Work</a> 
           <a class="nav-link" href="#about">About</a> 
@@ -195,13 +190,11 @@
           <a class="nav-link" href="#contact">Contact</a>
         </div>
         
-        <!-- Mobile Menu Toggle Button -->
         <button id="menu-toggle" type="button" class="text-[#EAE5DB] hover:text-[#C9A556] lg:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"> 
           <i data-lucide="menu" class="h-6 w-6"></i> 
         </button>
       </nav>
       
-      <!-- Mobile Navigation Drawer -->
       <div id="mobile-menu" class="hidden border-t border-[#c9a55633] bg-[#231F20] px-6 py-6 lg:hidden">
         <div class="flex flex-col gap-4">
           <a class="nav-link text-base" href="#work">Work</a> 
@@ -215,7 +208,7 @@
     </header>
 
     <main>
-      <!-- Hero Section (Typography Led - No Photos) -->
+      <!-- Hero Section -->
       <section id="home" class="hero flex items-center">
         <div class="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <p class="eyebrow">STRATEGIC COMMUNICATION • VISUAL STORYTELLING • PROGRAM OPERATIONS</p>
@@ -237,7 +230,6 @@
             I turn complex ideas into clear, compelling communication—and build the content, systems, and digital spaces that bring those ideas to life.
           </p>
           
-          <!-- Hero Actions (Max 3 buttons, no extra labels or notes) -->
           <div class="mt-10 flex flex-wrap items-center gap-4">
             <a class="button-main" href="#work">
               <span>View Selected Work</span>
@@ -288,58 +280,13 @@
               <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Selected Work</h2>
             </div>
             <p class="text-base font-light leading-relaxed text-[#231F20cc]">
-              Strategic communication, digital publishing, qualitative research, and large-scale program operations executed with empirical grounding and structural rigor.
+              Strategic communication, qualitative research, community relations, and large-scale program operations executed with empirical grounding and structural rigor.
             </p>
           </div>
           
           <div class="mt-14 space-y-16">
             
-            <!-- Case Study 1: Show Me Fort Leonard Wood -->
-            <article class="case-card overflow-hidden bg-[#F5F1E9]">
-              <div class="grid lg:grid-cols-[1.25fr_1.1fr]">
-                <div class="case-photo-wrap">
-                  <!-- Placeholder Container for Show Me Fort Leonard Wood Asset -->
-                  <!-- REPLACE WITH AMANDA'S SHOW ME FORT LEONARD WOOD SCREENSHOT OR IMAGE -->
-                  <div class="img-placeholder text-[#EAE5DB]">
-                    <i data-lucide="layout" class="h-12 w-12 text-[#C9A556] mb-3"></i>
-                    <p class="cinzel text-lg text-[#EAE5DB]">Show Me Fort Leonard Wood</p>
-                    <p class="text-xs text-[#EAE5DBaa] mt-1">Digital Publication &amp; WordPress Architecture</p>
-                    <span class="mt-4 text-[10px] tracking-widest uppercase text-[#C9A556] border border-[#c9a55655] px-3 py-1">
-                      [ Image Space Reserved: Official WordPress Publication Asset ]
-                    </span>
-                  </div>
-                </div>
-                
-                <div class="p-8 sm:p-10">
-                  <p class="eyebrow text-[#2D4D36]">Digital Publishing • Content Strategy • Web Development</p>
-                  <h3 class="cinzel mt-3 text-3xl leading-tight">Show Me Fort Leonard Wood</h3>
-                  
-                  <div class="mt-6 space-y-4 text-sm font-light leading-relaxed text-[#231F20cc]">
-                    <p><strong>Challenge:</strong> Create an accessible digital publication that made installation stories, programs, and community information easier to discover and understand.</p>
-                    <p><strong>Audience:</strong> Service members, military families, civilian personnel, veterans, and local community members.</p>
-                    <p><strong>Amanda’s Role:</strong> Amanda launched and managed the installation’s official WordPress blog, creating its layout, taxonomy, content structure, publishing workflow, and supporting content strategy.</p>
-                    <p><strong>Strategy &amp; Process:</strong> Conducted content audits, structured user-centered navigation, instituted SEO metadata standards, and established editorial guidelines.</p>
-                  </div>
-
-                  <div class="mt-6 border-t border-[#c9a55666] pt-5">
-                    <p class="text-xs uppercase font-semibold text-[#2D4D36] tracking-wider mb-2">Verified Outcomes</p>
-                    <ul class="space-y-2 text-sm">
-                      <li class="case-detail">Built and managed the official WordPress publication</li>
-                      <li class="case-detail">Applied SEO practices, keywords, tags, and metadata</li>
-                      <li class="case-detail">Produced and published original written and visual content</li>
-                      <li class="case-detail">Reviewed analytics and audience behavior to guide content decisions</li>
-                      <li class="case-detail">Helped the publication reach more than 200,000 readers</li>
-                    </ul>
-                  </div>
-
-                  <div class="mt-6 bg-[#EAE5DB] p-4 border-l-2 border-[#2D4D36]">
-                    <p class="text-xs text-[#231F20bb]"><strong>What it demonstrates:</strong> Digital publishing expertise, end-to-end editorial management, SEO best practices, and data-informed content growth.</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Case Study 2: Read Across America -->
+            <!-- Case Study 1: Read Across America -->
             <article class="case-card overflow-hidden bg-[#231F20] text-[#EAE5DB]">
               <div class="grid lg:grid-cols-[1.1fr_1.25fr]">
                 <div class="p-8 sm:p-10 order-2 lg:order-1">
@@ -369,8 +316,6 @@
                 </div>
 
                 <div class="case-photo-wrap order-1 lg:order-2">
-                  <!-- Placeholder Container for Read Across America Asset -->
-                  <!-- REPLACE WITH AMANDA'S READ ACROSS AMERICA IMAGE -->
                   <div class="img-placeholder text-[#EAE5DB]">
                     <i data-lucide="users" class="h-12 w-12 text-[#C9A556] mb-3"></i>
                     <p class="cinzel text-lg text-[#EAE5DB]">Read Across America Outreach</p>
@@ -383,12 +328,10 @@
               </div>
             </article>
 
-            <!-- Case Study 3: AI in the Workplace Focus-Group Project -->
+            <!-- Case Study 2: AI in the Workplace Focus-Group Project -->
             <article class="case-card overflow-hidden bg-[#F5F1E9]">
               <div class="grid lg:grid-cols-[1.25fr_1.1fr]">
                 <div class="case-photo-wrap">
-                  <!-- Placeholder Container for AI Research Focus-Group Project -->
-                  <!-- REPLACE WITH AMANDA'S AI FOCUS GROUP RESEARCH ASSET -->
                   <div class="img-placeholder text-[#EAE5DB]">
                     <i data-lucide="file-search" class="h-12 w-12 text-[#C9A556] mb-3"></i>
                     <p class="cinzel text-lg text-[#EAE5DB]">AI in the Workplace Research</p>
@@ -433,14 +376,11 @@
         <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <div class="grid gap-12 lg:grid-cols-[.35fr_1fr] lg:items-start">
             
-            <!-- Professional Portrait Container (Restrained, max 1/3 desktop width) -->
             <div>
               <p class="eyebrow text-[#C9A556]">Background</p>
               <h2 class="cinzel mt-3 text-4xl leading-tight">About Amanda</h2>
               
               <div class="mt-6 overflow-hidden border border-[#C9A556] bg-[#203A29]">
-                <!-- Headshot Placeholder (Restrained size, strictly max 1/3 section width) -->
-                <!-- REPLACE WITH AMANDA'S OFFICIAL HEADSHOT PHOTO FILE -->
                 <div class="p-8 text-center flex flex-col items-center justify-center min-h-[300px]">
                   <i data-lucide="user" class="h-16 w-16 text-[#C9A556] mb-4"></i>
                   <p class="cinzel text-base text-[#EAE5DB]">Amanda Sullivan</p>
@@ -451,7 +391,6 @@
               </div>
             </div>
 
-            <!-- Verified Bio & Professional Philosophy -->
             <div class="space-y-6">
               <p class="text-base font-light leading-relaxed text-[#EAE5DB]">
                 Amanda Sullivan is an award-winning communications professional with experience spanning public affairs, journalism, photography, multimedia production, organizational communication, digital content, stakeholder engagement, and program operations.
@@ -463,12 +402,10 @@
                 Amanda is completing a Bachelor of Arts in English with a concentration in Professional Communication and Journalism through the University of Maine at Presque Isle. Her work combines strategic thinking, operational experience, visual judgment, and a belief that effective communication should be clear, accurate, useful, and human.
               </p>
 
-              <!-- Personal Statement Blockquote -->
               <blockquote class="my-8 border-l-2 border-[#C9A556] pl-6 py-2 italic cinzel text-lg text-[#EAE5DB]">
                 “I have never been interested in communication that merely fills space. I want to understand what needs to be said, who needs to hear it, and what form will make it matter.”
               </blockquote>
 
-              <!-- Operational Principles: How I Work -->
               <div class="mt-10 border-t border-[#c9a55655] pt-8">
                 <p class="eyebrow text-[#C9A556]">Operational Principles</p>
                 <h3 class="cinzel mt-2 text-2xl">How I Work</h3>
@@ -513,7 +450,6 @@
             </p>
           </div>
 
-          <!-- Sample Writing Domain Cards -->
           <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             
             <article class="bg-[#F5F1E9] p-6 border border-[#2d4d3633] flex flex-col justify-between">
@@ -525,8 +461,6 @@
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-[#c9a55666]">
-                <!-- EDITABLE PLACEHOLDER FOR REAL ARTICLE LINK -->
-                <!-- REPLACE WITH REAL ARTICLE LINK WHEN AVAILABLE -->
                 <span class="text-xs font-semibold uppercase tracking-wider text-[#2D4D36]">
                   150+ Articles Published
                 </span>
@@ -590,7 +524,6 @@
               <p class="eyebrow">Visual Communications</p>
               <h2 class="cinzel mt-4 text-4xl leading-tight sm:text-5xl">Photojournalism &amp; Imagery</h2>
               
-              <!-- Verified Awards Display -->
               <div class="mt-8 border-l-2 border-[#C9A556] pl-5 space-y-3">
                 <p class="text-xs uppercase font-semibold text-[#C9A556] tracking-wider">Verified Honors &amp; Recognition</p>
                 <p class="text-sm font-normal"><strong>2024 Civilian Photographer of the Year</strong> — U.S. Army Installation Management Command</p>
@@ -609,15 +542,12 @@
             </div>
           </div>
 
-          <!-- Photography Gallery Grid (Full Color, Restrained Placeholders with Captions) -->
           <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             
-            <!-- Photo 1: Photojournalism -->
             <div class="gallery-item cursor-pointer group" onclick="openModal('Photojournalism', 'Official military training coverage documenting operational readiness.')">
               <div class="img-placeholder">
                 <i data-lucide="camera" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Photojournalism</p>
-                <!-- REPLACE WITH AMANDA'S PHOTOJOURNALISM IMAGE -->
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
@@ -627,12 +557,10 @@
               </div>
             </div>
 
-            <!-- Photo 2: Portraiture -->
             <div class="gallery-item cursor-pointer group" onclick="openModal('Portraiture', 'Official leadership and personnel portraiture emphasizing human character.')">
               <div class="img-placeholder">
                 <i data-lucide="user-check" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Portraiture</p>
-                <!-- REPLACE WITH AMANDA'S PORTRAITURE IMAGE -->
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
@@ -642,12 +570,10 @@
               </div>
             </div>
 
-            <!-- Photo 3: Community Engagement -->
             <div class="gallery-item cursor-pointer group" onclick="openModal('Community Engagement', 'Capturing authentic interaction during public events and regional outreach.')">
               <div class="img-placeholder">
                 <i data-lucide="heart" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Community Engagement</p>
-                <!-- REPLACE WITH AMANDA'S COMMUNITY ENGAGEMENT IMAGE -->
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
@@ -657,12 +583,10 @@
               </div>
             </div>
 
-            <!-- Photo 4: Military & Government -->
             <div class="gallery-item cursor-pointer group" onclick="openModal('Military & Government', 'Official ceremonies, awards, and command communications.')">
               <div class="img-placeholder">
                 <i data-lucide="award" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Military &amp; Government</p>
-                <!-- REPLACE WITH AMANDA'S MILITARY/GOVERNMENT IMAGE -->
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
@@ -672,12 +596,10 @@
               </div>
             </div>
 
-            <!-- Photo 5: Campaign Imagery -->
             <div class="gallery-item cursor-pointer group" onclick="openModal('Campaign Imagery', 'Visual assets developed for social media initiatives and awareness campaigns.')">
               <div class="img-placeholder">
                 <i data-lucide="image" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Campaign Imagery</p>
-                <!-- REPLACE WITH AMANDA'S CAMPAIGN IMAGE -->
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
@@ -687,12 +609,10 @@
               </div>
             </div>
 
-            <!-- Photo 6: Multimedia Production -->
             <div class="gallery-item cursor-pointer group" onclick="openModal('Multimedia Production', 'Integrated photography, graphics, and video production.')">
               <div class="img-placeholder">
                 <i data-lucide="film" class="h-10 w-10 text-[#C9A556] mb-2"></i>
                 <p class="cinzel text-sm text-[#EAE5DB]">Multimedia Production</p>
-                <!-- REPLACE WITH AMANDA'S MULTIMEDIA IMAGE -->
                 <span class="mt-3 text-[9px] tracking-widest text-[#C9A556] uppercase">[ Official Image Placeholder ]</span>
               </div>
               <div class="gallery-overlay">
@@ -719,10 +639,8 @@
             </p>
           </div>
 
-          <!-- Organized Capabilities Grid -->
           <div class="mt-14 grid gap-10 lg:grid-cols-2">
             
-            <!-- Web and Digital Capabilities -->
             <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
               <div class="flex items-center gap-3 mb-6">
                 <i data-lucide="code" class="h-6 w-6 text-[#C9A556]"></i>
@@ -743,7 +661,6 @@
               </ul>
             </div>
 
-            <!-- Communication Operations Capabilities -->
             <div class="bg-[#203A29] p-8 border border-[#c9a55644]">
               <div class="flex items-center gap-3 mb-6">
                 <i data-lucide="workflow" class="h-6 w-6 text-[#C9A556]"></i>
@@ -766,16 +683,10 @@
 
           </div>
 
-          <!-- Verified Operational Examples -->
           <div class="mt-12 border-t border-[#c9a55655] pt-10">
             <p class="eyebrow text-[#C9A556] mb-4">Verified Operational Examples</p>
             
-            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div class="border-l-2 border-[#C9A556] pl-4">
-                <h4 class="cinzel text-lg text-[#EAE5DB]">Show Me Fort Leonard Wood</h4>
-                <p class="text-xs text-[#EAE5DBaa] mt-1">Official WordPress publication layout, taxonomy, and content architecture.</p>
-              </div>
-              
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <div class="border-l-2 border-[#C9A556] pl-4">
                 <h4 class="cinzel text-lg text-[#EAE5DB]">Annual Post Guide Production</h4>
                 <p class="text-xs text-[#EAE5DBaa] mt-1">Comprehensive publication editing, layout coordination, and installation guide management.</p>
@@ -801,7 +712,7 @@
         </div>
       </section>
 
-      <!-- Contact Section (No fake form endpoints, direct email mailto link) -->
+      <!-- Contact Section -->
       <section id="contact" class="bg-[#231F20] text-[#EAE5DB]">
         <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <div class="max-w-3xl">
@@ -816,7 +727,6 @@
               Have a story to tell, a message to clarify, or an idea that needs a place in the world? Let’s bring it to life.
             </p>
 
-            <!-- Direct Functional Email Link -->
             <div class="mt-10 flex flex-wrap items-center gap-6">
               <a href="mailto:Amanda.l.sullivan@outlook.com" class="button-main">
                 <i data-lucide="mail" class="h-4 w-4"></i>
@@ -846,7 +756,6 @@
     </footer>
   </div>
 
-  <!-- Interactive Lightbox Modal for Photography Gallery -->
   <div id="photo-modal" class="modal" onclick="closeModal()">
     <div class="bg-[#231F20] border border-[#C9A556] p-8 max-w-lg w-full text-center relative" onclick="event.stopPropagation()">
       <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-[#EAE5DB] hover:text-[#C9A556]">
@@ -862,12 +771,9 @@
     </div>
   </div>
 
-  <!-- Scripts for Mobile Menu and Lightbox -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Mobile Navigation Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -879,7 +785,6 @@
       });
     }
 
-    // Photography Modal Functions
     function openModal(title, caption) {
       document.getElementById('modal-title').innerText = title;
       document.getElementById('modal-caption').innerText = caption;
