@@ -82,8 +82,8 @@
           type: "Program Development & Community Relations",
           preview: "In the post-COVID period, Fort Leonard Wood needed a consistent way to rebuild relationships with local schools. I developed a monthly recognition program centered on Army Values and positive student impact.",
           primaryImg: "assets/images/Leadership Award.jpg",
-          hoverImg: "assets/images/photo-airport-groundbreaking.jpg",
-          alt: "Student Leadership Award recognition ceremony at local school."
+          alt: "Student Leadership Award recognition ceremony at local school.",
+          url: "/community-relations/"
         },
         {
           id: "case-2",
@@ -91,18 +91,17 @@
           type: "Community Outreach & Event Operations",
           preview: "When I assumed management in 2020, participation was limited to one district. I developed a scalable model that expanded school participation while preserving consistent messaging and manageable coordination.",
           primaryImg: "assets/images/photo-read-across-america.jpg",
-          hoverImg: "assets/images/photo-trees-for-troops.jpg",
           alt: "Soldier volunteer reading to elementary school students.",
-          articleUrl: "https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day"
+          url: "https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day"
         },
         {
           id: "case-3",
           title: "Scout Visits Liaison",
-          type: "Community Engagement & Operational Coordination",
+          type: "Community Engagement Programs",
           preview: "Fort Leonard Wood supported approximately 10 Scout visits annually, each involving 10–40 participants and often including overnight stays and hands-on Army activities.",
           primaryImg: "assets/images/photo-scout-visit.jpg",
-          hoverImg: "assets/images/Bicentennial Parade.jpg",
-          alt: "Scout troop interacting with military equipment during guided visit."
+          alt: "Scout troop interacting with military equipment during guided visit.",
+          url: "/community-relations/"
         }
       ],
       photography: [
@@ -139,7 +138,6 @@
           url: "https://www.army.mil/article/261291/from_the_fbi_to_flw_army_chaplain_has_worn_many_hats",
           publication: "Army.mil",
           primaryImg: "assets/images/article-chaplain.jpg",
-          hoverImg: "assets/images/article-50yo-soldier.jpg",
           alt: "Army Chaplain portrait feature"
         },
         {
@@ -149,7 +147,6 @@
           url: "https://www.army.mil/article/256850/para_swimmer_military_spouse_defies_the_odds_through_personal_courage",
           publication: "Army.mil",
           primaryImg: "assets/images/article-paraswimmer.jpg",
-          hoverImg: "assets/images/article-adjutant-general-oy.jpg",
           alt: "Para-swimmer military spouse feature"
         },
         {
@@ -159,7 +156,6 @@
           url: "https://www.army.mil/article/247350/fort_leonard_wood_examines_wwii_ghost_army_deception_tactics",
           publication: "Army.mil",
           primaryImg: "assets/images/ghost-army-article.jpg",
-          hoverImg: "assets/images/article-eagle-survey.jpg",
           alt: "WWII Ghost Army history feature"
         }
       ],
@@ -183,10 +179,9 @@
         {
           id: "creative-3",
           title: "Soldier & Civilian Spotlight Graphics",
-          type: "Graphic Design & Visual Identity",
+          type: "Graphics & Visual Identity",
           description: "Original graphic design layouts, social media spotlight templates, and publication graphics developed for official public affairs channels.",
           primaryImg: "assets/images/graphic-soldier-spotlight-1.jpg",
-          hoverImg: "assets/images/graphic-soldier-spotlight-2.jpg",
           videoUrl: null
         }
       ],
@@ -197,8 +192,7 @@
           type: "Digital Publishing & Content Strategy",
           description: "Launched and managed Show Me Fort Leonard Wood, an official WordPress blog that reached 200,000+ readers through original reporting, content strategy, SEO, analytics, and digital publishing.",
           tech: "WordPress, CSS, SEO, Google Analytics",
-          primaryImg: "assets/images/civilian-spotlight-olguin.jpg",
-          hoverImg: "assets/images/civilain-spotlight-bowersox.jpg"
+          primaryImg: "assets/images/civilian-spotlight-olguin.jpg"
         },
         {
           id: "dig-2",
@@ -206,8 +200,7 @@
           type: "Application Development & UI/UX",
           description: "Designing and developing responsive web interfaces, interactive tools, and clean front-end code built for accessibility and user experience.",
           tech: "HTML5, Tailwind CSS, JavaScript",
-          primaryImg: "assets/images/best-sapper-graphic-1.jpg",
-          hoverImg: "assets/images/best-sapper-graphic-2.jpg"
+          primaryImg: "assets/images/best-sapper-graphic-1.jpg"
         },
         {
           id: "dig-3",
@@ -215,8 +208,7 @@
           type: "E-Commerce Implementation",
           description: "Configuring online storefronts, structuring digital product catalogs, implementing merchant features, and optimizing user workflows.",
           tech: "E-Commerce CMS, Merchandising, UI/UX",
-          primaryImg: "assets/images/graphic-thenandnow-counteehall.jpg",
-          hoverImg: "assets/images/graphic-thenandnow-garlington.jpg"
+          primaryImg: "assets/images/graphic-thenandnow-counteehall.jpg"
         }
       ]
     };
@@ -225,9 +217,9 @@
   <!-- GLOBAL HORIZONTAL NAVIGATION -->
   <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
     <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
-      <!-- Brand Link -->
-      <a href="/" class="font-serif text-lg sm:text-xl font-normal tracking-[0.12em] text-warmIvory hover:text-lightGold transition duration-300">
-        AMANDA SULLIVAN
+      <!-- Initials Logo -->
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -306,21 +298,17 @@
             </div>
           </div>
 
-          <!-- Featured Hero Image Component -->
+          <!-- Featured Hero Portrait Component -->
           <div class="lg:col-span-4">
             <div class="bg-charcoal border border-forestGreen/50 p-3 shadow-xl">
-              <div class="aspect-[4/5] bg-deepEvergreen overflow-hidden relative group">
+              <div class="aspect-[4/5] bg-deepEvergreen overflow-hidden relative">
                 <img 
                   src="assets/images/amanda-sullivan-portrait.png" 
                   alt="Portrait of Amanda Sullivan" 
-                  class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  class="w-full h-full object-cover"
                   loading="eager"
                 />
               </div>
-              <p class="mt-2.5 px-1 text-[11px] text-mutedIvory font-light flex justify-between">
-                <span>Amanda Sullivan</span>
-                <span class="text-antiqueGold font-medium">Public Relations</span>
-              </p>
             </div>
           </div>
 
@@ -332,15 +320,8 @@
     <section id="community-relations" class="py-20 bg-charcoal border-b border-forestGreen/30">
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-forestGreen/40 pb-6">
-          <div>
-            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">CASE STUDIES</span>
-            <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Community Relations &amp; Operations</h2>
-          </div>
-          <a href="/community-relations/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
-            <span>VIEW ALL CASE STUDIES</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+        <div class="border-b border-forestGreen/40 pb-6">
+          <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Community Relations &amp; Operations</h2>
         </div>
 
         <!-- 3-Column Case Studies Grid -->
@@ -355,23 +336,25 @@
     <section id="photography" class="py-20 bg-deepEvergreen border-b border-forestGreen/30">
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-forestGreen/40 pb-6">
-          <div>
-            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">DOCUMENTARY &amp; PHOTOJOURNALISM</span>
-            <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Award-Winning Photography</h2>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light mt-2 max-w-xl">
-              "Photography is not separate from communication strategy; it is one of the ways I make complex missions visible and human."
-            </p>
-          </div>
-          <a href="/photography/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1 shrink-0">
-            <span>VIEW MORE PHOTOS</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+        <div class="border-b border-forestGreen/40 pb-6">
+          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">DOCUMENTARY &amp; PHOTOJOURNALISM</span>
+          <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Award-Winning Photography</h2>
+          <p class="text-xs sm:text-sm text-mutedIvory font-light mt-2 max-w-xl">
+            "Photography is not separate from communication strategy; it is one of the ways I make complex missions visible and human."
+          </p>
         </div>
 
         <!-- 3-Column Photography Grid -->
         <div class="grid md:grid-cols-3 gap-8" id="photography-grid">
           <!-- Rendered by JS -->
+        </div>
+
+        <!-- Link placed BELOW the photos -->
+        <div class="pt-4 text-center md:text-right">
+          <a href="/photography/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
+            <span>VIEW MORE PHOTOS</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
         </div>
 
       </div>
@@ -381,20 +364,21 @@
     <section id="writing" class="py-20 bg-charcoal border-b border-forestGreen/30">
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-forestGreen/40 pb-6">
-          <div>
-            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">PUBLISHED REPORTING</span>
-            <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Writing &amp; Journalism</h2>
-          </div>
-          <a href="/writing/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
-            <span>VIEW MORE WRITING SAMPLES</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+        <div class="border-b border-forestGreen/40 pb-6">
+          <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Writing &amp; Journalism</h2>
         </div>
 
         <!-- 3-Column Article Grid -->
         <div class="grid md:grid-cols-3 gap-8" id="articles-grid">
           <!-- Rendered by JS -->
+        </div>
+
+        <!-- Link placed BELOW the writing samples -->
+        <div class="pt-4 text-center md:text-right">
+          <a href="/writing/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
+            <span>VIEW MORE WRITING SAMPLES</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
         </div>
 
       </div>
@@ -406,9 +390,9 @@
         
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-forestGreen/40 pb-6">
           <div>
-            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">CAMPAIGNS, VIDEO &amp; DESIGN</span>
+            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">CAMPAIGNS, VIDEO &amp; GRAPHICS</span>
             <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Creative &amp; Digital Media</h2>
-            <p class="text-xs text-mutedIvory mt-1">Social Media Campaigns &nbsp;|&nbsp; Video Production &nbsp;|&nbsp; Graphic Design</p>
+            <p class="text-xs text-mutedIvory mt-1">Social Media Campaigns &nbsp;|&nbsp; Video Production &nbsp;|&nbsp; Graphics Design</p>
           </div>
           <a href="/creative-media/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
             <span>VIEW CREATIVE WORK</span>
@@ -494,12 +478,22 @@
     // 1. Initialize Lucide Icons
     lucide.createIcons();
 
-    // Helper: Build Dual-Image Hover Container
-    function buildImageHoverHTML(primary, hover, alt) {
+    // Helper: Static Image Display (NO hover swap)
+    function buildStaticImageHTML(src, alt) {
+      if (!src) return '';
+      return `
+        <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
+          <img src="${src}" alt="${alt}" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      `;
+    }
+
+    // Helper: Dual-Image Hover Container (ONLY used for Photography)
+    function buildHoverImageHTML(primary, hover, alt) {
       if (!primary) return '';
       return `
-        <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative group">
-          <img src="${primary}" alt="${alt}" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out ${hover ? 'group-hover:opacity-0' : 'group-hover:scale-105'}" loading="lazy" />
+        <div class="aspect-[4/3] bg-deepEvergreen border border-forestGreen/30 overflow-hidden relative group">
+          <img src="${primary}" alt="${alt}" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0" loading="lazy" />
           ${hover ? `<img src="${hover}" alt="${alt} preview" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" loading="lazy" />` : ''}
         </div>
       `;
@@ -514,21 +508,23 @@
         card.className = "bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
         card.innerHTML = `
           <div class="space-y-3">
-            ${buildImageHoverHTML(item.primaryImg, item.hoverImg, item.alt)}
+            ${buildStaticImageHTML(item.primaryImg, item.alt)}
             <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
             <h3 class="text-lg font-semibold text-warmIvory leading-snug">${item.title}</h3>
             <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.preview}</p>
           </div>
-          <div class="pt-4 border-t border-forestGreen/30 flex items-center justify-between text-xs">
-            ${item.articleUrl ? `<a href="${item.articleUrl}" target="_blank" rel="noopener noreferrer" class="text-antiqueGold hover:underline inline-flex items-center gap-1 font-semibold"><span>Read Coverage</span> <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>` : `<span class="text-mutedIvory font-medium">Case Study Preview</span>`}
-            <a href="/community-relations/" class="text-warmIvory hover:text-lightGold font-semibold">Details &rarr;</a>
+          <div class="pt-4 border-t border-forestGreen/30 text-xs">
+            <a href="${item.url}" ${item.url.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="text-antiqueGold hover:underline inline-flex items-center gap-1 font-semibold">
+              <span>Read Case Study</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         `;
         communityGrid.appendChild(card);
       });
     }
 
-    // 3. Render Section 2: Award-Winning Photography
+    // 3. Render Section 2: Award-Winning Photography (HOVER SWAP KEPT HERE ONLY)
     const photoGrid = document.getElementById('photography-grid');
     if (photoGrid) {
       photoGrid.innerHTML = '';
@@ -537,14 +533,10 @@
         card.className = "bg-charcoal border border-forestGreen/50 p-4 space-y-3 cursor-pointer group hover:border-antiqueGold transition duration-300";
         card.onclick = () => openLightbox(photo.title, photo.caption, photo.credit, photo.primaryImg);
         card.innerHTML = `
-          <div class="aspect-[4/3] bg-deepEvergreen border border-forestGreen/30 overflow-hidden relative">
-            <img src="${photo.primaryImg}" alt="${photo.title}" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0" loading="lazy" />
-            <img src="${photo.hoverImg}" alt="${photo.title} secondary view" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" loading="lazy" />
-          </div>
+          ${buildHoverImageHTML(photo.primaryImg, photo.hoverImg, photo.title)}
           <div class="px-1 space-y-1">
             <h3 class="text-sm font-semibold text-warmIvory group-hover:text-antiqueGold transition">${photo.title}</h3>
             <p class="text-[11px] text-mutedIvory line-clamp-2 font-light">${photo.caption}</p>
-            <span class="text-[10px] text-antiqueGold font-medium block pt-1">Click to view full photo &amp; caption &rarr;</span>
           </div>
         `;
         photoGrid.appendChild(card);
@@ -560,7 +552,7 @@
         card.className = "bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
         card.innerHTML = `
           <div class="space-y-3">
-            ${buildImageHoverHTML(art.primaryImg, art.hoverImg, art.title)}
+            ${buildStaticImageHTML(art.primaryImg, art.title)}
             <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${art.publication}</span>
             <h3 class="text-base font-semibold text-warmIvory leading-snug">${art.title}</h3>
             <p class="text-xs text-mutedIvory leading-relaxed font-light">${art.description}</p>
@@ -589,13 +581,13 @@
               <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
                 <iframe class="w-full h-full border-0" src="${item.embedUrl}" title="${item.title}" frameborder="0" scrolling="no" style="overflow: hidden;" allowfullscreen></iframe>
               </div>
-            ` : buildImageHoverHTML(item.primaryImg, item.hoverImg, item.title)}
+            ` : buildStaticImageHTML(item.primaryImg, item.title)}
             <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
             <h3 class="text-base font-semibold text-warmIvory leading-snug">${item.title}</h3>
             <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.description}</p>
           </div>
           <div class="pt-4 border-t border-forestGreen/30 text-xs">
-            ${item.videoUrl ? `<a href="${item.videoUrl}" target="_blank" rel="noopener noreferrer" class="text-antiqueGold font-semibold hover:underline inline-flex items-center gap-1"><span>Watch Video</span> <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>` : `<span class="text-mutedIvory font-medium">Graphic Asset Overview</span>`}
+            ${item.videoUrl ? `<a href="${item.videoUrl}" target="_blank" rel="noopener noreferrer" class="text-antiqueGold font-semibold hover:underline inline-flex items-center gap-1"><span>Watch Video</span> <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>` : `<span class="text-mutedIvory font-medium">Graphic Asset Showcase</span>`}
           </div>
         `;
         creativeGrid.appendChild(card);
@@ -611,7 +603,7 @@
         card.className = "bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
         card.innerHTML = `
           <div class="space-y-3">
-            ${buildImageHoverHTML(item.primaryImg, item.hoverImg, item.title)}
+            ${buildStaticImageHTML(item.primaryImg, item.title)}
             <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
             <h3 class="text-base font-semibold text-warmIvory leading-snug">${item.title}</h3>
             <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.description}</p>
