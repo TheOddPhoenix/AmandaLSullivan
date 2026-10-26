@@ -1,13 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Amanda Sullivan</title>
+  <title>Photography | Amanda Sullivan</title>
+  <meta name="description" content="Professional photojournalism and editorial photography portfolio by Amanda Sullivan, documenting military service, community events, and historical moments.">
+  <link rel="canonical" href="https://www.amandalsullivan.com/photography/">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Photography | Amanda Sullivan">
+  <meta property="og:description" content="Professional photojournalism portfolio documenting military operations, leadership, and community moments at Fort Leonard Wood.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.amandalsullivan.com/photography/">
+
+  <!-- Tailwind CSS 3.4 & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Cinzel & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepEvergreen: '#202420',   /* Main site background */
+            charcoal: '#1C1C1C',        /* Section background */
+            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            antiqueGold: '#B68A3B',     /* Primary accent */
+            lightGold: '#C6A76D',       /* Hover highlights */
+            warmIvory: '#EDE9E3',       /* Primary text */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --deep-evergreen: #202420;
+      --charcoal: #1C1C1C;
+      --forest-green: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
+    }
+
+    body {
+      background-color: var(--deep-evergreen);
+      color: var(--warm-ivory);
+      font-family: 'Manrope', sans-serif;
+    }
+
+    /* Focus accessibility styling */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B68A3B;
+      outline-offset: 4px;
+    }
+  </style>
 </head>
-<body>
-  <h1>About Amanda Sullivan</h1>
-  <p>Page under development.</p>
-  <a href="/">Return to Home</a>
+<body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      <!-- Initials Logo -->
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
+        <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
+        <a href="/#community-relations" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">PHOTOGRAPHY</a>
+        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
+        <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
+    <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
+      <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
+      <a href="/#community-relations" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-antiqueGold font-bold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
+        <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
+        <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
+      </div>
+    </nav>
+    <div class="pt-6 border-t border-forestGreen/30 text-xs text-mutedIvory space-y-1">
+      <p class="uppercase tracking-widest text-[10px] text-antiqueGold">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full flex-grow">
+
+    <!-- PAGE HEADER SECTION -->
+    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-4">
+        <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
+          SELECTED PHOTOGRAPHIC WORK
+        </span>
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory tracking-[0.03em]">
+          Photography
+        </h1>
+        <div class="space-y-4 pt-2 max-w-3xl text-base sm:text-lg text-mutedIvory font-light leading-relaxed">
+          <p>
+            Photography is one of the ways I document the people, experiences, and moments that shape a larger story. My approach combines an eye for composition with an understanding of visual communication, capturing images that inform, connect, and preserve moments of significance.
+          </p>
+          <p>
+            I believe photography is one of the most powerful forms of storytelling. A single image can capture emotion, preserve history, and communicate what words alone sometimes cannot. My approach to photography is rooted in that belief, with an emphasis on documenting authentic moments and the people behind them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOGRAPHY RECOGNITION SECTION -->
+    <section class="py-10 bg-charcoal/60 border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div class="border-l-2 border-antiqueGold pl-4 space-y-3">
+          <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em]">
+            Photography Recognition
+          </h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-warmIvory font-light">
+            <div class="space-y-1 bg-deepEvergreen/80 p-4 border border-forestGreen/40">
+              <span class="text-antiqueGold font-medium block">2024 Civilian Photographer of the Year</span>
+              <span class="text-mutedIvory text-xs block">U.S. Army Installation Management Command</span>
+            </div>
+            <div class="space-y-1 bg-deepEvergreen/80 p-4 border border-forestGreen/40">
+              <span class="text-antiqueGold font-medium block">2024 Civilian Photographer of the Year</span>
+              <span class="text-mutedIvory text-xs block">U.S. Army Materiel Command</span>
+            </div>
+            <div class="space-y-1 bg-deepEvergreen/80 p-4 border border-forestGreen/40 sm:col-span-2 lg:col-span-1">
+              <span class="text-antiqueGold font-medium block">2024 Honorable Mention</span>
+              <span class="text-mutedIvory text-xs block">Maj. Gen. Keith L. Ware Communications Awards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY GRID SECTION -->
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-8">
+        
+        <div class="flex items-center justify-between border-b border-forestGreen/40 pb-4">
+          <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em] border-l-2 border-antiqueGold pl-3">
+            Portfolio Showcase
+          </h2>
+          <span class="text-xs text-mutedIvory font-light">Click any image to enlarge</span>
+        </div>
+
+        <!-- 3-Column Desktop / 2-Column Tablet / 1-Column Mobile Gallery -->
+        <div id="photo-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery items injected via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ACCESSIBLE LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col justify-between p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Image viewer">
+    
+    <!-- Top Bar: Counter & Close Button -->
+    <div class="flex items-center justify-between text-xs text-mutedIvory max-w-[1200px] mx-auto w-full pt-2">
+      <span id="lightbox-counter" class="tracking-widest uppercase text-antiqueGold font-semibold">Photograph 1 of 10</span>
+      <button id="lightbox-close" class="text-warmIvory hover:text-antiqueGold p-2 transition focus:outline-none" aria-label="Close image viewer">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Main Image Display Container -->
+    <div class="relative flex-grow flex items-center justify-center my-4 max-w-[1200px] mx-auto w-full overflow-hidden">
+      <!-- Previous Button -->
+      <button id="lightbox-prev" class="absolute left-2 sm:left-4 z-10 text-warmIvory bg-charcoal/80 hover:bg-antiqueGold hover:text-charcoal p-3 rounded-full transition border border-forestGreen/50 focus:outline-none" aria-label="Previous photograph">
+        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Active Image -->
+      <img id="lightbox-img" src="" alt="" class="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain mx-auto border border-forestGreen/40 shadow-2xl" />
+
+      <!-- Next Button -->
+      <button id="lightbox-next" class="absolute right-2 sm:right-4 z-10 text-warmIvory bg-charcoal/80 hover:bg-antiqueGold hover:text-charcoal p-3 rounded-full transition border border-forestGreen/50 focus:outline-none" aria-label="Next photograph">
+        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Bottom Caption Container -->
+    <div class="max-w-[1000px] mx-auto w-full text-center pb-2 px-4 space-y-2">
+      <h3 id="lightbox-title" class="font-serif text-base sm:text-lg font-normal text-warmIvory"></h3>
+      <p id="lightbox-caption" class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed max-h-[15vh] overflow-y-auto"></p>
+    </div>
+
+  </div>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <div>
+        <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix LLC. All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:text-lightGold transition">
+          amanda.l.sullivan@outlook.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GALLERY DATA & INTERACTIVE SCRIPT -->
+  <script>
+    // Original Portfolio Photographs Data
+    const GALLERY_DATA = [
+      {
+        title: "International Best CBRN Warrior Competition",
+        src: "/assets/images/cbrn-warrior-cargo-net.jpg",
+        alt: "1st Lt. Erin Butcher scaling cargo net during CBRN competition",
+        caption: "1st Lt. Erin Butcher with the 1st Cavalry Division at Fort Cavazos, Texas, scales a cargo net on the Physical Endurance Course May 31, 2024, during the 2024 International Best CBRN Warrior Competition at Fort Leonard Wood, Missouri. The competition brings chemical Soldiers from around the world together to demonstrate Chemical Corps capabilities and test competitors’ Soldiering skills."
+      },
+      {
+        title: "Best Sapper Competition",
+        src: "/assets/images/best-sapper-competition-finish.jpg",
+        alt: "Engineers running through castle finish line at Best Sapper Competition",
+        caption: "Staff Sgt. Dwayne Jones, front, and 1st Lt. Austin Chambers, right, from the 299th Brigade Engineer Battalion at Fort Carson, Colorado, run through the Engineer castle at the finish line of the X-Mile final event of the 2024 Robert B. Flowers Best Sapper Competition."
+      },
+      {
+        title: "CH-47 Chinook Operations",
+        src: "/assets/images/photo-in-flight-reenlistment.jpg",
+        alt: "Military Police trainees watching CH-47 Chinook approach at airfield",
+        caption: "Trainees with Company B, 787th Military Police Battalion, watch the approach of a CH-47 Chinook Nov. 6, 2024, at Forney Airfield on Fort Leonard Wood."
+      },
+      {
+        title: "Chemical Training Exercise",
+        src: "/assets/images/chemical-field-training.jpg",
+        alt: "Pvt. Daven Maclin emerging from smoke during field exercise",
+        caption: "Pvt. Daven Maclin, Soldier in training with Company C, 84th Chemical Battalion, emerges from the smoke during a Field Training Exercise June 21, 2024, at Fort Leonard Wood. FTXs serve as a medium to perform summative and formative assessments on what Soldiers have learned throughout advanced individual training."
+      },
+      {
+        title: "Vietnam-Era Combat Engineer Reunion",
+        src: "/assets/images/photos-vietnam-veterans.jpg",
+        alt: "Vietnam combat engineer veteran operating bridge boat",
+        caption: "Vietnam-era combat engineer Laurens Beckwith, center, operates a M30 Bridge Erection Boat during a reunion tour for former members of the 13th Engineer Battalion at Fort Leonard Wood Sept. 11, 2024. Beckwith graduated from advanced individual training at Fort Leonard Wood in 1964."
+      },
+      {
+        title: "Military Police Drill Sergeant Portrait",
+        src: "/assets/images/photo-drill-sergeant-portrait.jpg",
+        alt: "Staff Sgt. Austin Marshall posing at Vehicle Dynamics Course",
+        caption: "Staff Sgt. Austin Marshall, drill sergeant with Company D, 795th Military Police Battalion, poses in front of the Vehicle Dynamics Course at Fort Leonard Wood, Missouri, Dec. 13, 2024. The course teaches new MP Soldiers the basics of emergency vehicle operations and navigation."
+      },
+      {
+        title: "Army Birthday Celebration",
+        src: "/assets/images/photo-army-birthday-cake-cutting.jpg",
+        alt: "Command leadership cutting Army birthday cake with a ceremonial sword",
+        caption: "(From left) Command Sgt. Maj. Jorge Arzabala, Pvt. Sophia Vishneski, Maj. Anne Jeanette Sheahan and Maj. Gen. Christopher Beck, MSCoE and Fort Leonard Wood commanding general, use a sword to cut a cake in celebration of the Army’s 249th birthday."
+      },
+      {
+        title: "Best Squad Competition",
+        src: "/assets/images/photo-best-squad-competition.jpg",
+        alt: "Squad 6 members conducting tactical event during competition",
+        caption: "Members of Squad 6, representing the Maneuver Support Center of Excellence, conduct the TSE event during the Squad STX on day seven of the U.S. Army Training and Doctrine Command Best Squad Competition 2024, Aug. 16, 2024, at Fort Leonard Wood, Missouri."
+      },
+      {
+        title: "Trees for Troops Event",
+        src: "/assets/images/photo-trees-for-troops.jpg",
+        alt: "Cpl. Shavaun Shaw selecting a Christmas tree with family",
+        caption: "Cpl. Shavaun Shaw, with U.S. Army Medical Command, selects a tree with his family during the Trees for Troops event Dec. 13, 2024, at Fort Leonard Wood’s Automotive Skills Center. Fort Leonard Wood was one of more than 90 military installations receiving trees through the national program."
+      },
+      {
+        title: "399th Army Band Farewell Concert",
+        src: "/assets/images/photo-band-farewell-concert.jpg",
+        alt: "399th Army Band performing on stage at Nutter Field House",
+        caption: "Soldiers with Fort Leonard Wood’s 399th Army Band perform during a farewell concert held Oct. 26, 2024, at Nutter Field House."
+      }
+    ];
+
+    let currentIndex = 0;
+
+    // Render Gallery Grid
+    function renderGallery() {
+      const container = document.getElementById('photo-gallery');
+      if (!container) return;
+      container.innerHTML = '';
+
+      GALLERY_DATA.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = "bg-deepEvergreen border border-forestGreen/50 overflow-hidden flex flex-col justify-between group hover:border-antiqueGold transition duration-300 cursor-pointer";
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `View ${item.title}`);
+
+        card.innerHTML = `
+          <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
+            <img 
+              src="${item.src}" 
+              alt="${item.alt}" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+              loading="lazy"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='..'+this.getAttribute('src');}"
+            />
+            <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <span class="text-xs font-semibold tracking-wider text-warmIvory bg-charcoal/80 px-3 py-1.5 border border-antiqueGold/50 rounded-sm">
+                ENLARGE
+              </span>
+            </div>
+          </div>
+          <div class="p-4 space-y-1 bg-deepEvergreen">
+            <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Photograph ${index + 1}</span>
+            <h3 class="text-sm font-semibold text-warmIvory group-hover:text-lightGold transition">${item.title}</h3>
+          </div>
+        `;
+
+        card.addEventListener('click', () => openLightbox(index));
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openLightbox(index);
+          }
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    // Lightbox Controls
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    const modalTitle = document.getElementById('lightbox-title');
+    const modalCaption = document.getElementById('lightbox-caption');
+    const modalCounter = document.getElementById('lightbox-counter');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxContent();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeLightbox() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent() {
+      const item = GALLERY_DATA[currentIndex];
+      modalImg.src = item.src;
+      modalImg.alt = item.alt;
+      modalTitle.textContent = item.title;
+      modalCaption.textContent = item.caption;
+      modalCounter.textContent = `Photograph ${currentIndex + 1} of ${GALLERY_DATA.length}`;
+
+      // Fallback path check for local/relative deployment
+      modalImg.onerror = function() {
+        if (!this.dataset.fallback) {
+          this.dataset.fallback = 'true';
+          this.src = '..' + item.src;
+        }
+      };
+    }
+
+    function nextPhoto() {
+      currentIndex = (currentIndex + 1) % GALLERY_DATA.length;
+      updateLightboxContent();
+    }
+
+    function prevPhoto() {
+      currentIndex = (currentIndex - 1 + GALLERY_DATA.length) % GALLERY_DATA.length;
+      updateLightboxContent();
+    }
+
+    // Event Listeners for Lightbox
+    closeBtn.addEventListener('click', closeLightbox);
+    nextBtn.addEventListener('click', nextPhoto);
+    prevBtn.addEventListener('click', prevPhoto);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (modal.classList.contains('flex')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextPhoto();
+        if (e.key === 'ArrowLeft') prevPhoto();
+      }
+    });
+
+    // Mobile Navigation Drawer Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        menuIcon.setAttribute('data-lucide', 'x');
+      }
+      lucide.createIcons();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+      });
+    });
+
+    // Initial Execution
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderGallery();
+    });
+  </script>
 </body>
 </html>
