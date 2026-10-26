@@ -127,7 +127,9 @@
           Photography
         </h1>
         <div class="space-y-4 pt-2 max-w-3xl text-base sm:text-lg text-mutedIvory font-light leading-relaxed">
-        
+          <p>
+            Photography is one of the ways I document the people, experiences, and moments that shape a larger story. My approach combines an eye for composition with an understanding of visual communication, capturing images that inform, connect, and preserve moments of significance.
+          </p>
           <p>
             I believe photography is one of the most powerful forms of storytelling. A single image can capture emotion, preserve history, and communicate what words alone sometimes cannot. My approach to photography is rooted in that belief, with an emphasis on documenting authentic moments and the people behind them.
           </p>
@@ -225,7 +227,7 @@
 
   <!-- GALLERY DATA & INTERACTIVE SCRIPT -->
   <script>
-    // All 18 Original Portfolio Photographs (Matching repo files starting with photo / photos)
+    // 14 Selected Portfolio Photographs
     const GALLERY_DATA = [
       {
         src: "/assets/images/photo-airport-groundbreaking.jpg",
@@ -246,11 +248,6 @@
         src: "/assets/images/photo-best-sapper-2.jpg",
         alt: "Competitors in action during the Best Sapper Competition",
         caption: "Sapper competitors navigate grueling physical obstacles and technical engineering challenges during the annual Robert B. Flowers Best Sapper Competition at Fort Leonard Wood."
-      },
-      {
-        src: "/assets/images/photo-best-sapper-3.jpg",
-        alt: "Sapper competitors completing tactical field event",
-        caption: "Engineers execute tactical breaching and obstacle navigation during the high-intensity Best Sapper Competition at Fort Leonard Wood."
       },
       {
         src: "/assets/images/photo-best-squad-competition.jpg",
@@ -283,24 +280,9 @@
         caption: "Army Soldiers take part in a memorable aerial reenlistment ceremony aboard a CH-47 Chinook helicopter in flight over Fort Leonard Wood."
       },
       {
-        src: "/assets/images/photo-in-flight-reenlistment-3.jpg",
-        alt: "Soldiers celebrating reenlistment inside helicopter",
-        caption: "Soldiers celebrate their continued commitment to military service during an in-flight reenlistment ceremony aboard a CH-47 Chinook helicopter."
-      },
-      {
         src: "/assets/images/photo-mp-working-dog-grooming.jpg",
         alt: "Military Police handler grooming military working dog",
         caption: "A Military Police handler grooms and prepares a military working dog for regimental week demonstrations and installation patrol duty at Fort Leonard Wood."
-      },
-      {
-        src: "/assets/images/photo-read-across-america.jpg",
-        alt: "Service members reading to elementary students",
-        caption: "Fort Leonard Wood service members read to elementary school students in support of Read Across America community outreach events."
-      },
-      {
-        src: "/assets/images/photo-scout-visit.jpg",
-        alt: "Youth scouts visiting Fort Leonard Wood facility",
-        caption: "Local youth scouts visit Fort Leonard Wood to learn about military service careers, emergency response capabilities, and community partnerships."
       },
       {
         src: "/assets/images/photo-trees-for-troops.jpg",
@@ -309,163 +291,4 @@
       },
       {
         src: "/assets/images/photos-graduation-salute.jpg",
-        alt: "Graduating Soldiers rendering hand salute",
-        caption: "Graduating Soldiers render a proud hand salute during a Basic Combat Training graduation ceremony at Fort Leonard Wood."
-      },
-      {
-        src: "/assets/images/photos-vietnam-veterans.jpg",
-        alt: "Vietnam combat engineer veteran Laurens Beckwith operating boat",
-        caption: "Vietnam-era combat engineer Laurens Beckwith, center, operates a M30 Bridge Erection Boat during a reunion tour for former members of the 13th Engineer Battalion at Fort Leonard Wood Sept. 11, 2024. Beckwith graduated from advanced individual training at Fort Leonard Wood in 1964."
-      }
-    ];
-
-    let currentIndex = 0;
-
-    // Render Clean Gallery Grid (Pure Images, No Text or Titles on Cards)
-    function renderGallery() {
-      const container = document.getElementById('photo-gallery');
-      if (!container) return;
-      container.innerHTML = '';
-
-      GALLERY_DATA.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = "aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden relative group hover:border-antiqueGold transition duration-300 cursor-pointer";
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `Enlarge photograph ${index + 1}`);
-
-        card.innerHTML = `
-          <img 
-            src="${item.src}" 
-            alt="${item.alt}" 
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-            loading="lazy"
-            onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='..'+this.getAttribute('src');}"
-          />
-          <div class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-            <span class="text-[11px] font-semibold tracking-widest uppercase text-warmIvory bg-charcoal/85 px-3 py-1.5 border border-antiqueGold/60">
-              ENLARGE
-            </span>
-          </div>
-        `;
-
-        card.addEventListener('click', () => openLightbox(index));
-        card.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openLightbox(index);
-          }
-        });
-
-        container.appendChild(card);
-      });
-    }
-
-    // Lightbox Modal Controls
-    const modal = document.getElementById('lightbox-modal');
-    const modalImg = document.getElementById('lightbox-img');
-    const modalCaption = document.getElementById('lightbox-caption');
-    const closeBtn = document.getElementById('lightbox-close');
-    const prevBtn = document.getElementById('lightbox-prev');
-    const nextBtn = document.getElementById('lightbox-next');
-
-    function openLightbox(index) {
-      currentIndex = index;
-      updateLightboxContent();
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-      closeBtn.focus();
-    }
-
-    function closeLightbox() {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
-
-    function updateLightboxContent() {
-      const item = GALLERY_DATA[currentIndex];
-      modalImg.src = item.src;
-      modalImg.alt = item.alt;
-      modalCaption.textContent = item.caption;
-
-      // Relative path fallback for local testing
-      modalImg.onerror = function() {
-        if (!this.dataset.fallback) {
-          this.dataset.fallback = 'true';
-          this.src = '..' + item.src;
-        }
-      };
-    }
-
-    function nextPhoto() {
-      currentIndex = (currentIndex + 1) % GALLERY_DATA.length;
-      updateLightboxContent();
-    }
-
-    function prevPhoto() {
-      currentIndex = (currentIndex - 1 + GALLERY_DATA.length) % GALLERY_DATA.length;
-      updateLightboxContent();
-    }
-
-    // Event Listeners for Lightbox Controls
-    closeBtn.addEventListener('click', closeLightbox);
-    nextBtn.addEventListener('click', nextPhoto);
-    prevBtn.addEventListener('click', prevPhoto);
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeLightbox();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (modal.classList.contains('flex')) {
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') nextPhoto();
-        if (e.key === 'ArrowLeft') prevPhoto();
-      }
-    });
-
-    // Mobile Navigation Drawer Toggle
-    const toggleBtn = document.getElementById('mobile-menu-toggle');
-    const drawer = document.getElementById('mobile-drawer');
-    const menuIcon = document.getElementById('menu-icon');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-    toggleBtn.addEventListener('click', () => {
-      const isOpen = drawer.classList.contains('flex');
-      if (isOpen) {
-        drawer.classList.remove('flex');
-        drawer.classList.add('hidden');
-        drawer.setAttribute('aria-hidden', 'true');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-      } else {
-        drawer.classList.remove('hidden');
-        drawer.classList.add('flex');
-        drawer.setAttribute('aria-hidden', 'false');
-        toggleBtn.setAttribute('aria-expanded', 'true');
-        menuIcon.setAttribute('data-lucide', 'x');
-      }
-      lucide.createIcons();
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        drawer.classList.add('hidden');
-        drawer.classList.remove('flex');
-        drawer.setAttribute('aria-hidden', 'true');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
-      });
-    });
-
-    // Initial Load Execution
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-      renderGallery();
-    });
-  </script>
-</body>
-</html>
+        alt: "Graduating Soldiers
