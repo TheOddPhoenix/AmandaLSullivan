@@ -583,7 +583,7 @@
       });
     }
 
-    // 5b. Render Section 4: Creative Media - Graphics Grid
+// 5b. Render Section 4: Creative Media - Graphics Grid
     const creativeGraphicsGrid = document.getElementById('creative-graphics-grid');
     if (creativeGraphicsGrid) {
       creativeGraphicsGrid.innerHTML = '';
@@ -592,7 +592,9 @@
         card.className = "bg-charcoal border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
         card.innerHTML = `
           <div class="space-y-3">
-            ${buildStaticImageHTML(item.primaryImg, item.alt)}
+            <div class="aspect-[4/5] bg-deepEvergreen/80 border border-forestGreen/30 overflow-hidden relative flex items-center justify-center p-2">
+              <img src="${item.primaryImg}" alt="${item.alt}" class="w-full h-full object-contain" loading="lazy" />
+            </div>
             <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
             <h3 class="text-base font-semibold text-warmIvory leading-snug">${item.title}</h3>
             <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.description}</p>
