@@ -80,7 +80,6 @@
 
   <!-- DATA ARCHITECTURE STORE -->
   <script>
-<script>
     const HOMEPAGE_DATA = {
       communityCases: [
         {
@@ -88,8 +87,7 @@
           title: "Leadership Award Program",
           type: "Program Development & Community Relations",
           preview: "In the post-COVID period, Fort Leonard Wood needed a consistent way to rebuild relationships with local schools. I developed a monthly recognition program centered on Army Values and positive student impact.",
-          primaryImg: "assets/images/Leadership Award.jpg",
-          hoverImg: "assets/images/photo-airport-groundbreaking.jpg",
+          imageSlot: "assets/images/case-leadership-award.jpg",
           alt: "Student Leadership Award recognition ceremony at local school."
         },
         {
@@ -97,8 +95,7 @@
           title: "Read Across America",
           type: "Community Outreach & Event Operations",
           preview: "When I assumed management in 2020, participation was limited to one district. I developed a scalable model that expanded school participation while preserving consistent messaging and manageable coordination.",
-          primaryImg: "assets/images/photo-read-across-america.jpg",
-          hoverImg: "assets/images/photo-trees-for-troops.jpg",
+          imageSlot: "assets/images/case-read-across-america.jpg",
           alt: "Soldier volunteer reading to elementary school students.",
           articleUrl: "https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day"
         },
@@ -107,32 +104,28 @@
           title: "Scout Visits Liaison",
           type: "Community Engagement & Operational Coordination",
           preview: "Fort Leonard Wood supported approximately 10 Scout visits annually, each involving 10–40 participants and often including overnight stays and hands-on Army activities.",
-          primaryImg: "assets/images/photo-scout-visit.jpg",
-          hoverImg: "assets/images/Bicentennial Parade.jpg",
+          imageSlot: "assets/images/case-scout-visits.jpg",
           alt: "Scout troop interacting with military equipment during guided visit."
         }
       ],
       photography: [
         {
           id: "photo-1",
-          primaryImg: "assets/images/cbrn-warrior-cargo-net.jpg",
-          hoverImg: "assets/images/photo-best-squad-competition.jpg",
+          filename: "cbrn-warrior-cargo-net.jpg",
           title: "International Best CBRN Warrior Competition",
           caption: "1st Lt. Erin Butcher with the 1st Cavalry Division at Fort Cavazos, Texas, scales a cargo net on the Physical Endurance Course May 31, 2024, during the 2024 International Best CBRN Warrior Competition at Fort Leonard Wood, Missouri. The competition brings chemical Soldiers from around the world together to demonstrate Chemical Corps capabilities and test competitors' Soldiering skills.",
           credit: "U.S. Army Photo by Amanda Sullivan"
         },
         {
           id: "photo-2",
-          primaryImg: "assets/images/best-sapper-competition-finish.jpg",
-          hoverImg: "assets/images/photo-best-sapper-2.jpg",
+          filename: "best-sapper-competition.jpg",
           title: "Robert B. Flowers Best Sapper Competition",
           caption: "Staff Sgt. Dwayne Jones, front, and 1st Lt. Austin Chambers, right, from the 299th Brigade Engineer Battalion at Fort Carson, Colorado, run through the Engineer castle at the finish line of the X-Mile final event of the 2024 Robert B. Flowers Best Sapper Competition.",
           credit: "U.S. Army Photo by Amanda Sullivan"
         },
         {
           id: "photo-3",
-          primaryImg: "assets/images/chemical-field-training.jpg",
-          hoverImg: "assets/images/photo-fire-training.jpg",
+          filename: "chemical-field-training.jpg",
           title: "Chemical Battalion Field Training",
           caption: "Pvt. Daven Maclin, Soldier in training with Company C, 84th Chemical Battalion, emerges from the smoke during a Field Training Exercise June 21, 2024, at Fort Leonard Wood. FTXs serve as a medium to perform summative and formative assessments on what Soldiers have learned throughout advanced individual training.",
           credit: "U.S. Army Photo by Amanda Sullivan"
@@ -144,30 +137,21 @@
           title: "From the FBI to FLW: Army Chaplain Has Worn Many Hats",
           description: "A long-form feature tracing one chaplain's journey from FBI special agent to Army ministry and exploring the varied paths that lead to military service.",
           url: "https://www.army.mil/article/261291/from_the_fbi_to_flw_army_chaplain_has_worn_many_hats",
-          publication: "Army.mil",
-          primaryImg: "assets/images/article-chaplain.jpg",
-          hoverImg: "assets/images/article-50yo-soldier.jpg",
-          alt: "Army Chaplain portrait feature"
+          publication: "Army.mil"
         },
         {
           id: "art-2",
           title: "Para-swimmer, Military Spouse Defies the Odds",
           description: "A story of resilience, athletic achievement, and personal courage centered on a para-athlete and Army spouse.",
           url: "https://www.army.mil/article/256850/para_swimmer_military_spouse_defies_the_odds_through_personal_courage",
-          publication: "Army.mil",
-          primaryImg: "assets/images/article-paraswimmer.jpg",
-          hoverImg: "assets/images/article-adjutant-general-oy.jpg",
-          alt: "Para-swimmer military spouse feature"
+          publication: "Army.mil"
         },
         {
           id: "art-3",
           title: "Fort Leonard Wood Examines WWII Ghost Army Deception Tactics",
           description: "An accessible examination of World War II deception operations connecting Army history with modern audiences.",
           url: "https://www.army.mil/article/247350/fort_leonard_wood_examines_wwii_ghost_army_deception_tactics",
-          publication: "Army.mil",
-          primaryImg: "assets/images/ghost-army-article.jpg",
-          hoverImg: "assets/images/article-eagle-survey.jpg",
-          alt: "WWII Ghost Army history feature"
+          publication: "Army.mil"
         }
       ],
       creativeMedia: [
@@ -189,12 +173,11 @@
         },
         {
           id: "creative-3",
-          title: "Soldier & Civilian Spotlight Graphics",
-          type: "Graphic Design & Visual Identity",
-          description: "Original graphic design layouts, social media spotlight templates, and publication graphics developed for official public affairs channels.",
-          primaryImg: "assets/images/graphic-soldier-spotlight-1.jpg",
-          hoverImg: "assets/images/graphic-soldier-spotlight-2.jpg",
-          videoUrl: null
+          title: "Community Engagement Feature",
+          type: "Facebook Social Media Campaign",
+          description: "Original social media video campaign developed for official channels highlighting installation activities and community engagements.",
+          videoUrl: "https://www.facebook.com/fortleonardwoodmissouri/videos/502155020403062/",
+          embedUrl: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffortleonardwoodmissouri%2Fvideos%2F502155020403062%2F&show_text=0"
         }
       ],
       digitalProjects: [
@@ -204,8 +187,7 @@
           type: "Digital Publishing & Content Strategy",
           description: "Launched and managed Show Me Fort Leonard Wood, an official WordPress blog that reached 200,000+ readers through original reporting, content strategy, SEO, analytics, and digital publishing.",
           tech: "WordPress, CSS, SEO, Google Analytics",
-          primaryImg: "assets/images/civilian-spotlight-olguin.jpg",
-          hoverImg: "assets/images/civilain-spotlight-bowersox.jpg"
+          imageSlot: "assets/images/web-show-me-flw.jpg"
         },
         {
           id: "dig-2",
@@ -213,8 +195,7 @@
           type: "Application Development & UI/UX",
           description: "Designing and developing responsive web interfaces, interactive tools, and clean front-end code built for accessibility and user experience.",
           tech: "HTML5, Tailwind CSS, JavaScript",
-          primaryImg: "assets/images/best-sapper-graphic-1.jpg",
-          hoverImg: "assets/images/best-sapper-graphic-2.jpg"
+          imageSlot: "assets/images/web-app-interface.jpg"
         },
         {
           id: "dig-3",
@@ -222,8 +203,7 @@
           type: "E-Commerce Implementation",
           description: "Configuring online storefronts, structuring digital product catalogs, implementing merchant features, and optimizing user workflows.",
           tech: "E-Commerce CMS, Merchandising, UI/UX",
-          primaryImg: "assets/images/graphic-thenandnow-counteehall.jpg",
-          hoverImg: "assets/images/graphic-thenandnow-garlington.jpg"
+          imageSlot: "assets/images/ecommerce-storefront.jpg"
         }
       ]
     };
