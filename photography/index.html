@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photography | Amanda Sullivan</title>
-  <meta name="description" content="Professional photojournalism and editorial photography portfolio by Amanda Sullivan, documenting military service, community events, and historical moments.">
+  <meta name="description" content="Professional photojournalism portfolio by Amanda Sullivan documenting military operations, leadership, and community events at Fort Leonard Wood.">
   <link rel="canonical" href="https://www.amandalsullivan.com/photography/">
 
   <!-- Open Graph Metadata -->
@@ -165,17 +165,10 @@
     <!-- GALLERY GRID SECTION -->
     <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30">
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-8">
-        
-        <div class="flex items-center justify-between border-b border-forestGreen/40 pb-4">
-          <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em] border-l-2 border-antiqueGold pl-3">
-            Portfolio Showcase
-          </h2>
-          <span class="text-xs text-mutedIvory font-light">Click any image to enlarge</span>
-        </div>
 
-        <!-- 3-Column Desktop / 2-Column Tablet / 1-Column Mobile Gallery -->
+        <!-- Clean Grid: Desktop 3-col / Tablet 2-col / Mobile 1-col -->
         <div id="photo-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Gallery items injected via JavaScript -->
+          <!-- Gallery photos injected dynamically via JavaScript -->
         </div>
 
       </div>
@@ -184,11 +177,10 @@
   </main>
 
   <!-- ACCESSIBLE LIGHTBOX MODAL -->
-  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col justify-between p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex-col justify-between p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Image viewer">
     
-    <!-- Top Bar: Counter & Close Button -->
-    <div class="flex items-center justify-between text-xs text-mutedIvory max-w-[1200px] mx-auto w-full pt-2">
-      <span id="lightbox-counter" class="tracking-widest uppercase text-antiqueGold font-semibold">Photograph 1 of 10</span>
+    <!-- Top Bar: Close Button -->
+    <div class="flex items-center justify-end text-xs text-mutedIvory max-w-[1200px] mx-auto w-full pt-2">
       <button id="lightbox-close" class="text-warmIvory hover:text-antiqueGold p-2 transition focus:outline-none" aria-label="Close image viewer">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
@@ -202,7 +194,7 @@
       </button>
 
       <!-- Active Image -->
-      <img id="lightbox-img" src="" alt="" class="max-h-[65vh] sm:max-h-[70vh] max-w-full object-contain mx-auto border border-forestGreen/40 shadow-2xl" />
+      <img id="lightbox-img" src="" alt="" class="max-h-[70vh] sm:max-h-[75vh] max-w-full object-contain mx-auto border border-forestGreen/40 shadow-2xl" />
 
       <!-- Next Button -->
       <button id="lightbox-next" class="absolute right-2 sm:right-4 z-10 text-warmIvory bg-charcoal/80 hover:bg-antiqueGold hover:text-charcoal p-3 rounded-full transition border border-forestGreen/50 focus:outline-none" aria-label="Next photograph">
@@ -211,9 +203,8 @@
     </div>
 
     <!-- Bottom Caption Container -->
-    <div class="max-w-[1000px] mx-auto w-full text-center pb-2 px-4 space-y-2">
-      <h3 id="lightbox-title" class="font-serif text-base sm:text-lg font-normal text-warmIvory"></h3>
-      <p id="lightbox-caption" class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed max-h-[15vh] overflow-y-auto"></p>
+    <div class="max-w-[1000px] mx-auto w-full text-center pb-4 px-4">
+      <p id="lightbox-caption" class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed max-h-[18vh] overflow-y-auto"></p>
     </div>
 
   </div>
@@ -236,73 +227,103 @@
 
   <!-- GALLERY DATA & INTERACTIVE SCRIPT -->
   <script>
-    // Original Portfolio Photographs Data
+    // All 18 Original Portfolio Photographs (Matching repo files starting with photo / photos)
     const GALLERY_DATA = [
       {
-        title: "International Best CBRN Warrior Competition",
-        src: "/assets/images/cbrn-warrior-cargo-net.jpg",
-        alt: "1st Lt. Erin Butcher scaling cargo net during CBRN competition",
-        caption: "1st Lt. Erin Butcher with the 1st Cavalry Division at Fort Cavazos, Texas, scales a cargo net on the Physical Endurance Course May 31, 2024, during the 2024 International Best CBRN Warrior Competition at Fort Leonard Wood, Missouri. The competition brings chemical Soldiers from around the world together to demonstrate Chemical Corps capabilities and test competitors’ Soldiering skills."
+        src: "/assets/images/photo-airport-groundbreaking.jpg",
+        alt: "Groundbreaking ceremony for the new Waynesville-St. Robert Regional Airport terminal",
+        caption: "Local and military leaders break ground for the new Waynesville-St. Robert Regional Airport terminal project at Fort Leonard Wood, strengthening post-to-community infrastructure and civic partnership."
       },
       {
-        title: "Best Sapper Competition",
-        src: "/assets/images/best-sapper-competition-finish.jpg",
-        alt: "Engineers running through castle finish line at Best Sapper Competition",
-        caption: "Staff Sgt. Dwayne Jones, front, and 1st Lt. Austin Chambers, right, from the 299th Brigade Engineer Battalion at Fort Carson, Colorado, run through the Engineer castle at the finish line of the X-Mile final event of the 2024 Robert B. Flowers Best Sapper Competition."
-      },
-      {
-        title: "CH-47 Chinook Operations",
-        src: "/assets/images/photo-in-flight-reenlistment.jpg",
-        alt: "Military Police trainees watching CH-47 Chinook approach at airfield",
-        caption: "Trainees with Company B, 787th Military Police Battalion, watch the approach of a CH-47 Chinook Nov. 6, 2024, at Forney Airfield on Fort Leonard Wood."
-      },
-      {
-        title: "Chemical Training Exercise",
-        src: "/assets/images/chemical-field-training.jpg",
-        alt: "Pvt. Daven Maclin emerging from smoke during field exercise",
-        caption: "Pvt. Daven Maclin, Soldier in training with Company C, 84th Chemical Battalion, emerges from the smoke during a Field Training Exercise June 21, 2024, at Fort Leonard Wood. FTXs serve as a medium to perform summative and formative assessments on what Soldiers have learned throughout advanced individual training."
-      },
-      {
-        title: "Vietnam-Era Combat Engineer Reunion",
-        src: "/assets/images/photos-vietnam-veterans.jpg",
-        alt: "Vietnam combat engineer veteran operating bridge boat",
-        caption: "Vietnam-era combat engineer Laurens Beckwith, center, operates a M30 Bridge Erection Boat during a reunion tour for former members of the 13th Engineer Battalion at Fort Leonard Wood Sept. 11, 2024. Beckwith graduated from advanced individual training at Fort Leonard Wood in 1964."
-      },
-      {
-        title: "Military Police Drill Sergeant Portrait",
-        src: "/assets/images/photo-drill-sergeant-portrait.jpg",
-        alt: "Staff Sgt. Austin Marshall posing at Vehicle Dynamics Course",
-        caption: "Staff Sgt. Austin Marshall, drill sergeant with Company D, 795th Military Police Battalion, poses in front of the Vehicle Dynamics Course at Fort Leonard Wood, Missouri, Dec. 13, 2024. The course teaches new MP Soldiers the basics of emergency vehicle operations and navigation."
-      },
-      {
-        title: "Army Birthday Celebration",
         src: "/assets/images/photo-army-birthday-cake-cutting.jpg",
         alt: "Command leadership cutting Army birthday cake with a ceremonial sword",
         caption: "(From left) Command Sgt. Maj. Jorge Arzabala, Pvt. Sophia Vishneski, Maj. Anne Jeanette Sheahan and Maj. Gen. Christopher Beck, MSCoE and Fort Leonard Wood commanding general, use a sword to cut a cake in celebration of the Army’s 249th birthday."
       },
       {
-        title: "Best Squad Competition",
+        src: "/assets/images/photo-band-farewell-concert.jpg",
+        alt: "399th Army Band performing during farewell concert",
+        caption: "Soldiers with Fort Leonard Wood’s 399th Army Band perform during a farewell concert held Oct. 26, 2024, at Nutter Field House."
+      },
+      {
+        src: "/assets/images/photo-best-sapper-2.jpg",
+        alt: "Competitors in action during the Best Sapper Competition",
+        caption: "Sapper competitors navigate grueling physical obstacles and technical engineering challenges during the annual Robert B. Flowers Best Sapper Competition at Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photo-best-sapper-3.jpg",
+        alt: "Sapper competitors completing tactical field event",
+        caption: "Engineers execute tactical breaching and obstacle navigation during the high-intensity Best Sapper Competition at Fort Leonard Wood."
+      },
+      {
         src: "/assets/images/photo-best-squad-competition.jpg",
-        alt: "Squad 6 members conducting tactical event during competition",
+        alt: "Squad 6 members during TRADOC Best Squad Competition",
         caption: "Members of Squad 6, representing the Maneuver Support Center of Excellence, conduct the TSE event during the Squad STX on day seven of the U.S. Army Training and Doctrine Command Best Squad Competition 2024, Aug. 16, 2024, at Fort Leonard Wood, Missouri."
       },
       {
-        title: "Trees for Troops Event",
+        src: "/assets/images/photo-best-squad-competition-2.jpg",
+        alt: "Competitors engaging targets during TRADOC Best Squad Competition",
+        caption: "Competitors engage targets on the range during the weapons qualification and tactical marksmanship phase of the TRADOC Best Squad Competition at Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photo-drill-sergeant-portrait.jpg",
+        alt: "Staff Sgt. Austin Marshall in front of Vehicle Dynamics Course",
+        caption: "Staff Sgt. Austin Marshall, drill sergeant with Company D, 795th Military Police Battalion, poses in front of the Vehicle Dynamics Course at Fort Leonard Wood, Missouri, Dec. 13, 2024. The course teaches new MP Soldiers the basics of emergency vehicle operations and navigation."
+      },
+      {
+        src: "/assets/images/photo-fire-training.jpg",
+        alt: "Military firefighters during live-fire response training",
+        caption: "Military firefighters participate in intensive live-fire vehicle extrication and emergency response training exercises at Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photo-in-flight-reenlistment.jpg",
+        alt: "Trainees watching CH-47 Chinook approach at Forney Airfield",
+        caption: "Trainees with Company B, 787th Military Police Battalion, watch the approach of a CH-47 Chinook Nov. 6, 2024, at Forney Airfield on Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photo-in-flight-reenlistment-2.jpg",
+        alt: "Soldiers taking part in in-flight reenlistment flight",
+        caption: "Army Soldiers take part in a memorable aerial reenlistment ceremony aboard a CH-47 Chinook helicopter in flight over Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photo-in-flight-reenlistment-3.jpg",
+        alt: "Soldiers celebrating reenlistment inside helicopter",
+        caption: "Soldiers celebrate their continued commitment to military service during an in-flight reenlistment ceremony aboard a CH-47 Chinook helicopter."
+      },
+      {
+        src: "/assets/images/photo-mp-working-dog-grooming.jpg",
+        alt: "Military Police handler grooming military working dog",
+        caption: "A Military Police handler grooms and prepares a military working dog for regimental week demonstrations and installation patrol duty at Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photo-read-across-america.jpg",
+        alt: "Service members reading to elementary students",
+        caption: "Fort Leonard Wood service members read to elementary school students in support of Read Across America community outreach events."
+      },
+      {
+        src: "/assets/images/photo-scout-visit.jpg",
+        alt: "Youth scouts visiting Fort Leonard Wood facility",
+        caption: "Local youth scouts visit Fort Leonard Wood to learn about military service careers, emergency response capabilities, and community partnerships."
+      },
+      {
         src: "/assets/images/photo-trees-for-troops.jpg",
-        alt: "Cpl. Shavaun Shaw selecting a Christmas tree with family",
+        alt: "Cpl. Shavaun Shaw selecting Christmas tree with family",
         caption: "Cpl. Shavaun Shaw, with U.S. Army Medical Command, selects a tree with his family during the Trees for Troops event Dec. 13, 2024, at Fort Leonard Wood’s Automotive Skills Center. Fort Leonard Wood was one of more than 90 military installations receiving trees through the national program."
       },
       {
-        title: "399th Army Band Farewell Concert",
-        src: "/assets/images/photo-band-farewell-concert.jpg",
-        alt: "399th Army Band performing on stage at Nutter Field House",
-        caption: "Soldiers with Fort Leonard Wood’s 399th Army Band perform during a farewell concert held Oct. 26, 2024, at Nutter Field House."
+        src: "/assets/images/photos-graduation-salute.jpg",
+        alt: "Graduating Soldiers rendering hand salute",
+        caption: "Graduating Soldiers render a proud hand salute during a Basic Combat Training graduation ceremony at Fort Leonard Wood."
+      },
+      {
+        src: "/assets/images/photos-vietnam-veterans.jpg",
+        alt: "Vietnam combat engineer veteran Laurens Beckwith operating boat",
+        caption: "Vietnam-era combat engineer Laurens Beckwith, center, operates a M30 Bridge Erection Boat during a reunion tour for former members of the 13th Engineer Battalion at Fort Leonard Wood Sept. 11, 2024. Beckwith graduated from advanced individual training at Fort Leonard Wood in 1964."
       }
     ];
 
     let currentIndex = 0;
 
-    // Render Gallery Grid
+    // Render Clean Gallery Grid (Pure Images, No Text or Titles on Cards)
     function renderGallery() {
       const container = document.getElementById('photo-gallery');
       if (!container) return;
@@ -310,29 +331,23 @@
 
       GALLERY_DATA.forEach((item, index) => {
         const card = document.createElement('div');
-        card.className = "bg-deepEvergreen border border-forestGreen/50 overflow-hidden flex flex-col justify-between group hover:border-antiqueGold transition duration-300 cursor-pointer";
+        card.className = "aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden relative group hover:border-antiqueGold transition duration-300 cursor-pointer";
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `View ${item.title}`);
+        card.setAttribute('aria-label', `Enlarge photograph ${index + 1}`);
 
         card.innerHTML = `
-          <div class="aspect-[4/3] bg-charcoal relative overflow-hidden">
-            <img 
-              src="${item.src}" 
-              alt="${item.alt}" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-              loading="lazy"
-              onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='..'+this.getAttribute('src');}"
-            />
-            <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-              <span class="text-xs font-semibold tracking-wider text-warmIvory bg-charcoal/80 px-3 py-1.5 border border-antiqueGold/50 rounded-sm">
-                ENLARGE
-              </span>
-            </div>
-          </div>
-          <div class="p-4 space-y-1 bg-deepEvergreen">
-            <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Photograph ${index + 1}</span>
-            <h3 class="text-sm font-semibold text-warmIvory group-hover:text-lightGold transition">${item.title}</h3>
+          <img 
+            src="${item.src}" 
+            alt="${item.alt}" 
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            loading="lazy"
+            onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='..'+this.getAttribute('src');}"
+          />
+          <div class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <span class="text-[11px] font-semibold tracking-widest uppercase text-warmIvory bg-charcoal/85 px-3 py-1.5 border border-antiqueGold/60">
+              ENLARGE
+            </span>
           </div>
         `;
 
@@ -348,12 +363,10 @@
       });
     }
 
-    // Lightbox Controls
+    // Lightbox Modal Controls
     const modal = document.getElementById('lightbox-modal');
     const modalImg = document.getElementById('lightbox-img');
-    const modalTitle = document.getElementById('lightbox-title');
     const modalCaption = document.getElementById('lightbox-caption');
-    const modalCounter = document.getElementById('lightbox-counter');
     const closeBtn = document.getElementById('lightbox-close');
     const prevBtn = document.getElementById('lightbox-prev');
     const nextBtn = document.getElementById('lightbox-next');
@@ -377,11 +390,9 @@
       const item = GALLERY_DATA[currentIndex];
       modalImg.src = item.src;
       modalImg.alt = item.alt;
-      modalTitle.textContent = item.title;
       modalCaption.textContent = item.caption;
-      modalCounter.textContent = `Photograph ${currentIndex + 1} of ${GALLERY_DATA.length}`;
 
-      // Fallback path check for local/relative deployment
+      // Relative path fallback for local testing
       modalImg.onerror = function() {
         if (!this.dataset.fallback) {
           this.dataset.fallback = 'true';
@@ -400,7 +411,7 @@
       updateLightboxContent();
     }
 
-    // Event Listeners for Lightbox
+    // Event Listeners for Lightbox Controls
     closeBtn.addEventListener('click', closeLightbox);
     nextBtn.addEventListener('click', nextPhoto);
     prevBtn.addEventListener('click', prevPhoto);
@@ -452,7 +463,7 @@
       });
     });
 
-    // Initial Execution
+    // Initial Load Execution
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
       renderGallery();
