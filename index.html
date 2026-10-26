@@ -3,46 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda Sullivan | Public Relations &amp; Strategic Communications Portfolio</title>
-  <meta name="description" content="Official professional portfolio of Amanda Sullivan featuring public relations, strategic communications, community relations, photography, journalism, creative media, and digital development.">
+  <title>Amanda Sullivan | Selected Works</title>
+  <meta name="description" content="Professional portfolio of Amanda Sullivan featuring public relations, strategic communications, event operations, photography, journalism, creative media, and digital development.">
   <link rel="canonical" href="https://www.amandalsullivan.com/">
 
-  <!-- Open Graph / Social Metadata -->
-  <meta property="og:title" content="Amanda Sullivan | Public Relations &amp; Strategic Communications">
-  <meta property="og:description" content="Portfolio of Amanda Sullivan featuring public relations, event operations, strategic communications, photography, creative media, and web development.">
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Amanda Sullivan | Selected Works">
+  <meta property="og:description" content="Professional portfolio of Amanda Sullivan featuring public relations, strategic communications, event operations, photography, journalism, creative media, and digital development.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.amandalsullivan.com/">
+  <meta property="og:image" content="https://www.amandalsullivan.com/assets/images/featured-hero.jpg">
 
   <!-- Tailwind CSS 3.4 & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
-  <!-- Google Fonts: Cinzel & Inter -->
+  <!-- Google Fonts: Cinzel & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            warmIvory: '#FAF9F6',
-            softCream: '#F3F1EC',
-            cardWhite: '#FFFFFF',
-            charcoal: '#252525',
-            deepCharcoal: '#17191C',
-            slateGray: '#60656B',
-            slateBlue: '#49657B',
-            hoverAccent: '#344D62',
-            paleBlueGray: '#E5EBF0',
-            borderColor: '#E2E4E6',
-            darkGallery: '#171B20',
-            textOnDark: '#F8F7F4',
+            charcoal: '#1C1C1C',      /* Main background */
+            evergreen: '#202420',     /* Secondary dark background */
+            forest: '#2F4732',        /* Decorative dividers / secondary accent */
+            antiqueGold: '#B68A3B',   /* Primary accent & interactive links */
+            lightGold: '#C6A76D',     /* Hover state highlight */
+            warmIvory: '#EDE9E3',     /* Primary typography */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Subdued body typography */
           },
           fontFamily: {
             serif: ['Cinzel', 'serif'],
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Manrope', 'sans-serif'],
           }
         }
       }
@@ -51,1341 +47,217 @@
 
   <style>
     :root {
-      --warm-ivory: #FAF9F6;
-      --soft-cream: #F3F1EC;
-      --charcoal: #252525;
-      --deep-charcoal: #17191C;
-      --slate-blue: #49657B;
-      --border-color: #E2E4E6;
+      --charcoal: #1C1C1C;
+      --evergreen: #202420;
+      --forest: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
     }
-    body {
-      background-color: var(--warm-ivory);
-      color: var(--charcoal);
-      font-family: 'Inter', sans-serif;
-    }
-    .nav-item-active {
-      background-color: #E5EBF0;
-      color: #49657B;
-      border-left: 4px solid #49657B;
-      font-weight: 600;
-    }
-    .modal-active { overflow: hidden; }
-    .gallery-item { transition: opacity 0.3s ease, transform 0.3s ease; }
-    .gallery-item.hidden-item { display: none; opacity: 0; transform: scale(0.95); }
 
-    /* Interactive Before/After Slider */
-    .ba-container { position: relative; overflow: hidden; }
-    .ba-overlay { position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; width: 50%; }
-    .ba-slider-input {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      cursor: ew-resize;
-      z-index: 30;
+    body {
+      background-color: var(--charcoal);
+      color: var(--warm-ivory);
+      font-family: 'Manrope', sans-serif;
     }
-    .ba-handle {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 2px;
-      background-color: #49657B;
-      z-index: 20;
-      pointer-events: none;
+
+    /* Focus styling for WCAG 2.2 AA compliance */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--antique-gold);
+      outline-offset: 4px;
     }
-    .ba-handle-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: #49657B;
-      color: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+
+    /* Prevent scrolling when mobile drawer is expanded */
+    body.menu-open {
+      overflow: hidden;
     }
   </style>
 </head>
-<body class="antialiased bg-warmIvory text-charcoal selection:bg-slateBlue selection:text-white">
+<body class="antialiased bg-charcoal text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
-  <!-- ========================================== -->
-  <!-- DATA ARCHITECTURE & PORTFOLIO DATA STORE   -->
-  <!-- ========================================== -->
-  <script>
-    const PORTFOLIO_DATA = {
-      articles: [
-        {
-          id: "art-1",
-          title: "From the FBI to FLW: Army Chaplain Has Worn Many Hats",
-          category: "Profile / Long-form Feature",
-          description: "A long-form feature tracing one chaplain's journey from FBI special agent to Army ministry and exploring the varied paths that lead to military service.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/261291/from_the_fbi_to_flw_army_chaplain_has_worn_many_hats"
-        },
-        {
-          id: "art-2",
-          title: "Para-swimmer, Military Spouse Defies the Odds",
-          category: "Human-Interest Feature",
-          description: "A story of resilience, athletic achievement, and personal courage centered on a para-athlete and Army spouse.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/256850/para_swimmer_military_spouse_defies_the_odds_through_personal_courage"
-        },
-        {
-          id: "art-3",
-          title: "3-10 Soldier Is the 2022 TRADOC Adjutant General's Officer of the Year",
-          category: "News Reporting",
-          description: "Concise AP-style reporting documenting a Soldier's achievement at the Army's highest training command.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/261089/3_10_soldier_is_the_2022_tradoc_adjutant_generals_officer_of_the_year"
-        },
-        {
-          id: "art-4",
-          title: "Fort Leonard Wood Assists Missouri Department of Conservation with Annual Eagle Survey",
-          category: "Community & Environmental Reporting",
-          description: "Coverage of an interagency partnership supporting wildlife conservation and public service.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/263219/fort_leonard_wood_assists_missouri_department_of_conservation_with_annual_eagle_survey"
-        },
-        {
-          id: "art-5",
-          title: "Vietnam-era Combat Engineers Reunite at Fort Leonard Wood",
-          category: "Historical / Legacy Feature",
-          description: "A story connecting former and current Soldiers through shared history, tradition, and service.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/279794/vietnam_era_combat_engineers_reunite_at_fort_leonard_wood"
-        },
-        {
-          id: "art-6",
-          title: "Fort Leonard Wood Examines WWII Ghost Army Deception Tactics",
-          category: "Historical Feature",
-          description: "An examination of World War II deception operations connecting Army history with modern audiences.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/247350/fort_leonard_wood_examines_wwii_ghost_army_deception_tactics"
-        },
-        {
-          id: "art-7",
-          title: "Soldier Turns 50, Graduates Basic Combat Training",
-          category: "Human-Interest Feature",
-          description: "A story of persistence following a Soldier who completed Basic Combat Training at age 50.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/260882/soldier_turns_50_graduates_basic_combat_training"
-        },
-        {
-          id: "art-8",
-          title: "First Female Sapper Leader Course Instructor Paves the Way for Others",
-          category: "Leadership Profile",
-          description: "A feature on Staff Sgt. Ariana Sanchez, the first female Sapper Leader Course instructor, and her career in a traditionally male-dominated field.",
-          publication: "Fort Leonard Wood Press Center",
-          url: "https://ftleonardwoodpresscenter.com/first-female-sapper-leader-course-instructor-paves-the-way-for-others/"
-        },
-        {
-          id: "art-9",
-          title: "From Loss Comes Strength to Lead Soldiers",
-          category: "Additional Reporting",
-          description: "Feature exploring personal adversity, military leadership, and personal resilience.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/246801/from_loss_comes_strength_to_lead_soldiers"
-        },
-        {
-          id: "art-10",
-          title: "Mentorship Comes Full Circle for Fort Leonard Wood NCO and Officer",
-          category: "Additional Reporting",
-          description: "Human-interest narrative detailing career growth, leadership development, and long-term mentorship.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/259470/mentorship_comes_full_circle_for_fort_leonard_wood_nco_and_officer"
-        },
-        {
-          id: "art-11",
-          title: "Fort Leonard Wood Offers 24/7 Recycling Options",
-          category: "Additional Reporting",
-          description: "Public information release detailing installation sustainability initiatives and public services.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/255918/fort_leonard_wood_offers_247_recycling_options"
-        },
-        {
-          id: "art-12",
-          title: "Army MP Corps Celebrates 81st Anniversary During Regimental Week",
-          category: "Additional Reporting",
-          description: "News coverage documenting ceremonial events and regimental history during MP Week.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/260686/army_mp_corps_celebrates_81st_anniversary_during_regimental_week"
-        },
-        {
-          id: "art-13",
-          title: "Army Takes Home 'King of the Road' Trophy During Sixth-Annual Joint Service Truck Rodeo",
-          category: "Additional Reporting",
-          description: "Joint service inter-branch operational competition coverage.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/250547/army_takes_home_king_of_the_road_trophy_during_sixth_annual_joint_service_truck_rodeo"
-        },
-        {
-          id: "art-14",
-          title: "Historic Preservation Efforts Keep History Alive on Fort Leonard Wood",
-          category: "Additional Reporting",
-          description: "Feature detailing cultural resource preservation efforts on a major military installation.",
-          publication: "Army.mil",
-          url: "https://www.army.mil/article/256617/historic_preservation_efforts_keep_history_alive_on_fort_leonard_wood"
-        }
-      ],
-      photography: [
-        {
-          id: "photo-1",
-          filename: "cbrn-warrior-cargo-net.jpg",
-          title: "International Best CBRN Warrior Competition",
-          caption: "1st Lt. Erin Butcher with the 1st Cavalry Division at Fort Cavazos, Texas, scales a cargo net on the Physical Endurance Course May 31, 2024, during the 2024 International Best CBRN Warrior Competition at Fort Leonard Wood, Missouri. The competition brings chemical Soldiers from around the world together to demonstrate Chemical Corps capabilities and test competitors' Soldiering skills.",
-          category: "Competitions",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-2",
-          filename: "best-sapper-competition.jpg",
-          title: "Best Sapper Competition",
-          caption: "Staff Sgt. Dwayne Jones, front, and 1st Lt. Austin Chambers, right, from the 299th Brigade Engineer Battalion at Fort Carson, Colorado, run through the Engineer castle at the finish line of the X-Mile final event of the 2024 Robert B. Flowers Best Sapper Competition.",
-          category: "Competitions",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-3",
-          filename: "chinook-training.jpg",
-          title: "Chinook Training",
-          caption: "Trainees with Company B, 787th Military Police Battalion, watch the approach of a CH-47 Chinook Nov. 6, 2024, at Forney Airfield on Fort Leonard Wood.",
-          category: "Military Training",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-4",
-          filename: "chemical-field-training.jpg",
-          title: "Chemical Battalion Field Training",
-          caption: "Pvt. Daven Maclin, Soldier in training with Company C, 84th Chemical Battalion, emerges from the smoke during a Field Training Exercise June 21, 2024, at Fort Leonard Wood. FTXs serve as a medium to perform summative and formative assessments on what Soldiers have learned throughout advanced individual training.",
-          category: "Military Training",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-5",
-          filename: "engineer-reunion.jpg",
-          title: "Vietnam-Era Engineer Reunion",
-          caption: "Vietnam-era combat engineer Laurens Beckwith, center, operates a M30 Bridge Erection Boat during a reunion tour for former members of the 13th Engineer Battalion at Fort Leonard Wood Sept. 11, 2024. Beckwith graduated from advanced individual training at Fort Leonard Wood in 1964.",
-          category: "Community Engagement",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-6",
-          filename: "military-police-portrait.jpg",
-          title: "Military Police Portrait",
-          caption: "Staff Sgt. Austin Marshall, drill sergeant with Company D, 795th Military Police Battalion, poses in front of the Vehicle Dynamics Course at Fort Leonard Wood, Missouri, Dec. 13, 2024. The course teaches new MP Soldiers the basics of emergency vehicle operations and navigation.",
-          category: "Portraiture",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-7",
-          filename: "army-birthday.jpg",
-          title: "Army Birthday Ceremony",
-          caption: "(From left) Command Sgt. Maj. Jorge Arzabala, Pvt. Sophia Vishneski, Maj. Anne Jeanette Sheahan and Maj. Gen. Christopher Beck, MSCoE and Fort Leonard Wood commanding general, use a sword to cut a cake in celebration of the Army's 249th birthday.",
-          category: "Ceremonies",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-8",
-          filename: "best-squad-competition.jpg",
-          title: "Best Squad Competition",
-          caption: "Members of Squad 6, representing the Maneuver Support Center of Excellence, conduct the TSE event during the Squad STX on day seven of the U.S. Army Training and Doctrine Command Best Squad Competition 2024, Aug. 16, 2024, at Fort Leonard Wood, Missouri.",
-          category: "Competitions",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-9",
-          filename: "trees-for-troops.jpg",
-          title: "Trees for Troops",
-          caption: "Cpl. Shavaun Shaw, with U.S. Army Medical Command, selects a tree with his family during the Trees for Troops event Dec. 13, 2024, at Fort Leonard Wood's Automotive Skills Center. Fort Leonard Wood was one of more than 90 military installations receiving trees through the national program.",
-          category: "Community Engagement",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        },
-        {
-          id: "photo-10",
-          filename: "army-band-farewell.jpg",
-          title: "399th Army Band",
-          caption: "Soldiers with Fort Leonard Wood's 399th Army Band perform during a farewell concert held Oct. 26, 2024, at Nutter Field House.",
-          category: "Ceremonies",
-          credit: "U.S. Army Photo by Amanda Sullivan"
-        }
-      ]
-    };
-  </script>
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-charcoal/90 backdrop-blur-md border-b border-forest/30">
+    <nav class="max-w-[1400px] mx-auto px-6 sm:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      
+      <!-- Brand Name -->
+      <a href="index.html" class="font-serif text-xl md:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition-colors duration-300 focus:outline-none">
+        AMANDA SULLIVAN
+      </a>
 
-  <!-- MOBILE HEADER BAR (Visible on < lg screens) -->
-  <header class="lg:hidden fixed top-0 left-0 right-0 z-50 h-16 bg-softCream border-b border-borderColor px-6 flex items-center justify-between">
-    <a href="#home" class="font-serif text-lg text-deepCharcoal tracking-wider font-semibold">
-      AMANDA SULLIVAN
-    </a>
-    <button id="mobile-menu-toggle" class="text-charcoal focus:outline-none p-2" aria-label="Toggle Navigation Menu">
-      <i data-lucide="menu" class="w-6 h-6"></i>
-    </button>
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-[0.15em] text-mutedIvory">
+        <a href="index.html" class="text-antiqueGold border-b border-antiqueGold pb-1 font-semibold" aria-current="page">HOME</a>
+        <a href="selected-work/index.html" class="hover:text-lightGold transition-colors duration-200">SELECTED WORK</a>
+        <a href="resume/index.html" class="hover:text-lightGold transition-colors duration-200">RÉSUMÉ</a>
+        <a href="about/index.html" class="hover:text-lightGold transition-colors duration-200">ABOUT</a>
+        <a href="contact/index.html" class="hover:text-lightGold transition-colors duration-200">CONTACT</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" class="md:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+      </button>
+    </nav>
   </header>
 
   <!-- MOBILE NAVIGATION DRAWER -->
-  <div id="mobile-drawer" class="hidden fixed inset-0 z-40 bg-softCream pt-20 px-6 pb-8 overflow-y-auto lg:hidden flex flex-col justify-between">
-    <div>
-      <div class="mb-6">
-        <h2 class="font-serif text-2xl text-deepCharcoal tracking-wider font-semibold">AMANDA SULLIVAN</h2>
-        <div class="h-[2px] w-12 bg-slateBlue my-3"></div>
-        <p class="text-xs text-slateGray leading-relaxed font-normal">
-          Public Relations | Strategic Communications | Event Planning &amp; Operations | Creative &amp; Digital Media
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-evergreen/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forest/40 md:hidden" aria-hidden="true">
+    <nav class="flex flex-col space-y-6 text-sm font-medium tracking-[0.2em] pt-4">
+      <a href="index.html" class="mobile-nav-link text-antiqueGold font-bold flex items-center justify-between" aria-current="page">
+        <span>HOME</span>
+        <span class="text-xs">01</span>
+      </a>
+      <a href="selected-work/index.html" class="mobile-nav-link text-warmIvory hover:text-lightGold flex items-center justify-between transition-colors">
+        <span>SELECTED WORK</span>
+        <span class="text-xs text-mutedIvory">02</span>
+      </a>
+      <a href="resume/index.html" class="mobile-nav-link text-warmIvory hover:text-lightGold flex items-center justify-between transition-colors">
+        <span>RÉSUMÉ</span>
+        <span class="text-xs text-mutedIvory">03</span>
+      </a>
+      <a href="about/index.html" class="mobile-nav-link text-warmIvory hover:text-lightGold flex items-center justify-between transition-colors">
+        <span>ABOUT</span>
+        <span class="text-xs text-mutedIvory">04</span>
+      </a>
+      <a href="contact/index.html" class="mobile-nav-link text-warmIvory hover:text-lightGold flex items-center justify-between transition-colors">
+        <span>CONTACT</span>
+        <span class="text-xs text-mutedIvory">05</span>
+      </a>
+    </nav>
+
+    <div class="pt-8 border-t border-forest/30 space-y-2 text-xs text-mutedIvory">
+      <p class="tracking-widest uppercase">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:underline block font-normal tracking-wide">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <!-- HOMEPAGE MAIN CONTENT -->
+  <main id="main-content" class="flex-1 flex items-center max-w-[1400px] w-full mx-auto px-6 sm:px-10 py-12 md:py-16">
+    <section class="w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left Column: Identity, Disciplines, Introduction & Key Links (55% desktop width) -->
+      <div class="lg:col-span-7 space-y-8 md:space-y-10">
+        
+        <!-- Name -->
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-[54px] font-normal leading-[1.1] tracking-[0.08em] text-warmIvory">
+          AMANDA SULLIVAN
+        </h1>
+
+        <!-- Professional Disciplines -->
+        <div class="space-y-1.5 text-sm sm:text-base md:text-[17px] font-normal tracking-[0.05em] text-mutedIvory border-l-2 border-forest pl-4 py-0.5">
+          <p>Public Relations</p>
+          <p>Strategic Communications</p>
+          <p>Event Planning &amp; Operations</p>
+          <p>Creative &amp; Digital Media</p>
+        </div>
+
+        <!-- Introduction Paragraph -->
+        <p class="text-base sm:text-lg md:text-[18px] text-mutedIvory font-light leading-[1.75] max-w-xl">
+          I bring together strategic communication, creative production, and operational expertise to develop compelling content, coordinate meaningful initiatives, and build effective digital experiences.
         </p>
-      </div>
-      <nav class="space-y-1.5 text-xs font-medium uppercase tracking-wider">
-        <a href="#home" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Home</a>
-        <a href="#community-relations" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Community Relations &amp; Operations</a>
-        <a href="#strategic-communications" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Strategic Communications</a>
-        <a href="#photography" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Photography</a>
-        <a href="#creative-media" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Creative &amp; Digital Media</a>
-        <a href="#web-development" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Web, Applications &amp; E-Commerce</a>
-        <a href="#writing" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">Writing &amp; Journalism</a>
-        <a href="#about" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray">About Amanda</a>
-        <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded hover:bg-paleBlueGray text-slateBlue font-bold">Contact</a>
-      </nav>
-    </div>
-    <div class="pt-6 border-t border-borderColor space-y-2 text-xs">
-      <a href="tel:6149291779" class="block text-slateGray font-medium">Phone: 614-929-1779</a>
-      <a href="mailto:amanda.l.sullivan@outlook.com" class="block text-slateBlue font-medium">amanda.l.sullivan@outlook.com</a>
-    </div>
-  </div>
 
-  <!-- MAIN PAGE WRAPPER -->
-  <div class="flex min-h-screen">
+        <!-- Understated Navigation Links -->
+        <div class="pt-4 flex flex-wrap gap-8 text-xs sm:text-sm font-medium tracking-[0.18em]">
+          <a href="selected-work/index.html" class="group inline-flex items-center gap-2 text-warmIvory hover:text-antiqueGold transition-colors duration-300">
+            <span>SELECTED WORK</span>
+            <span class="text-antiqueGold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">↗</span>
+          </a>
+          <a href="resume/index.html" class="group inline-flex items-center gap-2 text-warmIvory hover:text-antiqueGold transition-colors duration-300">
+            <span>RÉSUMÉ</span>
+            <span class="text-antiqueGold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">↗</span>
+          </a>
+          <a href="about/index.html" class="group inline-flex items-center gap-2 text-warmIvory hover:text-antiqueGold transition-colors duration-300">
+            <span>ABOUT</span>
+            <span class="text-antiqueGold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">↗</span>
+          </a>
+        </div>
 
-    <!-- DESKTOP FIXED LEFT SIDEBAR (Width: 260px, Height: 100vh) -->
-    <aside class="hidden lg:flex w-[260px] h-screen fixed left-0 top-0 bg-softCream border-r border-borderColor flex-col justify-between p-6 z-30 overflow-y-auto">
-      <div>
-        <!-- Sidebar Brand / Header -->
-        <a href="#home" class="block">
-          <h1 class="font-serif text-[30px] font-normal leading-tight text-deepCharcoal tracking-tight">
-            AMANDA<br>SULLIVAN
-          </h1>
-        </a>
-        <div class="h-[2px] w-12 bg-slateBlue my-4"></div>
-        <p class="text-xs text-slateGray leading-relaxed font-normal mb-8">
-          Public Relations<br>
-          Strategic Communications<br>
-          Event Planning &amp; Operations<br>
-          Creative &amp; Digital Media
-        </p>
-
-        <!-- Sidebar Navigation -->
-        <nav class="space-y-1 text-[12px] font-medium tracking-wide" id="desktop-nav">
-          <a href="#home" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Home</a>
-          <a href="#community-relations" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Community Relations &amp; Operations</a>
-          <a href="#strategic-communications" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Strategic Communications</a>
-          <a href="#photography" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Photography</a>
-          <a href="#creative-media" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Creative &amp; Digital Media</a>
-          <a href="#web-development" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Web, Applications &amp; E-Commerce</a>
-          <a href="#writing" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">Writing &amp; Journalism</a>
-          <a href="#about" class="nav-link block px-3 py-2 text-charcoal hover:bg-paleBlueGray hover:text-slateBlue transition">About Amanda</a>
-        </nav>
       </div>
 
-      <!-- Bottom Sidebar Actions -->
-      <div class="pt-6 border-t border-borderColor space-y-3 text-xs">
-        <a href="#contact" class="nav-link flex items-center gap-2 text-slateBlue font-semibold hover:underline">
-          <i data-lucide="mail" class="w-4 h-4"></i>
-          <span>Contact</span>
-        </a>
-        <a href="resume.pdf" class="flex items-center gap-2 text-charcoal font-medium hover:text-slateBlue transition">
-          <i data-lucide="file-text" class="w-4 h-4"></i>
-          <span>Download Resume</span>
+      <!-- Right Column: Featured Portfolio Photograph Component (45% desktop width) -->
+      <div class="lg:col-span-5 w-full">
+        <figure class="relative bg-evergreen border border-forest/40 p-2 sm:p-3 overflow-hidden shadow-2xl">
+          <div class="aspect-[4/5] w-full overflow-hidden relative bg-charcoal">
+            <!-- Featured Portfolio Image -->
+            <img 
+              src="assets/images/featured-hero.jpg" 
+              alt="Official documentary photography by Amanda Sullivan capturing military training operations." 
+              class="w-full h-full object-cover grayscale-[15%] contrast-[1.05] hover:scale-[1.02] transition-transform duration-700 ease-out"
+              loading="eager"
+              onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\"w-full h-full flex flex-col items-center justify-center p-8 text-center text-xs tracking-widest text-mutedIvory bg-evergreen border border-dashed border-forest/50\"><i data-lucide=\"camera\" class=\"w-10 h-10 text-antiqueGold mb-3 stroke-[1.5]\"></i><span class=\"uppercase font-semibold text-warmIvory mb-1\">[ Featured Photograph Slot ]</span><span>assets/images/featured-hero.jpg</span></div>'; lucide.createIcons();"
+            />
+          </div>
+          <figcaption class="mt-2.5 px-1 text-[11px] text-mutedIvory font-light tracking-wide flex justify-between items-center">
+            <span>U.S. Army Documentary Photography</span>
+            <span class="text-antiqueGold">2024</span>
+          </figcaption>
+        </figure>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- HOMEPAGE FOOTER -->
+  <footer class="border-t border-forest/30 bg-charcoal/80 py-8">
+    <div class="max-w-[1400px] mx-auto px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <p>&copy; Amanda Sullivan. All rights reserved.</p>
+      
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:text-antiqueGold transition-colors">
+          amanda.l.sullivan@outlook.com
         </a>
       </div>
-    </aside>
-
-    <!-- RIGHT MAIN CONTENT AREA -->
-    <main class="flex-1 lg:ml-[260px] pt-16 lg:pt-0 min-h-screen">
-      <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-10 lg:py-16 space-y-24">
-
-        <!-- ========================================== -->
-        <!-- 1. HOMEPAGE                                -->
-        <!-- ========================================== -->
-        <section id="home" class="space-y-6 pt-4">
-          <span class="text-[11px] font-semibold uppercase tracking-widest text-slateBlue block">
-            COMMUNICATE / CREATE / ORGANIZE / BUILD
-          </span>
-          
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[50px] font-normal text-deepCharcoal leading-[1.2]">
-            Work That Connects People and Purpose.
-          </h2>
-          
-          <div class="max-w-[820px] space-y-4 text-base md:text-lg text-charcoal font-normal leading-[1.7]">
-            <p>
-              I'm an award-winning communications professional with nearly eight years of experience in U.S. Army Public Affairs, specializing in public relations, strategic communications, community relations, event planning and operations, journalism, and multimedia production.
-            </p>
-            <p>
-              My work combines creative communication with the practical coordination of people, programs, information, and technology.
-            </p>
-            <p>
-              Beyond my government communications experience, my work includes website and application development, e-commerce implementation, product photography, graphic design, logo restoration, and search engine optimization.
-            </p>
-            <p class="text-slateGray font-normal">
-              This portfolio showcases selected work across communications, community engagement, creative production, and digital technology.
-            </p>
-          </div>
-
-          <div class="pt-4">
-            <a href="#community-relations" class="inline-flex items-center gap-2 bg-slateBlue text-white hover:bg-hoverAccent text-xs font-semibold uppercase tracking-wider px-6 py-3.5 transition">
-              <span>EXPLORE MY WORK</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-
-          <!-- Professional Highlights Strip -->
-          <div class="border-y border-borderColor py-8 my-10 bg-warmIvory">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-y lg:divide-y-0 lg:divide-x divide-borderColor text-center gap-y-6 lg:gap-y-0">
-              <div class="px-2 py-2">
-                <span class="block font-serif text-3xl font-normal text-deepCharcoal mb-1">Nearly 8</span>
-                <span class="text-[10px] text-slateGray font-medium uppercase tracking-wider block">Years U.S. Army PAO Experience</span>
-              </div>
-              <div class="px-2 py-2">
-                <span class="block font-serif text-3xl font-normal text-deepCharcoal mb-1">200+</span>
-                <span class="text-[10px] text-slateGray font-medium uppercase tracking-wider block">Community Events &amp; Engagements</span>
-              </div>
-              <div class="px-2 py-2">
-                <span class="block font-serif text-3xl font-normal text-deepCharcoal mb-1">150+</span>
-                <span class="text-[10px] text-slateGray font-medium uppercase tracking-wider block">Published Articles</span>
-              </div>
-              <div class="px-2 py-2">
-                <span class="block font-serif text-3xl font-normal text-deepCharcoal mb-1">2,400+</span>
-                <span class="text-[10px] text-slateGray font-medium uppercase tracking-wider block">Official Photographs</span>
-              </div>
-              <div class="px-2 py-2">
-                <span class="block font-serif text-3xl font-normal text-deepCharcoal mb-1">200K+</span>
-                <span class="text-[10px] text-slateGray font-medium uppercase tracking-wider block">WordPress Publication Readers</span>
-              </div>
-              <div class="px-2 py-2">
-                <span class="block font-serif text-3xl font-normal text-deepCharcoal mb-1">2024</span>
-                <span class="text-[10px] text-slateGray font-medium uppercase tracking-wider block">Dual Civilian Photographer of the Year</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Featured Projects Grid -->
-          <div class="space-y-6 pt-4">
-            <h3 class="font-serif text-2xl md:text-3xl font-normal text-deepCharcoal">Featured Portfolio Disciplines</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-              <!-- Card 1 -->
-              <a href="#community-relations" class="group bg-cardWhite border border-borderColor p-6 hover:border-slateBlue transition flex flex-col justify-between">
-                <div>
-                  <div class="aspect-[4/3] bg-softCream border border-borderColor mb-4 flex items-center justify-center">
-                    <i data-lucide="award" class="w-10 h-10 text-slateBlue"></i>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Community Relations</span>
-                  <h4 class="text-xl font-semibold text-deepCharcoal group-hover:text-slateBlue transition mb-2">Leadership Award Program</h4>
-                  <p class="text-xs text-slateGray leading-relaxed font-normal">
-                    Restoring engagement with regional schools through Army Values student recognition across 15+ school districts.
-                  </p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-borderColor">
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-slateBlue group-hover:underline">
-                    View Case Study &rarr;
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 2 -->
-              <a href="#community-relations" class="group bg-cardWhite border border-borderColor p-6 hover:border-slateBlue transition flex flex-col justify-between">
-                <div>
-                  <div class="aspect-[4/3] bg-softCream border border-borderColor mb-4 flex items-center justify-center">
-                    <i data-lucide="book-open" class="w-10 h-10 text-slateBlue"></i>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Community Outreach</span>
-                  <h4 class="text-xl font-semibold text-deepCharcoal group-hover:text-slateBlue transition mb-2">Read Across America</h4>
-                  <p class="text-xs text-slateGray leading-relaxed font-normal">
-                    Large-scale initiative reaching 18,000+ students across 940 classrooms with 360+ Soldier volunteers.
-                  </p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-borderColor">
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-slateBlue group-hover:underline">
-                    View Case Study &rarr;
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 3 -->
-              <a href="#photography" class="group bg-cardWhite border border-borderColor p-6 hover:border-slateBlue transition flex flex-col justify-between">
-                <div>
-                  <div class="aspect-[4/3] bg-softCream border border-borderColor mb-4 flex items-center justify-center">
-                    <i data-lucide="camera" class="w-10 h-10 text-slateBlue"></i>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Visual Storytelling</span>
-                  <h4 class="text-xl font-semibold text-deepCharcoal group-hover:text-slateBlue transition mb-2">Award-Winning Photography</h4>
-                  <p class="text-xs text-slateGray leading-relaxed font-normal">
-                    Documentary coverage earning 2024 IMCOM &amp; AMC Civilian Photographer of the Year honors.
-                  </p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-borderColor">
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-slateBlue group-hover:underline">
-                    View Gallery &rarr;
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 4 -->
-              <a href="#writing" class="group bg-cardWhite border border-borderColor p-6 hover:border-slateBlue transition flex flex-col justify-between">
-                <div>
-                  <div class="aspect-[4/3] bg-softCream border border-borderColor mb-4 flex items-center justify-center">
-                    <i data-lucide="newspaper" class="w-10 h-10 text-slateBlue"></i>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Journalism</span>
-                  <h4 class="text-xl font-semibold text-deepCharcoal group-hover:text-slateBlue transition mb-2">Journalism &amp; Feature Writing</h4>
-                  <p class="text-xs text-slateGray leading-relaxed font-normal">
-                    150+ published AP-style news and feature articles documenting military readiness and human resilience.
-                  </p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-borderColor">
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-slateBlue group-hover:underline">
-                    View Articles &rarr;
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 5 -->
-              <a href="#creative-media" class="group bg-cardWhite border border-borderColor p-6 hover:border-slateBlue transition flex flex-col justify-between">
-                <div>
-                  <div class="aspect-[4/3] bg-softCream border border-borderColor mb-4 flex items-center justify-center">
-                    <i data-lucide="video" class="w-10 h-10 text-slateBlue"></i>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Multimedia</span>
-                  <h4 class="text-xl font-semibold text-deepCharcoal group-hover:text-slateBlue transition mb-2">Video &amp; Digital Campaigns</h4>
-                  <p class="text-xs text-slateGray leading-relaxed font-normal">
-                    Public information videos, social campaigns, DVIDS features, and official livestream production.
-                  </p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-borderColor">
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-slateBlue group-hover:underline">
-                    View Media Projects &rarr;
-                  </span>
-                </div>
-              </a>
-
-              <!-- Card 6 -->
-              <a href="#web-development" class="group bg-cardWhite border border-borderColor p-6 hover:border-slateBlue transition flex flex-col justify-between">
-                <div>
-                  <div class="aspect-[4/3] bg-softCream border border-borderColor mb-4 flex items-center justify-center">
-                    <i data-lucide="layout" class="w-10 h-10 text-slateBlue"></i>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Digital Engineering</span>
-                  <h4 class="text-xl font-semibold text-deepCharcoal group-hover:text-slateBlue transition mb-2">Web &amp; Digital Development</h4>
-                  <p class="text-xs text-slateGray leading-relaxed font-normal">
-                    Web application creation, e-commerce storefront development, and search engine optimization.
-                  </p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-borderColor">
-                  <span class="inline-flex items-center gap-1 text-xs font-semibold text-slateBlue group-hover:underline">
-                    View Web Work &rarr;
-                  </span>
-                </div>
-              </a>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 2. COMMUNITY RELATIONS & OPERATIONS        -->
-        <!-- ========================================== -->
-        <section id="community-relations" class="space-y-12 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">Community Relations &amp; Operations</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">
-              Building Relationships. Coordinating Programs. Supporting the Mission.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-base text-charcoal leading-[1.7] font-normal max-w-[820px]">
-            <p>
-              Community relations and operational coordination were central components of my work with U.S. Army Public Affairs at Fort Leonard Wood, Missouri.
-            </p>
-            <p>
-              My responsibilities involved connecting military organizations with civilian communities, coordinating public engagements, supporting installation activities, and working with leadership and stakeholders to ensure programs were effectively planned and executed.
-            </p>
-            <p>
-              My work required balancing community needs, organizational priorities, military operational requirements, and communication objectives.
-            </p>
-          </div>
-
-          <!-- CASE STUDY 1: LEADERSHIP AWARD PROGRAM -->
-          <div class="bg-cardWhite p-6 md:p-8 border border-borderColor space-y-6">
-            <div>
-              <span class="text-[11px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Featured Case Study 1</span>
-              <h4 class="text-2xl font-semibold text-deepCharcoal">Student Leadership Award Program</h4>
-              <p class="text-xs font-medium text-slateGray mt-1">Program Development | Community Partnerships | Recognition Framework</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 pt-2">
-              <div class="bg-softCream p-5 border border-borderColor space-y-2">
-                <h5 class="text-xs font-bold text-slateBlue uppercase tracking-wider">Research &amp; Planning</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  In the post-COVID period, Fort Leonard Wood needed a consistent way to rebuild relationships with local schools. I developed a monthly recognition program centered on Army Values and positive student impact.
-                </p>
-              </div>
-              <div class="bg-softCream p-5 border border-borderColor space-y-2">
-                <h5 class="text-xs font-bold text-slateBlue uppercase tracking-wider">Implementation</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  Created the nomination and recognition framework; coordinated school administrators, materials, scheduling, and senior-leader participation; and prepared clear, community-focused messaging for presentations.
-                </p>
-              </div>
-              <div class="bg-softCream p-5 border border-borderColor space-y-2">
-                <h5 class="text-xs font-bold text-slateBlue uppercase tracking-wider">Evaluation &amp; Impact</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  The program recognized 200+ students across 15+ school districts, restored recurring engagement with regional schools, and created a sustainable platform for positive community storytelling.
-                </p>
-              </div>
-            </div>
-
-            <!-- Supporting Coverage Links -->
-            <div class="pt-4 border-t border-borderColor space-y-3">
-              <span class="text-xs font-semibold uppercase text-deepCharcoal tracking-wider block">Supporting Press &amp; Media Releases</span>
-              <div class="grid sm:grid-cols-3 gap-3 text-xs">
-                <div class="p-3 bg-warmIvory border border-borderColor">
-                  <span class="font-medium text-deepCharcoal block mb-1">Fort Leonard Wood recognizes area students for demonstrating Army Values</span>
-                  <span class="text-[10px] text-slateGray italic">[ Official PAO Release ]</span>
-                </div>
-                <div class="p-3 bg-warmIvory border border-borderColor">
-                  <span class="font-medium text-deepCharcoal block mb-1">Local students receive Fort Leonard Wood Leadership Award</span>
-                  <span class="text-[10px] text-slateGray italic">[ Regional Media Release ]</span>
-                </div>
-                <div class="p-3 bg-warmIvory border border-borderColor">
-                  <span class="font-medium text-deepCharcoal block mb-1">Sample Wins Fort Leonard Wood Award for Selfless Service</span>
-                  <span class="text-[10px] text-slateGray italic">[ Educational Publication ]</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CASE STUDY 2: READ ACROSS AMERICA -->
-          <div class="bg-cardWhite p-6 md:p-8 border border-borderColor space-y-6">
-            <div>
-              <span class="text-[11px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Featured Case Study 2</span>
-              <h4 class="text-2xl font-semibold text-deepCharcoal">Read Across America Campaign</h4>
-              <p class="text-xs font-medium text-slateGray mt-1">Community Outreach | Program Scaling | Volunteer Mobilization</p>
-            </div>
-
-            <div class="grid md:grid-cols-4 gap-4 py-3 bg-softCream p-4 border border-borderColor text-center">
-              <div>
-                <span class="block font-serif text-2xl text-deepCharcoal">360+</span>
-                <span class="text-[10px] uppercase text-slateGray">Soldier Volunteers</span>
-              </div>
-              <div>
-                <span class="block font-serif text-2xl text-deepCharcoal">940</span>
-                <span class="text-[10px] uppercase text-slateGray">Classrooms Reached</span>
-              </div>
-              <div>
-                <span class="block font-serif text-2xl text-deepCharcoal">18,000+</span>
-                <span class="text-[10px] uppercase text-slateGray">Children Engaged</span>
-              </div>
-              <div>
-                <span class="block font-serif text-2xl text-deepCharcoal">15+</span>
-                <span class="text-[10px] uppercase text-slateGray">School Districts</span>
-              </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-              <div class="space-y-2">
-                <h5 class="text-xs font-bold text-slateBlue uppercase tracking-wider">Research &amp; Planning</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  When assuming management in 2020, participation was limited to one district. Developed a scalable model that expanded school participation while preserving consistent messaging and manageable coordination.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <h5 class="text-xs font-bold text-slateBlue uppercase tracking-wider">Implementation</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  Recruited and scheduled 360+ Soldier volunteers across program years; coordinated schools, classrooms, units, and senior leaders; and adapted the 2021 program to virtual delivery through produced reading videos.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <h5 class="text-xs font-bold text-slateBlue uppercase tracking-wider">Evaluation</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  The campaign grew to reach 18,000+ students in 940 classrooms across 15+ schools and districts, becoming one of the installation's largest annual outreach initiatives.
-                </p>
-              </div>
-            </div>
-
-            <div class="pt-4 border-t border-borderColor flex flex-wrap items-center justify-between gap-4 text-xs">
-              <div class="space-y-1">
-                <span class="font-semibold text-deepCharcoal block">Verified Published Coverage:</span>
-                <a href="https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day" target="_blank" rel="noopener noreferrer" class="text-slateBlue hover:underline inline-flex items-center gap-1">
-                  <span>Fort Leonard Wood celebrates Read Across America Day (Army.mil)</span>
-                  <i data-lucide="external-link" class="w-3 h-3"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CASE STUDY 3 & 4 GRID -->
-          <div class="grid md:grid-cols-2 gap-6">
-            <!-- Scout Visits -->
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-4 flex flex-col justify-between">
-              <div class="space-y-3">
-                <span class="text-[11px] font-semibold text-slateBlue uppercase tracking-widest block">Case Study 3</span>
-                <h4 class="text-xl font-semibold text-deepCharcoal">Youth &amp; Scout Visits Liaison</h4>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  <strong>Program Scope:</strong> Fort Leonard Wood supported approximately 10 Scout visits annually, each involving 10–40 participants, often including overnight stays and hands-on Army activities.
-                </p>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  <strong>My Role:</strong> Served as primary liaison, evaluated activity and staffing requirements, coordinated military units and schedules, prepared participants, supported safe execution, and documented programs through photography and reporting.
-                </p>
-              </div>
-              <div class="pt-3 border-t border-borderColor text-xs font-medium text-slateBlue">
-                Result: Strengthened relationships with regional youth organizations through structured, educational experiences.
-              </div>
-            </div>
-
-            <!-- Public Engagement Operations -->
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-4 flex flex-col justify-between">
-              <div class="space-y-3">
-                <span class="text-[11px] font-semibold text-slateBlue uppercase tracking-widest block">Case Study 4</span>
-                <h4 class="text-xl font-semibold text-deepCharcoal">Public Engagement Operations</h4>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  <strong>Program Scope:</strong> Coordinated Army support for dozens of community-facing events annually, including parades, sporting events, civic ceremonies, school partnerships, veteran recognitions, and nationally televised performances.
-                </p>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  <strong>My Role:</strong> Assessed requests for policy and operational feasibility; coordinated units, personnel, equipment, schedules, approvals, and messaging; advised organizers; and documented execution.
-                </p>
-              </div>
-              <div class="pt-3 border-t border-borderColor text-xs font-medium text-slateBlue">
-                Result: Reached thousands of community members across 100+ public-facing engagements annually.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 3. STRATEGIC COMMUNICATIONS                -->
-        <!-- ========================================== -->
-        <section id="strategic-communications" class="space-y-8 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">Strategic Communications</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">
-              Clear Messaging. Purposeful Content. Meaningful Engagement.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-base text-charcoal leading-[1.7] font-normal max-w-[820px]">
-            <p>
-              My strategic communications experience includes developing audience-focused content, coordinating communication initiatives, producing public information materials, and supporting organizational messaging across digital and traditional platforms.
-            </p>
-            <p>
-              My work combines editorial planning, multimedia production, public engagement, digital publishing, and stakeholder coordination.
-            </p>
-          </div>
-
-          <!-- Featured Campaigns Grid -->
-          <div class="space-y-4">
-            <h4 class="text-sm font-semibold uppercase tracking-wider text-deepCharcoal">Featured Strategic Campaigns</h4>
-            <div class="grid md:grid-cols-2 gap-6">
-              
-              <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-                <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">Digital Campaign</span>
-                <h5 class="text-lg font-semibold text-deepCharcoal">Training Tuesday</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  Educational digital content highlighting military training activities, specialized units, and organizational capabilities to educate civilian audiences.
-                </p>
-              </div>
-
-              <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-                <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">Storytelling Campaign</span>
-                <h5 class="text-lg font-semibold text-deepCharcoal">Why I Serve</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  Interview-based personal storytelling featuring service members and their motivations for military service to humanize the armed forces.
-                </p>
-              </div>
-
-              <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-                <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">Human Interest</span>
-                <h5 class="text-lg font-semibold text-deepCharcoal">Soldier Spotlight</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  Recurring digital content highlighting individual service members, exceptional achievements, qualifications, and personal backgrounds.
-                </p>
-              </div>
-
-              <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-                <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">Civilian Engagement</span>
-                <h5 class="text-lg font-semibold text-deepCharcoal">Civilian Q&amp;A</h5>
-                <p class="text-xs text-slateGray leading-relaxed">
-                  Informational features highlighting Department of the Army civilian personnel and their essential contributions to installation operations.
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Standalone Digital Publishing Case Study -->
-          <div class="bg-cardWhite p-6 md:p-8 border border-borderColor space-y-4">
-            <span class="text-[11px] font-semibold text-slateBlue uppercase tracking-widest block">Digital Publishing Case Study</span>
-            <h4 class="text-2xl font-semibold text-deepCharcoal">Show Me Fort Leonard Wood</h4>
-            <p class="text-xs font-medium text-slateGray">Official WordPress Publication Management &amp; Content Strategy</p>
-            <p class="text-xs text-charcoal leading-relaxed font-normal">
-              I developed and managed <em>Show Me Fort Leonard Wood</em>, an official WordPress publication highlighting military life, community activities, and stories from the installation. My responsibilities included website structure, content strategy, original reporting, photography, search engine optimization, publishing, and audience analytics review.
-            </p>
-            <div class="pt-2 text-xs font-semibold text-slateBlue">
-              Audience Reach: Reached over 200,000 readers across military and civilian communities.
-            </div>
-          </div>
-
-          <!-- Social Media Experience Note -->
-          <div class="bg-softCream p-6 border border-borderColor space-y-2">
-            <h5 class="text-xs font-bold text-deepCharcoal uppercase tracking-wider">Social Media &amp; Digital Governance</h5>
-            <p class="text-xs text-slateGray leading-relaxed">
-              Served as an administrator for official U.S. Army social media accounts, periodically publishing content and developing original multimedia materials for digital communication initiatives. Familiar with Hootsuite and government social media publishing workflows.
-            </p>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 4. PHOTOGRAPHY                             -->
-        <!-- ========================================== -->
-        <section id="photography" class="space-y-8 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">Photography</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">
-              Documenting People, Places, and Purpose.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-base text-charcoal leading-[1.7] font-normal max-w-[820px]">
-            <p>
-              Photography is not separate from communication strategy; it is one of the ways I make complex missions visible and human.
-            </p>
-            <p>
-              I have produced more than 2,400 official photographs across military training, portraits, ceremonies, competitions, community programs, and breaking events, with work published on Army.mil, DVIDS, regional outlets, and official social channels.
-            </p>
-            <p class="font-medium text-deepCharcoal">
-              In 2025, I was recognized for my 2024 work as Civilian Photographer of the Year by both U.S. Army Materiel Command and U.S. Army Installation Management Command, and received Army-level Honorable Mention in the Maj. Gen. Keith L. Ware Communications Awards.
-            </p>
-          </div>
-
-          <!-- Category Filters -->
-          <div class="flex flex-wrap gap-2 text-xs font-medium">
-            <button class="photo-filter-btn px-3 py-1.5 bg-slateBlue text-white" data-filter="all">All Photos</button>
-            <button class="photo-filter-btn px-3 py-1.5 bg-softCream text-charcoal hover:bg-paleBlueGray" data-filter="Military Training">Military Training</button>
-            <button class="photo-filter-btn px-3 py-1.5 bg-softCream text-charcoal hover:bg-paleBlueGray" data-filter="Competitions">Competitions</button>
-            <button class="photo-filter-btn px-3 py-1.5 bg-softCream text-charcoal hover:bg-paleBlueGray" data-filter="Portraiture">Portraiture</button>
-            <button class="photo-filter-btn px-3 py-1.5 bg-softCream text-charcoal hover:bg-paleBlueGray" data-filter="Ceremonies">Ceremonies</button>
-            <button class="photo-filter-btn px-3 py-1.5 bg-softCream text-charcoal hover:bg-paleBlueGray" data-filter="Community Engagement">Community Engagement</button>
-          </div>
-
-          <!-- Editorial Photography Grid (Populated dynamically from PORTFOLIO_DATA) -->
-          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6" id="photography-grid">
-            <!-- Rendered by JS -->
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 5. CREATIVE & DIGITAL MEDIA                -->
-        <!-- ========================================== -->
-        <section id="creative-media" class="space-y-8 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">Creative &amp; Digital Media</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">
-              Design, Production, and Visual Communication.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-base text-charcoal leading-[1.7] font-normal max-w-[820px]">
-            <p>
-              My creative work spans graphic design, visual identity development, commercial photography, video production, image editing, and multimedia storytelling.
-            </p>
-            <p>
-              I combine technical production skills with visual communication principles to create functional, engaging materials for print and digital applications.
-            </p>
-          </div>
-
-          <!-- Video Portfolio Grid -->
-          <div class="space-y-4">
-            <h4 class="text-sm font-semibold uppercase tracking-wider text-deepCharcoal">Video &amp; Multimedia Projects</h4>
-            <div class="grid md:grid-cols-2 gap-6">
-              
-              <!-- Video 1 -->
-              <div class="bg-cardWhite p-6 border border-borderColor flex flex-col justify-between space-y-4">
-                <div>
-                  <div class="aspect-video w-full bg-black border border-borderColor mb-4 overflow-hidden">
-                    <iframe class="w-full h-full" src="https://www.dvidshub.net/video/embed/768279" title="Stop, Drop and Roll with Sparky" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Public Information Video</span>
-                  <h5 class="text-lg font-semibold text-deepCharcoal">Stop, Drop and Roll with Sparky</h5>
-                  <p class="text-xs text-slateGray leading-relaxed mt-2">
-                    Virtual public-information video produced for Fire Prevention Week 2020, using clear demonstration and familiar characters to reach both in-person and remote learners.
-                  </p>
-                </div>
-                <div class="pt-3 border-t border-borderColor flex items-center justify-between text-xs">
-                  <span class="text-slateGray">Role: Videographer / Editor</span>
-                  <a href="https://www.dvidshub.net/video/768279/stop-drop-and-roll-with-sparky" target="_blank" rel="noopener noreferrer" class="text-slateBlue hover:underline inline-flex items-center gap-1 font-semibold">
-                    <span>Watch on DVIDS</span>
-                    <i data-lucide="external-link" class="w-3 h-3"></i>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Video 2 -->
-              <div class="bg-cardWhite p-6 border border-borderColor flex flex-col justify-between space-y-4">
-                <div>
-                  <div class="aspect-video w-full bg-black border border-borderColor mb-4 overflow-hidden">
-                    <iframe class="w-full h-full" src="https://www.dvidshub.net/video/embed/826678" title="How to Be a Drill Sergeant for Halloween" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest block mb-1">Social Video Feature</span>
-                  <h5 class="text-lg font-semibold text-deepCharcoal">How to Be a Drill Sergeant for Halloween</h5>
-                  <p class="text-xs text-slateGray leading-relaxed mt-2">
-                    Seasonal social video translating a familiar Army role into accessible, audience-centered content designed for engagement and sharing.
-                  </p>
-                </div>
-                <div class="pt-3 border-t border-borderColor flex items-center justify-between text-xs">
-                  <span class="text-slateGray">Role: Producer / Editor</span>
-                  <a href="https://www.dvidshub.net/video/826678/drill-sergeant-halloween" target="_blank" rel="noopener noreferrer" class="text-slateBlue hover:underline inline-flex items-center gap-1 font-semibold">
-                    <span>Watch on DVIDS</span>
-                    <i data-lucide="external-link" class="w-3 h-3"></i>
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Interactive Before & After Restoration Component -->
-          <div class="bg-cardWhite p-6 border border-borderColor space-y-4">
-            <div>
-              <span class="text-[11px] font-semibold text-slateBlue uppercase tracking-widest">Graphic Design &amp; Restoration</span>
-              <h5 class="text-lg font-semibold text-deepCharcoal mt-0.5">Logo Restoration &amp; Vector Conversion</h5>
-              <p class="text-xs text-slateGray">Drag the slider to compare original low-res raster asset with restored vector graphic.</p>
-            </div>
-
-            <div class="ba-container w-full max-w-[700px] aspect-[16/9] mx-auto bg-softCream border border-borderColor select-none">
-              <div class="absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-6">
-                <span class="text-xs font-semibold text-slateBlue uppercase tracking-widest">[ RESTORED VECTOR ARTWORK ]</span>
-                <span class="font-serif text-2xl font-bold text-deepCharcoal mt-2">HIGH RESOLUTION LOGO</span>
-              </div>
-              <div id="ba-overlay" class="ba-overlay bg-softCream border-r border-slateBlue flex flex-col items-center justify-center text-center p-6">
-                <span class="text-xs font-semibold text-slateGray uppercase tracking-widest">[ ORIGINAL RASTER ASSET ]</span>
-                <span class="font-serif text-2xl font-bold text-slateGray opacity-40 mt-2">PIXELATED LOGO</span>
-              </div>
-              <div id="ba-handle" class="ba-handle">
-                <div class="ba-handle-button">
-                  <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
-                </div>
-              </div>
-              <input type="range" min="0" max="100" value="50" id="ba-range" class="ba-slider-input" aria-label="Before and after restoration slider">
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 6. WEB, APPLICATIONS & E-COMMERCE          -->
-        <!-- ========================================== -->
-        <section id="web-development" class="space-y-8 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">Web, Applications &amp; E-Commerce</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">
-              Digital Experiences Built for Function and Usability.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-base text-charcoal leading-[1.7] font-normal max-w-[820px]">
-            <p>
-              My experience extends into website development, application development, e-commerce implementation, and digital platform management.
-            </p>
-            <p>
-              I combine visual design, content organization, and technical problem-solving to create digital experiences that emphasize usability, accessibility, and functionality.
-            </p>
-          </div>
-
-          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-cardWhite p-5 border border-borderColor space-y-2">
-              <h5 class="text-sm font-semibold text-deepCharcoal">Website Development</h5>
-              <p class="text-xs text-slateGray leading-relaxed">Responsive web design, architecture, CMS administration, maintenance, and UI/UX.</p>
-            </div>
-            <div class="bg-cardWhite p-5 border border-borderColor space-y-2">
-              <h5 class="text-sm font-semibold text-deepCharcoal">Application Development</h5>
-              <p class="text-xs text-slateGray leading-relaxed">Digital tools, functional web interfaces, and user-centered application development.</p>
-            </div>
-            <div class="bg-cardWhite p-5 border border-borderColor space-y-2">
-              <h5 class="text-sm font-semibold text-deepCharcoal">E-Commerce</h5>
-              <p class="text-xs text-slateGray leading-relaxed">Online storefront setup, product catalog structure, merchandising, and store management.</p>
-            </div>
-            <div class="bg-cardWhite p-5 border border-borderColor space-y-2">
-              <h5 class="text-sm font-semibold text-deepCharcoal">SEO &amp; Analytics</h5>
-              <p class="text-xs text-slateGray leading-relaxed">On-page SEO, metadata optimization, content structure, and analytics review.</p>
-            </div>
-          </div>
-
-          <!-- Digital Projects Case Study Cards -->
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-3">
-              <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">Web Architecture</span>
-              <h5 class="text-lg font-semibold text-deepCharcoal">Show Me Fort Leonard Wood</h5>
-              <p class="text-xs text-slateGray leading-relaxed">
-                <strong>Project Objective:</strong> Structured and published a WordPress digital publication to deliver military community news.
-              </p>
-              <p class="text-xs text-slateGray"><strong>Technologies:</strong> WordPress, CSS3, Google Analytics, SEO Optimization.</p>
-            </div>
-
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-3">
-              <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">E-Commerce Platform</span>
-              <h5 class="text-lg font-semibold text-deepCharcoal">Digital Storefront Implementation</h5>
-              <p class="text-xs text-slateGray leading-relaxed">
-                <strong>Project Objective:</strong> Configured online product catalog, digital merchandising, and responsive checkout user flows.
-              </p>
-              <p class="text-xs text-slateGray"><strong>Technologies:</strong> E-Commerce CMS, UI/UX Design, Product Photography.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 7. WRITING & JOURNALISM                    -->
-        <!-- ========================================== -->
-        <section id="writing" class="space-y-8 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">Writing &amp; Journalism</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">
-              Telling Stories That Matter.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-base text-charcoal leading-[1.7] font-normal max-w-[820px]">
-            <p>
-              My journalism experience includes researching, interviewing, writing, and editing more than 150 news and feature articles published through official U.S. Army communication channels, including <em>The Guidon</em> and <em>Army.mil</em>.
-            </p>
-            <p>
-              My reporting covered military training, organizational initiatives, leadership, service members, community relationships, and events affecting the Fort Leonard Wood community.
-            </p>
-            <p>
-              My writing emphasizes clarity, context, accuracy, and the human experiences that connect audiences to a larger story.
-            </p>
-          </div>
-
-          <!-- Featured Articles Grid (Populated dynamically) -->
-          <div class="space-y-4">
-            <h4 class="text-sm font-semibold uppercase tracking-wider text-deepCharcoal">Featured Published Articles</h4>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
-              <!-- Rendered by JS -->
-            </div>
-          </div>
-
-          <!-- Additional Reporting Collection -->
-          <div class="bg-cardWhite p-6 border border-borderColor space-y-4">
-            <h4 class="text-sm font-semibold uppercase tracking-wider text-deepCharcoal">Additional Published Reporting</h4>
-            <div class="grid md:grid-cols-2 gap-3 text-xs" id="additional-articles-grid">
-              <!-- Rendered by JS -->
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 8. ABOUT AMANDA                            -->
-        <!-- ========================================== -->
-        <section id="about" class="space-y-12 pt-8 border-t border-borderColor">
-          <div>
-            <h3 class="font-serif text-3xl md:text-4xl font-normal text-deepCharcoal">About Amanda Sullivan</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue mt-2">Professional Biography &amp; Background</p>
-          </div>
-
-          <!-- Desktop Hero Layout: Bio 60% / Portrait Placeholder 40% -->
-          <div class="grid lg:grid-cols-10 gap-8 items-start">
-            <div class="lg:col-span-6 space-y-4 text-base text-charcoal leading-[1.7] font-normal">
-              <p>
-                I'm Amanda Sullivan, an award-winning communications professional with nearly eight years of experience supporting U.S. Army Public Affairs at Fort Leonard Wood, Missouri.
-              </p>
-              <p>
-                My professional background encompasses public relations, strategic communications, community relations, event planning and operations, journalism, photography, multimedia production, and program coordination.
-              </p>
-              <p>
-                Throughout my career, I've worked with military leadership, civilian organizations, government personnel, educational institutions, and community stakeholders to support public information initiatives, coordinate community engagement programs, and develop communication materials for diverse audiences.
-              </p>
-              <p>
-                My work has included coordinating more than 200 community engagements, developing regional outreach initiatives, producing award-winning photography, writing published news and feature articles, and supporting the operational responsibilities of a large government communications organization.
-              </p>
-              <p>
-                Beyond my government communications experience, I have experience in website and application development, e-commerce implementation, commercial photography, graphic design, logo development and restoration, and search engine optimization.
-              </p>
-              <p class="text-slateGray">
-                My professional approach combines creative communication with practical experience coordinating people, programs, information, and technology.
-              </p>
-            </div>
-
-            <div class="lg:col-span-4">
-              <div class="aspect-[4/5] bg-softCream border border-borderColor p-6 flex flex-col items-center justify-center text-center">
-                <i data-lucide="user" class="w-16 h-16 text-slateBlue mb-3"></i>
-                <span class="text-xs font-semibold text-deepCharcoal uppercase tracking-wider">[ Professional Portrait Slot ]</span>
-                <span class="text-[11px] text-slateGray mt-1">Aspect Ratio 4:5</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Education & Awards Section -->
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-              <h4 class="font-serif text-lg font-normal text-deepCharcoal">Education</h4>
-              <p class="text-xs font-semibold text-deepCharcoal">Bachelor of Arts in English</p>
-              <p class="text-xs text-slateGray">Concentration in Professional Communication &amp; Journalism</p>
-              <p class="text-xs text-slateGray">University of Maine at Presque Isle</p>
-              <p class="text-xs font-semibold text-slateBlue mt-1">Expected Graduation: March 2027</p>
-            </div>
-
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-              <h4 class="font-serif text-lg font-normal text-deepCharcoal">Leadership</h4>
-              <p class="text-xs font-semibold text-deepCharcoal">President, Federal Women's Program</p>
-              <p class="text-xs text-slateGray">Fort Leonard Wood | 2022–2023</p>
-              <p class="text-xs text-slateGray leading-relaxed mt-1">Coordinated organizational programming, observances, and leadership activities.</p>
-            </div>
-
-            <div class="bg-cardWhite p-6 border border-borderColor space-y-2">
-              <h4 class="font-serif text-lg font-normal text-deepCharcoal">Awards &amp; Recognition</h4>
-              <ul class="text-xs text-slateGray space-y-1">
-                <li><strong>2024 Civilian Photographer of Year:</strong> IMCOM</li>
-                <li><strong>2024 Civilian Photographer of Year:</strong> AMC</li>
-                <li><strong>2024 Honorable Mention:</strong> Keith L. Ware Awards</li>
-                <li><strong>2025 Achievement Medal:</strong> Civilian Service</li>
-                <li><strong>2022 Order of the Blacksmith:</strong> 3rd Chem Bde</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 9. CONTACT                                 -->
-        <!-- ========================================== -->
-        <section id="contact" class="bg-darkGallery text-textOnDark p-8 md:p-12 space-y-6">
-          <div class="space-y-2">
-            <h3 class="font-serif text-3xl font-normal text-textOnDark">Contact Amanda</h3>
-            <p class="text-xs font-semibold uppercase tracking-widest text-slateBlue">Inquiries &amp; Professional Opportunities</p>
-          </div>
-
-          <p class="text-sm text-textOnDark/80 max-w-[600px] leading-relaxed font-light">
-            For professional inquiries, employment opportunities, or additional examples of my work, please contact me.
-          </p>
-
-          <div class="space-y-3 pt-2 text-sm font-light">
-            <div class="flex items-center gap-3">
-              <i data-lucide="mail" class="w-4 h-4 text-slateBlue"></i>
-              <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:text-slateBlue transition">amanda.l.sullivan@outlook.com</a>
-            </div>
-            <div class="flex items-center gap-3">
-              <i data-lucide="phone" class="w-4 h-4 text-slateBlue"></i>
-              <a href="tel:6149291779" class="hover:text-slateBlue transition">614-929-1779</a>
-            </div>
-            <div class="flex items-center gap-3">
-              <i data-lucide="globe" class="w-4 h-4 text-slateBlue"></i>
-              <a href="https://www.amandalsullivan.com" class="hover:text-slateBlue transition">https://www.amandalsullivan.com</a>
-            </div>
-          </div>
-
-          <div class="pt-4">
-            <a href="resume.pdf" class="inline-flex items-center gap-2 bg-slateBlue hover:bg-hoverAccent text-white text-xs font-semibold uppercase tracking-wider px-6 py-3 transition">
-              <i data-lucide="download" class="w-4 h-4"></i>
-              <span>DOWNLOAD RESUME</span>
-            </a>
-          </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="pt-8 border-t border-borderColor text-xs text-slateGray flex flex-col md:flex-row items-center justify-between gap-4">
-          <p>&copy; Amanda Sullivan. All rights reserved.</p>
-          <p>Public Relations &amp; Strategic Communications Portfolio</p>
-        </footer>
-
-      </div>
-    </main>
-
-  </div>
-
-  <!-- LIGHTBOX MODAL COMPONENT -->
-  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-darkGallery/95 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="relative bg-darkGallery border border-borderColor/20 max-w-3xl w-full p-6 text-textOnDark">
-      <button onclick="closeLightbox()" class="absolute top-4 right-4 text-textOnDark/70 hover:text-textOnDark p-2">
-        <i data-lucide="x" class="w-6 h-6"></i>
-      </button>
-      <div id="lightbox-image-space" class="aspect-[16/9] bg-black/40 border border-borderColor/10 mb-4 flex items-center justify-center">
-        <i data-lucide="image" class="w-12 h-12 text-slateBlue"></i>
-      </div>
-      <h4 id="lightbox-title" class="font-serif text-2xl text-textOnDark"></h4>
-      <p id="lightbox-caption" class="text-xs text-textOnDark/80 mt-2 leading-relaxed font-light"></p>
-      <div class="flex items-center justify-between mt-4 pt-3 border-t border-borderColor/10 text-[11px] text-slateBlue">
-        <span id="lightbox-category"></span>
-        <span id="lightbox-credit"></span>
-      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- INTERACTIVE LOGIC & DYNAMIC RENDERING -->
+  <!-- SCRIPT & INTERACTIVE LOGIC -->
   <script>
-    // 1. Initialize Icons
+    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // 2. Render Articles dynamically from PORTFOLIO_DATA
-    const articlesGrid = document.getElementById('articles-grid');
-    const additionalArticlesGrid = document.getElementById('additional-articles-grid');
+    // Mobile Navigation Drawer Controls
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelectorAll('.mobile-nav-link');
 
-    if (articlesGrid && additionalArticlesGrid) {
-      const mainArticles = PORTFOLIO_DATA.articles.slice(0, 8);
-      const additionalArticles = PORTFOLIO_DATA.articles.slice(8);
-
-      mainArticles.forEach(art => {
-        const card = document.createElement('article');
-        card.className = "bg-cardWhite p-6 border border-borderColor flex flex-col justify-between space-y-4";
-        card.innerHTML = `
-          <div class="space-y-2">
-            <span class="text-[10px] font-semibold text-slateBlue uppercase tracking-widest">${art.category}</span>
-            <h5 class="text-base font-semibold text-deepCharcoal leading-snug">${art.title}</h5>
-            <p class="text-[11px] text-slateGray font-medium">${art.publication}</p>
-            <p class="text-xs text-slateGray leading-relaxed">${art.description}</p>
-          </div>
-          <a href="${art.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-slateBlue hover:underline inline-flex items-center gap-1">
-            <span>Read Article</span>
-            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        `;
-        articlesGrid.appendChild(card);
-      });
-
-      additionalArticles.forEach(art => {
-        const item = document.createElement('div');
-        item.className = "p-3 bg-warmIvory border border-borderColor flex items-center justify-between gap-2";
-        item.innerHTML = `
-          <div>
-            <span class="font-medium text-deepCharcoal block">${art.title}</span>
-            <span class="text-[10px] text-slateGray">${art.publication}</span>
-          </div>
-          <a href="${art.url}" target="_blank" rel="noopener noreferrer" class="text-slateBlue hover:underline shrink-0">
-            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-          </a>
-        `;
-        additionalArticlesGrid.appendChild(item);
-      });
+    function toggleMenu() {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+        menuIcon.setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+        menuIcon.setAttribute('data-lucide', 'x');
+      }
       lucide.createIcons();
     }
 
-    // 3. Render Photography Gallery dynamically
-    const photoGrid = document.getElementById('photography-grid');
-    if (photoGrid) {
-      PORTFOLIO_DATA.photography.forEach(photo => {
-        const item = document.createElement('div');
-        item.className = `photo-item gallery-item bg-cardWhite border border-borderColor cursor-pointer overflow-hidden`;
-        item.setAttribute('data-category', photo.category);
-        item.onclick = () => openLightbox(photo.title, photo.caption, photo.category, photo.credit);
-        item.innerHTML = `
-          <div class="aspect-[4/3] bg-softCream border-b border-borderColor flex flex-col items-center justify-center p-4 text-center">
-            <i data-lucide="camera" class="w-8 h-8 text-slateBlue mb-2"></i>
-            <span class="text-[10px] text-slateGray uppercase tracking-wider font-medium">[ ${photo.filename} ]</span>
-          </div>
-          <div class="p-3">
-            <span class="text-[10px] font-semibold text-slateBlue uppercase block">${photo.category}</span>
-            <h5 class="text-sm font-semibold text-deepCharcoal mt-0.5">${photo.title}</h5>
-          </div>
-        `;
-        photoGrid.appendChild(item);
-      });
-      lucide.createIcons();
-    }
+    toggleBtn.addEventListener('click', toggleMenu);
 
-    // 4. Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileDrawer = document.getElementById('mobile-drawer');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-    if (mobileMenuToggle && mobileDrawer) {
-      mobileMenuToggle.addEventListener('click', () => {
-        mobileDrawer.classList.toggle('hidden');
-      });
-      mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileDrawer.classList.add('hidden');
-        });
-      });
-    }
-
-    // 5. ScrollSpy Navigation
-    const sections = document.querySelectorAll('main section[id]');
-    const desktopNavLinks = document.querySelectorAll('#desktop-nav .nav-link');
-
-    window.addEventListener('scroll', () => {
-      let currentSection = 'home';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          currentSection = section.getAttribute('id');
-        }
-      });
-
-      desktopNavLinks.forEach(link => {
-        link.classList.remove('nav-item-active');
-        if (link.getAttribute('href') === '#' + currentSection) {
-          link.classList.add('nav-item-active');
+    // Close mobile drawer when selecting a navigation link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (drawer.classList.contains('flex')) {
+          toggleMenu();
         }
       });
     });
 
-    // 6. Photo Gallery Category Filtering
-    const photoFilterBtns = document.querySelectorAll('.photo-filter-btn');
-    photoFilterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-
-        photoFilterBtns.forEach(b => {
-          b.classList.remove('bg-slateBlue', 'text-white');
-          b.classList.add('bg-softCream', 'text-charcoal');
-        });
-        btn.classList.remove('bg-softCream', 'text-charcoal');
-        btn.classList.add('bg-slateBlue', 'text-white');
-
-        const photoItems = document.querySelectorAll('.photo-item');
-        photoItems.forEach(item => {
-          if (filter === 'all' || item.getAttribute('data-category') === filter) {
-            item.classList.remove('hidden-item');
-          } else {
-            item.classList.add('hidden-item');
-          }
-        });
-      });
-    });
-
-    // 7. Lightbox Modal Handler
-    const lightboxModal = document.getElementById('lightbox-modal');
-    function openLightbox(title, caption, category, credit) {
-      document.getElementById('lightbox-title').textContent = title;
-      document.getElementById('lightbox-caption').textContent = caption;
-      document.getElementById('lightbox-category').textContent = category;
-      document.getElementById('lightbox-credit').textContent = credit;
-      lightboxModal.classList.remove('hidden');
-      lightboxModal.classList.add('flex');
-      document.body.classList.add('modal-active');
-    }
-
-    function closeLightbox() {
-      lightboxModal.classList.add('hidden');
-      lightboxModal.classList.remove('flex');
-      document.body.classList.remove('modal-active');
-    }
-
+    // Close mobile drawer on Escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
-        closeLightbox();
+      if (e.key === 'Escape' && drawer.classList.contains('flex')) {
+        toggleMenu();
       }
     });
-
-    // 8. Interactive Before/After Restoration Slider Component
-    const baRange = document.getElementById('ba-range');
-    const baOverlay = document.getElementById('ba-overlay');
-    const baHandle = document.getElementById('ba-handle');
-
-    if (baRange && baOverlay && baHandle) {
-      baRange.addEventListener('input', (e) => {
-        const sliderValue = e.target.value;
-        baOverlay.style.width = sliderValue + '%';
-        baHandle.style.left = sliderValue + '%';
-      });
-    }
   </script>
 </body>
 </html>
