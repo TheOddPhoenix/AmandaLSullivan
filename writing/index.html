@@ -1,13 +1,436 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Amanda Sullivan</title>
+  <title>Writing & Journalism | Amanda Sullivan</title>
+  <meta name="description" content="Published news, features, and historical reporting by Amanda Sullivan across official U.S. Army communication channels including Army.mil and The Guidon.">
+  <link rel="canonical" href="https://www.amandalsullivan.com/writing/">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Writing & Journalism | Amanda Sullivan">
+  <meta property="og:description" content="Published reporting covering military training, leadership, historical preservation, and community relations at Fort Leonard Wood.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.amandalsullivan.com/writing/">
+
+  <!-- Tailwind CSS 3.4 & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Cinzel & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepEvergreen: '#202420',   /* Main site background */
+            charcoal: '#1C1C1C',        /* Section background */
+            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            antiqueGold: '#B68A3B',     /* Primary accent */
+            lightGold: '#C6A76D',       /* Hover highlights */
+            warmIvory: '#EDE9E3',       /* Primary text */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --deep-evergreen: #202420;
+      --charcoal: #1C1C1C;
+      --forest-green: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
+    }
+
+    body {
+      background-color: var(--deep-evergreen);
+      color: var(--warm-ivory);
+      font-family: 'Manrope', sans-serif;
+    }
+
+    /* Focus accessibility styling */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B68A3B;
+      outline-offset: 4px;
+    }
+  </style>
 </head>
-<body>
-  <h1>About Amanda Sullivan</h1>
-  <p>Page under development.</p>
-  <a href="/">Return to Home</a>
+<body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      <!-- Initials Logo -->
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
+        <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
+        <a href="/#community-relations" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/#photography" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">WRITING</a>
+        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
+        <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
+    <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
+      <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
+      <a href="/#community-relations" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/#photography" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-antiqueGold font-bold">WRITING</a>
+      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
+        <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
+        <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
+      </div>
+    </nav>
+    <div class="pt-6 border-t border-forestGreen/30 text-xs text-mutedIvory space-y-1">
+      <p class="uppercase tracking-widest text-[10px] text-antiqueGold">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full flex-grow">
+
+    <!-- PAGE HEADER SECTION -->
+    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-4">
+        <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
+          SELECTED PUBLISHED WORK
+        </span>
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory tracking-[0.03em]">
+          Writing &amp; Journalism
+        </h1>
+        <div class="space-y-3 pt-2 max-w-3xl text-base sm:text-lg text-mutedIvory font-light leading-relaxed">
+          <p>
+            My journalism experience includes researching, interviewing, writing, and editing more than 150 news and feature articles published through official U.S. Army communication channels, including The Guidon and Army.mil.
+          </p>
+          <p>
+            My reporting covered military training, organizational initiatives, leadership, service members, community relationships, and events affecting the Fort Leonard Wood community.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE CATEGORIES CONTAINER -->
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-16">
+
+        <!-- CATEGORY 1: PERSONALITY & HUMAN-INTEREST FEATURES -->
+        <div class="space-y-6">
+          <div class="border-b border-forestGreen/40 pb-4">
+            <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em] border-l-2 border-antiqueGold pl-3">
+              Personality &amp; Human-Interest Features
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">From the FBI to FLW: Army Chaplain Has Worn Many Hats</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/261291/from_the_fbi_to_flw_army_chaplain_has_worn_many_hats" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Para-swimmer, Military Spouse Defies the Odds</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/256850/para_swimmer_military_spouse_defies_the_odds_through_personal_courage" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Soldier Turns 50, Graduates Basic Combat Training</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/260882/soldier_turns_50_graduates_basic_combat_training" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Fort Leonard Wood Press Center</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">First Female Sapper Leader Course Instructor Paves the Way for Others</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://ftleonardwoodpresscenter.com/first-female-sapper-leader-course-instructor-paves-the-way-for-others/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">From Loss Comes Strength to Lead Soldiers</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/246801/from_loss_comes_strength_to_lead_soldiers" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Mentorship Comes Full Circle for Fort Leonard Wood NCO and Officer</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/259470/mentorship_comes_full_circle_for_fort_leonard_wood_nco_and_officer" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: NEWS & ORGANIZATIONAL REPORTING -->
+        <div class="space-y-6">
+          <div class="border-b border-forestGreen/40 pb-4">
+            <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em] border-l-2 border-antiqueGold pl-3">
+              News &amp; Organizational Reporting
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">3-10 Soldier Is the 2022 TRADOC Adjutant General's Officer of the Year</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/261089/3_10_soldier_is_the_2022_tradoc_adjutant_generals_officer_of_the_year" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Fort Leonard Wood Offers 24/7 Recycling Options</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/255918/fort_leonard_wood_offers_247_recycling_options" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Army MP Corps Celebrates 81st Anniversary During Regimental Week</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/260686/army_mp_corps_celebrates_81st_anniversary_during_regimental_week" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Army Takes Home 'King of the Road' Trophy During Sixth-Annual Joint Service Truck Rodeo</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/250547/army_takes_home_king_of_the_road_trophy_during_sixth_annual_joint_service_truck_rodeo" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: HISTORY & LEGACY -->
+        <div class="space-y-6">
+          <div class="border-b border-forestGreen/40 pb-4">
+            <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em] border-l-2 border-antiqueGold pl-3">
+              History &amp; Legacy
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Vietnam-era Combat Engineers Reunite at Fort Leonard Wood</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/279794/vietnam_era_combat_engineers_reunite_at_fort_leonard_wood" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Fort Leonard Wood Examines WWII Ghost Army Deception Tactics</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/247350/fort_leonard_wood_examines_wwii_ghost_army_deception_tactics" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Historic Preservation Efforts Keep History Alive on Fort Leonard Wood</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/256617/historic_preservation_efforts_keep_history_alive_on_fort_leonard_wood" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: COMMUNITY & PUBLIC INTEREST -->
+        <div class="space-y-6">
+          <div class="border-b border-forestGreen/40 pb-4">
+            <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em] border-l-2 border-antiqueGold pl-3">
+              Community &amp; Public Interest
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
+                <h3 class="text-base font-semibold text-warmIvory leading-snug">Fort Leonard Wood Assists Missouri Department of Conservation with Annual Eagle Survey</h3>
+              </div>
+              <div class="pt-4 border-t border-forestGreen/30">
+                <a href="https://www.army.mil/article/263219/fort_leonard_wood_assists_missouri_department_of_conservation_with_annual_eagle_survey" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1">
+                  <span>READ ARTICLE</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <div>
+        <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix LLC. All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:text-lightGold transition">
+          amanda.l.sullivan@outlook.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE LOGIC & MOBILE NAV CONTROLS -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navigation Drawer Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        menuIcon.setAttribute('data-lucide', 'x');
+      }
+      lucide.createIcons();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+      });
+    });
+  </script>
 </body>
 </html>
