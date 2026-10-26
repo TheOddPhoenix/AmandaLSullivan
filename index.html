@@ -157,11 +157,11 @@
       creativeMedia: [
         {
           id: "creative-1",
-          title: "Why I Serve Campaign",
-          type: "Social Media Campaign & Video Storytelling",
-          description: "Installation-level execution of an Army campaign using interview-based storytelling, video, photography, and social distribution to connect audiences with personal motivations for service.",
-          imageSlot: "assets/images/campaign-why-i-serve.jpg",
-          videoUrl: null
+          title: "How to Be a Drill Sergeant for Halloween",
+          type: "Social Media Campaign & Video Production",
+          description: "Seasonal social video translating a familiar Army role into accessible, audience-centered content designed for engagement and sharing.",
+          videoUrl: "https://www.dvidshub.net/video/826678/drill-sergeant-halloween",
+          embedUrl: "https://www.dvidshub.net/video/embed/826678"
         },
         {
           id: "creative-2",
@@ -173,11 +173,11 @@
         },
         {
           id: "creative-3",
-          title: "Vector Identity & Publication Graphics",
-          type: "Graphic Design & Digital Asset Restoration",
-          description: "Original visual design, vector asset cleanup, promotional layouts, and informational infographics for digital and print distribution.",
-          imageSlot: "assets/images/graphic-design-showcase.jpg",
-          videoUrl: null
+          title: "Community Engagement Feature",
+          type: "Facebook Social Media Campaign",
+          description: "Original social media video campaign developed for official channels highlighting installation activities and community engagements.",
+          videoUrl: "https://www.facebook.com/fortleonardwoodmissouri/videos/502155020403062/",
+          embedUrl: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffortleonardwoodmissouri%2Fvideos%2F502155020403062%2F&show_text=0"
         }
       ],
       digitalProjects: [
@@ -464,7 +464,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
       <div>
         <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
-        <p class="text-[11px] mt-0.5">&copy; Amanda Sullivan. All rights reserved.</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix. All rights reserved.</p>
       </div>
 
       <div class="flex items-center space-x-6">
@@ -561,7 +561,7 @@
           <div class="space-y-3">
             ${item.embedUrl ? `
               <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
-                <iframe class="w-full h-full" src="${item.embedUrl}" title="${item.title}" frameborder="0" allowfullscreen></iframe>
+                <i<iframe class="w-full h-full border-0" src="${item.embedUrl}" title="${item.title}" frameborder="0" scrolling="no" style="overflow: hidden;" allowfullscreen></iframe>frame class="w-full h-full" src="${item.embedUrl}" title="${item.title}" frameborder="0" allowfullscreen></iframe>
               </div>
             ` : `
               <div class="aspect-video bg-deepEvergreen border border-forestGreen/30 flex flex-col items-center justify-center p-4 text-center">
