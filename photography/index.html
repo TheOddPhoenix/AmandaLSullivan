@@ -17,10 +17,10 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
-  <!-- Google Fonts: Cinzel & Manrope -->
+  <!-- Google Fonts: Cinzel & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -37,7 +37,7 @@
           },
           fontFamily: {
             serif: ['Cinzel', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
+            sans: ['Montserrat', 'sans-serif'],
           }
         }
       }
@@ -57,7 +57,7 @@
     body {
       background-color: var(--deep-evergreen);
       color: var(--warm-ivory);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     /* Focus accessibility styling */
@@ -66,6 +66,7 @@
       outline-offset: 4px;
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/site-refinements.css">
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -134,29 +135,15 @@
       </div>
     </section>
 
-    <!-- PHOTOGRAPHY RECOGNITION SECTION -->
-    <section class="py-10 bg-charcoal/60 border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div class="border-l-2 border-antiqueGold pl-4 space-y-3">
-          <h2 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.2em]">
-            Photography Recognition
-          </h2>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-warmIvory font-light">
-            <div class="space-y-1 bg-deepEvergreen/80 p-4 border border-forestGreen/40">
-              <span class="text-antiqueGold font-medium block">2024 Civilian Photographer of the Year</span>
-              <span class="text-mutedIvory text-xs block">U.S. Army Installation Management Command</span>
-            </div>
-            <div class="space-y-1 bg-deepEvergreen/80 p-4 border border-forestGreen/40">
-              <span class="text-antiqueGold font-medium block">2024 Civilian Photographer of the Year</span>
-              <span class="text-mutedIvory text-xs block">U.S. Army Materiel Command</span>
-            </div>
-            <div class="space-y-1 bg-deepEvergreen/80 p-4 border border-forestGreen/40 sm:col-span-2 lg:col-span-1">
-              <span class="text-antiqueGold font-medium block">2024 Honorable Mention</span>
-              <span class="text-mutedIvory text-xs block">Maj. Gen. Keith L. Ware Communications Awards</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<section  class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Photography recognition</h2><div class="space-y-3 border-l-2 border-antiqueGold pl-4 text-sm text-mutedIvory">
+          <p class="text-xs text-lightGold font-semibold">Recognized in 2025 for work produced in 2024</p>
+          <ul class="space-y-2">
+            <li><span class="text-warmIvory">Civilian Photographer of the Year</span> · U.S. Army Materiel Command</li>
+            <li><span class="text-warmIvory">Civilian Photographer of the Year</span> · U.S. Army Installation Management Command</li>
+            <li><span class="text-warmIvory">Honorable Mention</span> · Maj. Gen. Keith L. Ware Communications Awards, Army level</li>
+          </ul>
+        </div><dl class="flex flex-wrap gap-x-8 gap-y-4"><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Official photographs</dt><dd class="font-serif text-2xl text-lightGold order-first">2,400+</dd></div><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Professional photography awards</dt><dd class="font-serif text-2xl text-lightGold order-first">3</dd></div></dl></div>
     </section>
 
     <!-- GALLERY GRID SECTION -->

@@ -11,10 +11,10 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
-  <!-- Google Fonts: Cinzel & Manrope -->
+  <!-- Google Fonts: Cinzel & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -31,7 +31,7 @@
           },
           fontFamily: {
             serif: ['Cinzel', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
+            sans: ['Montserrat', 'sans-serif'],
           }
         }
       }
@@ -51,7 +51,7 @@
     body {
       background-color: var(--deep-evergreen);
       color: var(--warm-ivory);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     a:focus-visible, button:focus-visible {
@@ -59,6 +59,7 @@
       outline-offset: 4px;
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/site-refinements.css">
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -109,13 +110,13 @@
       <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6">
         <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block">CAMPAIGNS, VIDEO &amp; DESIGN</span>
         <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory">Creative &amp; Digital Media</h1>
-        <p class="text-sm sm:text-base text-mutedIvory font-light leading-relaxed max-w-4xl">My creative work includes video, editorial layouts, graphics, and digital content developed for official U.S. Army communication channels. These selections bring together public information, community engagement, and visual storytelling.</p>
+        <div class="space-y-4 text-sm sm:text-base text-mutedIvory leading-relaxed max-w-4xl"><p>In an increasingly digital world, social media has become a primary source of information and a powerful tool for public engagement. Throughout my career, I have developed and executed digital communications campaigns designed to inform, educate, and connect with diverse audiences.</p><p>From photography and video production to graphic design, social media campaigns, and livestreamed events, my work has helped organizations communicate effectively across multiple platforms. My experience includes developing content for official social media channels with a combined audience of more than 650,000 followers, translating complex information into accessible, engaging content.</p></div><dl class="flex flex-wrap gap-x-8 gap-y-4"><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Combined followers of official channels supported</dt><dd class="font-serif text-2xl text-lightGold order-first">650,000+</dd></div></dl><p class="text-xs text-mutedIvory">Combined channel audience, not individual campaign reach, unique viewers, or impressions.</p>
       </div>
     </section>
 
     <section id="video-production" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
       <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Video production</h2>
+        <p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">VIDEO &amp; MULTIMEDIA</p><h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Video production</h2><dl class="flex flex-wrap gap-x-8 gap-y-4"><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Video products developed or coordinated in one appraisal year</dt><dd class="font-serif text-2xl text-lightGold order-first">33</dd></div></dl>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
             <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
               <iframe src="https://www.dvidshub.net/video/embed/826678" title="How to Be a Drill Sergeant for Halloween" class="w-full h-full border-0" allowfullscreen></iframe>
@@ -146,7 +147,7 @@
 
     <section id="graphic-design" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
       <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Graphics &amp; visual design</h2>
+        <p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">PUBLICATION &amp; VISUAL DESIGN</p><h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Graphics &amp; visual design</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
             <a href="/assets/images/best-sapper-graphic-2.jpg" class="block aspect-[4/5] bg-charcoal border border-forestGreen/30 p-2">
               <img src="/assets/images/best-sapper-graphic-2.jpg" alt="Best Sapper Competition Team Graphic" class="w-full h-full object-contain" />
@@ -177,7 +178,7 @@
 
     <section id="digital-communications" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
       <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Digital communications</h2>
+        <p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">CHANNELS &amp; CONTENT</p><h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Digital communications</h2>
         <div class="grid md:grid-cols-2 gap-8 text-sm text-mutedIvory font-light leading-relaxed">
           <div class="space-y-4">
             <h3 class="text-lg font-semibold text-warmIvory">Social media content</h3>
