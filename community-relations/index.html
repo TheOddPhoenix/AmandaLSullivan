@@ -77,7 +77,7 @@
 
       <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
         <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
-        <a href="/community-relations/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">COMMUNITY RELATIONS</a>
+        <a href="/community-relations/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">COMMUNITY RELATIONS</a>
         <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
         <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
         <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
@@ -86,7 +86,7 @@
       </div>
 
       <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
       </button>
     </nav>
   </header>
@@ -95,7 +95,7 @@
   <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
     <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
       <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
-      <a href="/community-relations/" class="mobile-nav-link text-antiqueGold font-bold">COMMUNITY RELATIONS</a>
+      <a href="/community-relations/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">COMMUNITY RELATIONS</a>
       <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
       <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
       <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
@@ -325,11 +325,16 @@
   </footer>
 
   <script>
-    lucide.createIcons();
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    refreshIcons();
 
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
-    const menuIcon = document.getElementById('menu-icon');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     toggleBtn.addEventListener('click', () => {
@@ -339,15 +344,15 @@
         drawer.classList.add('hidden');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
       } else {
         drawer.classList.remove('hidden');
         drawer.classList.add('flex');
         drawer.setAttribute('aria-hidden', 'false');
         toggleBtn.setAttribute('aria-expanded', 'true');
-        menuIcon.setAttribute('data-lucide', 'x');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
       }
-      lucide.createIcons();
+      refreshIcons();
     });
 
     mobileLinks.forEach(link => {
@@ -356,8 +361,8 @@
         drawer.classList.remove('flex');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
       });
     });
   </script>

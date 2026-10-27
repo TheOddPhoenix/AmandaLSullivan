@@ -1,5 +1,174 @@
-AmandaLSullivan/
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development | Amanda Sullivan</title>
+
+  <!-- Tailwind CSS 3.4 & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Cinzel & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepEvergreen: '#202420',   /* Main site background */
+            charcoal: '#1C1C1C',        /* Section background */
+            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            antiqueGold: '#B68A3B',     /* Primary accent */
+            lightGold: '#C6A76D',       /* Hover highlights */
+            warmIvory: '#EDE9E3',       /* Primary text */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --deep-evergreen: #202420;
+      --charcoal: #1C1C1C;
+      --forest-green: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
+    }
+
+    body {
+      background-color: var(--deep-evergreen);
+      color: var(--warm-ivory);
+      font-family: 'Manrope', sans-serif;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B68A3B;
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
+      </a>
+
+      <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
+        <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
+        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
+        <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
+    <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
+      <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
+      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
+        <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
+        <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
+      </div>
+    </nav>
+    <div class="pt-6 border-t border-forestGreen/30 text-xs text-mutedIvory space-y-1">
+      <p class="uppercase tracking-widest text-[10px] text-antiqueGold">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <main class="w-full flex-grow">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10 py-16 space-y-4">
+      <pre class="overflow-x-auto">AmandaLSullivan/
 ├── about/
 │   └── index.html
 ├── CNAME
-└── index.html
+└── index.html</pre>
+    </div>
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <div>
+        <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix LLC. All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:text-lightGold transition">
+          amanda.l.sullivan@outlook.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    refreshIcons();
+
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
+      }
+      refreshIcons();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
+      });
+    });
+  </script>
+</body>
+</html>

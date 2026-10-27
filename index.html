@@ -83,7 +83,7 @@
           preview: "In the post-COVID period, Fort Leonard Wood needed a consistent way to rebuild relationships with local schools. I developed a monthly recognition program centered on Army Values and positive student impact.",
           primaryImg: "assets/images/Leadership Award.jpg",
           alt: "Student Leadership Award recognition ceremony at local school.",
-          url: "/community-relations/"
+          url: "/community-relations/#leadership-award"
         },
         {
           id: "case-2",
@@ -92,7 +92,7 @@
           preview: "When I assumed management in 2020, participation was limited to one district. I developed a scalable model that expanded school participation while preserving consistent messaging and manageable coordination.",
           primaryImg: "assets/images/photo-read-across-america.jpg",
           alt: "Soldier volunteer reading to elementary school students.",
-          url: "https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day"
+          url: "/community-relations/#read-across-america"
         },
         {
           id: "case-3",
@@ -101,7 +101,8 @@
           preview: "Fort Leonard Wood supported approximately 10 Scout visits annually, each involving 10–40 participants and often including overnight stays and hands-on Army activities.",
           primaryImg: "assets/images/photo-scout-visit.jpg",
           alt: "Scout troop interacting with military equipment during guided visit.",
-          url: "/community-relations/"
+          url: "/community-relations/",
+          linkLabel: "View Community Relations"
         }
       ],
       photography: [
@@ -224,18 +225,18 @@
 
       <!-- Desktop Navigation Links -->
       <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
-        <a href="/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">HOME</a>
-        <a href="#community-relations" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
-        <a href="#photography" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
-        <a href="#writing" class="hover:text-lightGold transition duration-200">WRITING</a>
-        <a href="#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">HOME</a>
+        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
         <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
         <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
       <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
       </button>
     </nav>
   </header>
@@ -243,11 +244,11 @@
   <!-- MOBILE NAVIGATION DRAWER -->
   <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
     <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
-      <a href="/" class="mobile-nav-link text-antiqueGold font-bold">HOME</a>
-      <a href="#community-relations" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
-      <a href="#photography" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
-      <a href="#writing" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
-      <a href="#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <a href="/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">HOME</a>
+      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
       <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
         <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
         <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
@@ -389,7 +390,7 @@
     </section>
 
     <!-- SECTION FOUR: CREATIVE & DIGITAL MEDIA -->
-    <section id="creative-media" class="py-20 bg-deepEvergreen border-b border-forestGreen/30">
+    <section id="creative-media" class="scroll-mt-20 py-20 bg-deepEvergreen border-b border-forestGreen/30">
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-forestGreen/40 pb-6">
@@ -397,8 +398,8 @@
             <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">CAMPAIGNS, VIDEO &amp; DESIGN</span>
             <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Creative &amp; Digital Media</h2>
           </div>
-          <a href="/creative-media/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
-            <span>VIEW CREATIVE WORK</span>
+          <a href="#creative-video-grid" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
+            <span>EXPLORE CREATIVE WORK BELOW</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
@@ -406,7 +407,7 @@
         <!-- Subsection 1: Video Production (3 Videos Across Top) -->
         <div class="space-y-6">
           <h3 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.15em] border-l-2 border-antiqueGold pl-3">Video Production</h3>
-          <div class="grid md:grid-cols-3 gap-8" id="creative-video-grid">
+          <div class="grid md:grid-cols-3 gap-8" id="creative-video-grid" style="scroll-margin-top: 6rem;">
             <!-- Rendered by JS -->
           </div>
         </div>
@@ -428,7 +429,7 @@
   <div id="lightbox-modal" class="fixed inset-0 z-50 bg-charcoal/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6" aria-hidden="true" role="dialog" aria-labelledby="lightbox-title">
     <div class="relative bg-deepEvergreen border border-forestGreen max-w-3xl w-full p-6 text-warmIvory shadow-2xl">
       <button onclick="closeLightbox()" class="absolute top-4 right-4 text-warmIvory/70 hover:text-antiqueGold p-2 focus:outline-none" aria-label="Close Lightbox">
-        <i data-lucide="x" class="w-6 h-6"></i>
+        <i data-lucide="x" class="w-6 h-6" aria-hidden="true">×</i>
       </button>
       
       <div id="lightbox-image-space" class="aspect-[16/9] bg-charcoal border border-forestGreen/40 mb-4 flex items-center justify-center overflow-hidden">
@@ -463,8 +464,14 @@
 
   <!-- INTERACTIVE LOGIC & DYNAMIC RENDERING -->
   <script>
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
     // 1. Initialize Lucide Icons
-    lucide.createIcons();
+    refreshIcons();
 
     // Helper: Static Image Display (NO hover swap)
     function buildStaticImageHTML(src, alt) {
@@ -503,7 +510,7 @@
           </div>
           <div class="pt-4 border-t border-forestGreen/30 text-xs">
             <a href="${item.url}" ${item.url.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="text-antiqueGold hover:underline inline-flex items-center gap-1 font-semibold">
-              <span>Read Case Study</span>
+              <span>${item.linkLabel || 'Read Case Study'}</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
@@ -621,7 +628,7 @@
       lightboxModal.classList.add('flex');
       lightboxModal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-active');
-      lucide.createIcons();
+      refreshIcons();
     }
 
     function closeLightbox() {
@@ -640,7 +647,6 @@
     // Mobile Navigation Controls
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
-    const menuIcon = document.getElementById('menu-icon');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     toggleBtn.addEventListener('click', () => {
@@ -650,15 +656,15 @@
         drawer.classList.add('hidden');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
       } else {
         drawer.classList.remove('hidden');
         drawer.classList.add('flex');
         drawer.setAttribute('aria-hidden', 'false');
         toggleBtn.setAttribute('aria-expanded', 'true');
-        menuIcon.setAttribute('data-lucide', 'x');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
       }
-      lucide.createIcons();
+      refreshIcons();
     });
 
     mobileLinks.forEach(link => {
@@ -667,13 +673,13 @@
         drawer.classList.remove('flex');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
       });
     });
 
     // Re-initialize Lucide Icons after dynamic rendering
-    lucide.createIcons();
+    refreshIcons();
   </script>
 </body>
 </html>
