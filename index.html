@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda Sullivan | Communication Strategist &amp; Public Affairs</title>
-  <meta name="description" content="Portfolio of Amanda Sullivan, Communication Strategist specializing in U.S. Army Public Affairs, strategic communications, journalism, photography, and community relations.">
+  <title>Amanda Sullivan | Selected Works</title>
+  <meta name="description" content="Professional portfolio of Amanda Sullivan featuring public relations, strategic communications, event operations, photography, journalism, and creative media.">
   <link rel="canonical" href="https://www.amandalsullivan.com/">
 
   <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Amanda Sullivan | Communication Strategist">
-  <meta property="og:description" content="Communication Strategist with nearly eight years of experience in U.S. Army Public Affairs, combining public relations, journalism, multimedia production, and community engagement.">
+  <meta property="og:title" content="Amanda Sullivan | Selected Works">
+  <meta property="og:description" content="Strategic communications professional with nearly eight years of experience translating complex missions into clear, credible public-facing communication.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.amandalsullivan.com/">
+  <meta property="og:image" content="https://www.amandalsullivan.com/assets/images/amanda-sullivan-portrait.png">
 
   <!-- Tailwind CSS 3.4 & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -28,8 +29,8 @@
         extend: {
           colors: {
             deepEvergreen: '#202420',   /* Main site background */
-            charcoal: '#1C1C1C',        /* Section background */
-            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            charcoal: '#1C1C1C',        /* Alternating section background */
+            forestGreen: '#2F4732',     /* Subtle borders & dividers */
             antiqueGold: '#B68A3B',     /* Primary accent */
             lightGold: '#C6A76D',       /* Hover highlights */
             warmIvory: '#EDE9E3',       /* Primary text */
@@ -60,6 +61,9 @@
       font-family: 'Manrope', sans-serif;
     }
 
+    .modal-active { overflow: hidden; }
+
+    /* Focus accessibility styling */
     a:focus-visible, button:focus-visible {
       outline: 2px solid #B68A3B;
       outline-offset: 4px;
@@ -67,6 +71,148 @@
   </style>
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- DATA ARCHITECTURE STORE -->
+  <script>
+    const HOMEPAGE_DATA = {
+      communityCases: [
+        {
+          id: "case-1",
+          title: "Leadership Award Program",
+          type: "Program Development & Community Relations",
+          preview: "In the post-COVID period, Fort Leonard Wood needed a consistent way to rebuild relationships with local schools. I developed a monthly recognition program centered on Army Values and positive student impact.",
+          primaryImg: "assets/images/Leadership Award.jpg",
+          alt: "Student Leadership Award recognition ceremony at local school.",
+          url: "/community-relations/"
+        },
+        {
+          id: "case-2",
+          title: "Read Across America",
+          type: "Community Outreach & Event Operations",
+          preview: "When I assumed management in 2020, participation was limited to one district. I developed a scalable model that expanded school participation while preserving consistent messaging and manageable coordination.",
+          primaryImg: "assets/images/photo-read-across-america.jpg",
+          alt: "Soldier volunteer reading to elementary school students.",
+          url: "https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day"
+        },
+        {
+          id: "case-3",
+          title: "Scout Visits Liaison",
+          type: "Community Engagement Programs",
+          preview: "Fort Leonard Wood supported approximately 10 Scout visits annually, each involving 10–40 participants and often including overnight stays and hands-on Army activities.",
+          primaryImg: "assets/images/photo-scout-visit.jpg",
+          alt: "Scout troop interacting with military equipment during guided visit.",
+          url: "/community-relations/"
+        }
+      ],
+      photography: [
+        {
+          id: "photo-1",
+          primaryImg: "assets/images/cbrn-warrior-cargo-net.jpg",
+          hoverImg: "assets/images/photo-best-squad-competition.jpg",
+          title: "International Best CBRN Warrior Competition",
+          caption: "1st Lt. Erin Butcher with the 1st Cavalry Division at Fort Cavazos, Texas, scales a cargo net on the Physical Endurance Course May 31, 2024, during the 2024 International Best CBRN Warrior Competition at Fort Leonard Wood, Missouri. The competition brings chemical Soldiers from around the world together to demonstrate Chemical Corps capabilities and test competitors' Soldiering skills.",
+          credit: "U.S. Army Photo by Amanda Sullivan"
+        },
+        {
+          id: "photo-2",
+          primaryImg: "assets/images/best-sapper-competition-finish.jpg",
+          hoverImg: "assets/images/photo-best-sapper-2.jpg",
+          title: "Robert B. Flowers Best Sapper Competition",
+          caption: "Staff Sgt. Dwayne Jones, front, and 1st Lt. Austin Chambers, right, from the 299th Brigade Engineer Battalion at Fort Carson, Colorado, run through the Engineer castle at the finish line of the X-Mile final event of the 2024 Robert B. Flowers Best Sapper Competition.",
+          credit: "U.S. Army Photo by Amanda Sullivan"
+        },
+        {
+          id: "photo-3",
+          primaryImg: "assets/images/chemical-field-training.jpg",
+          hoverImg: "assets/images/photo-fire-training.jpg",
+          title: "Chemical Battalion Field Training",
+          caption: "Pvt. Daven Maclin, Soldier in training with Company C, 84th Chemical Battalion, emerges from the smoke during a Field Training Exercise June 21, 2024, at Fort Leonard Wood. FTXs serve as a medium to perform summative and formative assessments on what Soldiers have learned throughout advanced individual training.",
+          credit: "U.S. Army Photo by Amanda Sullivan"
+        }
+      ],
+      articles: [
+        {
+          id: "art-1",
+          title: "From the FBI to FLW: Army Chaplain Has Worn Many Hats",
+          description: "A long-form feature tracing one chaplain's journey from FBI special agent to Army ministry and exploring the varied paths that lead to military service.",
+          url: "https://www.army.mil/article/261291/from_the_fbi_to_flw_army_chaplain_has_worn_many_hats",
+          publication: "Army.mil",
+          primaryImg: "assets/images/article-chaplain.jpg",
+          alt: "Army Chaplain portrait feature"
+        },
+        {
+          id: "art-2",
+          title: "Para-swimmer, Military Spouse Defies the Odds",
+          description: "A story of resilience, athletic achievement, and personal courage centered on a para-athlete and Army spouse.",
+          url: "https://www.army.mil/article/256850/para_swimmer_military_spouse_defies_the_odds_through_personal_courage",
+          publication: "Army.mil",
+          primaryImg: "assets/images/article-paraswimmer.jpg",
+          alt: "Para-swimmer military spouse feature"
+        },
+        {
+          id: "art-3",
+          title: "Fort Leonard Wood Examines WWII Ghost Army Deception Tactics",
+          description: "An accessible examination of World War II deception operations connecting Army history with modern audiences.",
+          url: "https://www.army.mil/article/247350/fort_leonard_wood_examines_wwii_ghost_army_deception_tactics",
+          publication: "Army.mil",
+          primaryImg: "assets/images/ghost-army-article.jpg",
+          alt: "WWII Ghost Army history feature"
+        }
+      ],
+      creativeVideos: [
+        {
+          id: "vid-1",
+          title: "How to Be a Drill Sergeant for Halloween",
+          type: "Social Media Campaign & Video Production",
+          description: "Seasonal social video translating a familiar Army role into accessible, audience-centered content designed for engagement and sharing.",
+          videoUrl: "https://www.dvidshub.net/video/826678/drill-sergeant-halloween",
+          embedUrl: "https://www.dvidshub.net/video/embed/826678"
+        },
+        {
+          id: "vid-2",
+          title: "Stop, Drop and Roll with Sparky",
+          type: "Public Information Video Production",
+          description: "Virtual public-information video produced for Fire Prevention Week 2020, using clear demonstration and familiar characters to reach both in-person and remote learners.",
+          videoUrl: "https://www.dvidshub.net/video/768279/stop-drop-and-roll-with-sparky",
+          embedUrl: "https://www.dvidshub.net/video/embed/768279"
+        },
+        {
+          id: "vid-3",
+          title: "Community Engagement Feature",
+          type: "Facebook Social Media Campaign",
+          description: "Original social media video campaign developed for official channels highlighting installation activities and community engagements.",
+          videoUrl: "https://www.facebook.com/fortleonardwoodmissouri/videos/502155020403062/",
+          embedUrl: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffortleonardwoodmissouri%2Fvideos%2F502155020403062%2F&show_text=0"
+        }
+      ],
+      creativeGraphics: [
+        {
+          id: "gfx-1",
+          title: "Best Sapper Competition Layout",
+          type: "Publication & Social Graphic",
+          description: "Official visual design layout developed for public affairs coverage of the annual Best Sapper Competition.",
+          primaryImg: "assets/images/best-sapper-graphic-2.jpg",
+          alt: "Best Sapper Competition Team Graphic"
+        },
+        {
+          id: "gfx-2",
+          title: "Civilian Employee Spotlight",
+          type: "Editorial Feature Layout",
+          description: "Feature article layout and Q&A design highlighting civilian workforce achievements across the installation.",
+          primaryImg: "assets/images/civilain-spotlight-bowersox.jpg",
+          alt: "Civilian Employee Spotlight Feature"
+        },
+        {
+          id: "gfx-3",
+          title: "Then & Now: Countee Hall",
+          type: "Historical Comparison Graphic",
+          description: "Comparative visual history graphic connecting installation heritage with contemporary infrastructure.",
+          primaryImg: "assets/images/graphic-thenandnow-counteehall.jpg",
+          alt: "Then and Now Countee Hall Graphic"
+        }
+      ]
+    };
+  </script>
 
   <!-- GLOBAL HORIZONTAL NAVIGATION -->
   <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
@@ -79,10 +225,10 @@
       <!-- Desktop Navigation Links -->
       <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
         <a href="/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">HOME</a>
-        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
-        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
-        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
-        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="#community-relations" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="#photography" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="#writing" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
         <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
         <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
       </div>
@@ -98,10 +244,10 @@
   <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
     <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
       <a href="/" class="mobile-nav-link text-antiqueGold font-bold">HOME</a>
-      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
-      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
-      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
-      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <a href="#community-relations" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="#photography" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="#writing" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
       <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
         <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
         <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
@@ -114,315 +260,103 @@
   </div>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="w-full flex-grow">
+  <main class="w-full">
 
-    <!-- 1. HERO INTRODUCTION SECTION -->
-    <section class="py-20 md:py-24 bg-deepEvergreen border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-6">
-        <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
-          PUBLIC RELATIONS &amp; STRATEGIC COMMUNICATIONS
-        </span>
-        <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-warmIvory tracking-[0.03em] max-w-4xl leading-tight">
-          AMANDA SULLIVAN
-        </h1>
-        <p class="text-base sm:text-lg text-mutedIvory font-light leading-relaxed max-w-3xl pt-1">
-          Amanda Sullivan is a communications strategist whose work brings together public relations, journalism, creative media, and community engagement. With a background spanning strategic storytelling, program development, and organizational collaboration, she creates thoughtful communications, builds meaningful relationships, and turns complex ideas into effective outcomes.
-        </p>
-        <div class="pt-4 flex flex-wrap gap-4 text-xs font-semibold tracking-wider">
-          <a href="#community-relations" class="px-6 py-3.5 bg-antiqueGold text-charcoal hover:bg-lightGold transition duration-300 uppercase">
-            EXPLORE SELECTED WORK
-          </a>
-          <a href="/resume/" class="px-6 py-3.5 border border-forestGreen hover:border-antiqueGold text-warmIvory transition duration-300 uppercase">
-            VIEW RÉSUMÉ
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. COMMUNITY RELATIONS & OPERATIONS SECTION -->
-    <section id="community-relations" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-10">
-        
-        <div class="space-y-3 max-w-3xl">
-          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
-            FEATURED PORTFOLIO
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-serif font-normal text-warmIvory">
-            COMMUNITY RELATIONS &amp; OPERATIONS
-          </h2>
-          <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed">
-            Building strong community relationships requires thoughtful planning, effective communication, and reliable execution. My work at Fort Leonard Wood included developing outreach initiatives, cultivating partnerships, and coordinating the people and resources needed to turn community engagement into meaningful results.
-          </p>
-        </div>
-
-        <!-- 3 Featured Project Cards -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- HOMEPAGE HERO SECTION -->
+    <section id="home" class="py-16 md:py-24 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
           
-          <!-- Project 1: Leadership Award Program -->
-          <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-4">
-              <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/Leadership Award.jpg" 
-                  alt="Leadership Award Program presentation" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/Leadership Award.jpg';}"
-                />
+          <div class="lg:col-span-8 space-y-6">
+            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block">
+              PUBLIC RELATIONS &amp; STRATEGIC COMMUNICATIONS
+            </span>
+            
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-[46px] font-normal leading-[1.15] text-warmIvory tracking-[0.03em]">
+              AMANDA SULLIVAN
+            </h1>
+
+            <!-- Updated Disciplines Labels -->
+            <div class="border-l-2 border-forestGreen pl-4 py-0.5">
+              <div class="flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-2 text-xs sm:text-sm font-medium tracking-[0.08em] text-antiqueGold/90 uppercase">
+                <span class="whitespace-nowrap">Community Relations</span>
+                <span class="whitespace-nowrap">Event Operations</span>
+                <span class="whitespace-nowrap">Creative &amp; Digital Media</span>
               </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">COMMUNITY ENGAGEMENT</span>
-              <h3 class="text-base sm:text-lg font-serif font-normal text-warmIvory leading-snug">Leadership Award Program</h3>
-              <p class="text-xs text-mutedIvory leading-relaxed font-light">
-                Conceived and developed a student recognition initiative connecting military leaders with regional schools. Established the program framework, secured senior command approval, and coordinated an initiative that has recognized more than 200 students across 15+ school districts.
-              </p>
             </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="/community-relations/#leadership-award" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>VIEW CASE STUDY</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
 
-          <!-- Project 2: Read Across America -->
-          <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-4">
-              <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/photo-read-across-america.jpg" 
-                  alt="Soldiers participating in Read Across America" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/photo-read-across-america.jpg';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">COMMUNITY OUTREACH</span>
-              <h3 class="text-base sm:text-lg font-serif font-normal text-warmIvory leading-snug">Read Across America</h3>
-              <p class="text-xs text-mutedIvory leading-relaxed font-light">
-                Expanded an annual educational outreach initiative through school partnerships, targeted volunteer recruitment, and coordinated military participation, reaching more than 18,000 students across 940 classrooms.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="/community-relations/#read-across-america" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>VIEW CASE STUDY</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
+            <p class="text-base sm:text-lg text-mutedIvory font-light leading-[1.75] max-w-2xl pt-2">
+              Amanda Sullivan is a communication strategist specializing in public relations, strategic communications, community engagement, and creative media. With a passion for connecting people, ideas, and organizations, she understands that effective communication goes beyond simply delivering information. It builds understanding, fosters trust, and creates meaningful connections.
 
-          <!-- Project 3: Community Support Operations -->
-          <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300 md:col-span-2 lg:col-span-1">
-            <div class="space-y-4">
-              <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/Bicentennial Parade" 
-                  alt="Missouri Bicentennial Parade military involvement" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/Bicentennial Parade';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">COMMUNITY RELATIONS &amp; OPERATIONS</span>
-              <h3 class="text-base sm:text-lg font-serif font-normal text-warmIvory leading-snug">Community Engagement and Support Operations</h3>
-              <p class="text-xs text-mutedIvory leading-relaxed font-light">
-                Managed complex community support operations, coordinating military participation in public events, government partnerships, and civic initiatives. Improved operational processes, strengthened stakeholder relationships, and independently managed 25–50 concurrent engagements.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="/community-relations/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>VIEW CASE STUDY</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="pt-4 text-center sm:text-left">
-          <a href="/community-relations/" class="px-6 py-3.5 border border-forestGreen hover:border-antiqueGold text-warmIvory hover:text-antiqueGold text-xs font-semibold tracking-wider uppercase transition duration-300 inline-flex items-center gap-2">
-            <span>EXPLORE COMMUNITY RELATIONS</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 3. PHOTOGRAPHY SECTION -->
-    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-10">
-        
-        <div class="space-y-3 max-w-3xl">
-          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
-            VISUAL STORYTELLING
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-serif font-normal text-warmIvory">
-            AWARD-WINNING PHOTOGRAPHY
-          </h2>
-          <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed">
-            Photography has always been central to how I tell stories. From military training and documentary assignments to portraits and community events, my work focuses on capturing meaningful moments with authenticity, technical precision, and a strong sense of narrative.
-          </p>
-          <div class="pt-2 border-l-2 border-antiqueGold pl-4">
-            <p class="text-xs text-antiqueGold font-medium tracking-wide">
-              2024 Civilian Photographer of the Year, U.S. Army Materiel Command and U.S. Army Installation Management Command.
             </p>
+
+            <div class="pt-4 flex flex-wrap gap-6 text-xs font-semibold tracking-[0.15em]">
+              <a href="#community-relations" class="inline-flex items-center gap-2 text-warmIvory hover:text-lightGold transition border-b border-antiqueGold pb-1">
+                <span>EXPLORE WORK</span>
+                <span>↓</span>
+              </a>
+              <a href="/resume/" class="inline-flex items-center gap-2 text-antiqueGold hover:text-lightGold transition border-b border-transparent pb-1">
+                <span>VIEW RÉSUMÉ</span>
+                <span>↗</span>
+              </a>
+            </div>
           </div>
+
+          <!-- Featured Hero Portrait Component -->
+          <div class="lg:col-span-4">
+            <div class="bg-charcoal border border-forestGreen/50 p-3 shadow-xl">
+              <div class="aspect-[4/5] bg-deepEvergreen overflow-hidden relative">
+                <img 
+                  src="assets/images/amanda-sullivan-portrait.png" 
+                  alt="Portrait of Amanda Sullivan" 
+                  class="w-full h-full object-cover"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ONE: COMMUNITY RELATIONS, SUPPORT & OPERATIONS -->
+    <section id="community-relations" class="py-20 bg-charcoal border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
+        
+        <div class="border-b border-forestGreen/40 pb-6">
+          <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Community Relations &amp; Operations</h2>
         </div>
 
-        <!-- Editorial Photo Showcase (3 Varied Portfolio Shots) -->
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="aspect-[4/3] bg-charcoal border border-forestGreen/40 overflow-hidden relative group">
-            <img 
-              src="/assets/images/photo-best-squad-competition.jpg" 
-              alt="Documentary military training photography - TRADOC Best Squad Competition" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-              loading="lazy"
-              onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/photo-best-squad-competition.jpg';}"
-            />
-            <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-              <span class="text-[10px] font-semibold text-warmIvory uppercase tracking-widest">Documentary / Field Operations</span>
-            </div>
-          </div>
-
-          <div class="aspect-[4/3] bg-charcoal border border-forestGreen/40 overflow-hidden relative group">
-            <img 
-              src="/assets/images/photo-drill-sergeant-portrait.jpg" 
-              alt="Portraiture photography - Staff Sgt. Austin Marshall" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-              loading="lazy"
-              onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/photo-drill-sergeant-portrait.jpg';}"
-            />
-            <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-              <span class="text-[10px] font-semibold text-warmIvory uppercase tracking-widest">Portraiture &amp; Human Interest</span>
-            </div>
-          </div>
-
-          <div class="aspect-[4/3] bg-charcoal border border-forestGreen/40 overflow-hidden relative group">
-            <img 
-              src="/assets/images/photo-army-birthday-cake-cutting.jpg" 
-              alt="Ceremonial photography - Army Birthday Cake Cutting" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-              loading="lazy"
-              onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/photo-army-birthday-cake-cutting.jpg';}"
-            />
-            <div class="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-              <span class="text-[10px] font-semibold text-warmIvory uppercase tracking-widest">Ceremonial &amp; Community</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-4 text-center sm:text-left">
-          <a href="/photography/" class="px-6 py-3.5 border border-forestGreen hover:border-antiqueGold text-warmIvory hover:text-antiqueGold text-xs font-semibold tracking-wider uppercase transition duration-300 inline-flex items-center gap-2">
-            <span>VIEW PHOTOGRAPHY PORTFOLIO</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+        <!-- 3-Column Case Studies Grid -->
+        <div class="grid md:grid-cols-3 gap-8" id="community-grid">
+          <!-- Rendered by JS -->
         </div>
 
       </div>
     </section>
 
-    <!-- 4. WRITING & JOURNALISM SECTION -->
-    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-10">
+    <!-- SECTION TWO: AWARD-WINNING PHOTOGRAPHY -->
+    <section id="photography" class="py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
-        <div class="space-y-3 max-w-3xl">
-          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
-            PUBLISHED REPORTING
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-serif font-normal text-warmIvory">
-            WRITING &amp; JOURNALISM
-          </h2>
-          <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed">
-            Everyone has a story if you ask the right questions. My approach to journalism begins with curiosity, thoughtful research, and a willingness to look beyond the obvious. Across more than 150 published news and feature articles, I've explored the people, experiences, and histories behind the headlines.
+        <div class="border-b border-forestGreen/40 pb-6">
+          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">DOCUMENTARY &amp; PHOTOJOURNALISM</span>
+          <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Award-Winning Photography</h2>
+          <p class="text-xs sm:text-sm text-mutedIvory font-light mt-2 max-w-xl">
+            "Photography is not separate from communication strategy; it is one of the ways I make complex missions visible and human."
           </p>
         </div>
 
-        <!-- Featured Published Articles Grid -->
-        <div class="grid md:grid-cols-3 gap-8">
-          
-          <!-- Article 1 -->
-          <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-3">
-              <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/article-chaplain.jpg" 
-                  alt="From the FBI to FLW Army Chaplain" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/article-chaplain.jpg';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
-              <h3 class="text-base font-semibold text-warmIvory leading-snug">From the FBI to FLW: Army Chaplain Has Worn Many Hats</h3>
-              <p class="text-xs text-mutedIvory font-light leading-relaxed">
-                A profile exploring one Army chaplain's unconventional journey from FBI special agent to military ministry.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="https://www.army.mil/article/261291/from_the_fbi_to_flw_army_chaplain_has_worn_many_hats" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>READ ARTICLE</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 2 -->
-          <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-3">
-              <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/article-paraswimmer.jpg" 
-                  alt="Para-Swimmer Military Spouse Defies the Odds" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/article-paraswimmer.jpg';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
-              <h3 class="text-base font-semibold text-warmIvory leading-snug">Para-Swimmer, Military Spouse Defies the Odds</h3>
-              <p class="text-xs text-mutedIvory font-light leading-relaxed">
-                A human-interest feature exploring resilience, determination, and the personal experiences of a para-athlete and military spouse.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="https://www.army.mil/article/256850/para_swimmer_military_spouse_defies_the_odds_through_personal_courage" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>READ ARTICLE</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 3 -->
-          <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-3">
-              <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/ghost-army-article.jpg" 
-                  alt="WWII Ghost Army Deception Tactics" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/ghost-army-article.jpg';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
-              <h3 class="text-base font-semibold text-warmIvory leading-snug">Fort Leonard Wood Examines WWII Ghost Army Deception Tactics</h3>
-              <p class="text-xs text-mutedIvory font-light leading-relaxed">
-                A historical feature examining World War II deception operations and their continuing relevance to military history.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="https://www.army.mil/article/247350/fort_leonard_wood_examines_wwii_ghost_army_deception_tactics" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>READ ARTICLE</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </article>
-
+        <!-- 3-Column Photography Grid -->
+        <div class="grid md:grid-cols-3 gap-8" id="photography-grid">
+          <!-- Rendered by JS -->
         </div>
 
-        <div class="pt-4 text-center sm:text-left">
-          <a href="/writing/" class="px-6 py-3.5 border border-forestGreen hover:border-antiqueGold text-warmIvory hover:text-antiqueGold text-xs font-semibold tracking-wider uppercase transition duration-300 inline-flex items-center gap-2">
-            <span>EXPLORE WRITING SAMPLES</span>
+        <!-- Link placed BELOW the photos -->
+        <div class="pt-4 text-center md:text-right">
+          <a href="/photography/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
+            <span>VIEW MORE PHOTOS</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
@@ -430,108 +364,23 @@
       </div>
     </section>
 
-    <!-- 5. CREATIVE & DIGITAL MEDIA SECTION -->
-    <section id="creative-media" class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-10">
+    <!-- SECTION THREE: WRITING & JOURNALISM -->
+    <section id="writing" class="py-20 bg-charcoal border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
-        <div class="space-y-3 max-w-3xl">
-          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
-            MULTIMEDIA &amp; DESIGN
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-serif font-normal text-warmIvory">
-            CREATIVE &amp; DIGITAL MEDIA
-          </h2>
-          <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed">
-            Effective communication often requires more than words. My creative work brings together video, photography, graphic design, digital publishing, and visual storytelling to develop communication products that are both engaging and purposeful.
-          </p>
+        <div class="border-b border-forestGreen/40 pb-6">
+          <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Writing &amp; Journalism</h2>
         </div>
 
-        <!-- 3 Feature Categories -->
-        <div class="grid md:grid-cols-3 gap-8">
-          
-          <!-- Feature 1 -->
-          <div class="bg-charcoal border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-4">
-              <div class="aspect-[16/9] bg-deepEvergreen border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/photo-fire-training.jpg" 
-                  alt="Video &amp; Multimedia Production" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/photo-fire-training.jpg';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">MULTIMEDIA PRODUCTION</span>
-              <h3 class="text-base font-semibold text-warmIvory leading-snug">Video &amp; Multimedia Production</h3>
-              <p class="text-xs text-mutedIvory font-light leading-relaxed">
-                Original video content, interviews, public-information campaigns, and livestream productions developed for official Army communication platforms.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="/writing/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>VIEW MULTIMEDIA WORK</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="bg-charcoal border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-4">
-              <div class="aspect-[16/9] bg-deepEvergreen border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/graphic-soldier-spotlight-1.png" 
-                  alt="Graphic Design &amp; Visual Communication" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/graphic-soldier-spotlight-1.png';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">VISUAL DESIGN</span>
-              <h3 class="text-base font-semibold text-warmIvory leading-snug">Graphic Design &amp; Visual Communication</h3>
-              <p class="text-xs text-mutedIvory font-light leading-relaxed">
-                Digital campaigns, informational graphics, publication layouts, and branded communication materials developed for print and digital audiences.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="/writing/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>VIEW GRAPHIC DESIGN</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="bg-charcoal border border-forestGreen/50 p-6 flex flex-col justify-between space-y-6 hover:border-antiqueGold transition duration-300">
-            <div class="space-y-4">
-              <div class="aspect-[16/9] bg-deepEvergreen border border-forestGreen/30 overflow-hidden relative">
-                <img 
-                  src="/assets/images/graphic-thenandnow-counteehall.png" 
-                  alt="Digital Publishing &amp; Content Development" 
-                  class="w-full h-full object-cover" 
-                  loading="lazy"
-                  onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='../assets/images/graphic-thenandnow-counteehall.png';}"
-                />
-              </div>
-              <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">DIGITAL PUBLISHING</span>
-              <h3 class="text-base font-semibold text-warmIvory leading-snug">Digital Publishing &amp; Content Development</h3>
-              <p class="text-xs text-mutedIvory font-light leading-relaxed">
-                Website content, digital publications, audience-focused communications, and online storytelling developed across organizational platforms (including the official <em>Show Me Fort Leonard Wood</em> blog reaching 200,000+ readers).
-              </p>
-            </div>
-            <div class="pt-4 border-t border-forestGreen/30">
-              <a href="/writing/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold inline-flex items-center gap-1 transition">
-                <span>VIEW DIGITAL WORK</span>
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-
+        <!-- 3-Column Article Grid -->
+        <div class="grid md:grid-cols-3 gap-8" id="articles-grid">
+          <!-- Rendered by JS -->
         </div>
 
-        <div class="pt-4 text-center sm:text-left">
-          <a href="/writing/" class="px-6 py-3.5 border border-forestGreen hover:border-antiqueGold text-warmIvory hover:text-antiqueGold text-xs font-semibold tracking-wider uppercase transition duration-300 inline-flex items-center gap-2">
-            <span>EXPLORE CREATIVE WORK</span>
+        <!-- Link placed BELOW the writing samples -->
+        <div class="pt-4 text-center md:text-right">
+          <a href="/writing/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
+            <span>VIEW MORE WRITING SAMPLES</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
@@ -539,99 +388,62 @@
       </div>
     </section>
 
-    <!-- 6. CORE COMPETENCIES SECTION -->
-    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/40">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-8">
+    <!-- SECTION FOUR: CREATIVE & DIGITAL MEDIA -->
+    <section id="creative-media" class="py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-12">
         
-        <div class="border-b border-forestGreen/40 pb-4">
-          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
-            CORE COMPETENCIES
-          </span>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-forestGreen/40 pb-6">
+          <div>
+            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block mb-1">CAMPAIGNS, VIDEO &amp; DESIGN</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-normal text-warmIvory">Creative &amp; Digital Media</h2>
+          </div>
+          <a href="/creative-media/" class="text-xs font-semibold text-antiqueGold hover:text-lightGold tracking-[0.15em] uppercase inline-flex items-center gap-1">
+            <span>VIEW CREATIVE WORK</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
         </div>
 
-        <div class="divide-y divide-forestGreen/30 font-sans">
-          <div class="py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6">
-            <span class="text-xs sm:text-sm font-semibold text-warmIvory uppercase tracking-wider md:w-1/3 shrink-0">
-              STRATEGIC COMMUNICATIONS
-            </span>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed md:w-2/3">
-              Public Relations <span class="text-antiqueGold px-2 font-normal">·</span> Communication Strategy <span class="text-antiqueGold px-2 font-normal">·</span> Messaging <span class="text-antiqueGold px-2 font-normal">·</span> Audience Engagement
-            </p>
-          </div>
-
-          <div class="py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6">
-            <span class="text-xs sm:text-sm font-semibold text-warmIvory uppercase tracking-wider md:w-1/3 shrink-0">
-              STAKEHOLDER &amp; INTERAGENCY RELATIONS
-            </span>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed md:w-2/3">
-              Stakeholder Engagement <span class="text-antiqueGold px-2 font-normal">·</span> Interagency Coordination <span class="text-antiqueGold px-2 font-normal">·</span> Community Partnerships <span class="text-antiqueGold px-2 font-normal">·</span> Leadership Liaison
-            </p>
-          </div>
-
-          <div class="py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6">
-            <span class="text-xs sm:text-sm font-semibold text-warmIvory uppercase tracking-wider md:w-1/3 shrink-0">
-              PROGRAM &amp; EVENT OPERATIONS
-            </span>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed md:w-2/3">
-              Program Development <span class="text-antiqueGold px-2 font-normal">·</span> Event Planning <span class="text-antiqueGold px-2 font-normal">·</span> Logistics <span class="text-antiqueGold px-2 font-normal">·</span> Cross-Functional Coordination
-            </p>
-          </div>
-
-          <div class="py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6">
-            <span class="text-xs sm:text-sm font-semibold text-warmIvory uppercase tracking-wider md:w-1/3 shrink-0">
-              JOURNALISM &amp; EDITORIAL
-            </span>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed md:w-2/3">
-              News &amp; Feature Writing <span class="text-antiqueGold px-2 font-normal">·</span> Interviewing <span class="text-antiqueGold px-2 font-normal">·</span> Research <span class="text-antiqueGold px-2 font-normal">·</span> Editorial Production
-            </p>
-          </div>
-
-          <div class="py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6">
-            <span class="text-xs sm:text-sm font-semibold text-warmIvory uppercase tracking-wider md:w-1/3 shrink-0">
-              CREATIVE &amp; MULTIMEDIA PRODUCTION
-            </span>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed md:w-2/3">
-              Photography <span class="text-antiqueGold px-2 font-normal">·</span> Graphic Design <span class="text-antiqueGold px-2 font-normal">·</span> Video Production <span class="text-antiqueGold px-2 font-normal">·</span> Visual Storytelling
-            </p>
-          </div>
-
-          <div class="py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6">
-            <span class="text-xs sm:text-sm font-semibold text-warmIvory uppercase tracking-wider md:w-1/3 shrink-0">
-              DIGITAL COMMUNICATIONS
-            </span>
-            <p class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed md:w-2/3">
-              Website Management <span class="text-antiqueGold px-2 font-normal">·</span> Social Media Content Development <span class="text-antiqueGold px-2 font-normal">·</span> SEO <span class="text-antiqueGold px-2 font-normal">·</span> Analytics
-            </p>
+        <!-- Subsection 1: Video Production (3 Videos Across Top) -->
+        <div class="space-y-6">
+          <h3 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.15em] border-l-2 border-antiqueGold pl-3">Video Production</h3>
+          <div class="grid md:grid-cols-3 gap-8" id="creative-video-grid">
+            <!-- Rendered by JS -->
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- 7. CLOSING SECTION -->
-    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 text-center space-y-6">
-        <h2 class="text-2xl sm:text-3xl font-serif font-normal text-warmIvory">
-          EXPLORE MORE
-        </h2>
-        <p class="text-xs sm:text-sm text-mutedIvory font-light max-w-xl mx-auto leading-relaxed">
-          Explore my professional background, selected work, and experience across communications, creative media, and community engagement.
-        </p>
-        <div class="pt-2 flex flex-wrap justify-center items-center gap-6 text-xs font-semibold tracking-wider">
-          <a href="/resume/" class="px-6 py-3 bg-antiqueGold text-charcoal hover:bg-lightGold transition duration-300 uppercase">
-            VIEW RÉSUMÉ
-          </a>
-          <a href="/about/" class="px-6 py-3 border border-forestGreen hover:border-antiqueGold text-warmIvory transition duration-300 uppercase">
-            ABOUT ME
-          </a>
-          <a href="mailto:amanda.l.sullivan@outlook.com" class="px-6 py-3 border border-antiqueGold/50 text-antiqueGold hover:bg-antiqueGold hover:text-charcoal transition duration-300 uppercase">
-            CONTACT
-          </a>
+        <!-- Subsection 2: Graphic Design (3 Graphics Underneath) -->
+        <div class="space-y-6 pt-6 border-t border-forestGreen/30">
+          <h3 class="text-xs font-semibold text-antiqueGold uppercase tracking-[0.15em] border-l-2 border-antiqueGold pl-3">Graphics &amp; Visual Design</h3>
+          <div class="grid md:grid-cols-3 gap-8" id="creative-graphics-grid">
+            <!-- Rendered by JS -->
+          </div>
         </div>
+
       </div>
     </section>
 
   </main>
+
+  <!-- LIGHTBOX MODAL COMPONENT FOR PHOTOGRAPHY -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-charcoal/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6" aria-hidden="true" role="dialog" aria-labelledby="lightbox-title">
+    <div class="relative bg-deepEvergreen border border-forestGreen max-w-3xl w-full p-6 text-warmIvory shadow-2xl">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 text-warmIvory/70 hover:text-antiqueGold p-2 focus:outline-none" aria-label="Close Lightbox">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      
+      <div id="lightbox-image-space" class="aspect-[16/9] bg-charcoal border border-forestGreen/40 mb-4 flex items-center justify-center overflow-hidden">
+        <i data-lucide="image" class="w-12 h-12 text-antiqueGold"></i>
+      </div>
+      
+      <h3 id="lightbox-title" class="font-serif text-xl font-normal text-warmIvory"></h3>
+      <p id="lightbox-caption" class="text-xs text-mutedIvory mt-2 leading-relaxed font-light"></p>
+      
+      <div class="mt-4 pt-3 border-t border-forestGreen/30 text-[11px] text-antiqueGold flex justify-between">
+        <span id="lightbox-credit"></span>
+        <span class="text-mutedIvory font-medium">U.S. Army Official Photography</span>
+      </div>
+    </div>
+  </div>
 
   <!-- MINIMAL FOOTER -->
   <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
@@ -649,9 +461,183 @@
     </div>
   </footer>
 
+  <!-- INTERACTIVE LOGIC & DYNAMIC RENDERING -->
   <script>
+    // 1. Initialize Lucide Icons
     lucide.createIcons();
 
+    // Helper: Static Image Display (NO hover swap)
+    function buildStaticImageHTML(src, alt) {
+      if (!src) return '';
+      return `
+        <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
+          <img src="${src}" alt="${alt}" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      `;
+    }
+
+    // Helper: Dual-Image Hover Container (ONLY used for Photography)
+    function buildHoverImageHTML(primary, hover, alt) {
+      if (!primary) return '';
+      return `
+        <div class="aspect-[4/3] bg-deepEvergreen border border-forestGreen/30 overflow-hidden relative group">
+          <img src="${primary}" alt="${alt}" class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0" loading="lazy" />
+          ${hover ? `<img src="${hover}" alt="${alt} preview" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" loading="lazy" />` : ''}
+        </div>
+      `;
+    }
+
+    // 2. Render Section 1: Community Relations Case Studies
+    const communityGrid = document.getElementById('community-grid');
+    if (communityGrid) {
+      communityGrid.innerHTML = '';
+      HOMEPAGE_DATA.communityCases.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
+        card.innerHTML = `
+          <div class="space-y-3">
+            ${buildStaticImageHTML(item.primaryImg, item.alt)}
+            <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
+            <h3 class="text-lg font-semibold text-warmIvory leading-snug">${item.title}</h3>
+            <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.preview}</p>
+          </div>
+          <div class="pt-4 border-t border-forestGreen/30 text-xs">
+            <a href="${item.url}" ${item.url.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="text-antiqueGold hover:underline inline-flex items-center gap-1 font-semibold">
+              <span>Read Case Study</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        `;
+        communityGrid.appendChild(card);
+      });
+    }
+
+    // 3. Render Section 2: Award-Winning Photography (HOVER SWAP KEPT HERE ONLY)
+    const photoGrid = document.getElementById('photography-grid');
+    if (photoGrid) {
+      photoGrid.innerHTML = '';
+      HOMEPAGE_DATA.photography.forEach(photo => {
+        const card = document.createElement('div');
+        card.className = "bg-charcoal border border-forestGreen/50 p-4 space-y-3 cursor-pointer group hover:border-antiqueGold transition duration-300";
+        card.onclick = () => openLightbox(photo.title, photo.caption, photo.credit, photo.primaryImg);
+        card.innerHTML = `
+          ${buildHoverImageHTML(photo.primaryImg, photo.hoverImg, photo.title)}
+          <div class="px-1 space-y-1">
+            <h3 class="text-sm font-semibold text-warmIvory group-hover:text-antiqueGold transition">${photo.title}</h3>
+            <p class="text-[11px] text-mutedIvory line-clamp-2 font-light">${photo.caption}</p>
+          </div>
+        `;
+        photoGrid.appendChild(card);
+      });
+    }
+
+    // 4. Render Section 3: Writing & Journalism
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+      articlesGrid.innerHTML = '';
+      HOMEPAGE_DATA.articles.forEach(art => {
+        const card = document.createElement('article');
+        card.className = "bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
+        card.innerHTML = `
+          <div class="space-y-3">
+            ${buildStaticImageHTML(art.primaryImg, art.title)}
+            <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${art.publication}</span>
+            <h3 class="text-base font-semibold text-warmIvory leading-snug">${art.title}</h3>
+            <p class="text-xs text-mutedIvory leading-relaxed font-light">${art.description}</p>
+          </div>
+          <div class="pt-4 border-t border-forestGreen/30">
+            <a href="${art.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-antiqueGold hover:underline inline-flex items-center gap-1">
+              <span>Read Full Article</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        `;
+        articlesGrid.appendChild(card);
+      });
+    }
+
+    // 5a. Render Section 4: Creative Media - Videos Grid
+    const creativeVideoGrid = document.getElementById('creative-video-grid');
+    if (creativeVideoGrid) {
+      creativeVideoGrid.innerHTML = '';
+      HOMEPAGE_DATA.creativeVideos.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-charcoal border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
+        card.innerHTML = `
+          <div class="space-y-3">
+            <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
+              <iframe class="w-full h-full border-0" src="${item.embedUrl}" title="${item.title}" frameborder="0" scrolling="no" style="overflow: hidden;" allowfullscreen></iframe>
+            </div>
+            <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
+            <h3 class="text-base font-semibold text-warmIvory leading-snug">${item.title}</h3>
+            <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.description}</p>
+          </div>
+          <div class="pt-4 border-t border-forestGreen/30 text-xs">
+            <a href="${item.videoUrl}" target="_blank" rel="noopener noreferrer" class="text-antiqueGold font-semibold hover:underline inline-flex items-center gap-1">
+              <span>Watch Video</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        `;
+        creativeVideoGrid.appendChild(card);
+      });
+    }
+
+// 5b. Render Section 4: Creative Media - Graphics Grid
+    const creativeGraphicsGrid = document.getElementById('creative-graphics-grid');
+    if (creativeGraphicsGrid) {
+      creativeGraphicsGrid.innerHTML = '';
+      HOMEPAGE_DATA.creativeGraphics.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-charcoal border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300";
+        card.innerHTML = `
+          <div class="space-y-3">
+            <div class="aspect-[4/5] bg-deepEvergreen/80 border border-forestGreen/30 overflow-hidden relative flex items-center justify-center p-2">
+              <img src="${item.primaryImg}" alt="${item.alt}" class="w-full h-full object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">${item.type}</span>
+            <h3 class="text-base font-semibold text-warmIvory leading-snug">${item.title}</h3>
+            <p class="text-xs text-mutedIvory leading-relaxed font-light">${item.description}</p>
+          </div>
+          <div class="pt-4 border-t border-forestGreen/30 text-xs text-mutedIvory font-medium">
+            <span>Graphic Asset Showcase</span>
+          </div>
+        `;
+        creativeGraphicsGrid.appendChild(card);
+      });
+    }
+
+    // 6. Lightbox Modal Handler
+    const lightboxModal = document.getElementById('lightbox-modal');
+    function openLightbox(title, caption, credit, imagePath) {
+      document.getElementById('lightbox-title').textContent = title;
+      document.getElementById('lightbox-caption').textContent = caption;
+      document.getElementById('lightbox-credit').textContent = credit;
+      
+      const space = document.getElementById('lightbox-image-space');
+      space.innerHTML = `<img src="${imagePath}" alt="${title}" class="w-full h-full object-contain" />`;
+
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+      lightboxModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-active');
+      lucide.createIcons();
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+
+    // Mobile Navigation Controls
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
     const menuIcon = document.getElementById('menu-icon');
@@ -685,6 +671,9 @@
         lucide.createIcons();
       });
     });
+
+    // Re-initialize Lucide Icons after dynamic rendering
+    lucide.createIcons();
   </script>
 </body>
 </html>
