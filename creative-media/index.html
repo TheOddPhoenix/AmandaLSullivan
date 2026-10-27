@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative &amp; Digital Media | Amanda Sullivan</title>
+  <meta name="description" content="Selected video, graphic design, social media, and digital communication work by Amanda Sullivan.">
+  <link rel="canonical" href="https://www.amandalsullivan.com/creative-media/">
+
+  <!-- Tailwind CSS 3.4 & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Cinzel & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepEvergreen: '#202420',   /* Main site background */
+            charcoal: '#1C1C1C',        /* Section background */
+            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            antiqueGold: '#B68A3B',     /* Primary accent */
+            lightGold: '#C6A76D',       /* Hover highlights */
+            warmIvory: '#EDE9E3',       /* Primary text */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --deep-evergreen: #202420;
+      --charcoal: #1C1C1C;
+      --forest-green: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
+    }
+
+    body {
+      background-color: var(--deep-evergreen);
+      color: var(--warm-ivory);
+      font-family: 'Manrope', sans-serif;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B68A3B;
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
+      </a>
+
+      <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
+        <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
+        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="/creative-media/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">CREATIVE MEDIA</a>
+        <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
+        <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
+    <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
+      <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
+      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="/creative-media/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">CREATIVE MEDIA</a>
+      <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
+        <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
+        <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
+      </div>
+    </nav>
+    <div class="pt-6 border-t border-forestGreen/30 text-xs text-mutedIvory space-y-1">
+      <p class="uppercase tracking-widest text-[10px] text-antiqueGold">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <main class="w-full flex-grow">
+    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6">
+        <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block">CAMPAIGNS, VIDEO &amp; DESIGN</span>
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory">Creative &amp; Digital Media</h1>
+        <p class="text-sm sm:text-base text-mutedIvory font-light leading-relaxed max-w-4xl">My creative work includes video, editorial layouts, graphics, and digital content developed for official U.S. Army communication channels. These selections bring together public information, community engagement, and visual storytelling.</p>
+      </div>
+    </section>
+
+    <section id="video-production" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Video production</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
+            <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
+              <iframe src="https://www.dvidshub.net/video/embed/826678" title="How to Be a Drill Sergeant for Halloween" class="w-full h-full border-0" allowfullscreen></iframe>
+            </div>
+            <p class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest">Social Media Campaign &amp; Video Production</p>
+            <h3 class="text-lg font-semibold text-warmIvory">How to Be a Drill Sergeant for Halloween</h3>
+            <p class="text-sm text-mutedIvory font-light leading-relaxed">Seasonal social video translating a familiar Army role into accessible, audience-centered content designed for engagement and sharing.</p>
+            <a href="https://www.dvidshub.net/video/826678/drill-sergeant-halloween" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">Watch on DVIDS</a>
+          </article><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
+            <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
+              <iframe src="https://www.dvidshub.net/video/embed/768279" title="Stop, Drop and Roll with Sparky" class="w-full h-full border-0" allowfullscreen></iframe>
+            </div>
+            <p class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest">Public Information Video Production</p>
+            <h3 class="text-lg font-semibold text-warmIvory">Stop, Drop and Roll with Sparky</h3>
+            <p class="text-sm text-mutedIvory font-light leading-relaxed">Virtual public-information video produced for Fire Prevention Week 2020, using clear demonstration and familiar characters to reach both in-person and remote learners.</p>
+            <a href="https://www.dvidshub.net/video/768279/stop-drop-and-roll-with-sparky" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">Watch on DVIDS</a>
+          </article><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
+            <div class="aspect-video bg-black border border-forestGreen/30 overflow-hidden">
+              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffortleonardwoodmissouri%2Fvideos%2F502155020403062%2F&amp;show_text=0" title="Community Engagement Feature" class="w-full h-full border-0" allowfullscreen></iframe>
+            </div>
+            <p class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest">Facebook Social Media Campaign</p>
+            <h3 class="text-lg font-semibold text-warmIvory">Community Engagement Feature</h3>
+            <p class="text-sm text-mutedIvory font-light leading-relaxed">Original social media video campaign developed for official channels highlighting installation activities and community engagements.</p>
+            <a href="https://www.facebook.com/fortleonardwoodmissouri/videos/502155020403062/" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">Watch on Facebook</a>
+          </article></div>
+      </div>
+    </section>
+
+    <section id="graphic-design" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Graphics &amp; visual design</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
+            <a href="/assets/images/best-sapper-graphic-2.jpg" class="block aspect-[4/5] bg-charcoal border border-forestGreen/30 p-2">
+              <img src="/assets/images/best-sapper-graphic-2.jpg" alt="Best Sapper Competition Team Graphic" class="w-full h-full object-contain" />
+            </a>
+            <p class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest">Publication &amp; Social Graphic</p>
+            <h3 class="text-lg font-semibold text-warmIvory">Best Sapper Competition Layout</h3>
+            <p class="text-sm text-mutedIvory font-light leading-relaxed">Official visual design layout developed for public affairs coverage of the annual Best Sapper Competition.</p>
+            <a href="/assets/images/best-sapper-graphic-2.jpg" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">View full-size graphic</a>
+          </article><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
+            <a href="/assets/images/civilain-spotlight-bowersox.jpg" class="block aspect-[4/5] bg-charcoal border border-forestGreen/30 p-2">
+              <img src="/assets/images/civilain-spotlight-bowersox.jpg" alt="Civilian Employee Spotlight Feature" class="w-full h-full object-contain" />
+            </a>
+            <p class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest">Editorial Feature Layout</p>
+            <h3 class="text-lg font-semibold text-warmIvory">Civilian Employee Spotlight</h3>
+            <p class="text-sm text-mutedIvory font-light leading-relaxed">Feature article layout and Q&amp;A design highlighting civilian workforce achievements across the installation.</p>
+            <a href="/assets/images/civilain-spotlight-bowersox.jpg" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">View full-size graphic</a>
+          </article><article class="bg-deepEvergreen border border-forestGreen/50 p-6 space-y-4">
+            <a href="/assets/images/graphic-thenandnow-counteehall.jpg" class="block aspect-[4/5] bg-charcoal border border-forestGreen/30 p-2">
+              <img src="/assets/images/graphic-thenandnow-counteehall.jpg" alt="Then and Now Countee Hall Graphic" class="w-full h-full object-contain" />
+            </a>
+            <p class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest">Historical Comparison Graphic</p>
+            <h3 class="text-lg font-semibold text-warmIvory">Then &amp; Now: Countee Hall</h3>
+            <p class="text-sm text-mutedIvory font-light leading-relaxed">Comparative visual history graphic connecting installation heritage with contemporary infrastructure.</p>
+            <a href="/assets/images/graphic-thenandnow-counteehall.jpg" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">View full-size graphic</a>
+          </article></div>
+      </div>
+    </section>
+
+    <section id="digital-communications" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Digital communications</h2>
+        <div class="grid md:grid-cols-2 gap-8 text-sm text-mutedIvory font-light leading-relaxed">
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-warmIvory">Social media content</h3>
+            <p>I developed photography, video, graphics, and accompanying written content for official campaigns including Why I Serve, Training Tuesday, Soldier Spotlight, and Civilian Q&amp;A. My responsibilities also included monitoring social media activity and performance metrics.</p>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-warmIvory">Publishing and digital platforms</h3>
+            <p>I updated public-facing content for Digital Garrison and My Army Post applications and organized communication materials through DVIDS, Flickr, SharePoint, and Microsoft Teams.</p>
+            <a href="/web-development/index.htm" class="inline-block text-xs font-semibold text-antiqueGold hover:underline">Explore WordPress publishing experience</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <div>
+        <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix LLC. All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:text-lightGold transition">
+          amanda.l.sullivan@outlook.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    refreshIcons();
+
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
+      }
+      refreshIcons();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
+      });
+    });
+  </script>
+</body>
+</html>
