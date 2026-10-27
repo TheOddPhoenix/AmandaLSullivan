@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Writing & Journalism | Amanda Sullivan</title>
+  <title>Journalism &amp; News Writing | Amanda Sullivan</title>
   <meta name="description" content="Published news, features, and historical reporting by Amanda Sullivan across official U.S. Army communication channels including Army.mil and The Guidon.">
   <link rel="canonical" href="https://www.amandalsullivan.com/writing/">
 
   <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Writing & Journalism | Amanda Sullivan">
+  <meta property="og:title" content="Journalism &amp; News Writing | Amanda Sullivan">
   <meta property="og:description" content="Published reporting covering military training, leadership, historical preservation, and community relations at Fort Leonard Wood.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.amandalsullivan.com/writing/">
@@ -17,10 +17,10 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
-  <!-- Google Fonts: Cinzel & Manrope -->
+  <!-- Google Fonts: Cinzel & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -37,7 +37,7 @@
           },
           fontFamily: {
             serif: ['Cinzel', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
+            sans: ['Montserrat', 'sans-serif'],
           }
         }
       }
@@ -57,7 +57,7 @@
     body {
       background-color: var(--deep-evergreen);
       color: var(--warm-ivory);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     /* Focus accessibility styling */
@@ -66,6 +66,7 @@
       outline-offset: 4px;
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/site-refinements.css">
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -80,17 +81,17 @@
       <!-- Desktop Navigation Links -->
       <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
         <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
-        <a href="/#community-relations" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
-        <a href="/#photography" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
-        <a href="/writing/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">WRITING</a>
-        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">WRITING</a>
+        <a href="/creative-media/" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
         <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
         <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
       <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
       </button>
     </nav>
   </header>
@@ -99,10 +100,10 @@
   <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
     <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
       <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
-      <a href="/#community-relations" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
-      <a href="/#photography" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
-      <a href="/writing/" class="mobile-nav-link text-antiqueGold font-bold">WRITING</a>
-      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">WRITING</a>
+      <a href="/creative-media/" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
       <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
         <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
         <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
@@ -124,7 +125,7 @@
           SELECTED PUBLISHED WORK
         </span>
         <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory tracking-[0.03em]">
-          Writing &amp; Journalism
+          Journalism &amp; News Writing
         </h1>
         <div class="space-y-4 pt-2 max-w-3xl text-base sm:text-lg text-mutedIvory font-light leading-relaxed">
           <p class="font-serif italic text-warmIvory text-lg sm:text-xl border-l-2 border-antiqueGold pl-4 py-1">
@@ -138,6 +139,10 @@
           </p>
         </div>
       </div>
+    </section>
+
+<section  class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Editorial impact</h2><dl class="flex flex-wrap gap-x-8 gap-y-4"><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Published news &amp; feature articles</dt><dd class="font-serif text-2xl text-lightGold order-first">150+</dd></div><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Show Me Fort Leonard Wood blog readers</dt><dd class="font-serif text-2xl text-lightGold order-first">200,000+</dd></div></dl><a href="/web-development/index.htm" class="inline-block text-xs text-lightGold font-semibold hover:underline">EXPLORE THE WORDPRESS PUBLICATION</a></div>
     </section>
 
     <!-- ARTICLE CATEGORIES CONTAINER -->
@@ -288,7 +293,7 @@
             <article class="bg-deepEvergreen border border-forestGreen/50 p-6 flex flex-col justify-between space-y-4 hover:border-antiqueGold transition duration-300">
               <div class="space-y-3">
                 <div class="aspect-[16/9] bg-charcoal border border-forestGreen/30 overflow-hidden relative">
-                  <img src="../assets/images/article-adjutant-general-oy.jpg" alt="3-10 Soldier Is the 2022 TRADOC Adjutant General's Officer of the Year" class="w-full h-full object-cover" loading="lazy" />
+                  <img src="../assets/images/article-adjuctant-general-oy.jpg" alt="3-10 Soldier Is the 2022 TRADOC Adjutant General's Officer of the Year" class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <span class="text-[10px] font-semibold text-antiqueGold uppercase tracking-widest block">Army.mil</span>
                 <h3 class="text-base font-semibold text-warmIvory leading-snug">3-10 Soldier Is the 2022 TRADOC Adjutant General's Officer of the Year</h3>
@@ -495,13 +500,18 @@
 
   <!-- INTERACTIVE LOGIC & MOBILE NAV CONTROLS -->
   <script>
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
     // Initialize Lucide Icons
-    lucide.createIcons();
+    refreshIcons();
 
     // Mobile Navigation Drawer Toggle
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
-    const menuIcon = document.getElementById('menu-icon');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     toggleBtn.addEventListener('click', () => {
@@ -511,15 +521,15 @@
         drawer.classList.add('hidden');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
       } else {
         drawer.classList.remove('hidden');
         drawer.classList.add('flex');
         drawer.setAttribute('aria-hidden', 'false');
         toggleBtn.setAttribute('aria-expanded', 'true');
-        menuIcon.setAttribute('data-lucide', 'x');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
       }
-      lucide.createIcons();
+      refreshIcons();
     });
 
     mobileLinks.forEach(link => {
@@ -528,8 +538,8 @@
         drawer.classList.remove('flex');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
       });
     });
   </script>

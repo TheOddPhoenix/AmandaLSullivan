@@ -17,10 +17,10 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
-  <!-- Google Fonts: Cinzel & Manrope -->
+  <!-- Google Fonts: Cinzel & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -37,7 +37,7 @@
           },
           fontFamily: {
             serif: ['Cinzel', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
+            sans: ['Montserrat', 'sans-serif'],
           }
         }
       }
@@ -57,7 +57,7 @@
     body {
       background-color: var(--deep-evergreen);
       color: var(--warm-ivory);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     a:focus-visible, button:focus-visible {
@@ -65,6 +65,7 @@
       outline-offset: 4px;
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/site-refinements.css">
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -77,16 +78,16 @@
 
       <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
         <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
-        <a href="/community-relations/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">COMMUNITY RELATIONS</a>
+        <a href="/community-relations/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">COMMUNITY RELATIONS</a>
         <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
         <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
-        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/creative-media/" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
         <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
         <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
       </div>
 
       <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
       </button>
     </nav>
   </header>
@@ -95,10 +96,10 @@
   <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
     <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
       <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
-      <a href="/community-relations/" class="mobile-nav-link text-antiqueGold font-bold">COMMUNITY RELATIONS</a>
+      <a href="/community-relations/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">COMMUNITY RELATIONS</a>
       <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
       <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
-      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <a href="/creative-media/" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
       <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
         <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
         <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
@@ -137,6 +138,16 @@
           </p>
         </div>
       </div>
+    </section>
+
+<section id="program-operations" class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">PROGRAMS &amp; LOGISTICS</p><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Program management &amp; operational coordination</h2><div class="grid md:grid-cols-2 gap-8 text-sm sm:text-base text-mutedIvory leading-relaxed">
+        <div class="space-y-3"><h3 class="text-lg text-warmIvory font-semibold">Requests, resources &amp; execution</h3>
+          <p>I evaluated requests for military participation and coordinated personnel, equipment, scheduling, logistics, and organizational approvals. This work brought together military units, civic organizations, schools, government agencies, and community partners.</p>
+          <p>My responsibilities included coordinating public-facing engagements, maintaining program documentation, and preparing engagement summaries and after-action reporting.</p><p>Coordinated complex community support operations involving military units, government officials, schools, and civic organizations. Managed operational requests, personnel coordination, logistical requirements, and competing priorities while improving the processes and relationships necessary to fulfill community commitments.</p></div>
+        <div class="space-y-4"><dl class="flex flex-wrap gap-x-8 gap-y-4"><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Public-facing events supported · career-wide</dt><dd class="font-serif text-2xl text-lightGold order-first">200+</dd></div><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Concurrent activities coordinated</dt><dd class="font-serif text-2xl text-lightGold order-first">25–50</dd></div></dl><p class="text-sm">Operational coordination across requests, resources, and stakeholders.</p></div>
+      </div>
+      <div class="flex flex-wrap gap-5 text-xs font-semibold text-lightGold"><a href="#read-across-america" class="hover:underline">READ ACROSS AMERICA CASE STUDY</a><a href="#leadership-award" class="hover:underline">LEADERSHIP AWARD CASE STUDY</a><a href="#scout-visits" class="hover:underline">COMMUNITY RELATIONS &amp; ENGAGEMENT</a></div></div>
     </section>
 
     <!-- CASE STUDIES SECTION -->
@@ -210,17 +221,18 @@
               </li>
               <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1">
                 <span class="text-lg font-serif text-antiqueGold block font-normal">940</span>
-                <span class="text-mutedIvory">Classrooms served during annual visits</span>
+                <span class="text-mutedIvory">Classrooms served across program years</span>
               </li>
               <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1 sm:col-span-2 lg:col-span-1">
                 <span class="text-lg font-serif text-antiqueGold block font-normal">360+</span>
-                <span class="text-mutedIvory">Soldier volunteers coordinated across program years</span>
+                <span class="text-mutedIvory">Soldier volunteer participations across program years</span>
               </li>
             </ul>
             <p class="text-xs text-mutedIvory pt-2 italic">
-              Expanded participation across regional schools and districts to establish a scalable annual outreach framework. The initiative became one of Fort Leonard Wood's largest recurring community outreach programs.
+              Cumulative results across program years; volunteer figures count participations. Expanded participation across regional schools and districts to establish a scalable annual outreach framework. The initiative became one of Fort Leonard Wood's largest recurring community outreach programs.
             </p>
           </div>
+        <p class="text-xs text-mutedIvory"><a href="https://www.army.mil/article/243928/fort_leonard_wood_celebrates_read_across_america_day" target="_blank" rel="noopener noreferrer" class="text-lightGold hover:underline">Related coverage: Fort Leonard Wood celebrates Read Across America Day</a> · Army.mil, by Sam Campbell</p>
         </article>
 
         <!-- CASE STUDY 02: LEADERSHIP AWARD PROGRAM -->
@@ -303,6 +315,28 @@
           </div>
         </article>
 
+        <!-- PROGRAM PROFILE: SCOUT VISITS — scope from Home; role from Résumé -->
+        <article id="scout-visits" class="bg-deepEvergreen border border-forestGreen/50 p-8 md:p-10 space-y-8 scroll-mt-28">
+          <div class="border-b border-forestGreen/40 pb-4 space-y-2">
+            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.2em] block">PROGRAM PROFILE</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Community Relations &amp; Engagement</h2>
+            <p class="text-sm text-mutedIvory leading-relaxed">Coordinated community engagement activities, organizational visits, event support, and external requests, facilitating communication and collaboration between military personnel, community organizations, and public stakeholders.</p>
+          </div>
+          <div class="aspect-[16/9] max-h-[400px] bg-charcoal border border-forestGreen/40 overflow-hidden">
+            <img src="/assets/images/photo-scout-visit.jpg" alt="Scout troop interacting with military equipment during a guided visit" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 text-sm text-mutedIvory font-light leading-relaxed">
+            <div class="space-y-3">
+              <h3 class="text-xs font-semibold text-warmIvory uppercase tracking-wider border-l-2 border-antiqueGold pl-2">Scout visits: program context</h3>
+              <p>Fort Leonard Wood supported approximately 10 Scout visits annually, with 10–40 participants per visit. Visits often included overnight stays and hands-on Army activities.</p>
+            </div>
+            <div class="space-y-3">
+              <h3 class="text-xs font-semibold text-warmIvory uppercase tracking-wider border-l-2 border-antiqueGold pl-2">My role</h3>
+              <p>As part of my community relations work, I coordinated recurring Scout visits and educational activities involving military units and regional youth organizations.</p>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -325,11 +359,16 @@
   </footer>
 
   <script>
-    lucide.createIcons();
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    refreshIcons();
 
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
-    const menuIcon = document.getElementById('menu-icon');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     toggleBtn.addEventListener('click', () => {
@@ -339,15 +378,15 @@
         drawer.classList.add('hidden');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
       } else {
         drawer.classList.remove('hidden');
         drawer.classList.add('flex');
         drawer.setAttribute('aria-hidden', 'false');
         toggleBtn.setAttribute('aria-expanded', 'true');
-        menuIcon.setAttribute('data-lucide', 'x');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
       }
-      lucide.createIcons();
+      refreshIcons();
     });
 
     mobileLinks.forEach(link => {
@@ -356,8 +395,8 @@
         drawer.classList.remove('flex');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
       });
     });
   </script>

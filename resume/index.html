@@ -17,10 +17,10 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
-  <!-- Google Fonts: Cinzel & Manrope -->
+  <!-- Google Fonts: Cinzel & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -37,7 +37,7 @@
           },
           fontFamily: {
             serif: ['Cinzel', 'serif'],
-            sans: ['Manrope', 'sans-serif'],
+            sans: ['Montserrat', 'sans-serif'],
           }
         }
       }
@@ -57,7 +57,7 @@
     body {
       background-color: var(--deep-evergreen);
       color: var(--warm-ivory);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     /* Focus accessibility styling */
@@ -66,6 +66,7 @@
       outline-offset: 4px;
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/site-refinements.css">
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -80,17 +81,17 @@
       <!-- Desktop Navigation Links -->
       <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
         <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
-        <a href="/#community-relations" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
         <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
         <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
-        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
-        <a href="/resume/" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">RÉSUMÉ</a>
+        <a href="/creative-media/" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/resume/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">RÉSUMÉ</a>
         <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
       <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
       </button>
     </nav>
   </header>
@@ -99,12 +100,12 @@
   <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
     <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
       <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
-      <a href="/#community-relations" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
       <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
       <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
-      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <a href="/creative-media/" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
       <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
-        <a href="/resume/" class="mobile-nav-link text-antiqueGold font-bold">RÉSUMÉ ↗</a>
+        <a href="/resume/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">RÉSUMÉ ↗</a>
         <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
       </div>
     </nav>
@@ -246,9 +247,9 @@
                 <li>Evaluated requests for military participation and coordinated personnel, equipment, scheduling, logistics, and organizational approvals.</li>
                 <li>Worked across military and civilian organizations to support event planning and execution.</li>
                 <li>Developed and managed a student Leadership Award Program recognizing more than 200 students across 15 or more school districts.</li>
-                <li>Managed the Read Across America outreach initiative, coordinating more than 360 Soldier volunteers and reaching more than 18,000 students across 940 classrooms.</li>
+                <li>Managed the Read Across America outreach initiative, coordinating 360+ Soldier volunteer participations across program years and reaching more than 18,000 students across 940 classrooms.</li>
                 <li>Coordinated recurring Scout visits and educational activities involving military units and regional youth organizations.</li>
-                <li>Supported more than 100 public-facing engagements annually.</li>
+                <li>Supported 200+ public-facing events across my career.</li>
                 <li>Prepared program documentation, engagement summaries, and after-action reporting.</li>
               </ul>
             </div>
@@ -482,7 +483,7 @@
               <span class="font-semibold text-warmIvory block sm:inline">Army-Level Honorable Mention</span>
               <span class="text-mutedIvory"> — Maj. Gen. Keith L. Ware Communications Awards</span>
             </div>
-            <span class="text-xs text-antiqueGold font-medium shrink-0 pt-0.5 sm:pt-0">2024 photographic work</span>
+            <span class="text-xs text-antiqueGold font-medium shrink-0 pt-0.5 sm:pt-0">Recognized in 2025 for 2024 work</span>
           </li>
 
           <li class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-forestGreen/20 pb-2">
@@ -564,13 +565,18 @@
 
   <!-- INTERACTIVE LOGIC & MOBILE NAV CONTROLS -->
   <script>
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
     // Initialize Lucide Icons
-    lucide.createIcons();
+    refreshIcons();
 
     // Mobile Navigation Drawer Toggle
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
-    const menuIcon = document.getElementById('menu-icon');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     toggleBtn.addEventListener('click', () => {
@@ -580,15 +586,15 @@
         drawer.classList.add('hidden');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
       } else {
         drawer.classList.remove('hidden');
         drawer.classList.add('flex');
         drawer.setAttribute('aria-hidden', 'false');
         toggleBtn.setAttribute('aria-expanded', 'true');
-        menuIcon.setAttribute('data-lucide', 'x');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
       }
-      lucide.createIcons();
+      refreshIcons();
     });
 
     mobileLinks.forEach(link => {
@@ -597,8 +603,8 @@
         drawer.classList.remove('flex');
         drawer.setAttribute('aria-hidden', 'true');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.setAttribute('data-lucide', 'menu');
-        lucide.createIcons();
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
       });
     });
   </script>

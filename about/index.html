@@ -1,13 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Amanda Sullivan</title>
+  <meta name="description" content="Amanda Sullivan’s background in public affairs, journalism, community engagement, photography, and digital communications.">
+  <link rel="canonical" href="https://www.amandalsullivan.com/about/">
+
+  <!-- Tailwind CSS 3.4 & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Cinzel & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepEvergreen: '#202420',   /* Main site background */
+            charcoal: '#1C1C1C',        /* Section background */
+            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            antiqueGold: '#B68A3B',     /* Primary accent */
+            lightGold: '#C6A76D',       /* Hover highlights */
+            warmIvory: '#EDE9E3',       /* Primary text */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --deep-evergreen: #202420;
+      --charcoal: #1C1C1C;
+      --forest-green: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
+    }
+
+    body {
+      background-color: var(--deep-evergreen);
+      color: var(--warm-ivory);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B68A3B;
+      outline-offset: 4px;
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/site-refinements.css">
 </head>
-<body>
-  <h1>About Amanda Sullivan</h1>
-  <p>Page under development.</p>
-  <a href="/">Return to Home</a>
+<body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
+      </a>
+
+      <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
+        <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
+        <a href="/community-relations/" class="hover:text-lightGold transition duration-200">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="/creative-media/" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
+        <a href="/about/" aria-current="page" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">ABOUT</a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6" aria-hidden="true">☰</i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
+    <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
+      <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
+      <a href="/community-relations/" class="mobile-nav-link text-warmIvory hover:text-lightGold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="/creative-media/" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
+        <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
+        <a href="/about/" aria-current="page" class="mobile-nav-link text-antiqueGold font-bold">ABOUT ↗</a>
+      </div>
+    </nav>
+    <div class="pt-6 border-t border-forestGreen/30 text-xs text-mutedIvory space-y-1">
+      <p class="uppercase tracking-widest text-[10px] text-antiqueGold">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <main class="w-full flex-grow">
+    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
+        <div><p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">BACKGROUND &amp; EXPERIENCE</p><h1 class="font-serif text-3xl sm:text-4xl md:text-5xl text-warmIvory">About Me</h1></div>
+        <div class="grid lg:grid-cols-3 gap-8 items-start"><div class="lg:col-span-2 space-y-5 text-sm sm:text-base text-mutedIvory leading-relaxed"><p>I'm a public relations, communications, and program operations professional with nearly eight years of experience spanning strategic communications, program development and management, journalism, photography, and digital media.</p><p>My professional background includes extensive experience with U.S. Army Public Affairs, where my responsibilities extended well beyond traditional communications. I helped develop and manage community relations programs, coordinate complex operations, organize large-scale events, manage requests and resources, and facilitate collaboration among military leadership, community organizations, and external stakeholders.</p><p>Alongside my operational responsibilities, I produced award-winning photography, developed digital communications campaigns, created multimedia content, and documented the people, events, and stories that shaped the communities I served.</p><p>My work combines creative storytelling with practical execution. I bring the same attention to detail, organizational judgment, and problem-solving abilities to managing programs and coordinating operations that I bring to developing effective communications.</p><p class="text-xs">Experience includes volunteer Public Affairs Office Assistant service and full-time Public Affairs Specialist employment.</p></div>
+        <img src="/assets/images/amanda-sullivan-portrait.png" alt="Portrait of Amanda Sullivan" width="1122" height="1402" class="w-full max-w-[300px] h-auto border border-forestGreen/50" /></div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">CAREER &amp; COMMUNICATIONS</p><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Background &amp; experience</h2><div class="space-y-5 max-w-4xl text-sm sm:text-base text-mutedIvory leading-relaxed">
+            <p>My background in U.S. Army Public Affairs at Fort Leonard Wood, Missouri, spans volunteer service as a Public Affairs Office Assistant from November 2017 to July 2019 and work as a Public Affairs Specialist from July 2019 to September 2025.</p>
+            <p>That work has taken me from researching stories and interviewing Soldiers, civilians, and senior leaders to producing photography, video, graphics, and digital content. I have authored more than 150 news and feature articles for official Army communication channels, including The Guidon and Army.mil, and produced more than 2,400 official photographs.</p>
+            <p>Alongside editorial and visual production, I have coordinated community programs and public-facing engagements involving military units, schools, civic organizations, and government partners. My experience includes developing the Leadership Award Program, managing Read Across America outreach, and coordinating recurring Scout visits.</p>
+            <p>I bring both the creative skills to develop communication products and the organizational experience to plan, coordinate, and execute the work behind them.</p>
+          </div></div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">STRATEGY &amp; EXECUTION</p><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Areas of Expertise</h2><ul class="grid sm:grid-cols-2 gap-5 text-sm text-warmIvory"><li class="border-l-2 border-antiqueGold pl-4">Public Relations &amp; Strategic Communications</li><li class="border-l-2 border-antiqueGold pl-4">Program Development &amp; Management</li><li class="border-l-2 border-antiqueGold pl-4">Operations &amp; Organizational Coordination</li><li class="border-l-2 border-antiqueGold pl-4">Journalism &amp; Editorial Content</li><li class="border-l-2 border-antiqueGold pl-4">Photography, Design &amp; Digital Media</li></ul></div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><p class="text-[11px] font-semibold text-lightGold uppercase tracking-[0.2em] mb-3">SELECTED RECOGNITION</p><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Professional achievements &amp; recognition</h2><dl class="flex flex-wrap gap-x-8 gap-y-4"><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Published articles</dt><dd class="font-serif text-2xl text-lightGold order-first">150+</dd></div><div class="flex flex-col"><dt class="text-xs text-mutedIvory mt-1">Official photographs</dt><dd class="font-serif text-2xl text-lightGold order-first">2,400+</dd></div></dl><div class="space-y-3 border-l-2 border-antiqueGold pl-4 text-sm text-mutedIvory">
+          <p class="text-xs text-lightGold font-semibold">Recognized in 2025 for work produced in 2024</p>
+          <ul class="space-y-2">
+            <li><span class="text-warmIvory">Civilian Photographer of the Year</span> · U.S. Army Materiel Command</li>
+            <li><span class="text-warmIvory">Civilian Photographer of the Year</span> · U.S. Army Installation Management Command</li>
+            <li><span class="text-warmIvory">Honorable Mention</span> · Maj. Gen. Keith L. Ware Communications Awards, Army level</li>
+          </ul>
+        </div><a href="/resume/" class="inline-block text-xs font-semibold text-lightGold hover:underline">VIEW ALL AWARDS &amp; PROFESSIONAL EXPERIENCE</a></div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-20">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-8">
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">Digital publishing and community leadership</h2>
+        <div class="space-y-5 text-sm sm:text-base text-mutedIvory font-light leading-relaxed max-w-4xl">
+          <p>As a Public Affairs Office volunteer, I developed and managed Show Me Fort Leonard Wood, an official WordPress blog. My responsibilities included original articles and photography, website organization, publishing, content updates, search engine optimization, and analytics monitoring.</p>
+          <p>I also served as president of Fort Leonard Wood’s Federal Women’s Program from 2022 to 2023, supporting professional development initiatives and coordinating with installation personnel and organizational stakeholders.</p>
+          <p>I am pursuing a Bachelor of Arts in English, with a focus on Professional Communication &amp; Journalism, at the University of Maine at Presque Isle. My expected graduation is March 2027.</p>
+          <div class="flex flex-wrap gap-6 pt-2 text-xs font-semibold text-antiqueGold uppercase tracking-wider">
+            <a href="/resume/" class="hover:underline">View résumé</a>
+            <a href="/writing/" class="hover:underline">Read published work</a>
+            <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PERSONAL BIOGRAPHY: add your own text here when ready, then remove hidden.
+         No personal details have been inferred. -->
+    <section id="personal-biography" hidden class="py-16 bg-charcoal">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-5">
+        <h2 class="font-serif text-2xl text-warmIvory">Beyond the portfolio</h2>
+        <!-- Add personal biography paragraphs here. -->
+      </div>
+    </section>
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <div>
+        <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix LLC. All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:text-lightGold transition">
+          amanda.l.sullivan@outlook.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Icons are decorative; a blocked CDN must not stop navigation or content.
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    refreshIcons();
+
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
+      }
+      refreshIcons();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
+        refreshIcons();
+      });
+    });
+  </script>
 </body>
 </html>

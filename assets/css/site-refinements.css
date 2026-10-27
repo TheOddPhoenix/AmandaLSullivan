@@ -1,0 +1,20 @@
+/* Shared refinements use the established portfolio palette and layout. */
+main { overflow-wrap: anywhere; }
+#mobile-drawer { overflow-y: auto; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible, summary:focus-visible {
+  outline: 2px solid #C6A76D; outline-offset: 4px;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  header nav > div { font-size: 10px; letter-spacing: .06em; }
+  header nav > div > a + a { margin-left: 1rem !important; }
+}
+.photo-primary, .photo-preview { transition: opacity .5s ease-in-out; }
+.photo-preview { opacity: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .photo-trigger[data-preview]:hover .photo-primary { opacity: 0; }
+  .photo-trigger[data-preview]:hover .photo-preview { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { transition-duration: 0s !important; }
+}
