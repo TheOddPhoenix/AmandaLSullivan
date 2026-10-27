@@ -19,20 +19,27 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, summary:fo
   *, *::before, *::after { transition-duration: 0s !important; }
 }
 
-/* DVIDS' responsive embed includes a 25px allowance below its 16:9 player. */
+/* Keep the visible picture at its original 16:9 ratio on every screen. */
 .video-embed {
   position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  padding: 0;
   overflow: hidden;
 }
 .video-embed iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   border: 0;
   display: block;
+}
+/* DVIDS adds a footer below its video. Give the embedded document room for it,
+   but keep that footer outside the visible picture. The video itself is intact. */
+.video-embed--dvids iframe {
+  height: calc(100% + 25px);
 }
