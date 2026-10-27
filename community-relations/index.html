@@ -1,1 +1,354 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Relations & Program Operations | Amanda Sullivan</title>
+  <meta name="description" content="Case studies and overview of community relations, educational outreach, and program operations managed by Amanda Sullivan for U.S. Army Public Affairs at Fort Leonard Wood.">
+  <link rel="canonical" href="https://www.amandalsullivan.com/#community-relations">
 
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Community Relations & Program Operations | Amanda Sullivan">
+  <meta property="og:description" content="Strategic community engagement, educational partnerships, and outreach program management at Fort Leonard Wood.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.amandalsullivan.com/#community-relations">
+
+  <!-- Tailwind CSS 3.4 & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Cinzel & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepEvergreen: '#202420',   /* Main site background */
+            charcoal: '#1C1C1C',        /* Section background */
+            forestGreen: '#2F4732',     /* Borders & subtle dividers */
+            antiqueGold: '#B68A3B',     /* Primary accent */
+            lightGold: '#C6A76D',       /* Hover highlights */
+            warmIvory: '#EDE9E3',       /* Primary text */
+            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --deep-evergreen: #202420;
+      --charcoal: #1C1C1C;
+      --forest-green: #2F4732;
+      --antique-gold: #B68A3B;
+      --light-gold: #C6A76D;
+      --warm-ivory: #EDE9E3;
+    }
+
+    body {
+      background-color: var(--deep-evergreen);
+      color: var(--warm-ivory);
+      font-family: 'Manrope', sans-serif;
+    }
+
+    /* Focus accessibility styling */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B68A3B;
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
+
+  <!-- GLOBAL HORIZONTAL NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-deepEvergreen/95 backdrop-blur-md border-b border-forestGreen/40">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between" aria-label="Main Navigation">
+      <!-- Initials Logo -->
+      <a href="/" class="font-serif text-xl sm:text-2xl font-normal tracking-[0.15em] text-warmIvory hover:text-lightGold transition duration-300">
+        AS
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-7 text-[12px] font-medium tracking-[0.12em] text-mutedIvory">
+        <a href="/" class="hover:text-lightGold transition duration-200">HOME</a>
+        <a href="/#community-relations" class="text-antiqueGold font-semibold border-b border-antiqueGold pb-1">COMMUNITY RELATIONS</a>
+        <a href="/photography/" class="hover:text-lightGold transition duration-200">PHOTOGRAPHY</a>
+        <a href="/writing/" class="hover:text-lightGold transition duration-200">WRITING</a>
+        <a href="/#creative-media" class="hover:text-lightGold transition duration-200">CREATIVE MEDIA</a>
+        <a href="/resume/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">RÉSUMÉ</a>
+        <a href="/about/" class="hover:text-lightGold transition duration-200 text-warmIvory font-semibold">ABOUT</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-toggle" class="lg:hidden text-warmIvory hover:text-antiqueGold p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 top-20 z-40 bg-charcoal/95 backdrop-blur-xl hidden flex-col justify-between p-8 border-t border-forestGreen/40 lg:hidden">
+    <nav class="flex flex-col space-y-5 text-xs font-medium tracking-[0.15em] pt-2">
+      <a href="/" class="mobile-nav-link text-warmIvory hover:text-lightGold">HOME</a>
+      <a href="/#community-relations" class="mobile-nav-link text-antiqueGold font-bold">COMMUNITY RELATIONS</a>
+      <a href="/photography/" class="mobile-nav-link text-warmIvory hover:text-lightGold">PHOTOGRAPHY</a>
+      <a href="/writing/" class="mobile-nav-link text-warmIvory hover:text-lightGold">WRITING</a>
+      <a href="/#creative-media" class="mobile-nav-link text-warmIvory hover:text-lightGold">CREATIVE MEDIA</a>
+      <div class="pt-4 border-t border-forestGreen/30 flex flex-col space-y-4">
+        <a href="/resume/" class="mobile-nav-link text-warmIvory font-semibold">RÉSUMÉ ↗</a>
+        <a href="/about/" class="mobile-nav-link text-warmIvory font-semibold">ABOUT ↗</a>
+      </div>
+    </nav>
+    <div class="pt-6 border-t border-forestGreen/30 text-xs text-mutedIvory space-y-1">
+      <p class="uppercase tracking-widest text-[10px] text-antiqueGold">Inquiries</p>
+      <a href="mailto:amanda.l.sullivan@outlook.com" class="hover:underline">amanda.l.sullivan@outlook.com</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full flex-grow">
+
+    <!-- PAGE HEADER SECTION -->
+    <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6">
+        <div>
+          <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block mb-2">
+            STRATEGIC OUTREACH &amp; ENGAGEMENT
+          </span>
+          <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory tracking-[0.03em]">
+            Community Relations &amp; Program Operations
+          </h1>
+        </div>
+
+        <div class="border-t border-forestGreen/40 pt-6 space-y-4 text-sm sm:text-base text-mutedIvory font-light leading-relaxed max-w-4xl">
+          <p>
+            Effective community engagement requires more than organizing events. It requires building relationships, understanding the needs of different stakeholders, coordinating resources, and creating opportunities for meaningful participation.
+          </p>
+          <p>
+            During my career with U.S. Army Public Affairs at Fort Leonard Wood, Missouri, I developed and managed community engagement programs connecting military personnel, government organizations, educational institutions, and surrounding communities.
+          </p>
+          <p>
+            My responsibilities encompassed program development, stakeholder relations, volunteer recruitment, operational coordination, public communications, and performance evaluation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30">
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-16">
+
+        <!-- CASE STUDY 01 -->
+        <article class="bg-deepEvergreen border border-forestGreen/50 p-8 md:p-10 space-y-8">
+          <div class="border-b border-forestGreen/40 pb-4 space-y-2">
+            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
+              CASE STUDY 01
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">
+              Read Across America
+            </h2>
+            <p class="text-sm text-antiqueGold font-medium">
+              Expanding Educational Outreach Through Community Partnerships
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 text-xs sm:text-sm text-mutedIvory font-light leading-relaxed">
+            <div class="space-y-3">
+              <h3 class="text-xs font-semibold text-warmIvory uppercase tracking-wider border-l-2 border-antiqueGold pl-2">
+                Research &amp; Planning
+              </h3>
+              <p>
+                When I assumed responsibility for coordinating Fort Leonard Wood's Read Across America initiative in 2020, participation was limited to one school district.
+              </p>
+              <p>
+                Recognizing an opportunity to expand the installation's educational outreach, I developed a scalable approach to increase school participation while maintaining consistent communication and manageable volunteer coordination.
+              </p>
+              <p>
+                I independently contacted school administrators, established relationships with participating districts, and assessed classroom participation and volunteer requirements.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="text-xs font-semibold text-warmIvory uppercase tracking-wider border-l-2 border-antiqueGold pl-2">
+                Implementation
+              </h3>
+              <p>
+                Working with military operations personnel, I coordinated installation-wide volunteer recruitment through formal military tasking procedures.
+              </p>
+              <p>
+                I served as the primary point of contact for participating Soldiers, managing registration, assignments, scheduling, school locations, and communication with administrators. I also developed recurring email outreach and reminder campaigns to maintain participation and ensure volunteers were prepared.
+              </p>
+              <p>
+                During COVID-19 restrictions, I adapted the 2021 initiative to virtual delivery, coordinating the production of recorded reading videos. Following each annual event, I compiled participation data, evaluated year-over-year growth, and prepared after-action reports for leadership.
+              </p>
+            </div>
+          </div>
+
+          <!-- Impact Metrics -->
+          <div class="border-t border-forestGreen/40 pt-6 space-y-3">
+            <h3 class="text-xs font-semibold text-antiqueGold uppercase tracking-wider">
+              Results &amp; Program Impact
+            </h3>
+            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-warmIvory font-light">
+              <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1">
+                <span class="text-lg font-serif text-antiqueGold block font-normal">18,000+</span>
+                <span class="text-mutedIvory">Students reached across regional school districts</span>
+              </li>
+              <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1">
+                <span class="text-lg font-serif text-antiqueGold block font-normal">940</span>
+                <span class="text-mutedIvory">Classrooms served during annual visits</span>
+              </li>
+              <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1 sm:col-span-2 lg:col-span-1">
+                <span class="text-lg font-serif text-antiqueGold block font-normal">360+</span>
+                <span class="text-mutedIvory">Soldier volunteers coordinated across program years</span>
+              </li>
+            </ul>
+            <p class="text-xs text-mutedIvory pt-2 italic">
+              Expanded participation across regional schools and districts to establish a scalable annual outreach framework. The initiative became one of Fort Leonard Wood's largest recurring community outreach programs.
+            </p>
+          </div>
+        </article>
+
+        <!-- CASE STUDY 02 -->
+        <article class="bg-deepEvergreen border border-forestGreen/50 p-8 md:p-10 space-y-8">
+          <div class="border-b border-forestGreen/40 pb-4 space-y-2">
+            <span class="text-[11px] font-semibold text-antiqueGold uppercase tracking-[0.25em] block">
+              CASE STUDY 02
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-normal text-warmIvory">
+              Leadership Award Program
+            </h2>
+            <p class="text-sm text-antiqueGold font-medium">
+              Creating a Sustainable Student Recognition Framework
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 text-xs sm:text-sm text-mutedIvory font-light leading-relaxed">
+            <div class="space-y-3">
+              <h3 class="text-xs font-semibold text-warmIvory uppercase tracking-wider border-l-2 border-antiqueGold pl-2">
+                Research &amp; Planning
+              </h3>
+              <p>
+                To build long-term goodwill between the installation and neighboring civilian communities, I recognized a need for a structured, recurring program that recognized student character, leadership, and community service.
+              </p>
+              <p>
+                I designed the framework for a student Leadership Award Program targeting middle and high school students across central Missouri school districts. The goal was to establish a clear, standardized selection process while maintaining active involvement from senior military leaders.
+              </p>
+              <p>
+                I collaborated with school superintendents, principals, and counselors to define nomination guidelines, award criteria, and presentation schedules aligned with school academic calendars.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="text-xs font-semibold text-warmIvory uppercase tracking-wider border-l-2 border-antiqueGold pl-2">
+                Implementation
+              </h3>
+              <p>
+                I managed end-to-end administration for the program, serving as the central point of contact for school officials across more than 15 school districts.
+              </p>
+              <p>
+                My operational responsibilities included tracking nominations, preparing official certificates and award materials, coordinating senior military speaker availability, and arranging logistics for in-person award presentations at school assemblies and board meetings.
+              </p>
+              <p>
+                To ensure continuity, I created standardized administrative templates and scheduling procedures that streamlined annual execution and provided leadership with clear program metrics after each recognition cycle.
+              </p>
+            </div>
+          </div>
+
+          <!-- Impact Metrics -->
+          <div class="border-t border-forestGreen/40 pt-6 space-y-3">
+            <h3 class="text-xs font-semibold text-antiqueGold uppercase tracking-wider">
+              Results &amp; Program Impact
+            </h3>
+            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-warmIvory font-light">
+              <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1">
+                <span class="text-lg font-serif text-antiqueGold block font-normal">200+</span>
+                <span class="text-mutedIvory">Students recognized for outstanding leadership and character</span>
+              </li>
+              <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1">
+                <span class="text-lg font-serif text-antiqueGold block font-normal">15+</span>
+                <span class="text-mutedIvory">School districts actively participating across regional communities</span>
+              </li>
+              <li class="bg-charcoal p-4 border border-forestGreen/40 space-y-1 sm:col-span-2 lg:col-span-1">
+                <span class="text-lg font-serif text-antiqueGold block font-normal">100%</span>
+                <span class="text-mutedIvory">Sustainable annual adoption integrated into military-community operations</span>
+              </li>
+            </ul>
+            <p class="text-xs text-mutedIvory pt-2 italic">
+              Strengthened civilian-military relations across central Missouri by establishing a reliable, high-visibility partnership program that continues to honor youth achievements.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-deepEvergreen py-10 border-t border-forestGreen/40">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-mutedIvory tracking-wider">
+      <div>
+        <p class="font-serif text-sm font-normal text-warmIvory tracking-widest">AMANDA SULLIVAN</p>
+        <p class="text-[11px] mt-0.5">&copy; The Odd Phoenix LLC. All rights reserved.</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="mailto:amanda.l.sullivan@outlook.com" class="text-antiqueGold hover:text-lightGold transition">
+          amanda.l.sullivan@outlook.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE LOGIC & MOBILE NAV CONTROLS -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Navigation Drawer Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('flex');
+      if (isOpen) {
+        drawer.classList.remove('flex');
+        drawer.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-lucide', 'menu');
+      } else {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        menuIcon.setAttribute('data-lucide', 'x');
+      }
+      lucide.createIcons();
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+      });
+    });
+  </script>
+</body>
+</html>
