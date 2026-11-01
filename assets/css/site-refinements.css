@@ -58,3 +58,11 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, summary:fo
 .video-embed--dvids iframe {
   height: calc(100% + 25px);
 }
+
+/* Supplied brand artwork keeps its original proportions and transparent padding. */
+.brand-home { display: flex; align-items: center; flex-shrink: 0; }
+.brand-mark { display: block; width: 62px; height: 80px; object-fit: contain; }
+.brand-signature { display: block; width: 155px; height: auto; margin-inline: auto; }
+@media (min-width: 640px) {
+  .brand-signature { margin-inline: 0; }
+}
