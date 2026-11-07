@@ -68,7 +68,7 @@
       outline-offset: 4px;
     }
   </style>
-  <link rel="stylesheet" href="/assets/css/site-refinements.css?v=personal-brand-1">
+  <link rel="stylesheet" href="/assets/css/site-refinements.css?v=portfolio-media-2">
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -157,6 +157,27 @@
           <!-- Gallery photos injected dynamically via JavaScript -->
         </div>
 
+      </div>
+    </section>
+
+    <section id="through-my-lens" class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30" aria-labelledby="personal-photography-heading">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-8">
+        <div class="space-y-4">
+          <h2 id="personal-photography-heading" class="font-serif text-2xl sm:text-3xl text-warmIvory">Through My Lens</h2>
+          <p class="text-sm sm:text-base text-mutedIvory font-light leading-relaxed">A personal collection of portraits, places, and small details.</p>
+        </div>
+        <div class="personal-photo-gallery">
+          <a href="/assets/images/through-my-lens/paint-study.jpg" class="personal-photo" aria-label="Enlarge: Orange, yellow and dark paint flowing over a mannequin head against a black background"><img src="/assets/images/through-my-lens/paint-study.jpg" alt="Orange, yellow and dark paint flowing over a mannequin head against a black background" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/window-light-portrait.jpg" class="personal-photo" aria-label="Enlarge: Side-lit portrait of a girl looking toward the light against a dark background"><img src="/assets/images/through-my-lens/window-light-portrait.jpg" alt="Side-lit portrait of a girl looking toward the light against a dark background" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/beach-chair.jpg" class="personal-photo" aria-label="Enlarge: Orange beach chair on golden sand beside a calm blue sea"><img src="/assets/images/through-my-lens/beach-chair.jpg" alt="Orange beach chair on golden sand beside a calm blue sea" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/green-apples.jpg" class="personal-photo" aria-label="Enlarge: Three green apples stacked above a reflective surface against a black background"><img src="/assets/images/through-my-lens/green-apples.jpg" alt="Three green apples stacked above a reflective surface against a black background" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/horse-at-sunset.jpg" class="personal-photo" aria-label="Enlarge: Close-up of a light-colored horse beneath a pink and gold sunset"><img src="/assets/images/through-my-lens/horse-at-sunset.jpg" alt="Close-up of a light-colored horse beneath a pink and gold sunset" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/green-wall-chair.jpg" class="personal-photo" aria-label="Enlarge: Weathered wooden chair against a green wall with fallen leaves on the floor"><img src="/assets/images/through-my-lens/green-wall-chair.jpg" alt="Weathered wooden chair against a green wall with fallen leaves on the floor" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/mountain-meadow.jpg" class="personal-photo" aria-label="Enlarge: Green meadow and evergreen forest beneath rugged mountains and dramatic clouds"><img src="/assets/images/through-my-lens/mountain-meadow.jpg" alt="Green meadow and evergreen forest beneath rugged mountains and dramatic clouds" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/vine-tendril.jpg" class="personal-photo" aria-label="Enlarge: Curled brown vine tendril against a softly blurred warm background"><img src="/assets/images/through-my-lens/vine-tendril.jpg" alt="Curled brown vine tendril against a softly blurred warm background" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/pride-flags.jpg" class="personal-photo" aria-label="Enlarge: Pride flags projecting from red brick buildings beneath a blue sky"><img src="/assets/images/through-my-lens/pride-flags.jpg" alt="Pride flags projecting from red brick buildings beneath a blue sky" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/boy-and-cat.jpg" class="personal-photo" aria-label="Enlarge: Black-and-white portrait of a boy holding a tabby cat"><img src="/assets/images/through-my-lens/boy-and-cat.jpg" alt="Black-and-white portrait of a boy holding a tabby cat" loading="lazy" decoding="async"></a>
+        </div>
       </div>
     </section>
 
@@ -293,6 +314,17 @@
       }
     ];
 
+    const personalLinks = [...document.querySelectorAll('.personal-photo')];
+    const PERSONAL_GALLERY_DATA = personalLinks.map(link => ({
+      src: link.getAttribute('href'), alt: link.querySelector('img').alt, caption: ''
+    }));
+    let activeGallery = GALLERY_DATA;
+    let returnFocus = null;
+    personalLinks.forEach((link, index) => link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openLightbox(index, PERSONAL_GALLERY_DATA);
+    }));
     let currentIndex = 0;
 
     // Render Clean Gallery Grid (Pure Images, No Text or Titles on Cards)
@@ -343,7 +375,9 @@
     const prevBtn = document.getElementById('lightbox-prev');
     const nextBtn = document.getElementById('lightbox-next');
 
-    function openLightbox(index) {
+    function openLightbox(index, gallery = GALLERY_DATA) {
+      returnFocus = document.activeElement;
+      activeGallery = gallery;
       currentIndex = index;
       updateLightboxContent();
       modal.classList.remove('hidden');
@@ -356,10 +390,11 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       document.body.style.overflow = '';
+      if (returnFocus) returnFocus.focus();
     }
 
     function updateLightboxContent() {
-      const item = GALLERY_DATA[currentIndex];
+      const item = activeGallery[currentIndex];
       modalImg.src = item.src;
       modalImg.alt = item.alt;
       modalCaption.textContent = item.caption;
@@ -374,12 +409,12 @@
     }
 
     function nextPhoto() {
-      currentIndex = (currentIndex + 1) % GALLERY_DATA.length;
+      currentIndex = (currentIndex + 1) % activeGallery.length;
       updateLightboxContent();
     }
 
     function prevPhoto() {
-      currentIndex = (currentIndex - 1 + GALLERY_DATA.length) % GALLERY_DATA.length;
+      currentIndex = (currentIndex - 1 + activeGallery.length) % activeGallery.length;
       updateLightboxContent();
     }
 
@@ -394,6 +429,12 @@
 
     document.addEventListener('keydown', (e) => {
       if (modal.classList.contains('flex')) {
+        if (e.key === 'Tab') {
+          const controls = [closeBtn, prevBtn, nextBtn];
+          const index = controls.indexOf(document.activeElement);
+          if (e.shiftKey && index <= 0) { e.preventDefault(); nextBtn.focus(); }
+          else if (!e.shiftKey && (index === controls.length - 1 || index < 0)) { e.preventDefault(); closeBtn.focus(); }
+        }
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowRight') nextPhoto();
         if (e.key === 'ArrowLeft') prevPhoto();
