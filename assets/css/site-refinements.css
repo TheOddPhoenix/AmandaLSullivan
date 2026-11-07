@@ -72,6 +72,5 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, summary:fo
 .personal-photo { display: block; break-inside: avoid; margin-bottom: 1.5rem; border: 1px solid #2F4732; background: #1C1C1C; }
 .personal-photo:hover { border-color: #B68A3B; }
 .personal-photo img { display: block; width: 100%; height: auto; }
-.video-embed--reel { aspect-ratio: 9 / 16; max-width: 360px; margin-inline: auto; }
 @media (max-width: 1023px) { .personal-photo-gallery { columns: 2; } }
 @media (max-width: 639px) { .personal-photo-gallery { columns: 1; } }
