@@ -53,10 +53,11 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, summary:fo
   border: 0;
   display: block;
 }
-/* DVIDS adds a footer below its video. Give the embedded document room for it,
-   but keep that footer outside the visible picture. The video itself is intact. */
+/* DVIDS' video wrapper is 16:9; its separate footer sits below that picture.
+   Match the player exactly and provide the full source link in the card. */
+.video-embed--dvids { aspect-ratio: 16 / 9; padding-bottom: 0; }
 .video-embed--dvids iframe {
-  height: calc(100% + 25px);
+  height: 100%;
 }
 
 /* Supplied brand artwork keeps its original proportions and transparent padding. */
@@ -74,3 +75,42 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, summary:fo
 .personal-photo img { display: block; width: 100%; height: auto; }
 @media (max-width: 1023px) { .personal-photo-gallery { columns: 2; } }
 @media (max-width: 639px) { .personal-photo-gallery { columns: 1; } }
+
+/* Readable evidence and restrained, consistent page rhythm. */
+main p, main li { line-height: 1.75; }
+main h2.text-xs { font-size: 1.125rem; letter-spacing: .12em; }
+main p.text-sm, main li.text-sm { font-size: 1rem; }
+main .text-xs.text-mutedIvory { font-size: .875rem; }
+main dd { font-size: clamp(2rem, 3.5vw, 3rem) !important; line-height: 1.2; }
+main dt, .hero-evidence dt { max-width: 19rem; font-size: .875rem; color: rgba(237,233,227,.8); }
+.hero-evidence dd { order: -1; color: #C6A76D; font-family: 'Libre Baskerville', serif; }
+main article[id] { scroll-margin-top: 7rem; }
+main article[id] > div > ul > li > span.font-serif { font-size: 2rem; line-height: 1.3; }
+#mobile-menu-toggle { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+@media (min-width: 1024px) { #mobile-menu-toggle { display: none; } }
+#mobile-drawer a { min-height: 44px; display: flex; align-items: center; }
+.skip-link { position: fixed; top: .5rem; left: 1rem; transform: translateY(-160%); z-index: 100; padding: .75rem 1rem; background: #EDE9E3; color: #202420; }
+.skip-link:focus { transform: none; }
+.photo-card { display: block; width: 100%; cursor: zoom-in; }
+.photo-card img { object-fit: contain; }
+.video-embed--dvids { background: #000; }
+@media (max-width: 639px) {
+  main article[id] { padding: 1.25rem; }
+  main section.py-16 { padding-top: 3rem; padding-bottom: 3rem; }
+  main .space-y-16 > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem; }
+}
+@media print {
+  @page { margin: 15mm; }
+  *, *::before, *::after { color: #111 !important; background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+  body { display: block !important; font-size: 10pt; }
+  header, footer, #mobile-drawer, .skip-link, .resume-actions, body > div { display: none !important; }
+  main, main > section, main > div { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+  main section { padding: 8pt 0 !important; }
+  main p, main li, main span, main a { font-size: 10pt !important; line-height: 1.4 !important; }
+  h1 { font-size: 22pt !important; }
+  h2 { font-size: 14pt !important; margin-top: 10pt; }
+  h3, h4 { font-size: 11pt !important; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  li { break-inside: avoid; }
+  a { text-decoration: none; }
+}

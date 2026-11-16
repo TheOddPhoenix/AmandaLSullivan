@@ -6,17 +6,13 @@
   <link rel="icon" type="image/png" sizes="108x140" href="/assets/brand/as-monogram-gold.png">
   <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/brand/favicon.svg">
   <title>Photography | Amanda Sullivan</title>
-  <meta name="description" content="Professional photojournalism portfolio by Amanda Sullivan documenting military operations, leadership, and community events at Fort Leonard Wood.">
+  <meta name="description" content="Explore Amanda Sullivan’s award-winning Army photojournalism and Through My Lens, a personal collection of landscapes, portraits, and still-life photography.">
   <link rel="canonical" href="https://www.amandalsullivan.com/photography/">
 
   <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Photography | Amanda Sullivan">
-  <meta property="og:description" content="Professional photojournalism portfolio documenting military operations, leadership, and community moments at Fort Leonard Wood.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.amandalsullivan.com/photography/">
 
-  <!-- Tailwind CSS 3.4 & Lucide Icons -->
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <!-- Compiled Tailwind CSS and decorative icons -->
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261116">
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
   <!-- Google Fonts: Libre Baskerville & Montserrat -->
@@ -24,27 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            deepEvergreen: '#202420',   /* Main site background */
-            charcoal: '#1C1C1C',        /* Section background */
-            forestGreen: '#2F4732',     /* Borders & subtle dividers */
-            antiqueGold: '#B68A3B',     /* Primary accent */
-            lightGold: '#C6A76D',       /* Hover highlights */
-            warmIvory: '#EDE9E3',       /* Primary text */
-            mutedIvory: 'rgba(237, 233, 227, 0.70)', /* Secondary body text */
-          },
-          fontFamily: {
-            serif: ['Libre Baskerville', 'serif'],
-            sans: ['Montserrat', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+
 
   <style>
     :root {
@@ -69,6 +45,14 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/site-refinements.css?v=portfolio-media-2">
+  <meta property="og:title" content="Photography | Amanda Sullivan">
+  <meta property="og:description" content="Explore Amanda Sullivan’s award-winning Army photojournalism and Through My Lens, a personal collection of landscapes, portraits, and still-life photography.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.amandalsullivan.com/photography/">
+  <meta property="og:image" content="https://www.amandalsullivan.com/assets/images/amanda-sullivan-portrait.png">
+  <meta property="og:image:alt" content="Amanda Sullivan">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Photography | Amanda Sullivan", "description": "Explore Amanda Sullivan’s award-winning Army photojournalism and Through My Lens, a personal collection of landscapes, portraits, and still-life photography.", "url": "https://www.amandalsullivan.com/photography/", "about": {"@type": "Person", "name": "Amanda Sullivan", "url": "https://www.amandalsullivan.com/"}}</script>
 </head>
 <body class="antialiased bg-deepEvergreen text-warmIvory min-h-screen flex flex-col justify-between selection:bg-antiqueGold selection:text-charcoal">
 
@@ -118,7 +102,8 @@
   </div>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="w-full flex-grow">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main id="main-content" class="w-full flex-grow">
 
     <!-- PAGE HEADER SECTION -->
     <section class="py-16 md:py-20 bg-deepEvergreen border-b border-forestGreen/30">
@@ -129,7 +114,7 @@
         <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warmIvory tracking-[0.03em]">
           Photography
         </h1>
-        <div class="space-y-4 pt-2 max-w-3xl text-base sm:text-lg text-mutedIvory font-light leading-relaxed">
+        <div class="space-y-4 pt-2 max-w-3xl text-base sm:text-lg text-mutedIvory font-normal leading-relaxed">
           <p>
             I believe photography is one of the most powerful forms of storytelling. A single image can capture emotion, preserve history, and communicate what words alone sometimes cannot. My approach to photography is rooted in that belief, with an emphasis on documenting authentic moments and the people behind them.
           </p>
@@ -139,7 +124,7 @@
 
 <section  class="py-16 md:py-20 bg-charcoal border-b border-forestGreen/30 scroll-mt-24">
       <div class="max-w-[1200px] mx-auto px-6 lg:px-10 space-y-6"><h2 class="font-serif text-2xl sm:text-3xl text-warmIvory">Photography recognition</h2><div class="space-y-3 border-l-2 border-antiqueGold pl-4 text-sm text-mutedIvory">
-          <p class="text-xs text-lightGold font-semibold">Recognized in 2025 for work produced in 2024</p>
+          <p class="text-sm text-lightGold font-semibold">Recognized in 2025 for work produced in 2024</p>
           <ul class="space-y-2">
             <li><span class="text-warmIvory">Civilian Photographer of the Year</span> · U.S. Army Materiel Command</li>
             <li><span class="text-warmIvory">Civilian Photographer of the Year</span> · U.S. Army Installation Management Command</li>
@@ -153,9 +138,20 @@
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-8">
 
         <!-- Clean Grid: Desktop 3-col / Tablet 2-col / Mobile 1-col -->
-        <div id="photo-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Gallery photos injected dynamically via JavaScript -->
-        </div>
+        <div id="photo-gallery" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"><a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-airport-groundbreaking.jpg" data-photo-index="0" aria-label="Enlarge photograph: Groundbreaking ceremony for the new Waynesville-St. Robert Regional Airport terminal"><img src="/assets/images/responsive/photo-airport-groundbreaking-960.webp" alt="Groundbreaking ceremony for the new Waynesville-St. Robert Regional Airport terminal" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-airport-groundbreaking-480.webp 479w, /assets/images/responsive/photo-airport-groundbreaking-960.webp 960w, /assets/images/responsive/photo-airport-groundbreaking-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-army-birthday-cake-cutting.jpg" data-photo-index="1" aria-label="Enlarge photograph: Command leadership cutting Army birthday cake with a ceremonial sword"><img src="/assets/images/responsive/photo-army-birthday-cake-cutting-960.webp" alt="Command leadership cutting Army birthday cake with a ceremonial sword" class="w-full h-full object-contain" loading="lazy" width="5327" height="3544" decoding="async" srcset="/assets/images/responsive/photo-army-birthday-cake-cutting-480.webp 479w, /assets/images/responsive/photo-army-birthday-cake-cutting-960.webp 960w, /assets/images/responsive/photo-army-birthday-cake-cutting-1600.webp 1599w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-band-farewell-concert.jpg" data-photo-index="2" aria-label="Enlarge photograph: 399th Army Band performing during farewell concert"><img src="/assets/images/responsive/photo-band-farewell-concert-960.webp" alt="399th Army Band performing during farewell concert" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-band-farewell-concert-480.webp 479w, /assets/images/responsive/photo-band-farewell-concert-960.webp 960w, /assets/images/responsive/photo-band-farewell-concert-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-best-sapper-2.jpg" data-photo-index="3" aria-label="Enlarge photograph: Competitors in action during the Best Sapper Competition"><img src="/assets/images/responsive/photo-best-sapper-2-960.webp" alt="Competitors in action during the Best Sapper Competition" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-best-sapper-2-480.webp 479w, /assets/images/responsive/photo-best-sapper-2-960.webp 960w, /assets/images/responsive/photo-best-sapper-2-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-best-squad-competition.jpg" data-photo-index="4" aria-label="Enlarge photograph: Squad 6 members during TRADOC Best Squad Competition"><img src="/assets/images/responsive/photo-best-squad-competition-960.webp" alt="Squad 6 members during TRADOC Best Squad Competition" class="w-full h-full object-contain" loading="lazy" width="5729" height="3812" decoding="async" srcset="/assets/images/responsive/photo-best-squad-competition-480.webp 479w, /assets/images/responsive/photo-best-squad-competition-960.webp 960w, /assets/images/responsive/photo-best-squad-competition-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-best-squad-competition-2.jpg" data-photo-index="5" aria-label="Enlarge photograph: Competitors engaging targets during TRADOC Best Squad Competition"><img src="/assets/images/responsive/photo-best-squad-competition-2-960.webp" alt="Competitors engaging targets during TRADOC Best Squad Competition" class="w-full h-full object-contain" loading="lazy" width="6048" height="4024" decoding="async" srcset="/assets/images/responsive/photo-best-squad-competition-2-480.webp 479w, /assets/images/responsive/photo-best-squad-competition-2-960.webp 960w, /assets/images/responsive/photo-best-squad-competition-2-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-drill-sergeant-portrait.jpg" data-photo-index="6" aria-label="Enlarge photograph: Staff Sgt. Austin Marshall in front of Vehicle Dynamics Course"><img src="/assets/images/responsive/photo-drill-sergeant-portrait-960.webp" alt="Staff Sgt. Austin Marshall in front of Vehicle Dynamics Course" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-drill-sergeant-portrait-480.webp 479w, /assets/images/responsive/photo-drill-sergeant-portrait-960.webp 960w, /assets/images/responsive/photo-drill-sergeant-portrait-1600.webp 1600w" sizes="(min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-fire-training.jpg" data-photo-index="7" aria-label="Enlarge photograph: Military firefighters during live-fire response training"><img src="/assets/images/responsive/photo-fire-training-960.webp" alt="Military firefighters during live-fire response training" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-fire-training-480.webp 479w, /assets/images/responsive/photo-fire-training-960.webp 960w, /assets/images/responsive/photo-fire-training-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-in-flight-reenlistment.jpg" data-photo-index="8" aria-label="Enlarge photograph: Trainees watching CH-47 Chinook approach at Forney Airfield"><img src="/assets/images/responsive/photo-in-flight-reenlistment-960.webp" alt="Trainees watching CH-47 Chinook approach at Forney Airfield" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-in-flight-reenlistment-480.webp 479w, /assets/images/responsive/photo-in-flight-reenlistment-960.webp 960w, /assets/images/responsive/photo-in-flight-reenlistment-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-in-flight-reenlistment-2.jpg" data-photo-index="9" aria-label="Enlarge photograph: Soldiers taking part in in-flight reenlistment flight"><img src="/assets/images/responsive/photo-in-flight-reenlistment-2-960.webp" alt="Soldiers taking part in in-flight reenlistment flight" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photo-in-flight-reenlistment-2-480.webp 479w, /assets/images/responsive/photo-in-flight-reenlistment-2-960.webp 960w, /assets/images/responsive/photo-in-flight-reenlistment-2-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-mp-working-dog-grooming.jpg" data-photo-index="10" aria-label="Enlarge photograph: Military Police handler grooming military working dog"><img src="/assets/images/responsive/photo-mp-working-dog-grooming-960.webp" alt="Military Police handler grooming military working dog" class="w-full h-full object-contain" loading="lazy" width="3000" height="2065" decoding="async" srcset="/assets/images/responsive/photo-mp-working-dog-grooming-480.webp 479w, /assets/images/responsive/photo-mp-working-dog-grooming-960.webp 960w, /assets/images/responsive/photo-mp-working-dog-grooming-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photo-trees-for-troops.jpg" data-photo-index="11" aria-label="Enlarge photograph: Cpl. Shavaun Shaw selecting Christmas tree with family"><img src="/assets/images/responsive/photo-trees-for-troops-960.webp" alt="Cpl. Shavaun Shaw selecting Christmas tree with family" class="w-full h-full object-contain" loading="lazy" width="6048" height="4024" decoding="async" srcset="/assets/images/responsive/photo-trees-for-troops-480.webp 479w, /assets/images/responsive/photo-trees-for-troops-960.webp 960w, /assets/images/responsive/photo-trees-for-troops-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photos-graduation-salute.jpg" data-photo-index="12" aria-label="Enlarge photograph: Graduating Soldiers rendering hand salute"><img src="/assets/images/responsive/photos-graduation-salute-960.webp" alt="Graduating Soldiers rendering hand salute" class="w-full h-full object-contain" loading="lazy" width="5475" height="3643" decoding="async" srcset="/assets/images/responsive/photos-graduation-salute-480.webp 479w, /assets/images/responsive/photos-graduation-salute-960.webp 960w, /assets/images/responsive/photos-graduation-salute-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+<a class="photo-card aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden hover:border-antiqueGold" href="/assets/images/photos-vietnam-veterans.jpg" data-photo-index="13" aria-label="Enlarge photograph: Vietnam combat engineer veteran Laurens Beckwith operating boat"><img src="/assets/images/responsive/photos-vietnam-veterans-960.webp" alt="Vietnam combat engineer veteran Laurens Beckwith operating boat" class="w-full h-full object-contain" loading="lazy" width="3000" height="1996" decoding="async" srcset="/assets/images/responsive/photos-vietnam-veterans-480.webp 479w, /assets/images/responsive/photos-vietnam-veterans-960.webp 960w, /assets/images/responsive/photos-vietnam-veterans-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a></div>
 
       </div>
     </section>
@@ -164,25 +160,25 @@
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 space-y-8">
         <div class="space-y-4">
           <h2 id="personal-photography-heading" class="font-serif text-2xl sm:text-3xl text-warmIvory">Through My Lens</h2>
-          <p class="text-sm sm:text-base text-mutedIvory font-light leading-relaxed">A personal collection of portraits, places, and small details.</p>
+          <p class="text-sm sm:text-base text-mutedIvory font-normal leading-relaxed">A personal collection of portraits, places, and small details.</p>
         </div>
         <div class="personal-photo-gallery">
-          <a href="/assets/images/through-my-lens/sunset-overlook.jpg" class="personal-photo" aria-label="Enlarge: Sun setting over a rocky overlook, wooded hills and an open valley"><img src="/assets/images/through-my-lens/sunset-overlook.jpg" alt="Sun setting over a rocky overlook, wooded hills and an open valley" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/paint-study.jpg" class="personal-photo" aria-label="Enlarge: Orange, yellow and dark paint flowing over a mannequin head against a black background"><img src="/assets/images/through-my-lens/paint-study.jpg" alt="Orange, yellow and dark paint flowing over a mannequin head against a black background" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/window-light-portrait.jpg" class="personal-photo" aria-label="Enlarge: Side-lit portrait of a girl looking toward the light against a dark background"><img src="/assets/images/through-my-lens/window-light-portrait.jpg" alt="Side-lit portrait of a girl looking toward the light against a dark background" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/playful-portrait.jpg" class="personal-photo" aria-label="Enlarge: Child in a blue shirt making circles around their eyes with their hands"><img src="/assets/images/through-my-lens/playful-portrait.jpg" alt="Child in a blue shirt making circles around their eyes with their hands" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/pride-flags.jpg" class="personal-photo" aria-label="Enlarge: Pride flags projecting from red brick buildings beneath a blue sky"><img src="/assets/images/through-my-lens/pride-flags.jpg" alt="Pride flags projecting from red brick buildings beneath a blue sky" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/horse-at-sunset.jpg" class="personal-photo" aria-label="Enlarge: Close-up of a light-colored horse beneath a pink and gold sunset"><img src="/assets/images/through-my-lens/horse-at-sunset.jpg" alt="Close-up of a light-colored horse beneath a pink and gold sunset" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/birds-on-rocks.jpg" class="personal-photo" aria-label="Enlarge: Three white birds perched on rocks beneath dark clouds and a mountain ridge"><img src="/assets/images/through-my-lens/birds-on-rocks.jpg" alt="Three white birds perched on rocks beneath dark clouds and a mountain ridge" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/green-buildings.jpg" class="personal-photo" aria-label="Enlarge: Two weathered green buildings in a grassy field beneath mountains and large clouds"><img src="/assets/images/through-my-lens/green-buildings.jpg" alt="Two weathered green buildings in a grassy field beneath mountains and large clouds" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/green-wall-chair.jpg" class="personal-photo" aria-label="Enlarge: Weathered wooden chair against a green wall with fallen leaves on the floor"><img src="/assets/images/through-my-lens/green-wall-chair.jpg" alt="Weathered wooden chair against a green wall with fallen leaves on the floor" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/seed-pods.jpg" class="personal-photo" aria-label="Enlarge: Purple and green seed pods with dried flowers against a softly blurred background"><img src="/assets/images/through-my-lens/seed-pods.jpg" alt="Purple and green seed pods with dried flowers against a softly blurred background" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/insect-on-seedhead.jpg" class="personal-photo" aria-label="Enlarge: Small green insect on a sunlit golden seed head against a dark background"><img src="/assets/images/through-my-lens/insect-on-seedhead.jpg" alt="Small green insect on a sunlit golden seed head against a dark background" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/vine-tendril.jpg" class="personal-photo" aria-label="Enlarge: Curled brown vine tendril against a softly blurred warm background"><img src="/assets/images/through-my-lens/vine-tendril.jpg" alt="Curled brown vine tendril against a softly blurred warm background" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/dried-thistle.jpg" class="personal-photo" aria-label="Enlarge: Dried thistle and branching stems in warm brown light"><img src="/assets/images/through-my-lens/dried-thistle.jpg" alt="Dried thistle and branching stems in warm brown light" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/holiday-still-life.jpg" class="personal-photo" aria-label="Enlarge: Champagne bottle and glass beside a lit candle and red holiday decorations"><img src="/assets/images/through-my-lens/holiday-still-life.jpg" alt="Champagne bottle and glass beside a lit candle and red holiday decorations" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/beach-chair.jpg" class="personal-photo" aria-label="Enlarge: Orange beach chair on golden sand beside a calm blue sea"><img src="/assets/images/through-my-lens/beach-chair.jpg" alt="Orange beach chair on golden sand beside a calm blue sea" loading="lazy" decoding="async"></a>
-          <a href="/assets/images/through-my-lens/green-apples.jpg" class="personal-photo" aria-label="Enlarge: Three green apples stacked above a reflective surface against a black background"><img src="/assets/images/through-my-lens/green-apples.jpg" alt="Three green apples stacked above a reflective surface against a black background" loading="lazy" decoding="async"></a>
+          <a href="/assets/images/through-my-lens/sunset-overlook.jpg" class="personal-photo" aria-label="Enlarge: Sun setting over a rocky overlook, wooded hills and an open valley"><img src="/assets/images/responsive/sunset-overlook-960.webp" alt="Sun setting over a rocky overlook, wooded hills and an open valley" loading="lazy" width="1080" height="720" decoding="async" srcset="/assets/images/responsive/sunset-overlook-480.webp 480w, /assets/images/responsive/sunset-overlook-960.webp 960w, /assets/images/responsive/sunset-overlook-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/paint-study.jpg" class="personal-photo" aria-label="Enlarge: Orange, yellow and dark paint flowing over a mannequin head against a black background"><img src="/assets/images/responsive/paint-study-960.webp" alt="Orange, yellow and dark paint flowing over a mannequin head against a black background" loading="lazy" width="2400" height="1600" decoding="async" srcset="/assets/images/responsive/paint-study-480.webp 480w, /assets/images/responsive/paint-study-960.webp 960w, /assets/images/responsive/paint-study-1600.webp 1600w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/window-light-portrait.jpg" class="personal-photo" aria-label="Enlarge: Side-lit portrait of a girl looking toward the light against a dark background"><img src="/assets/images/responsive/window-light-portrait-960.webp" alt="Side-lit portrait of a girl looking toward the light against a dark background" loading="lazy" width="1079" height="720" decoding="async" srcset="/assets/images/responsive/window-light-portrait-480.webp 480w, /assets/images/responsive/window-light-portrait-960.webp 960w, /assets/images/responsive/window-light-portrait-1079.webp 1079w" sizes="(min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/playful-portrait.jpg" class="personal-photo" aria-label="Enlarge: Child in a blue shirt making circles around their eyes with their hands"><img src="/assets/images/responsive/playful-portrait-960.webp" alt="Child in a blue shirt making circles around their eyes with their hands" loading="lazy" width="1080" height="721" decoding="async" srcset="/assets/images/responsive/playful-portrait-480.webp 479w, /assets/images/responsive/playful-portrait-960.webp 960w, /assets/images/responsive/playful-portrait-1080.webp 1080w" sizes="(min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/pride-flags.jpg" class="personal-photo" aria-label="Enlarge: Pride flags projecting from red brick buildings beneath a blue sky"><img src="/assets/images/responsive/pride-flags-960.webp" alt="Pride flags projecting from red brick buildings beneath a blue sky" loading="lazy" width="1080" height="719" decoding="async" srcset="/assets/images/responsive/pride-flags-480.webp 480w, /assets/images/responsive/pride-flags-960.webp 960w, /assets/images/responsive/pride-flags-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/horse-at-sunset.jpg" class="personal-photo" aria-label="Enlarge: Close-up of a light-colored horse beneath a pink and gold sunset"><img src="/assets/images/responsive/horse-at-sunset-960.webp" alt="Close-up of a light-colored horse beneath a pink and gold sunset" loading="lazy" width="1080" height="809" decoding="async" srcset="/assets/images/responsive/horse-at-sunset-480.webp 480w, /assets/images/responsive/horse-at-sunset-960.webp 960w, /assets/images/responsive/horse-at-sunset-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/birds-on-rocks.jpg" class="personal-photo" aria-label="Enlarge: Three white birds perched on rocks beneath dark clouds and a mountain ridge"><img src="/assets/images/responsive/birds-on-rocks-960.webp" alt="Three white birds perched on rocks beneath dark clouds and a mountain ridge" loading="lazy" width="1080" height="719" decoding="async" srcset="/assets/images/responsive/birds-on-rocks-480.webp 480w, /assets/images/responsive/birds-on-rocks-960.webp 960w, /assets/images/responsive/birds-on-rocks-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/green-buildings.jpg" class="personal-photo" aria-label="Enlarge: Two weathered green buildings in a grassy field beneath mountains and large clouds"><img src="/assets/images/responsive/green-buildings-960.webp" alt="Two weathered green buildings in a grassy field beneath mountains and large clouds" loading="lazy" width="1080" height="719" decoding="async" srcset="/assets/images/responsive/green-buildings-480.webp 480w, /assets/images/responsive/green-buildings-960.webp 960w, /assets/images/responsive/green-buildings-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/green-wall-chair.jpg" class="personal-photo" aria-label="Enlarge: Weathered wooden chair against a green wall with fallen leaves on the floor"><img src="/assets/images/responsive/green-wall-chair-960.webp" alt="Weathered wooden chair against a green wall with fallen leaves on the floor" loading="lazy" width="1080" height="720" decoding="async" srcset="/assets/images/responsive/green-wall-chair-480.webp 480w, /assets/images/responsive/green-wall-chair-960.webp 960w, /assets/images/responsive/green-wall-chair-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/seed-pods.jpg" class="personal-photo" aria-label="Enlarge: Purple and green seed pods with dried flowers against a softly blurred background"><img src="/assets/images/responsive/seed-pods-960.webp" alt="Purple and green seed pods with dried flowers against a softly blurred background" loading="lazy" width="1080" height="720" decoding="async" srcset="/assets/images/responsive/seed-pods-480.webp 480w, /assets/images/responsive/seed-pods-960.webp 960w, /assets/images/responsive/seed-pods-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/insect-on-seedhead.jpg" class="personal-photo" aria-label="Enlarge: Small green insect on a sunlit golden seed head against a dark background"><img src="/assets/images/responsive/insect-on-seedhead-960.webp" alt="Small green insect on a sunlit golden seed head against a dark background" loading="lazy" width="1076" height="1076" decoding="async" srcset="/assets/images/responsive/insect-on-seedhead-480.webp 480w, /assets/images/responsive/insect-on-seedhead-960.webp 960w, /assets/images/responsive/insect-on-seedhead-1076.webp 1076w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/vine-tendril.jpg" class="personal-photo" aria-label="Enlarge: Curled brown vine tendril against a softly blurred warm background"><img src="/assets/images/responsive/vine-tendril-960.webp" alt="Curled brown vine tendril against a softly blurred warm background" loading="lazy" width="1080" height="1080" decoding="async" srcset="/assets/images/responsive/vine-tendril-480.webp 480w, /assets/images/responsive/vine-tendril-960.webp 960w, /assets/images/responsive/vine-tendril-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/dried-thistle.jpg" class="personal-photo" aria-label="Enlarge: Dried thistle and branching stems in warm brown light"><img src="/assets/images/responsive/dried-thistle-960.webp" alt="Dried thistle and branching stems in warm brown light" loading="lazy" width="1080" height="1080" decoding="async" srcset="/assets/images/responsive/dried-thistle-480.webp 480w, /assets/images/responsive/dried-thistle-960.webp 960w, /assets/images/responsive/dried-thistle-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/holiday-still-life.jpg" class="personal-photo" aria-label="Enlarge: Champagne bottle and glass beside a lit candle and red holiday decorations"><img src="/assets/images/responsive/holiday-still-life-960.webp" alt="Champagne bottle and glass beside a lit candle and red holiday decorations" loading="lazy" width="1080" height="720" decoding="async" srcset="/assets/images/responsive/holiday-still-life-480.webp 480w, /assets/images/responsive/holiday-still-life-960.webp 960w, /assets/images/responsive/holiday-still-life-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/beach-chair.jpg" class="personal-photo" aria-label="Enlarge: Orange beach chair on golden sand beside a calm blue sea"><img src="/assets/images/responsive/beach-chair-960.webp" alt="Orange beach chair on golden sand beside a calm blue sea" loading="lazy" width="1080" height="1350" decoding="async" srcset="/assets/images/responsive/beach-chair-480.webp 480w, /assets/images/responsive/beach-chair-960.webp 960w, /assets/images/responsive/beach-chair-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
+          <a href="/assets/images/through-my-lens/green-apples.jpg" class="personal-photo" aria-label="Enlarge: Three green apples stacked above a reflective surface against a black background"><img src="/assets/images/responsive/green-apples-960.webp" alt="Three green apples stacked above a reflective surface against a black background" loading="lazy" width="1080" height="720" decoding="async" srcset="/assets/images/responsive/green-apples-480.webp 480w, /assets/images/responsive/green-apples-960.webp 960w, /assets/images/responsive/green-apples-1080.webp 1080w" sizes="(min-width: 1280px) 440px, (min-width: 768px) 50vw, 100vw"></a>
         </div>
       </div>
     </section>
@@ -191,7 +187,7 @@
 
   <!-- ACCESSIBLE LIGHTBOX MODAL -->
   <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex-col justify-between p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Image viewer">
-    
+
     <!-- Top Bar: Close Button -->
     <div class="flex items-center justify-end text-xs text-mutedIvory max-w-[1200px] mx-auto w-full pt-2">
       <button id="lightbox-close" class="text-warmIvory hover:text-antiqueGold p-2 transition focus:outline-none" aria-label="Close image viewer">
@@ -217,7 +213,7 @@
 
     <!-- Bottom Caption Container -->
     <div class="max-w-[1000px] mx-auto w-full text-center pb-4 px-4">
-      <p id="lightbox-caption" class="text-xs sm:text-sm text-mutedIvory font-light leading-relaxed max-h-[18vh] overflow-y-auto"></p>
+      <p id="lightbox-caption" class="text-sm sm:text-base text-mutedIvory leading-relaxed max-h-[18vh] overflow-y-auto"></p>
     </div>
 
   </div>
@@ -333,43 +329,14 @@
     }));
     let currentIndex = 0;
 
-    // Render Clean Gallery Grid (Pure Images, No Text or Titles on Cards)
+    // Static links remain available when JavaScript is unavailable.
     function renderGallery() {
-      const container = document.getElementById('photo-gallery');
-      if (!container) return;
-      container.innerHTML = '';
-
-      GALLERY_DATA.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = "aspect-[4/3] bg-charcoal border border-forestGreen/50 overflow-hidden relative group hover:border-antiqueGold transition duration-300 cursor-pointer";
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', `Enlarge photograph ${index + 1}`);
-
-        card.innerHTML = `
-          <img 
-            src="${item.src}" 
-            alt="${item.alt}" 
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-            loading="lazy"
-            onerror="if(!this.dataset.fallback){this.dataset.fallback=true; this.src='..'+this.getAttribute('src');}"
-          />
-          <div class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-            <span class="text-[11px] font-semibold tracking-widest uppercase text-warmIvory bg-charcoal/85 px-3 py-1.5 border border-antiqueGold/60">
-              ENLARGE
-            </span>
-          </div>
-        `;
-
-        card.addEventListener('click', () => openLightbox(index));
-        card.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openLightbox(index);
-          }
+      document.querySelectorAll('[data-photo-index]').forEach(link => {
+        link.addEventListener('click', event => {
+          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          openLightbox(Number(link.dataset.photoIndex));
         });
-
-        container.appendChild(card);
       });
     }
 
@@ -405,13 +372,7 @@
       modalImg.alt = item.alt;
       modalCaption.textContent = item.caption;
 
-      // Relative path fallback for local testing
-      modalImg.onerror = function() {
-        if (!this.dataset.fallback) {
-          this.dataset.fallback = 'true';
-          this.src = '..' + item.src;
-        }
-      };
+
     }
 
     function nextPhoto() {
@@ -447,45 +408,12 @@
       }
     });
 
-    // Mobile Navigation Drawer Toggle
-    const toggleBtn = document.getElementById('mobile-menu-toggle');
-    const drawer = document.getElementById('mobile-drawer');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-    toggleBtn.addEventListener('click', () => {
-      const isOpen = drawer.classList.contains('flex');
-      if (isOpen) {
-        drawer.classList.remove('flex');
-        drawer.classList.add('hidden');
-        drawer.setAttribute('aria-hidden', 'true');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
-      } else {
-        drawer.classList.remove('hidden');
-        drawer.classList.add('flex');
-        drawer.setAttribute('aria-hidden', 'false');
-        toggleBtn.setAttribute('aria-expanded', 'true');
-        document.getElementById('menu-icon').setAttribute('data-lucide', 'x');
-      }
-      refreshIcons();
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        drawer.classList.add('hidden');
-        drawer.classList.remove('flex');
-        drawer.setAttribute('aria-hidden', 'true');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        document.getElementById('menu-icon').setAttribute('data-lucide', 'menu');
-        refreshIcons();
-      });
-    });
-
     // Initial Load Execution
     document.addEventListener('DOMContentLoaded', () => {
       refreshIcons();
       renderGallery();
     });
   </script>
+  <script src="/assets/js/navigation.js?v=20261116" defer></script>
 </body>
 </html>

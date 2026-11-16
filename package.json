@@ -1,0 +1,9 @@
+{
+  "name": "amanda-sullivan-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i assets/css/tailwind-input.css -o assets/css/site.css --minify",
+    "check": "node scripts/check-site.mjs"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}
